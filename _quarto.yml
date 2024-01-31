@@ -12,7 +12,8 @@ website:
         href: https://www.linkedin.com/vmandela99/
 format:
   html:
-    theme: cosmo
+    # theme: minty
+    theme: materia
     # css: styles.css
     css: custom.scss
 

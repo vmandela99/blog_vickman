@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "Spartial regression: Lesson3\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\nRegression\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2021\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial Data Manipulation in R: Lesson2\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 23, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial analysis with R: Lesson1\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 16, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nBusiness intelligence tools\n\n\n\n\n\n\n\nBI\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\nNo matching items"
+    "text": "Spartial regression: Lesson3\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\nRegression\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2021\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial Data Manipulation in R: Lesson2\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 23, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial analysis with R: Lesson1\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 16, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nBusiness intelligence tools\n\n\n\n\n\n\n\nBI\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nHow to build a ShinyApp\n\n\n\n\n\n\n\nR\n\n\nShiny\n\n\n\n\n\n\n\n\n\n\n\nFeb 17, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -173,5 +173,26 @@
     "title": "Spartial regression: Lesson3",
     "section": "",
     "text": "Spatial regression is a powerful technique in spatial analytics that allows us to model relationships between variables while accounting for the spatial dependencies inherent in geospatial data. In this advanced blog post, we will dive into the intricacies of spatial regression using R. Our goal is to uncover hidden patterns and relationships in geospatial datasets, focusing on a hypothetical scenario of housing prices and neighborhood characteristics."
+  },
+  {
+    "objectID": "posts/How to build a shinyapp/index.html",
+    "href": "posts/How to build a shinyapp/index.html",
+    "title": "How to build a ShinyApp",
+    "section": "",
+    "text": "We begin to demonstrate the building blocks of a shinyApp.\nAn App needs a *User interface (ui)* and a server. The majic about the *shiny package* is that it can create both of this within R, plus run your app using an additionational shiny function.\nFirst,\n\nload the library using the shiny.\n\n\nlibrary(shiny)\n\n\nCreate ui using the html function\n\n\nui &lt;- fluidPage()\n\n\nDefine a custom function to create the server\n\n\nserver &lt;- function(input,\n\noutput,\n\nsession){\n\n}\n\n\nfinally run your app.\n\n\nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "posts/How to build a shinyapp/index.html#building-a-hello-world-shinyapp",
+    "href": "posts/How to build a shinyapp/index.html#building-a-hello-world-shinyapp",
+    "title": "How to build a ShinyApp",
+    "section": "",
+    "text": "We begin to demonstrate the building blocks of a shinyApp.\nAn App needs a *User interface (ui)* and a server. The majic about the *shiny package* is that it can create both of this within R, plus run your app using an additionational shiny function.\nFirst,\n\nload the library using the shiny.\n\n\nlibrary(shiny)\n\n\nCreate ui using the html function\n\n\nui &lt;- fluidPage()\n\n\nDefine a custom function to create the server\n\n\nserver &lt;- function(input,\n\noutput,\n\nsession){\n\n}\n\n\nfinally run your app.\n\n\nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "posts/How to build a shinyapp/index.html#example1-of-shiny-app",
+    "href": "posts/How to build a shinyapp/index.html#example1-of-shiny-app",
+    "title": "How to build a ShinyApp",
+    "section": "Example1 of shiny app",
+    "text": "Example1 of shiny app\n\nlibrary(shiny)\n\nlibrary(widgetframe)\n\nui &lt;- fluidPage(\n\n\"Hello, world!!!!!!\"\n\n)\n\nserver &lt;- function(input,\n\noutput,\n\nsession){\n\n}\n\nshinyApp(ui = ui, server = server)\n\n\nExample2: Add a question\nWe want to go an extra mile an add a text that asks a question. This is possible but adding *textinput* function that allows us to enter text. It has three arguments, a unique ID that will be used to refer to this input, a label that is displayed to the user and an optional default value.\nOur full out put that is diplayed is contained in the server using the render text function. Inside of that you can use *paste* to create a longer character string. And if add *input$name* you can access the name added using text input. The text is assigned to an output object that will be used in the ui to display.\n\nlibrary(shiny)\n\nlibrary(widgetframe)\n\nui &lt;- fluidPage(\n\ntextInput(\"name\", \"Enter your name:\"),\n\ntextOutput(\"r\")\n\n)\n\nserver &lt;- function(input, output){\n\noutput$r &lt;- renderText({\n\npaste0(\"Do you prefer rain or sunshine,\", input$name, \"?\")\n\n})\n\n}\n\nshinyApp(ui = ui, server = server)\n\nYou did it a text that uses a text input!!"
   }
 ]
