@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "Geospatial Data Manipulation in R: Lesson2\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 23, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial analysis with R: Lesson1\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 16, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nBusiness intelligence tools\n\n\n\n\n\n\n\nBI\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\nNo matching items"
+    "text": "Spartial regression: Lesson3\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\nRegression\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2021\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial Data Manipulation in R: Lesson2\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 23, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial analysis with R: Lesson1\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 16, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nBusiness intelligence tools\n\n\n\n\n\n\n\nBI\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -124,5 +124,54 @@
     "title": "Geospatial Data Manipulation in R: Lesson2",
     "section": "",
     "text": "In this blog post, we’ve covered the essential steps of loading and cleaning geospatial data using R. Starting with the hypothetical scenario of public parks, we explored data loading, cleaning, and basic analysis. Clean and well-organized geospatial data sets the stage for more advanced spatial analytics and insights.\nIn future articles, we will delve into advanced geospatial analysis, including spatial regression, machine learning with geospatial data, and the creation of interactive web maps. Stay tuned for more exciting explorations into the world of geospatial data science!"
+  },
+  {
+    "objectID": "posts/spatial regression/index.html",
+    "href": "posts/spatial regression/index.html",
+    "title": "Spartial regression: Lesson3",
+    "section": "",
+    "text": "Spatial regression is a powerful technique in spatial analytics that allows us to model relationships between variables while accounting for the spatial dependencies inherent in geospatial data. In this advanced blog post, we will dive into the intricacies of spatial regression using R. Our goal is to uncover hidden patterns and relationships in geospatial datasets, focusing on a hypothetical scenario of housing prices and neighborhood characteristics."
+  },
+  {
+    "objectID": "posts/spatial regression/index.html#understanding-spatial-regression",
+    "href": "posts/spatial regression/index.html#understanding-spatial-regression",
+    "title": "Spartial regression: Lesson3",
+    "section": "Understanding Spatial Regression",
+    "text": "Understanding Spatial Regression\nSpatial regression extends traditional regression models by incorporating spatial relationships. It acknowledges that observations closer in space may exhibit similarities or dependencies that traditional models overlook. There are different types of spatial regression models, and in this blog, we will focus on the Spatial Lag Model.\n\nSpatial Lag Model\nThe Spatial Lag Model introduces a spatially lagged dependent variable, indicating the influence of neighboring observations. Let’s consider housing prices as the dependent variable and neighborhood characteristics as independent variables.\n# Install and load required packages\ninstall.packages(\"spdep\")\nlibrary(spdep)\n\n# Load geospatial data (housing prices and neighborhood characteristics)\nhousing_data &lt;- st_read(\"path/to/housing_data.shp\")\n\n# Create spatial weights matrix\nw &lt;- poly2nb(st_as_sfc(housing_data))\nlw &lt;- nb2listw(w)\n\n# Fit Spatial Lag Model\nmodel &lt;- lm(y ~ x1 + x2 + lag(y, listw = lw), data = housing_data)\nsummary(model)\n\nReplace “path/to/housing_data.shp” with the actual path to your Shapefile. This example assumes you have a dependent variable y (housing prices) and independent variables x1 and x2 (neighborhood characteristics)."
+  },
+  {
+    "objectID": "posts/spatial regression/index.html#interpretation-of-results",
+    "href": "posts/spatial regression/index.html#interpretation-of-results",
+    "title": "Spartial regression: Lesson3",
+    "section": "Interpretation of Results",
+    "text": "Interpretation of Results\nThe summary output provides information about coefficients, standard errors, and statistical significance. Pay special attention to the spatial lag coefficient, which indicates the impact of neighboring observations on the dependent variable."
+  },
+  {
+    "objectID": "posts/spatial regression/index.html#diagnostic-checks",
+    "href": "posts/spatial regression/index.html#diagnostic-checks",
+    "title": "Spartial regression: Lesson3",
+    "section": "Diagnostic Checks",
+    "text": "Diagnostic Checks\nAssess the model’s validity and assumptions through diagnostic checks.\n# Spatial autocorrelation of residuals\nresiduals &lt;- residuals(model)\nmoran.test(residuals, listw = lw)\n\nA significant Moran’s I statistic for residuals indicates spatial autocorrelation, suggesting the need for further model refinement."
+  },
+  {
+    "objectID": "posts/spatial regression/index.html#visualization",
+    "href": "posts/spatial regression/index.html#visualization",
+    "title": "Spartial regression: Lesson3",
+    "section": "Visualization",
+    "text": "Visualization\nVisualize the spatial patterns and regression results on a map.\n# Plotting observed vs. predicted values\nplot(housing_data$y, fitted(model), main = \"Observed vs. Predicted\", xlab = \"Observed\", ylab = \"Predicted\")\n\n# Spatial autocorrelation map of residuals\nspplot(residuals, main = \"Spatial Autocorrelation Map of Residuals\", col.regions = colorRampPalette(c(\"blue\", \"white\", \"red\")))\n\nThese visualizations help in understanding how well the model captures spatial patterns and where adjustments might be needed."
+  },
+  {
+    "objectID": "posts/spatial regression/index.html#conclusion",
+    "href": "posts/spatial regression/index.html#conclusion",
+    "title": "Spartial regression: Lesson3",
+    "section": "Conclusion",
+    "text": "Conclusion\nSpatial regression in R opens up new dimensions for analyzing geospatial data. In this blog post, we explored the Spatial Lag Model as an advanced technique for modeling spatial dependencies in housing prices and neighborhood characteristics. The interpretation of results, diagnostic checks, and visualizations are crucial components of spatial regression analysis.\nAs you venture into spatial analytics, consider exploring other spatial regression models, incorporating additional spatial variables, and applying advanced techniques to enhance the robustness of your models. Stay tuned for more advanced spatial analytics topics, including machine learning with geospatial data and building interactive web maps. Happy analyzing!"
+  },
+  {
+    "objectID": "posts/spatial regression/index.html#mastering-spatial-regression-in-r-unveiling-patterns-in-geospatial-data",
+    "href": "posts/spatial regression/index.html#mastering-spatial-regression-in-r-unveiling-patterns-in-geospatial-data",
+    "title": "Spartial regression: Lesson3",
+    "section": "",
+    "text": "Spatial regression is a powerful technique in spatial analytics that allows us to model relationships between variables while accounting for the spatial dependencies inherent in geospatial data. In this advanced blog post, we will dive into the intricacies of spatial regression using R. Our goal is to uncover hidden patterns and relationships in geospatial datasets, focusing on a hypothetical scenario of housing prices and neighborhood characteristics."
   }
 ]

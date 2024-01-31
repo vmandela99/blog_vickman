@@ -60,7 +60,7 @@ Business Intelligence (BI) tools play a crucial role in turning raw data into ac
 
     -   **Uniqueness:** Strong statistical capabilities, ideal for creating interactive web applications.
 
-    ![Learning curve VS Business Capability rating](/pictures/BI tools.PNG)
+    ![Learning curve VS Business Capability rating](/pictures/BI%20tools.PNG)
 
 ## **Business Capability Rating:**
 

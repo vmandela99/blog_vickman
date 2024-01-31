@@ -1,0 +1,85 @@
+---
+title: "Spartial regression: Lesson3"
+date: "2021-07-30"
+categories: [GIS, Statistics, R, Regression]
+image: "effect.jpg"
+---
+
+## Mastering Spatial Regression in R: Unveiling patterns in Geospatial Data
+
+Spatial regression is a powerful technique in spatial analytics that allows us to model relationships between variables while accounting for the spatial dependencies inherent in geospatial data. In this advanced blog post, we will dive into the intricacies of spatial regression using R. Our goal is to uncover hidden patterns and relationships in geospatial datasets, focusing on a hypothetical scenario of housing prices and neighborhood characteristics.
+
+## **Understanding Spatial Regression**
+
+Spatial regression extends traditional regression models by incorporating spatial relationships. It acknowledges that observations closer in space may exhibit similarities or dependencies that traditional models overlook. There are different types of spatial regression models, and in this blog, we will focus on the Spatial Lag Model.
+
+### **Spatial Lag Model**
+
+The Spatial Lag Model introduces a spatially lagged dependent variable, indicating the influence of neighboring observations. Let's consider housing prices as the dependent variable and neighborhood characteristics as independent variables.
+
+``` R
+# Install and load required packages
+install.packages("spdep")
+library(spdep)
+
+# Load geospatial data (housing prices and neighborhood characteristics)
+housing_data <- st_read("path/to/housing_data.shp")
+
+# Create spatial weights matrix
+w <- poly2nb(st_as_sfc(housing_data))
+lw <- nb2listw(w)
+
+# Fit Spatial Lag Model
+model <- lm(y ~ x1 + x2 + lag(y, listw = lw), data = housing_data)
+summary(model)
+```
+
+```         
+
+```
+
+Replace "path/to/housing_data.shp" with the actual path to your Shapefile. This example assumes you have a dependent variable **`y`** (housing prices) and independent variables **`x1`** and **`x2`** (neighborhood characteristics).
+
+## **Interpretation of Results**
+
+The summary output provides information about coefficients, standard errors, and statistical significance. Pay special attention to the spatial lag coefficient, which indicates the impact of neighboring observations on the dependent variable.
+
+## **Diagnostic Checks**
+
+Assess the model's validity and assumptions through diagnostic checks.
+
+``` R
+# Spatial autocorrelation of residuals
+residuals <- residuals(model)
+moran.test(residuals, listw = lw)
+```
+
+```         
+
+```
+
+A significant Moran's I statistic for residuals indicates spatial autocorrelation, suggesting the need for further model refinement.
+
+## **Visualization**
+
+Visualize the spatial patterns and regression results on a map.
+
+``` R
+# Plotting observed vs. predicted values
+plot(housing_data$y, fitted(model), main = "Observed vs. Predicted", xlab = "Observed", ylab = "Predicted")
+
+# Spatial autocorrelation map of residuals
+spplot(residuals, main = "Spatial Autocorrelation Map of Residuals", col.regions = colorRampPalette(c("blue", "white", "red")))
+```
+
+```         
+
+```
+
+These visualizations help in understanding how well the model captures spatial patterns and where adjustments might be needed.
+
+## **Conclusion**
+
+Spatial regression in R opens up new dimensions for analyzing geospatial data. In this blog post, we explored the Spatial Lag Model as an advanced technique for modeling spatial dependencies in housing prices and neighborhood characteristics. The interpretation of results, diagnostic checks, and visualizations are crucial components of spatial regression analysis.
+
+As you venture into spatial analytics, consider exploring other spatial regression models, incorporating additional spatial variables, and applying advanced techniques to enhance the robustness of your models. Stay tuned for more advanced spatial analytics topics, including machine learning with geospatial data and building interactive web maps. Happy analyzing!
