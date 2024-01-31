@@ -1,13 +1,103 @@
 ---
-title: "Post With Code"
-author: "Harlow Malloc"
-date: "2024-01-23"
-categories: [news, code, analysis]
+title: "Business intelligence tools"
+author: "Victor Mandela"
+date: "2021-07-09"
+categories: [BI, analysis]
 image: "image.jpg"
 ---
 
-This is a post with executable code.
+# **Choosing the Right Business Intelligence Tool: A Comprehensive Comparison**
 
-```{r}
-1 + 1
-```
+Business Intelligence (BI) tools play a crucial role in turning raw data into actionable insights, aiding decision-makers in making informed choices. In this blog post, we'll explore the similarities, differences, and unique features of six popular BI tools: Excel, Power BI, Tableau, SAS, Python Dash, and R Shiny. Our analysis will focus on the learning curve and business capability rating of each tool.
+
+## **Learning Curve:**
+
+1.  **Excel:**
+
+    -   **Similarities:** Ubiquitous in business for data analysis.
+
+    -   **Differences:** Limited for extensive data processing and visualization.
+
+    -   **Uniqueness:** Familiar interface but may require advanced functions for complex analytics.
+
+2.  **Power BI:**
+
+    -   **Similarities:** Integrated with Microsoft products.
+
+    -   **Differences:** Emphasis on visualization and dashboards.
+
+    -   **Uniqueness:** User-friendly, with some learning required for advanced features.
+
+3.  **Tableau:**
+
+    -   **Similarities:** Focus on data visualization.
+
+    -   **Differences:** Steeper learning curve; powerful for interactive dashboards.
+
+    -   **Uniqueness:** Robust visualization capabilities, strong community support.
+
+4.  **SAS:**
+
+    -   **Similarities:** Advanced analytics, statistical analysis.
+
+    -   **Differences:** Requires programming skills; traditional use for complex models.
+
+    -   **Uniqueness:** Industry-wide usage in healthcare and finance, extensive analytics capabilities.
+
+5.  **Python Dash:**
+
+    -   **Similarities:** Python-based for web-based dashboards.
+
+    -   **Differences:** Programming-centric; suitable for data scientists.
+
+    -   **Uniqueness:** Flexibility and customization using Python.
+
+6.  **R Shiny:**
+
+    -   **Similarities:** R-based, excellent for statistical analysis.
+
+    -   **Differences:** Requires knowledge of R programming.
+
+    -   **Uniqueness:** Strong statistical capabilities, ideal for creating interactive web applications.
+
+    ![Learning curve VS Business Capability rating](/pictures/BI tools.PNG)
+
+## **Business Capability Rating:**
+
+1.  **Excel:**
+
+    -   **Strengths:** Versatile for small to medium-sized datasets.
+
+    -   **Weaknesses:** Limited scalability, less advanced analytics.
+
+2.  **Power BI:**
+
+    -   **Strengths:** Seamless Microsoft integration, excellent visualizations.
+
+    -   **Weaknesses:** May require additional tools for advanced analytics.
+
+3.  **Tableau:**
+
+    -   **Strengths:** Powerful visualization, extensive data connectivity.
+
+    -   **Weaknesses:** Steeper learning curve, higher cost.
+
+4.  **SAS:**
+
+    -   **Strengths:** Robust analytics, statistical modeling, and data management.
+
+    -   **Weaknesses:** High cost, steeper learning curve.
+
+5.  **Python Dash:**
+
+    -   **Strengths:** Customizable with Python, suitable for data science applications.
+
+    -   **Weaknesses:** Learning curve for those unfamiliar with Python.
+
+6.  **R Shiny:**
+
+    -   **Strengths:** Strong statistical capabilities, great for R users.
+
+    -   **Weaknesses:** Learning curve for those unfamiliar with R.
+
+In conclusion, the choice of BI tool depends on specific business needs, data scale, customization requirements, and the existing skill set. Whether opting for user-friendly interfaces or diving into more complex analytics, understanding these tools' nuances is crucial for effective decision-making.
