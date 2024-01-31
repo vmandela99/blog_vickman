@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/GIS2/index.html",
       "/posts/welcome/index.html",
       "/posts/post-with-code/index.html"
     ]

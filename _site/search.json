@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "Geospatial analysis with R: Lesson1\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 16, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nBusiness intelligence tools\n\n\n\n\n\n\n\nBI\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\nNo matching items"
+    "text": "Geospatial Data Manipulation in R: Lesson2\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 23, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nGeospatial analysis with R: Lesson1\n\n\n\n\n\n\n\nGIS\n\n\nStatistics\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nJul 16, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\n  \n\n\n\n\nBusiness intelligence tools\n\n\n\n\n\n\n\nBI\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJul 9, 2021\n\n\nVictor Mandela\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -75,5 +75,54 @@
     "title": "Business intelligence tools",
     "section": "",
     "text": "Excel:\n\nStrengths: Versatile for small to medium-sized datasets.\nWeaknesses: Limited scalability, less advanced analytics.\n\nPower BI:\n\nStrengths: Seamless Microsoft integration, excellent visualizations.\nWeaknesses: May require additional tools for advanced analytics.\n\nTableau:\n\nStrengths: Powerful visualization, extensive data connectivity.\nWeaknesses: Steeper learning curve, higher cost.\n\nSAS:\n\nStrengths: Robust analytics, statistical modeling, and data management.\nWeaknesses: High cost, steeper learning curve.\n\nPython Dash:\n\nStrengths: Customizable with Python, suitable for data science applications.\nWeaknesses: Learning curve for those unfamiliar with Python.\n\nR Shiny:\n\nStrengths: Strong statistical capabilities, great for R users.\nWeaknesses: Learning curve for those unfamiliar with R.\n\n\nIn conclusion, the choice of BI tool depends on specific business needs, data scale, customization requirements, and the existing skill set. Whether opting for user-friendly interfaces or diving into more complex analytics, understanding these tools’ nuances is crucial for effective decision-making."
+  },
+  {
+    "objectID": "posts/GIS2/index.html",
+    "href": "posts/GIS2/index.html",
+    "title": "Geospatial Data Manipulation in R: Lesson2",
+    "section": "",
+    "text": "Geospatial data manipulation is a crucial step in any spatial analysis project. In this blog post, we will delve into the world of geospatial data manipulation using R. Specifically, we’ll explore loading and cleaning free internal data to pave the way for insightful analyses. Let’s embark on this journey together, using a hypothetical scenario where we have access to free internal geospatial data related to public parks.\n\n\nAssuming you have a Shapefile named parks.shp containing information about public parks, we’ll use the sf package to load the data.\n# Install and load required packages\ninstall.packages(\"sf\")\nlibrary(sf)\n\n# Load internal geospatial data (parks)\nparks &lt;- st_read(\"path/to/parks.shp\")\nMake sure to replace “path/to/parks.shp” with the actual path to your Shapefile. The st_read function reads the Shapefile and creates a spatial data frame.\n\n\n\nBefore diving into manipulation, let’s explore the structure and attributes of the loaded geospatial data.\n# Display summary of the spatial data\nsummary(parks)\nThis summary will provide information about the geometry type, bounding box, and attributes of the parks dataset.\n\n\n\nClean data is essential for meaningful analyses. Let’s perform some basic cleaning steps on our parks dataset.\n\n\n# Remove duplicate geometries\nparks &lt;- st_unique(parks)\nThis step ensures that each park is represented only once in the dataset.\n\n\n\n# Check for missing values\nmissing_values &lt;- colSums(is.na(parks))\n\n# Display columns with missing values\nprint(names(missing_values[missing_values &gt; 0]))\nIdentify and handle missing values in relevant columns to maintain data integrity.\n\n\n\n\nVisualizing the geospatial data is a vital step in understanding its characteristics.\n# Plotting parks on a map\nplot(parks, main = \"Public Parks Map\", col = \"green\")\nThis basic map provides a visual overview of the public parks in the dataset. Customize it further using ggplot2 or other plotting libraries for more sophisticated visualizations.\n\n\n\nLet’s perform a basic analysis by calculating the area of each park.\n# Calculate area of parks\nparks$area &lt;- st_area(parks)\nNow, the area column contains the calculated area for each park. This information could be used for further analysis or visualization.\n\n\n\nIn this blog post, we’ve covered the essential steps of loading and cleaning geospatial data using R. Starting with the hypothetical scenario of public parks, we explored data loading, cleaning, and basic analysis. Clean and well-organized geospatial data sets the stage for more advanced spatial analytics and insights.\nIn future articles, we will delve into advanced geospatial analysis, including spatial regression, machine learning with geospatial data, and the creation of interactive web maps. Stay tuned for more exciting explorations into the world of geospatial data science!"
+  },
+  {
+    "objectID": "posts/GIS2/index.html#loading-free-internal-geospatial-data",
+    "href": "posts/GIS2/index.html#loading-free-internal-geospatial-data",
+    "title": "Geospatial Data Manipulation in R: Lesson2",
+    "section": "",
+    "text": "Assuming you have a Shapefile named parks.shp containing information about public parks, we’ll use the sf package to load the data.\n# Install and load required packages\ninstall.packages(\"sf\")\nlibrary(sf)\n\n# Load internal geospatial data (parks)\nparks &lt;- st_read(\"path/to/parks.shp\")\nMake sure to replace “path/to/parks.shp” with the actual path to your Shapefile. The st_read function reads the Shapefile and creates a spatial data frame."
+  },
+  {
+    "objectID": "posts/GIS2/index.html#exploring-internal-geospatial-data",
+    "href": "posts/GIS2/index.html#exploring-internal-geospatial-data",
+    "title": "Geospatial Data Manipulation in R: Lesson2",
+    "section": "",
+    "text": "Before diving into manipulation, let’s explore the structure and attributes of the loaded geospatial data.\n# Display summary of the spatial data\nsummary(parks)\nThis summary will provide information about the geometry type, bounding box, and attributes of the parks dataset."
+  },
+  {
+    "objectID": "posts/GIS2/index.html#cleaning-geospatial-data",
+    "href": "posts/GIS2/index.html#cleaning-geospatial-data",
+    "title": "Geospatial Data Manipulation in R: Lesson2",
+    "section": "",
+    "text": "Clean data is essential for meaningful analyses. Let’s perform some basic cleaning steps on our parks dataset.\n\n\n# Remove duplicate geometries\nparks &lt;- st_unique(parks)\nThis step ensures that each park is represented only once in the dataset.\n\n\n\n# Check for missing values\nmissing_values &lt;- colSums(is.na(parks))\n\n# Display columns with missing values\nprint(names(missing_values[missing_values &gt; 0]))\nIdentify and handle missing values in relevant columns to maintain data integrity."
+  },
+  {
+    "objectID": "posts/GIS2/index.html#spatial-data-exploration",
+    "href": "posts/GIS2/index.html#spatial-data-exploration",
+    "title": "Geospatial Data Manipulation in R: Lesson2",
+    "section": "",
+    "text": "Visualizing the geospatial data is a vital step in understanding its characteristics.\n# Plotting parks on a map\nplot(parks, main = \"Public Parks Map\", col = \"green\")\nThis basic map provides a visual overview of the public parks in the dataset. Customize it further using ggplot2 or other plotting libraries for more sophisticated visualizations."
+  },
+  {
+    "objectID": "posts/GIS2/index.html#basic-geospatial-analysis",
+    "href": "posts/GIS2/index.html#basic-geospatial-analysis",
+    "title": "Geospatial Data Manipulation in R: Lesson2",
+    "section": "",
+    "text": "Let’s perform a basic analysis by calculating the area of each park.\n# Calculate area of parks\nparks$area &lt;- st_area(parks)\nNow, the area column contains the calculated area for each park. This information could be used for further analysis or visualization."
+  },
+  {
+    "objectID": "posts/GIS2/index.html#conclusion",
+    "href": "posts/GIS2/index.html#conclusion",
+    "title": "Geospatial Data Manipulation in R: Lesson2",
+    "section": "",
+    "text": "In this blog post, we’ve covered the essential steps of loading and cleaning geospatial data using R. Starting with the hypothetical scenario of public parks, we explored data loading, cleaning, and basic analysis. Clean and well-organized geospatial data sets the stage for more advanced spatial analytics and insights.\nIn future articles, we will delve into advanced geospatial analysis, including spatial regression, machine learning with geospatial data, and the creation of interactive web maps. Stay tuned for more exciting explorations into the world of geospatial data science!"
   }
 ]

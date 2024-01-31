@@ -1,0 +1,90 @@
+---
+title: "Geospatial Data Manipulation in R: Lesson2"
+author: "Victor Mandela"
+date: "2021-07-23"
+categories: [GIS, Statistics, R]
+image: "globe.jpg"
+---
+
+# **Geospatial Data Manipulation in R: Unraveling Insights from Free Internal Data**
+
+Geospatial data manipulation is a crucial step in any spatial analysis project. In this blog post, we will delve into the world of geospatial data manipulation using R. Specifically, we'll explore loading and cleaning free internal data to pave the way for insightful analyses. Let's embark on this journey together, using a hypothetical scenario where we have access to free internal geospatial data related to public parks.
+
+## **Loading Free Internal Geospatial Data**
+
+Assuming you have a Shapefile named **`parks.shp`** containing information about public parks, we'll use the **`sf`** package to load the data.
+
+``` R
+# Install and load required packages
+install.packages("sf")
+library(sf)
+
+# Load internal geospatial data (parks)
+parks <- st_read("path/to/parks.shp")
+```
+
+Make sure to replace "path/to/parks.shp" with the actual path to your Shapefile. The **`st_read`** function reads the Shapefile and creates a spatial data frame.
+
+## **Exploring Internal Geospatial Data**
+
+Before diving into manipulation, let's explore the structure and attributes of the loaded geospatial data.
+
+``` R
+# Display summary of the spatial data
+summary(parks)
+```
+
+This summary will provide information about the geometry type, bounding box, and attributes of the parks dataset.
+
+## **Cleaning Geospatial Data**
+
+Clean data is essential for meaningful analyses. Let's perform some basic cleaning steps on our parks dataset.
+
+### **Removing Duplicate Geometries**
+
+``` R
+# Remove duplicate geometries
+parks <- st_unique(parks)
+```
+
+This step ensures that each park is represented only once in the dataset.
+
+### **Handling Missing Values**
+
+``` R
+# Check for missing values
+missing_values <- colSums(is.na(parks))
+
+# Display columns with missing values
+print(names(missing_values[missing_values > 0]))
+```
+
+Identify and handle missing values in relevant columns to maintain data integrity.
+
+## **Spatial Data Exploration**
+
+Visualizing the geospatial data is a vital step in understanding its characteristics.
+
+``` R
+# Plotting parks on a map
+plot(parks, main = "Public Parks Map", col = "green")
+```
+
+This basic map provides a visual overview of the public parks in the dataset. Customize it further using **`ggplot2`** or other plotting libraries for more sophisticated visualizations.
+
+## **Basic Geospatial Analysis**
+
+Let's perform a basic analysis by calculating the area of each park.
+
+``` R
+# Calculate area of parks
+parks$area <- st_area(parks)
+```
+
+Now, the **`area`** column contains the calculated area for each park. This information could be used for further analysis or visualization.
+
+## **Conclusion**
+
+In this blog post, we've covered the essential steps of loading and cleaning geospatial data using R. Starting with the hypothetical scenario of public parks, we explored data loading, cleaning, and basic analysis. Clean and well-organized geospatial data sets the stage for more advanced spatial analytics and insights.
+
+In future articles, we will delve into advanced geospatial analysis, including spatial regression, machine learning with geospatial data, and the creation of interactive web maps. Stay tuned for more exciting explorations into the world of geospatial data science!
