@@ -1,0 +1,30 @@
+---
+title: "About Vickman"
+comments: false
+image: pic.jpg
+about:
+  template: trestles
+# image: pic.jpg
+# about:
+#   template: jolla
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:vmandela99@gmail.com
+    - icon: github
+      text: GitHub
+      href: https://github.com/vmandela99
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/vmandela99/
+---
+
+::: {#hero-heading}
+Hi! My name is Victor Mandela, and I am from Kenya 💜.
+
+I'm a data enthusiast and statistics warrior, and I strive in environments that need solutions related to data research.
+
+I have been writing about R in my blog since 2019. I'm mostly active in the ShinyR and tidyverse community, slack groups and social media sites.
+
+I'm a Masters of Science in Statistics holder from the University of Nairobi. My research I am majorly interested in webApp development, machine learning and evidence-based reproducible research.
+:::
