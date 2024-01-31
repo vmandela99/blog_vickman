@@ -17,7 +17,7 @@ Spatial regression extends traditional regression models by incorporating spatia
 
 The Spatial Lag Model introduces a spatially lagged dependent variable, indicating the influence of neighboring observations. Let's consider housing prices as the dependent variable and neighborhood characteristics as independent variables.
 
-``` R
+``` r
 # Install and load required packages
 install.packages("spdep")
 library(spdep)
@@ -35,7 +35,6 @@ summary(model)
 ```
 
 ```         
-
 ```
 
 Replace "path/to/housing_data.shp" with the actual path to your Shapefile. This example assumes you have a dependent variable **`y`** (housing prices) and independent variables **`x1`** and **`x2`** (neighborhood characteristics).
@@ -48,14 +47,13 @@ The summary output provides information about coefficients, standard errors, and
 
 Assess the model's validity and assumptions through diagnostic checks.
 
-``` R
+``` r
 # Spatial autocorrelation of residuals
 residuals <- residuals(model)
 moran.test(residuals, listw = lw)
 ```
 
 ```         
-
 ```
 
 A significant Moran's I statistic for residuals indicates spatial autocorrelation, suggesting the need for further model refinement.
@@ -64,7 +62,7 @@ A significant Moran's I statistic for residuals indicates spatial autocorrelatio
 
 Visualize the spatial patterns and regression results on a map.
 
-``` R
+``` r
 # Plotting observed vs. predicted values
 plot(housing_data$y, fitted(model), main = "Observed vs. Predicted", xlab = "Observed", ylab = "Predicted")
 
@@ -73,7 +71,6 @@ spplot(residuals, main = "Spatial Autocorrelation Map of Residuals", col.regions
 ```
 
 ```         
-
 ```
 
 These visualizations help in understanding how well the model captures spatial patterns and where adjustments might be needed.
