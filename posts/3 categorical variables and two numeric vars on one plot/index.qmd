@@ -2,7 +2,7 @@
 title: "Creating Beautiful Visualizations of Educational Attainment Using ggplot2 and ggbeeswarm"
 date: "2024-02-01"
 categories: [Visualization, Statistics, R]
-image: "viz1.jpg"
+image: "viz1.PNG"
 ---
 
 # **Creating Beautiful Visualizations of Educational Attainment Using ggplot2 and ggbeeswarm**
