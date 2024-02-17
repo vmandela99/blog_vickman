@@ -6,7 +6,7 @@ categories: [Soft Skills, Survey]
 image: "brain_gear.jpg"
 ---
 
-## **Recruitment and Training of Data Collection Staff:** 
+## **Recruitment and Training of Data Collection Staff:**
 
 The competence of your field staff is pivotal to the success of your data collection program. When recruiting, prioritize individuals with a blend of domain expertise and technological proficiency. Ensure comprehensive training sessions that cover both survey tools and the intricacies of the data being collected.
 
