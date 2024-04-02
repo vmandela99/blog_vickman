@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-01">
+<meta name="dcterms.date" content="2024-04-02">
 
-<title>Blogs and Articles - Comparisons 01: Gender Equality Analysis Olympics</title>
+<title>Blogs and Articles - Kenya Milk Export and Imports Analysis with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Comparisons 01: Gender Equality Analysis Olympics</h1>
+      <h1 class="title">Kenya Milk Export and Imports Analysis with R</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Visualization</div>
                 <div class="quarto-category">Statistics</div>
@@ -123,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 1, 2024</p>
+        <p class="date">April 2, 2024</p>
       </div>
     </div>
     
@@ -141,88 +141,182 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="pics/Paris 2024 Summer Olympics - Summer Olympic Games in France.jpg" class="img-fluid"></p>
-<p>Inspired by <a href="https://www.linkedin.com/in/georgios-karamanis-a54926153/">Georgios Karamanis</a>This Chart is a contribution to day 1 of the <a href="https://www.linkedin.com/feed/hashtag/?keywords=30daychartchallenge&amp;highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7180648879019728896">hashtag#30DayChartChallenge</a>Here are facts about the achievement of gender equality reported by <a href="http://www.olympic.com/">www.olympic.com</a></p>
-<p>You can get the code here on <a href="https://github.com/vmandela99/30DayChartChallenge">github 2024 Day 1 chart challenge</a></p>
-<p><img src="effect.png" class="img-fluid"></p>
-<p><strong>Code snippet for Chart:</strong></p>
+<p><img src="pics/2024_04_02_08_50_41.496973.png" class="img-fluid"></p>
+<p>Election periods cause tension and affect agricultural production, in 2017 it led to a sharp decrease in Milk supply and caused an import rise of the commodity for a period.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/Harvard's Alexandar Keyssar analyzes voter suppression measures _ Harvard Magazine.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Harvard: Picture of People Casting Votes</figcaption>
+</figure>
+</div>
+<p>However, during the outbreak of covid19 Kenya experienced import restrictions causing a slight decrease.</p>
+<p>Source of Data is <a href="https://www.fao.org/faostat/en/#data/QCL">FAOSTATS</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pics/Swapster.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Picture: Pinterest</figcaption>
+</figure>
+</div>
+<p>Hear is a simple step-wise analysis of generating the code:-</p>
 <pre><code>library(tidyverse)
-library(ggforce)
+library(here)
+library(ggtext)
+# remotes::install_github("AllanCameron/geomtextpath")
+library(geomtextpath)
 library(camcorder)
 
-gg_record(dir = here::here("2024/01/"), device = "png", width = 1080 * 2, height = 1350 * 2, units = "px", dpi = 320)
 
-# https://olympics.com/en/news/paris-2024-first-games-to-achieve-full-gender-parity
-
-r &lt;- 1.3
+gg_record(dir = here::here("2024/02"), device = "png", width = 1080 * 2, height = 1350 * 2, units = "px", dpi = 320)
 
 
 
-women &lt;- tribble(
- ~olympics, ~year, ~pct, ~x0, ~y0, ~col,
-  "Tokyo", 1964, 13, 2*r - r/2, 3*r, "#0081C8",
-  "Tokyo", 2020, 48.7, 4*r, 3*r, "black",
-  "Beijing", 2022, 45, 6*r + r/2, 3*r, "#EE334E",
-  "Bueno Aires", 2018, 50, 3*r - r/4, 2*r, "#FCB131",
-  "Lausanne", 2020, 50, 5*r + r/4, 2*r, "#00A651"
-)
+# source: https://www.fao.org/faostat/en/#data/TCL
 
-f1 &lt;- "Graphik"
-f1b &lt;- "Graphik Compact"
-f2 &lt;- "Produkt"
-f2b &lt;- "Produkt Medium"
 
-ggplot(women) +
-  # geom_circle(aes(x0 = x0, y0 = y0, r = 1.3, colour = col), linewidth = 8) +
-  geom_vline(aes(xintercept = x0), alpha = 0.1, linetype = "dashed") +
-  geom_arc_bar(aes(x0 = x0, y0 = y0, r = 1.5, r0 = 1.1, start = 0, end = 2 * pi), fill = "grey99", color = NA) +
-  geom_arc_bar(aes(x0 = x0, y0 = y0, r = 1.5, r0 = 1.1, fill = col, start = 0, end = pct * 2 * pi / 100), color = NA) +
-  geom_text(aes(x0, y0 + if_else(year %in% c(1932, 1992), -2.5, 2.5), label = paste0(olympics, year, "\n", pct, "%"), color = col), lineheight = 0.9, family = f1, size = 5, fontface = "bold") +
-  annotate("text", 5.25, 9, label = "Olympics Gender Parity\nWomen Equality", family = f2b, color = "purple4", size = 14, lineheight = 0.8) +
-  annotate("text", 5.25, -2, label = paste0("Source: www.olympics.com, ", 2023, "\n", "Graphic: VICTOR MANDELA"), family = f2, color = "purple4") +
-  scale_color_identity() +
-  scale_fill_identity() +
-  coord_fixed(xlim = c(0.5, 10), ylim = c(-2, 10)) +
-  theme_void() +
+# width to height
+aspect_ratio &lt;- 1280 / 946
+
+
+
+df &lt;- read_csv("2024/data/kenya_milk_trade_2006-2022.csv") %&gt;% 
+  select(year = Year,
+         Element, Value) %&gt;% 
+  pivot_wider(names_from =  "Element",
+              values_from = "Value") %&gt;% #, names_to = c("Export", "Import")
+  rename(imports = "Import Quantity",
+          exports = "Export Quantity") %&gt;% 
+  mutate(imports = round(imports,0)/10000,
+         exports = round(exports, 0)/10000)
+
+# apply lowess smoothing to the import / export data 
+smooth_bw &lt;- 0.17
+
+apply_smoothing &lt;- function(x, y, bw) {
+  smooth &lt;- lowess(x, y, f = smooth_bw)
+  smooth$y
+}
+
+df$imports_smooth &lt;- apply_smoothing(df$year, df$imports, bw = smooth_bw)
+df$exports_smooth &lt;- apply_smoothing(df$year, df$exports, bw = smooth_bw)
+
+
+base_font_family &lt;- "Abhaya Libre"
+line_color &lt;- "#ABA098"
+font_color &lt;- "#564D46" # "#45403E"
+
+
+
+axis_labels_y &lt;- as.character(seq(1, 15 , 1))
+axis_labels_y[axis_labels_y == "100"] &lt;- "100,000"
+
+geom_textline2 &lt;- function(..., stat = "unique", linecolor = NA, 
+                           color = "#554C49", family = base_font_family, 
+                           fontface = "bold", size = 3) {
+  geom_textline(...,
+                stat = stat, linecolor = linecolor, color = color, alpha = 0.87,
+                family = family, size = size)
+}
+
+
+# png(here(base_path, "03-historical.png"), res = 300, units = "in",
+    # width = 6, height = 6 / aspect_ratio)
+p &lt;- df %&gt;% 
+  ggplot2::ggplot(aes(year)) +
+  geom_hline(yintercept = 100, size = 1, col = "#ABA098") +
+  
+  # Highlighted area
+  geom_ribbon(
+    data = . %&gt;% filter(year &lt;= 2017),
+    aes(x = year, ymin = exports_smooth, ymax = imports_smooth),
+    fill = "#F2DBD8", alpha = 0.9) +
+  geom_ribbon(
+    data = . %&gt;% filter(year &gt;= 2017),
+    aes(x = year, ymin = exports_smooth, ymax = imports_smooth),
+    fill = "#E5D9B9", alpha = 0.9) +
+  
+  # smoothed lines (thick coloured lines + thin grey lines)
+  geom_smooth(aes(y = exports),
+              size = 1.5, se = FALSE, span = 0.25, alpha = 0.8,
+              col = "#A3555B", method = "loess") +
+  geom_smooth(aes(y = imports),
+              size = 1.5, se = FALSE, span = 0.25, alpha = 0.8,
+              col = "#D8A962", method = "loess") +
+  geom_smooth(aes(y = exports),
+              size = 0.2, se = FALSE, span = 0.28, alpha = 0.2,
+              col = "grey40", method = "loess") +
+  geom_smooth(aes(y = imports),
+              size = 0.2, se = FALSE, span = 0.28, alpha = 0.2,
+              col = "grey40", method = "loess") +
+  
+  # Annotations
+  geom_textline2(aes(y = imports, label = "Line of Imports"),
+                 vjust = 0, hjust = 0.3) +
+  geom_textline2(aes(y = exports, label = "Line of Exports"),
+                 vjust = 1, hjust = 0.3) +
+  geom_textline2(aes(y = imports, label = "Imports"),
+                 vjust = 1, hjust = 0.95) +
+  geom_textline2(aes(y = exports, label = "Exports"),
+                 vjust = 0, hjust = 0.85) +
+  
+  # geom_textline2(aes(y = exports, label = "BALANCE AGAINST"),
+  #                vjust = -1.5, hjust = 0.38, size = 3.5, 
+  #                family = "Taviraj Bold Italic", 
+  #                # family = "Old Standard TT", fontface = "bold"
+  # ) +
+  annotate("richtext", x = 2019, y = 5, 
+           label = "Post Election&lt;/span&gt; 
+           &lt;i style='font-family: Taviraj Italic; font-size: 7pt'&gt;in&lt;/i&gt; &lt;br&gt;
+           2017
+           &lt;i style='font-family: Taviraj Italic; font-size: 7pt'&gt;and&lt;/i&gt; &lt;br&gt;
+           COVID19.", 
+           size = 4, family = "Taviraj Bold Italic", 
+           hjust = 0, vjust = 1,  color = "#554C49", label.size = 0, fill = NA) +
+  
+  scale_x_continuous(breaks = seq(2006, 2022, 2)) +
+  scale_y_continuous(position = "right", breaks = seq(1, 15, 1),
+                     labels = axis_labels_y) +
+  coord_cartesian(ylim = c(0, 15), expand = FALSE, clip = "off") +
+  labs(
+    title = "Exports and Imports of Milk in 
+    &lt;span style='font-size: 14pt'&gt;Kenya&lt;/span&gt; from 2006 to 2022.",
+    caption = paste("The Bottom line is divided into Years,
+    the Right hand line into L10,000 each.",
+                    "&lt;br&gt;&lt;span style='font-size:4pt'&gt;Designed for 30DayChartChallenge, 02&lt;sup&gt;t&lt;/sup&gt; April 2024, by Victor Mandela",
+                    "&lt;span style='color:transparent'&gt;",
+                    paste(rep(".", 200), collapse = ""),
+                    "&lt;/span&gt;",
+                    "Nairobi, 047, CBD, Kenya&lt;/span&gt;")) +
+  theme_minimal(base_family = base_font_family, base_size = 9) +
   theme(
-    plot.background = element_rect(fill = "#C9E4DE", color = NA)
-  )</code></pre>
-<p><strong>Olympic Movement: Achievements in gender equality</strong></p>
-<ul>
-<li><p><strong>Paris 1900:</strong> Female athletes first took part in the Olympic Games, four years after the first modern Olympics took place in Athens</p></li>
-<li><p><strong>1996</strong>: Promotion of women becomes a mission of the IOC and is enshrined in the Olympic Charter</p></li>
-<li><p><strong>Tokyo 2020</strong>: The last edition of the Games were the most gender-balanced to date with 48.7 per cent of athletes women. At Tokyo 1964, only 13 per cent of the athletes were women.</p></li>
-<li><p><strong>Tokyo 2020</strong>: Following a rule change allowing one male and one female athlete to jointly carry their flag during the Opening Ceremony, 91 per cent of NOCs had a female flag bearer</p></li>
-<li><p><strong>Tokyo 2020</strong>: Three disciplines achieved gender balance (BMX racing, mountain biking and freestyle wrestling)</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/The Great Wall of China (Beijing).jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Beijing</figcaption>
-</figure>
-</div>
-<ul>
-<li><p><strong>Beijing 2022</strong>: The last Olympic Winter Games were the most gender balanced to date with <a href="https://olympics.com/ioc/news/beijing-2022-sets-new-records-for-gender-equality"><strong>45 per cent female athletes</strong></a></p></li>
-<li><p><strong>Paris 2024</strong>: Out of the 10,500 athletes participating in the Games, 5,250 will be men and 5,250 women. These Games will be the first to reach full gender parity in terms of number of athletes.</p></li>
-<li><p><strong>Female IOC membership</strong> currently stands at 40 per cent, up from 21 per cent at the start of the Olympic Agenda 2020</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/City of Lausanne.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Lausanne</figcaption>
-</figure>
-</div>
-<ul>
-<li><p><strong>Youth Olympic Games</strong>: The Youth Games Buenos Aires 2018 and Winter Youth Games Lausanne 2020 reached full gender parity in overall athlete participation (2,000 athletes per gender in 2018 and 936 in 2020)</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/Buenos Aires.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Bueno Aires 2018</figcaption>
-</figure>
-</div></li>
-<li><p><strong>Female representation on the IOC Executive Board</strong> stands at 33.3 per cent, versus 26.6 per cent before the Olympic Agenda 2020</p></li>
-<li><p><strong>50 per cent of the members of IOC Commissions positions</strong> have been held by women since 2022, compared with 20.3 per cent prior to the Olympic Agenda 2020. In addition, a record high of 13 of the 31 commissions were chaired by women in 2022.</p></li>
-</ul>
+    plot.background = element_rect(color = NA, fill = "#FEFEFF"),
+    axis.title = element_blank(),
+    axis.text = element_text(face = "bold"),
+    panel.grid.major = element_line(color = line_color, size = 0.3),
+    panel.grid.minor = element_blank(),
+    text = element_text(color = font_color),
+    plot.title = element_markdown(face = "bold", hjust = 0.5),
+    plot.caption = element_markdown(hjust = 0.6, size = 9, lineheight = 0.8,
+                                    family = "Charm", face = "bold",
+                                    margin = margin(t = 8)),
+    plot.margin = margin(t = 16, b = 8, l = 12, r = 12))
+p
+invisible(dev.off())
+
+
+# Add the border around the plot area - fair play to William Playfair
+library(grid)
+
+png(here(base_path, "03-historical-wframe.png"), res = 300, units = "in",
+    width = 6, height = 6 / aspect_ratio)
+p + annotation_custom(
+  rectGrob(gp = gpar(col = "#4B4543", fill = NA, lwd = 3)),
+  xmin = 1699.5, xmax = 1787, ymin = -2, ymax = 202
+) + annotation_custom(
+  rectGrob(gp = gpar(col = "#4B4543", fill = NA, lwd = 0.5)),
+  xmin = 1700, xmax = 1786.5, ymin = 0, ymax = 200
+)
+</code></pre>
+<p>Credit to <strong>Ansgar Wolsing.</strong></p>
 
 
 

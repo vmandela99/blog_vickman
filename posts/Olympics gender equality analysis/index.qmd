@@ -1,7 +1,7 @@
 ---
 title: "Comparisons 01: Gender Equality Analysis Olympics"
 date: "2024-04-01"
-categories: [visualization, Statistics, R]
+categories: [Visualization, Statistics, R, Analysis]
 image: "effect.png"
 ---
 
