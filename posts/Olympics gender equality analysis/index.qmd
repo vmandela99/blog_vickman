@@ -1,8 +1,8 @@
 ---
-title: "Gender Equality Analysis Olympics"
+title: "Comparisons 01: Gender Equality Analysis Olympics"
 date: "2024-04-01"
 categories: [visualization, Statistics, R]
-image: "Free Vector _ Multiracial raised fists concept.jpg"
+image: "effect.png"
 ---
 
 ![](pics/Paris%202024%20Summer%20Olympics%20-%20Summer%20Olympic%20Games%20in%20France.jpg)
