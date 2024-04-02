@@ -5,8 +5,6 @@ categories: [Visualization, Statistics, R, Analysis]
 image: "viz1.PNG"
 ---
 
-
-
 ## The Task
 
 This document is presents the report from analysis conducted on Primary Education for the Ministry of Education (MINEDUC) in Rwanda. This report mainly focuses on rural and urban areas in
