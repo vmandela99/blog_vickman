@@ -7,11 +7,11 @@ image: "infections.png"
 
 **Introduction**
 
-![](pics/red ribbon symbol of hiv aids vector world aids day hiv aids tape hiv aids png.jpg)
+![](pics/red%20ribbon%20symbol%20of%20hiv%20aids%20vector%20world%20aids%20day%20hiv%20aids%20tape%20hiv%20aids%20png.jpg)
 
 In recent years, Kenya has made significant strides in combating HIV/AIDS, but challenges remain. Understanding trends in new infections is crucial for guiding interventions and policy decisions. This article examines the trends in new HIV infections in Kenya from 2019 to 2021, focusing on both overall and pediatric cases.
 
-![Map of Kenya](pics/Art Print_ Kenya Political Map by Peter Hermes Furian _ 12x12in.jpg)
+![Map of Kenya](pics/Art%20Print_%20Kenya%20Political%20Map%20by%20Peter%20Hermes%20Furian%20_%2012x12in.jpg)
 
 **Overview of New HIV Infections:** According to data from the National AIDS Control Council (NACC) of Kenya, the total number of new HIV infections in the country declined slightly from 53,200 in 2019 to 52,200 in 2021. While this represents a modest decrease of 1.13%, it signifies progress in the fight against the epidemic.
 
@@ -23,7 +23,7 @@ In recent years, Kenya has made significant strides in combating HIV/AIDS, but c
 
 **Challenges and Areas for Improvement:** Despite the progress made, challenges persist in the fight against HIV/AIDS in Kenya. Access to comprehensive prevention services, including condoms and pre-exposure prophylaxis (PrEP), remains uneven, particularly among key populations such as sex workers, men who have sex with men, and people who inject drugs. Additionally, gaps in testing coverage and linkage to care continue to hinder efforts to achieve epidemic control.
 
-![](pics/Analysis Customizable Isometric Illustrations _ Amico Style.jpg)
+![](pics/Analysis%20Customizable%20Isometric%20Illustrations%20_%20Amico%20Style.jpg)
 
 **Conclusion:** In conclusion, the modest decrease in new HIV infections overall and the significant reduction among children aged 0 to 14 in Kenya from 2019 to 2021 is a testament to the country's commitment to ending the epidemic. However, sustained efforts are needed to address remaining challenges and achieve the goal of an AIDS-free generation. By continuing to prioritize evidence-based interventions, invest in health systems strengthening, and promote equity and inclusivity, Kenya can build on its progress and move closer to ending HIV/AIDS.
 
@@ -142,7 +142,6 @@ p1 <-
   )
 
 p1
-
 
 
 ```
