@@ -190,7 +190,10 @@ df1 &lt;- rename_fun(df1) %&gt;%
 
 # Find the names with a pattern format using data.tables's %like% 
 names_df1 &lt;- names(df1)[names(df1) %like% "residence"]
-print(names_df1)</code></pre>
+print(names_df1)
+
+# to get the values - use print_labels() from the labelled packega
+print_labels(names_df1$religion)</code></pre>
 </section>
 <section id="section" class="level4">
 <h4 class="anchored" data-anchor-id="section"><img src="wifi.jpeg" class="img-fluid"></h4>

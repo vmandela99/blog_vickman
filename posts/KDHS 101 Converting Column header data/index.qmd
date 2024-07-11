@@ -62,6 +62,9 @@ df1 <- rename_fun(df1) %>%
 # Find the names with a pattern format using data.tables's %like% 
 names_df1 <- names(df1)[names(df1) %like% "residence"]
 print(names_df1)
+
+# to get the values - use print_labels() from the labelled packega
+print_labels(names_df1$religion)
 ```
 
 #### ![](wifi.jpeg)
