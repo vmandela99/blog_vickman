@@ -1,7 +1,7 @@
 ---
 title: "Received the Job, Excel and Word for Life!"
 date: "2024-08-01"
-categories: [DemographicHealthSurvey,  Statistics, R, Analysis]
+categories: [Monitoring and Evaluation  Statistics]
 image: "old_car.png"
 ---
 
@@ -17,7 +17,7 @@ Yes, you read that right. I found myself in a professional paradox. My excitemen
 
 ### The Reality Check
 
-**If a workplace doesn't encourage new ideas or innovation, it\'s a red flag 🚩.** You might be in a toxic environment where your potential is not just underutilized, but entirely ignored.
+**If a workplace doesn't encourage new ideas or innovation, it's a red flag 🚩.** You might be in a toxic environment where your potential is not just underutilized, but entirely ignored.
 
 #### 
 
@@ -29,11 +29,11 @@ Before jumping ship to a new role, especially with big companies or NGOs, **dig 
 
 -   Are there opportunities for professional growth?
 
--   What\'s the management\'s attitude towards new ideas?
+-   What's the management's attitude towards new ideas?
 
 ### ✨ Career Motivators, Listen Up
 
-Your skills are your greatest asset. Don\'t let them collect dust in a place that doesn\'t value progress. Advocate for yourself, and if you find yourself in a stifling environment, it might be time to move on. 🌟
+Your skills are your greatest asset. Don't let them collect dust in a place that doesn't value progress. Advocate for yourself, and if you find yourself in a stifling environment, it might be time to move on. 🌟
 
 #### 
 
