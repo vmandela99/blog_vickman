@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,8 +62,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -93,16 +101,43 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="custom.scss">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Blogs and Articles</span>
     </a>
@@ -114,23 +149,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About Vickman</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About Vickman</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/vmandela99/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/vmandela99/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -143,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -156,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(21)</span></div><div class="category" data-category="API">API <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Analysis">Analysis <span class="quarto-category-count">(7)</span></div><div class="category" data-category="BI">BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Climate">Climate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="DemographicHealthSurvey">DemographicHealthSurvey <span class="quarto-category-count">(2)</span></div><div class="category" data-category="GIS">GIS <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Monitoring and Evaluation">Monitoring and Evaluation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Monitoring and Evaluation  Statistics">Monitoring and Evaluation  Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(13)</span></div><div class="category" data-category="Regression">Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Soft Skills">Soft Skills <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(11)</span></div><div class="category" data-category="Survey">Survey <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Visualization">Visualization <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Weather Data">Weather Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(22)</span></div><div class="category" data-category="API">API <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Analysis">Analysis <span class="quarto-category-count">(7)</span></div><div class="category" data-category="BI">BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Climate">Climate <span class="quarto-category-count">(1)</span></div><div class="category" data-category="DemographicHealthSurvey">DemographicHealthSurvey <span class="quarto-category-count">(2)</span></div><div class="category" data-category="GIS">GIS <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Git codes">Git codes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Monitoring and Evaluation">Monitoring and Evaluation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Monitoring and Evaluation  Statistics">Monitoring and Evaluation  Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Profile">Profile <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(13)</span></div><div class="category" data-category="Regression">Regression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Soft Skills">Soft Skills <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(11)</span></div><div class="category" data-category="Survey">Survey <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Visualization">Visualization <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Weather Data">Weather Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Website">Website <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -167,21 +202,61 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Monitoring and Evaluation,Analysis" data-listing-date-sort="1722805200000" data-listing-file-modified-sort="1722843786230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="0" data-categories="Soft Skills,Website,Git codes,Profile" data-listing-date-sort="1725397200000" data-listing-file-modified-sort="1725435438595" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="194">
 <div class="thumbnail">
-<p><a href="./posts/Team morale/index.html"> <img src="./posts/Team morale/cross-team.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Creating a profile Website/index.html" class="no-external"></a></p><a href="./posts/Creating a profile Website/index.html" class="no-external">
+<p><img src="./posts/Creating a profile Website/Swapster.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Creating a profile Website/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Team morale/index.html">
 <h3 class="no-anchor listing-title">
-Boosting Team Performance
+<a href="./posts/Creating a profile Website/index.html" class="no-external">Creating a website for free: Ultimate guide</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Creating a profile Website/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Soft Skills'); return false;">
+Soft Skills
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Website'); return false;">
+Website
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Git codes'); return false;">
+Git codes
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Profile'); return false;">
+Profile
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/Creating a profile Website/index.html" class="no-external"><strong>Tools needed</strong></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/Creating a profile Website/index.html" class="no-external">
+<div class="listing-date">
+Sep 4, 2024
 </div>
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Monitoring and Evaluation,Analysis" data-listing-date-sort="1722805200000" data-listing-file-modified-sort="1722843786230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="405">
+<div class="thumbnail">
+<p><a href="./posts/Team morale/index.html" class="no-external"></a></p><a href="./posts/Team morale/index.html" class="no-external">
+<p><img src="./posts/Team morale/cross-team.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/Team morale/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Team morale/index.html" class="no-external">Boosting Team Performance</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Team morale/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Monitoring and Evaluation'); return false;">
 Monitoring and Evaluation
@@ -190,65 +265,61 @@ Monitoring and Evaluation
 Analysis
 </div>
 </div>
-<a href="./posts/Team morale/index.html">
 <div class="listing-description">
-In the fast-paced world of Monitoring and Evaluation (M&amp;E), staying ahead requires constant innovation and dedication. After more than six years of navigating this field…
+<a href="./posts/Team morale/index.html" class="no-external">In the fast-paced world of Monitoring and Evaluation (M&amp;E), staying ahead requires constant innovation and dedication. After more than six years of navigating this field…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Team morale/index.html">
+<a href="./posts/Team morale/index.html" class="no-external">
 <div class="listing-date">
 Aug 5, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Monitoring and Evaluation  Statistics" data-listing-date-sort="1722459600000" data-listing-file-modified-sort="1722842847647" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="2" data-categories="Monitoring and Evaluation  Statistics" data-listing-date-sort="1722459600000" data-listing-file-modified-sort="1722842847647" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="272">
 <div class="thumbnail">
-<p><a href="./posts/Skills to excel and word/index.html"> <img src="./posts/Skills to excel and word/old_car.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Skills to excel and word/index.html" class="no-external"></a></p><a href="./posts/Skills to excel and word/index.html" class="no-external">
+<p><img src="./posts/Skills to excel and word/old_car.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/Skills to excel and word/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Skills to excel and word/index.html">
 <h3 class="no-anchor listing-title">
-Received the Job, Excel and Word for Life!
+<a href="./posts/Skills to excel and word/index.html" class="no-external">Received the Job, Excel and Word for Life!</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Skills to excel and word/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Monitoring and Evaluation  Statistics'); return false;">
 Monitoring and Evaluation Statistics
 </div>
 </div>
-<a href="./posts/Skills to excel and word/index.html">
 <div class="listing-description">
-Have you ever landed your dream job, only to find yourself trapped in a time warp where your…
+<a href="./posts/Skills to excel and word/index.html" class="no-external">Have you ever landed your dream job, only to find yourself trapped in a time warp where your cutting-edge skills are rendered useless? Imagine joining a company, eager to…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Skills to excel and word/index.html">
+<a href="./posts/Skills to excel and word/index.html" class="no-external">
 <div class="listing-date">
 Aug 1, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="DemographicHealthSurvey,Statistics,R,Analysis" data-listing-date-sort="1720645200000" data-listing-file-modified-sort="1720665894601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="3" data-categories="DemographicHealthSurvey,Statistics,R,Analysis" data-listing-date-sort="1720645200000" data-listing-file-modified-sort="1720665894601" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="574">
 <div class="thumbnail">
-<p><a href="./posts/KDHS 101 Converting Column header data/index.html"> <img src="./posts/KDHS 101 Converting Column header data/rooster.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/KDHS 101 Converting Column header data/index.html" class="no-external"></a></p><a href="./posts/KDHS 101 Converting Column header data/index.html" class="no-external">
+<p><img src="./posts/KDHS 101 Converting Column header data/rooster.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/KDHS 101 Converting Column header data/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/KDHS 101 Converting Column header data/index.html">
 <h3 class="no-anchor listing-title">
-DHS data - Convert Column Values into Column Headers in R
+<a href="./posts/KDHS 101 Converting Column header data/index.html" class="no-external">DHS data - Convert Column Values into Column Headers in R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/KDHS 101 Converting Column header data/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('DemographicHealthSurvey'); return false;">
 DemographicHealthSurvey
@@ -263,33 +334,31 @@ R
 Analysis
 </div>
 </div>
-<a href="./posts/KDHS 101 Converting Column header data/index.html">
 <div class="listing-description">
-Hello, wonderful readers! I know, I know, it’s been a while since my last post. You might have been wondering, “Did they get lost in a sea of datasets? Or perhaps they took…
+<a href="./posts/KDHS 101 Converting Column header data/index.html" class="no-external">Hello, wonderful readers! I know, I know, it’s been a while since my last post. You might have been wondering, “Did they get lost in a sea of datasets? Or perhaps they took…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/KDHS 101 Converting Column header data/index.html">
+<a href="./posts/KDHS 101 Converting Column header data/index.html" class="no-external">
 <div class="listing-date">
 Jul 11, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="DemographicHealthSurvey,Statistics,R,Analysis" data-listing-date-sort="1720645200000" data-listing-file-modified-sort="1720668751959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="4" data-categories="DemographicHealthSurvey,Statistics,R,Analysis" data-listing-date-sort="1720645200000" data-listing-file-modified-sort="1720668751959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="448">
 <div class="thumbnail">
-<p><a href="./posts/KDHS Survey Design/index.html"> <img src="./posts/KDHS Survey Design/handcuffs.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/KDHS Survey Design/index.html" class="no-external"></a></p><a href="./posts/KDHS Survey Design/index.html" class="no-external">
+<p><img src="./posts/KDHS Survey Design/handcuffs.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/KDHS Survey Design/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/KDHS Survey Design/index.html">
 <h3 class="no-anchor listing-title">
-DHS Survey Design Computation
+<a href="./posts/KDHS Survey Design/index.html" class="no-external">DHS Survey Design Computation</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/KDHS Survey Design/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('DemographicHealthSurvey'); return false;">
 DemographicHealthSurvey
@@ -304,33 +373,31 @@ R
 Analysis
 </div>
 </div>
-<a href="./posts/KDHS Survey Design/index.html">
 <div class="listing-description">
-When working with Demographic and Health Surveys…<code></code><code></code><code></code>
+<a href="./posts/KDHS Survey Design/index.html" class="no-external">When working with Demographic and Health Surveys (DHS) data, it is crucial to understand certain standardized variables that are consistent across different countries and…<code></code><code></code><code></code></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/KDHS Survey Design/index.html">
+<a href="./posts/KDHS Survey Design/index.html" class="no-external">
 <div class="listing-date">
 Jul 11, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Visualization,Statistics,R,Analysis" data-listing-date-sort="1712091600000" data-listing-file-modified-sort="1720663550806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7">
+<div class="quarto-post image-right" data-index="5" data-categories="Visualization,Statistics,R,Analysis" data-listing-date-sort="1712091600000" data-listing-file-modified-sort="1720663550806" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1202">
 <div class="thumbnail">
-<p><a href="./posts/New HIV infections among Children/index.html"> <img src="./posts/New HIV infections among Children/infections.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/New HIV infections among Children/index.html" class="no-external"></a></p><a href="./posts/New HIV infections among Children/index.html" class="no-external">
+<p><img src="./posts/New HIV infections among Children/infections.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/New HIV infections among Children/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/New HIV infections among Children/index.html">
 <h3 class="no-anchor listing-title">
-Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R
+<a href="./posts/New HIV infections among Children/index.html" class="no-external">Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/New HIV infections among Children/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Visualization'); return false;">
 Visualization
@@ -345,33 +412,31 @@ R
 Analysis
 </div>
 </div>
-<a href="./posts/New HIV infections among Children/index.html">
 <div class="listing-description">
-<strong>Introduction</strong>
+<a href="./posts/New HIV infections among Children/index.html" class="no-external"><strong>Introduction</strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/New HIV infections among Children/index.html">
+<a href="./posts/New HIV infections among Children/index.html" class="no-external">
 <div class="listing-date">
 Apr 3, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Visualization,Statistics,R,Analysis" data-listing-date-sort="1712005200000" data-listing-file-modified-sort="1712043443124" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="6" data-categories="Visualization,Statistics,R,Analysis" data-listing-date-sort="1712005200000" data-listing-file-modified-sort="1712043443124" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1532">
 <div class="thumbnail">
-<p><a href="./posts/Kenya trade on milk/index.html"> <img src="./posts/Kenya trade on milk/milk.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Kenya trade on milk/index.html" class="no-external"></a></p><a href="./posts/Kenya trade on milk/index.html" class="no-external">
+<p><img src="./posts/Kenya trade on milk/milk.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Kenya trade on milk/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Kenya trade on milk/index.html">
 <h3 class="no-anchor listing-title">
-Kenya Milk Export and Imports Analysis with R
+<a href="./posts/Kenya trade on milk/index.html" class="no-external">Kenya Milk Export and Imports Analysis with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Kenya trade on milk/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Visualization'); return false;">
 Visualization
@@ -386,33 +451,31 @@ R
 Analysis
 </div>
 </div>
-<a href="./posts/Kenya trade on milk/index.html">
 <div class="listing-description">
-Election periods cause tension and affect agricultural production, in 2017 it led to a sharp decrease in Milk supply and caused an import rise of the commodity for a period.
+<a href="./posts/Kenya trade on milk/index.html" class="no-external">Election periods cause tension and affect agricultural production, in 2017 it led to a sharp decrease in Milk supply and caused an import rise of the commodity for a period.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Kenya trade on milk/index.html">
+<a href="./posts/Kenya trade on milk/index.html" class="no-external">
 <div class="listing-date">
 Apr 2, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Visualization,Statistics,R,Analysis" data-listing-date-sort="1711918800000" data-listing-file-modified-sort="1712043401973" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="7" data-categories="Visualization,Statistics,R,Analysis" data-listing-date-sort="1711918800000" data-listing-file-modified-sort="1712043401973" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="662">
 <div class="thumbnail">
-<p><a href="./posts/Olympics gender equality analysis/index.html"> <img src="./posts/Olympics gender equality analysis/effect.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Olympics gender equality analysis/index.html" class="no-external"></a></p><a href="./posts/Olympics gender equality analysis/index.html" class="no-external">
+<p><img src="./posts/Olympics gender equality analysis/effect.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/Olympics gender equality analysis/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Olympics gender equality analysis/index.html">
 <h3 class="no-anchor listing-title">
-Comparisons 01: Gender Equality Analysis Olympics
+<a href="./posts/Olympics gender equality analysis/index.html" class="no-external">Comparisons 01: Gender Equality Analysis Olympics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Olympics gender equality analysis/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Visualization'); return false;">
 Visualization
@@ -427,33 +490,31 @@ R
 Analysis
 </div>
 </div>
-<a href="./posts/Olympics gender equality analysis/index.html">
 <div class="listing-description">
-Inspired by Georgios KaramanisThis Chart is a contribution to day 1 of the hashtag#30DayChartChallengeHere are facts about the achievement of gender equality reported by www.olymp…
+<a href="./posts/Olympics gender equality analysis/index.html" class="no-external">Inspired by Georgios KaramanisThis Chart is a contribution to day 1 of the hashtag#30DayChartChallengeHere are facts about the achievement of gender equality reported by www.…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Olympics gender equality analysis/index.html">
+<a href="./posts/Olympics gender equality analysis/index.html" class="no-external">
 <div class="listing-date">
 Apr 1, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Visualization,Statistics,R,Analysis" data-listing-date-sort="1711486800000" data-listing-file-modified-sort="1712024797863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="40">
+<div class="quarto-post image-right" data-index="8" data-categories="Visualization,Statistics,R,Analysis" data-listing-date-sort="1711486800000" data-listing-file-modified-sort="1712024797863" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="40" data-listing-word-count-sort="7816">
 <div class="thumbnail">
-<p><a href="./posts/01_practical_analysis/index.html"> <img src="./posts/01_practical_analysis/viz1.PNG" class="thumbnail-image"> </a></p>
+<p><a href="./posts/01_practical_analysis/index.html" class="no-external"></a></p><a href="./posts/01_practical_analysis/index.html" class="no-external">
+<p><img src="./posts/01_practical_analysis/viz1.PNG" class="thumbnail-image"></p>
+</a><p><a href="./posts/01_practical_analysis/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/01_practical_analysis/index.html">
 <h3 class="no-anchor listing-title">
-Potential causes of repetition and dropout in Primary Education covering Primary 1 (P1) to Primary 6 case study: Rural and Urban areas(P6)
+<a href="./posts/01_practical_analysis/index.html" class="no-external">Potential causes of repetition and dropout in Primary Education covering Primary 1 (P1) to Primary 6 case study: Rural and Urban areas(P6)</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/01_practical_analysis/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Visualization'); return false;">
 Visualization
@@ -468,33 +529,31 @@ R
 Analysis
 </div>
 </div>
-<a href="./posts/01_practical_analysis/index.html">
 <div class="listing-description">
-This…
+<a href="./posts/01_practical_analysis/index.html" class="no-external">This document is presents the report from analysis conducted on Primary Education for the Ministry of Education (MINEDUC) in Rwanda. This report mainly focuses on rural and…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/01_practical_analysis/index.html">
+<a href="./posts/01_practical_analysis/index.html" class="no-external">
 <div class="listing-date">
 Mar 27, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="Soft Skills,Survey,R" data-listing-date-sort="1707771600000" data-listing-file-modified-sort="1708158493713" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="9" data-categories="Soft Skills,Survey,R" data-listing-date-sort="1707771600000" data-listing-file-modified-sort="1708158493713" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="616">
 <div class="thumbnail">
-<p><a href="./posts/organizing-survey-logistics/index.html"> <img src="./posts/organizing-survey-logistics/Mack_trailer.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/organizing-survey-logistics/index.html" class="no-external"></a></p><a href="./posts/organizing-survey-logistics/index.html" class="no-external">
+<p><img src="./posts/organizing-survey-logistics/Mack_trailer.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/organizing-survey-logistics/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/organizing-survey-logistics/index.html">
 <h3 class="no-anchor listing-title">
-Organizing Survey logistics
+<a href="./posts/organizing-survey-logistics/index.html" class="no-external">Organizing Survey logistics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/organizing-survey-logistics/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Soft Skills'); return false;">
 Soft Skills
@@ -506,14 +565,12 @@ Survey
 R
 </div>
 </div>
-<a href="./posts/organizing-survey-logistics/index.html">
 <div class="listing-description">
-Efficient logistics are a cornerstone for the seamless execution of data collection initiatives. Plan and…
+<a href="./posts/organizing-survey-logistics/index.html" class="no-external">Efficient logistics are a cornerstone for the seamless execution of data collection initiatives. Plan and schedule surveys strategically to optimize resources and minimize…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/organizing-survey-logistics/index.html">
+<a href="./posts/organizing-survey-logistics/index.html" class="no-external">
 <div class="listing-date">
 Feb 13, 2024
 </div>
@@ -523,19 +580,19 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Soft Skills,Survey" data-listing-date-sort="1707512400000" data-listing-file-modified-sort="1708159243742" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="10" data-categories="Soft Skills,Survey" data-listing-date-sort="1707512400000" data-listing-file-modified-sort="1708159243742" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="535">
 <div class="thumbnail">
-<p><a href="./posts/Training_data_collection/index.html"> <img src="./posts/Training_data_collection/brain_gear.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Training_data_collection/index.html" class="no-external"></a></p><a href="./posts/Training_data_collection/index.html" class="no-external">
+<p><img src="./posts/Training_data_collection/brain_gear.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Training_data_collection/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Training_data_collection/index.html">
 <h3 class="no-anchor listing-title">
-Training staff
+<a href="./posts/Training_data_collection/index.html" class="no-external">Training staff</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Training_data_collection/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Soft Skills'); return false;">
 Soft Skills
@@ -544,14 +601,12 @@ Soft Skills
 Survey
 </div>
 </div>
-<a href="./posts/Training_data_collection/index.html">
 <div class="listing-description">
-The competence of your field staff is pivotal to the success of your data collection program. When recruiting, prioritize individuals…
+<a href="./posts/Training_data_collection/index.html" class="no-external">The competence of your field staff is pivotal to the success of your data collection program. When recruiting, prioritize individuals with a blend of domain expertise and…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Training_data_collection/index.html">
+<a href="./posts/Training_data_collection/index.html" class="no-external">
 <div class="listing-date">
 Feb 10, 2024
 </div>
@@ -561,19 +616,19 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Visualization,Statistics,R" data-listing-date-sort="1706734800000" data-listing-file-modified-sort="1706820828350" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="11" data-categories="Visualization,Statistics,R" data-listing-date-sort="1706734800000" data-listing-file-modified-sort="1706820828350" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1142">
 <div class="thumbnail">
-<p><a href="./posts/3 categorical variables and two numeric vars on one plot/index.html"> <img src="./posts/3 categorical variables and two numeric vars on one plot/viz1.PNG" class="thumbnail-image"> </a></p>
+<p><a href="./posts/3 categorical variables and two numeric vars on one plot/index.html" class="no-external"></a></p><a href="./posts/3 categorical variables and two numeric vars on one plot/index.html" class="no-external">
+<p><img src="./posts/3 categorical variables and two numeric vars on one plot/viz1.PNG" class="thumbnail-image"></p>
+</a><p><a href="./posts/3 categorical variables and two numeric vars on one plot/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/3 categorical variables and two numeric vars on one plot/index.html">
 <h3 class="no-anchor listing-title">
-Creating Beautiful Visualizations of Educational Attainment Using ggplot2 and ggbeeswarm
+<a href="./posts/3 categorical variables and two numeric vars on one plot/index.html" class="no-external">Creating Beautiful Visualizations of Educational Attainment Using ggplot2 and ggbeeswarm</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/3 categorical variables and two numeric vars on one plot/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Visualization'); return false;">
 Visualization
@@ -585,33 +640,31 @@ Statistics
 R
 </div>
 </div>
-<a href="./posts/3 categorical variables and two numeric vars on one plot/index.html">
 <div class="listing-description">
-In the realm of data visualization, crafting compelling and informative graphics is an art. In this blog post, we will explore the step-by-step procedure of creating a…<strong><code></code></strong><strong><code></code></strong>
+<a href="./posts/3 categorical variables and two numeric vars on one plot/index.html" class="no-external">In the realm of data visualization, crafting compelling and informative graphics is an art. In this blog post, we will explore the step-by-step procedure of creating a…<strong><code></code></strong><strong><code></code></strong></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/3 categorical variables and two numeric vars on one plot/index.html">
+<a href="./posts/3 categorical variables and two numeric vars on one plot/index.html" class="no-external">
 <div class="listing-date">
 Feb 1, 2024
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="GIS,Statistics,R,API,Weather Data,Climate" data-listing-date-sort="1706648400000" data-listing-file-modified-sort="1706818902567" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="12" data-categories="GIS,Statistics,R,API,Weather Data,Climate" data-listing-date-sort="1706648400000" data-listing-file-modified-sort="1706818902567" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="690">
 <div class="thumbnail">
-<p><a href="./posts/getting data from Api/index.html"> <img src="./posts/getting data from Api/Featured.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/getting data from Api/index.html" class="no-external"></a></p><a href="./posts/getting data from Api/index.html" class="no-external">
+<p><img src="./posts/getting data from Api/Featured.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/getting data from Api/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/getting data from Api/index.html">
 <h3 class="no-anchor listing-title">
-Getting Weather Data via API with R
+<a href="./posts/getting data from Api/index.html" class="no-external">Getting Weather Data via API with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/getting data from Api/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('GIS'); return false;">
 GIS
@@ -632,14 +685,12 @@ Weather Data
 Climate
 </div>
 </div>
-<a href="./posts/getting data from Api/index.html">
 <div class="listing-description">
-I came across this awesome post from Albert Rapp about how to get weather data from API and I thought it was a great technique to use. Here we go.
+<a href="./posts/getting data from Api/index.html" class="no-external">I came across this awesome post from Albert Rapp about how to get weather data from API and I thought it was a great technique to use. Here we go.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/getting data from Api/index.html">
+<a href="./posts/getting data from Api/index.html" class="no-external">
 <div class="listing-date">
 Jan 31, 2024
 </div>
@@ -649,19 +700,19 @@ Albert Rapp
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Soft Skills,Survey" data-listing-date-sort="1705698000000" data-listing-file-modified-sort="1708158140284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="13" data-categories="Soft Skills,Survey" data-listing-date-sort="1705698000000" data-listing-file-modified-sort="1708158140284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="662">
 <div class="thumbnail">
-<p><a href="./posts/Survey_guidelines/index.html"> <img src="./posts/Survey_guidelines/drone.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Survey_guidelines/index.html" class="no-external"></a></p><a href="./posts/Survey_guidelines/index.html" class="no-external">
+<p><img src="./posts/Survey_guidelines/drone.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Survey_guidelines/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Survey_guidelines/index.html">
 <h3 class="no-anchor listing-title">
-Survey tools
+<a href="./posts/Survey_guidelines/index.html" class="no-external">Survey tools</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Survey_guidelines/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Soft Skills'); return false;">
 Soft Skills
@@ -670,14 +721,12 @@ Soft Skills
 Survey
 </div>
 </div>
-<a href="./posts/Survey_guidelines/index.html">
 <div class="listing-description">
-Choosing the right survey tools is paramount to successful data collection. Opt for platforms like SurveyMonkey, Google Forms, or REDCap for their user-friendly…
+<a href="./posts/Survey_guidelines/index.html" class="no-external">Choosing the right survey tools is paramount to successful data collection. Opt for platforms like SurveyMonkey, Google Forms, or REDCap for their user-friendly interfaces…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Survey_guidelines/index.html">
+<a href="./posts/Survey_guidelines/index.html" class="no-external">
 <div class="listing-date">
 Jan 20, 2024
 </div>
@@ -687,32 +736,30 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="Soft Skills" data-listing-date-sort="1665694800000" data-listing-file-modified-sort="1707373196113" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="14" data-categories="Soft Skills" data-listing-date-sort="1665694800000" data-listing-file-modified-sort="1707373196113" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="413">
 <div class="thumbnail">
-<p><a href="./posts/Prioritize and multi task/index.html"> <img src="./posts/Prioritize and multi task/priority.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Prioritize and multi task/index.html" class="no-external"></a></p><a href="./posts/Prioritize and multi task/index.html" class="no-external">
+<p><img src="./posts/Prioritize and multi task/priority.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Prioritize and multi task/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Prioritize and multi task/index.html">
 <h3 class="no-anchor listing-title">
-Mastering the Art of Task Juggling: A Simple Guide to Prioritizing and Multi-Tasking
+<a href="./posts/Prioritize and multi task/index.html" class="no-external">Mastering the Art of Task Juggling: A Simple Guide to Prioritizing and Multi-Tasking</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Prioritize and multi task/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Soft Skills'); return false;">
 Soft Skills
 </div>
 </div>
-<a href="./posts/Prioritize and multi task/index.html">
 <div class="listing-description">
-Hello, task-tacklers! Whether you’re a seasoned professional or just diving into the busy world of responsibilities, we’ve got your back. In this guide, we’ll unravel the…
+<a href="./posts/Prioritize and multi task/index.html" class="no-external">Hello, task-tacklers! Whether you’re a seasoned professional or just diving into the busy world of responsibilities, we’ve got your back. In this guide, we’ll unravel the…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Prioritize and multi task/index.html">
+<a href="./posts/Prioritize and multi task/index.html" class="no-external">
 <div class="listing-date">
 Oct 14, 2022
 </div>
@@ -722,32 +769,30 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="Soft Skills" data-listing-date-sort="1660597200000" data-listing-file-modified-sort="1707373196480" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="15" data-categories="Soft Skills" data-listing-date-sort="1660597200000" data-listing-file-modified-sort="1707373196480" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="384">
 <div class="thumbnail">
-<p><a href="./posts/Project management/index.html"> <img src="./posts/Project management/manage.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Project management/index.html" class="no-external"></a></p><a href="./posts/Project management/index.html" class="no-external">
+<p><img src="./posts/Project management/manage.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Project management/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Project management/index.html">
 <h3 class="no-anchor listing-title">
-Mastering Project Management: A Simple Guide to Success
+<a href="./posts/Project management/index.html" class="no-external">Mastering Project Management: A Simple Guide to Success</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Project management/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Soft Skills'); return false;">
 Soft Skills
 </div>
 </div>
-<a href="./posts/Project management/index.html">
 <div class="listing-description">
-Hello, project enthusiasts! Whether you’re a seasoned project manager or someone stepping into the world of coordinating tasks, we’re here to make project management a…
+<a href="./posts/Project management/index.html" class="no-external">Hello, project enthusiasts! Whether you’re a seasoned project manager or someone stepping into the world of coordinating tasks, we’re here to make project management a…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Project management/index.html">
+<a href="./posts/Project management/index.html" class="no-external">
 <div class="listing-date">
 Aug 16, 2022
 </div>
@@ -757,32 +802,30 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="Soft Skills" data-listing-date-sort="1659992400000" data-listing-file-modified-sort="1706822611928" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="16" data-categories="Soft Skills" data-listing-date-sort="1659992400000" data-listing-file-modified-sort="1706822611928" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="505">
 <div class="thumbnail">
-<p><a href="./posts/Mathematical and analytical skills/index.html"> <img src="./posts/Mathematical and analytical skills/skills.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/Mathematical and analytical skills/index.html" class="no-external"></a></p><a href="./posts/Mathematical and analytical skills/index.html" class="no-external">
+<p><img src="./posts/Mathematical and analytical skills/skills.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/Mathematical and analytical skills/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/Mathematical and analytical skills/index.html">
 <h3 class="no-anchor listing-title">
-Crunching Numbers with a Smile: A Playful Guide to Elevating Mathematical and Analytical Skills in the Workplace
+<a href="./posts/Mathematical and analytical skills/index.html" class="no-external">Crunching Numbers with a Smile: A Playful Guide to Elevating Mathematical and Analytical Skills in the Workplace</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/Mathematical and analytical skills/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Soft Skills'); return false;">
 Soft Skills
 </div>
 </div>
-<a href="./posts/Mathematical and analytical skills/index.html">
 <div class="listing-description">
-Ahoy, fellow math maestros and numerical neophytes alike! In the vast terrain of the professional realm, where equations reign supreme and spreadsheets take center stage…
+<a href="./posts/Mathematical and analytical skills/index.html" class="no-external">Ahoy, fellow math maestros and numerical neophytes alike! In the vast terrain of the professional realm, where equations reign supreme and spreadsheets take center stage…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/Mathematical and analytical skills/index.html">
+<a href="./posts/Mathematical and analytical skills/index.html" class="no-external">
 <div class="listing-date">
 Aug 9, 2022
 </div>
@@ -792,19 +835,19 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="GIS,Statistics,R,Regression" data-listing-date-sort="1627592400000" data-listing-file-modified-sort="1706728460884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="17" data-categories="GIS,Statistics,R,Regression" data-listing-date-sort="1627592400000" data-listing-file-modified-sort="1706728460884" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="471">
 <div class="thumbnail">
-<p><a href="./posts/spatial regression/index.html"> <img src="./posts/spatial regression/effect.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/spatial regression/index.html" class="no-external"></a></p><a href="./posts/spatial regression/index.html" class="no-external">
+<p><img src="./posts/spatial regression/effect.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/spatial regression/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/spatial regression/index.html">
 <h3 class="no-anchor listing-title">
-Spartial regression: Lesson3
+<a href="./posts/spatial regression/index.html" class="no-external">Spartial regression: Lesson3</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/spatial regression/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('GIS'); return false;">
 GIS
@@ -819,33 +862,31 @@ R
 Regression
 </div>
 </div>
-<a href="./posts/spatial regression/index.html">
 <div class="listing-description">
-Spatial regression is a powerful technique in spatial analytics that allows us to model relationships between variables while accounting for the spatial dependencies…
+<a href="./posts/spatial regression/index.html" class="no-external">Spatial regression is a powerful technique in spatial analytics that allows us to model relationships between variables while accounting for the spatial dependencies…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/spatial regression/index.html">
+<a href="./posts/spatial regression/index.html" class="no-external">
 <div class="listing-date">
 Jul 30, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="GIS,Statistics,R" data-listing-date-sort="1626987600000" data-listing-file-modified-sort="1706710737871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="18" data-categories="GIS,Statistics,R" data-listing-date-sort="1626987600000" data-listing-file-modified-sort="1706710737871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417">
 <div class="thumbnail">
-<p><a href="./posts/GIS2/index.html"> <img src="./posts/GIS2/globe.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/GIS2/index.html" class="no-external"></a></p><a href="./posts/GIS2/index.html" class="no-external">
+<p><img src="./posts/GIS2/globe.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/GIS2/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/GIS2/index.html">
 <h3 class="no-anchor listing-title">
-Geospatial Data Manipulation in R: Lesson2
+<a href="./posts/GIS2/index.html" class="no-external">Geospatial Data Manipulation in R: Lesson2</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/GIS2/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('GIS'); return false;">
 GIS
@@ -857,14 +898,12 @@ Statistics
 R
 </div>
 </div>
-<a href="./posts/GIS2/index.html">
 <div class="listing-description">
-Geospatial data manipulation is a crucial step in any spatial analysis project. In this blog post, we will delve into the world of geospatial data manipulation using R.…
+<a href="./posts/GIS2/index.html" class="no-external">Geospatial data manipulation is a crucial step in any spatial analysis project. In this blog post, we will delve into the world of geospatial data manipulation using R.…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/GIS2/index.html">
+<a href="./posts/GIS2/index.html" class="no-external">
 <div class="listing-date">
 Jul 23, 2021
 </div>
@@ -874,19 +913,19 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="GIS,Statistics,R" data-listing-date-sort="1626382800000" data-listing-file-modified-sort="1706708814313" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="19" data-categories="GIS,Statistics,R" data-listing-date-sort="1626382800000" data-listing-file-modified-sort="1706708814313" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="472">
 <div class="thumbnail">
-<p><a href="./posts/welcome/index.html"> <p class="card-img-top"><img src="posts\welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
+<p class="card-img-top"><img src="posts\welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/welcome/index.html">
 <h3 class="no-anchor listing-title">
-Geospatial analysis with R: Lesson1
+<a href="./posts/welcome/index.html" class="no-external">Geospatial analysis with R: Lesson1</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/welcome/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('GIS'); return false;">
 GIS
@@ -898,14 +937,12 @@ Statistics
 R
 </div>
 </div>
-<a href="./posts/welcome/index.html">
 <div class="listing-description">
-Geospatial data is a fundamental component of many data science projects, offering valuable insights into patterns, relationships, and trends based on geographical…
+<a href="./posts/welcome/index.html" class="no-external">Geospatial data is a fundamental component of many data science projects, offering valuable insights into patterns, relationships, and trends based on geographical…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/welcome/index.html">
+<a href="./posts/welcome/index.html" class="no-external">
 <div class="listing-date">
 Jul 16, 2021
 </div>
@@ -915,19 +952,19 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="BI,analysis" data-listing-date-sort="1625778000000" data-listing-file-modified-sort="1706711292383" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="20" data-categories="BI,analysis" data-listing-date-sort="1625778000000" data-listing-file-modified-sort="1706711292383" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="542">
 <div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html"> <img src="./posts/post-with-code/image.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
+<p><img src="./posts/post-with-code/image.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/post-with-code/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/post-with-code/index.html">
 <h3 class="no-anchor listing-title">
-Business intelligence tools
+<a href="./posts/post-with-code/index.html" class="no-external">Business intelligence tools</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/post-with-code/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('BI'); return false;">
 BI
@@ -936,14 +973,12 @@ BI
 analysis
 </div>
 </div>
-<a href="./posts/post-with-code/index.html">
 <div class="listing-description">
-Business Intelligence (BI) tools play a crucial role in turning raw data into actionable insights, aiding decision-makers in making informed choices. In this blog post…
+<a href="./posts/post-with-code/index.html" class="no-external">Business Intelligence (BI) tools play a crucial role in turning raw data into actionable insights, aiding decision-makers in making informed choices. In this blog post…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/post-with-code/index.html">
+<a href="./posts/post-with-code/index.html" class="no-external">
 <div class="listing-date">
 Jul 9, 2021
 </div>
@@ -953,19 +988,19 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="R,Shiny" data-listing-date-sort="1613509200000" data-listing-file-modified-sort="1706713494265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="21" data-categories="R,Shiny" data-listing-date-sort="1613509200000" data-listing-file-modified-sort="1706713494265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="257">
 <div class="thumbnail">
-<p><a href="./posts/How to build a shinyapp/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/How to build a shinyapp/index.html" class="no-external"></a></p><a href="./posts/How to build a shinyapp/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/How to build a shinyapp/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/How to build a shinyapp/index.html">
 <h3 class="no-anchor listing-title">
-How to build a ShinyApp
+<a href="./posts/How to build a shinyapp/index.html" class="no-external">How to build a ShinyApp</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/How to build a shinyapp/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -974,14 +1009,12 @@ R
 Shiny
 </div>
 </div>
-<a href="./posts/How to build a shinyapp/index.html">
 <div class="listing-description">
-We begin to demonstrate the building blocks of a shinyApp.
+<a href="./posts/How to build a shinyapp/index.html" class="no-external">We begin to demonstrate the building blocks of a shinyApp.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/How to build a shinyapp/index.html">
+<a href="./posts/How to build a shinyapp/index.html" class="no-external">
 <div class="listing-date">
 Feb 17, 2021
 </div>
@@ -1075,10 +1108,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1088,8 +1138,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1101,7 +1160,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1145,6 +1327,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1170,6 +1353,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1230,6 +1439,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

@@ -1,0 +1,58 @@
+---
+title: "Creating a website for free: Ultimate guide"
+date: "2024-09-04"
+categories: [Soft Skills, Website, Git codes,Profile]
+image: "Swapster.jpg"
+---
+
+**Tools needed**
+
+Note that you **don't** have to have expert programming for this course.
+
+In preparation we need the following:-
+
+R - <https://cran.r-project.org/bin/windows/base/>
+
+Rstudio - <https://rstudio.com/products/rstudio/download/>
+
+git for desktop- <https://git-scm.com/downloads>
+
+Also, you need to create an account with:- 
+
+netlify - <https://www.netlify.com/>
+
+github - <https://github.com/>
+
+**Setting up R and R studio(positron) or any other IDE**
+
+-   Install the R and R studio.
+
+-   Alternative you can install Pycharm, VSCode
+
+-   Alternatively you can use Jupiter Notebook
+
+-   
+
+**Connect rstudio to github account**
+
+-   Go to rstudio \> tools \> Global options \>  GIT/SVN  \> SSH RSA key \> Create RSA key \> view public key \> copy
+
+-   Go to github \> Settings (top right corner) \> SSH and GPG keys \> SSH keys \>  New SSH key \> title (put your name) \> key (paste the public key) \> add SSH key
+
+**Set up the git for desktop**
+
+-   git config --global user.name 'your github name'
+
+-   git config --global user.email 'email address you used on github'
+
+-   git config --global --list
+
+**Create repository and clone it on github**
+
+-   Open your github account and create new repository
+
+-   Clone the repository
+
+![](pics/Swapster.jpg)
+
+Picture Source: FAOStats
