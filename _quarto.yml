@@ -2,10 +2,14 @@ project:
   type: website
 
 website:
-  title: "Blogs and Articles"
+  title: "My Blogs"
   navbar:
     right:
       - about.qmd
+      - Publications.qmd
+      - Projects.qmd
+      - Skills.qmd
+      - Testimonials.qmd
       - icon: github
         href: https://github.com/
       - icon: linkedin
