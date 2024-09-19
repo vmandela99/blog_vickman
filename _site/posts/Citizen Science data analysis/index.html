@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Victor Mandela">
+<meta name="dcterms.date" content="2024-09-19">
+
+<title>My Blogs - Intergrating Citizen Science Data in Conversation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../custom.scss">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">My Blogs</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About Vickman</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Skills.html"> 
+<span class="menu-text">Skills</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Testimonials.html"> 
+<span class="menu-text">Testimonials</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/vmandela99/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Intergrating Citizen Science Data in Conversation</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Climate</div>
+                <div class="quarto-category">GIS</div>
+                <div class="quarto-category">Regression</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Statistics</div>
+                <div class="quarto-category">Visualization</div>
+                <div class="quarto-category">Analysis</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Victor Mandela </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 19, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p>Citizen science is the involvement of the general public in scientific research – through collecting and analyzing data and helping design projects. This participatory approach not only provides essential information for conservation and management, it connects people to nature and promotes a sense of shared responsibility for the environment</p>
+<p>Citizen science is playing an increasingly important role in conservation: it enables scientists to work at a scale that they could never achieve on their own, providing reliable data for monitoring and managing nature and their habitats. The evidence that citizen science projects generate can be used by communities to manage their resources and to guide government policy.</p>
+<p><img src="images/benefit_citizen_science.png" class="img-fluid"></p>
+</section>
+<section id="citizen-science-actions-in-africa" class="level2">
+<h2 class="anchored" data-anchor-id="citizen-science-actions-in-africa">2. Citizen science actions in Africa</h2>
+<p>There is huge potential for citizen science to improve conservation in Africa. Examples include continent-wide mapping of birds, to monitoring invasive plant species, to assessing ecosystem health. These projects are revealing new information about the state of Africa’s biodiversity providing evidence to governments to make well-informed decisions to address pressing environmental challenges.</p>
+<p>In order to maximize the impact of citizen science in Africa, we need skilled managers who can design citizen science projects and analyze and interpret the data.</p>
+<p>This practical guide provides you with ideas on how to analyze and interpret results from citizen science data. Using real-life citizen science case studies and data, the booklet aims to simplify statistical concepts and tests, and give you tools to present your data in an accessible and informative way. It also points out pitfalls to avoid with citizen science data. The vision is to build the capacity of citizen science managers to work with civil society organizations and government agencies, so that they are more effective at exploring and using citizen science data to inform conservation management and decisions.</p>
+</section>
+<section id="statistics" class="level2">
+<h2 class="anchored" data-anchor-id="statistics">3. STATISTICS</h2>
+<section id="why-statistics-are-necessary" class="level3">
+<h3 class="anchored" data-anchor-id="why-statistics-are-necessary">3.1 WHY STATISTICS ARE NECESSARY?</h3>
+<p>Statistics play a pivotal role by offering a concise and comprehensible overview of collected data. Serving as a crucial tool for data interpretation and visualization, these statistics facilitate effective communication of complex information to both participants and researchers. Beyond aiding in quality control by identifying outliers and errors, summary statistics empower decision-makers with key insights for informed policy formulation in conservation efforts. They enable comparisons, benchmarks, and rigorous scientific validation, fostering a collaborative community engaged in environmental stewardship. Moreover, the use of summary statistics supports resource allocation by pinpointing priority areas for conservation based on quantitative evidence, ensuring that limited resources are directed toward addressing the most pressing environmental challenges. Overall, statistics in citizen science are indispensable for meaningful data analysis, interpretation, and the advancement of informed action in the realm of environmental research and conservation.</p>
+</section>
+</section>
+<section id="descriptive-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-analysis">4. Descriptive analysis</h2>
+<p>Descriptive analysis provides a snapshot of the data, summarizing its main features, patterns, and trends. This helps citizen scientists and stakeholders understand the information collected and draw meaningful insights.</p>
+<p>We are going to use a real case study of a hypothetical citizen science project related to <em>birdwatching</em>. In this example, citizen scientists collect data on the number of bird species observed in different locations over several months. We’ll use this context to update the visual aids and R code accordingly.</p>
+<section id="summarizing-data" class="level3">
+<h3 class="anchored" data-anchor-id="summarizing-data">4.1 Summarizing data</h3>
+<p>In data analysis, summarizing data is a crucial step to extract meaningful insights. R offers a plethora of tools for summarizing and visualizing data. Here, we’ll explore common statistical measures and visualizations, along with pointers to the relevant packages and functions to get you started:</p>
+<section id="common-variables" class="level4">
+<h4 class="anchored" data-anchor-id="common-variables"><strong>4.1.1 Common Variables:</strong></h4>
+<ul>
+<li><p><em>Mean and Median:</em> Use <strong><code>mean()</code></strong> and <strong><code>median()</code></strong> functions to calculate the mean and median of a numeric variable, respectively.</p></li>
+<li><p><em>Standard Deviation:</em> The <strong><code>sd()</code></strong> function calculates the standard deviation, providing a measure of the spread of your data.</p></li>
+<li><p><em>Quantiles:</em> Employ the <strong><code>quantile()</code></strong> function to compute specific quantiles, such as quartiles.</p>
+<p><img src="images/basic_concepts.png" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="common-visuals" class="level4">
+<h4 class="anchored" data-anchor-id="common-visuals"><strong>4.1.2 Common Visuals:</strong></h4>
+<ul>
+<li><p><em>Histograms:</em> Visualize the distribution of a numeric variable with the <strong><code>hist()</code></strong> function. Customize bin width and colors for a clearer representation.</p></li>
+<li><p><em>Boxplots:</em> Utilize the <strong><code>boxplot()</code></strong> function to create box-and-whisker plots, offering insights into the central tendency and spread of your data.</p></li>
+<li><p><em>Scatter Plots:</em> Understand relationships between two numeric variables using the <strong><code>plot()</code></strong> function, with additional customization for labels and aesthetics.</p></li>
+<li><p><em>Bar Plots:</em> Represent categorical data with the <strong><code>barplot()</code></strong> function. Customize colors, labels, and axes to enhance interpretation.</p></li>
+<li><p><em>Maps:</em> For spatial data, consider packages like <strong><code>leaflet</code></strong> or <strong><code>tmap</code></strong> to create interactive and static maps.</p></li>
+</ul>
+</section>
+<section id="some-terms-and-concepts" class="level4">
+<h4 class="anchored" data-anchor-id="some-terms-and-concepts">4.1.3 Some terms and concepts</h4>
+<p><strong>Standard Deviation:</strong> A measure of how spread out the values in a dataset are from the mean.</p>
+<p><strong>Correlation:</strong> A measure of the strength and direction of a relationship between two variables.</p>
+<p><strong>Confidence Interval:</strong> A range of values around a sample statistic within which we are reasonably confident the true population parameter lies.</p>
+<p><strong>Probability:</strong> The likelihood of an event occurring.</p>
+<p><strong>Regression Line:</strong> A line that best fits the data points in a scatter plot.</p>
+<p><strong>P-value (probability of not observing difference among groups):</strong> is the defender of Null-hypothesis (brought to court for investigation).</p>
+<p><img src="images/pvalue.PNG" class="img-fluid"></p>
+</section>
+<section id="data-types" class="level4">
+<h4 class="anchored" data-anchor-id="data-types">4.1.4 Data types</h4>
+<p>In citizen science projects, various data types and variables are commonly used to collect and analyze information.</p>
+<p><img src="pics/data_types.png" class="img-fluid"></p>
+<ol type="1">
+<li><p><strong>Numerical Data:</strong> Quantitative information represented by counting of numbers.</p></li>
+<li><p><strong>Categorical Data:</strong> Qualitative information with distinct categories or groups.</p></li>
+<li><p><strong>Geospatial Data:</strong> Information related to geographic locations.</p></li>
+<li><p><strong>Temporal Data:</strong> Information related to time.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="installation-of-r-and-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="installation-of-r-and-r-studio"><strong>5. Installation of R and R studio</strong></h2>
+<section id="introduction-to-r" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-r"><strong>5.1 Introduction to R:</strong></h3>
+<p>R is a powerful and open-source programming language and software environment designed for statistical computing and data analysis. It provides a comprehensive suite of tools for data manipulation, statistical modeling, visualization, and more.</p>
+</section>
+<section id="r-environment" class="level3">
+<h3 class="anchored" data-anchor-id="r-environment"><strong>5.2 R Environment:</strong></h3>
+<p><img src="images/console.png" class="img-fluid"></p>
+<p>The R environment consists of an interactive console where you can type and execute commands, a script editor for writing and saving scripts, and a graphical user interface (GUI) called R Studio, which enhances the user experience by providing a more user-friendly interface for coding and data analysis.</p>
+</section>
+<section id="getting-started" class="level3">
+<h3 class="anchored" data-anchor-id="getting-started"><strong>5.3 Getting Started:</strong></h3>
+<ol type="1">
+<li><p><strong>Installation:</strong> Start by downloading and installing R from the Comprehensive R Archive Network (CRAN) website (https://cran.r-project.org/).</p></li>
+<li><p><strong>R Studio:</strong> For a more integrated development environment, consider installing R Studio (<a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a>).</p></li>
+</ol>
+</section>
+<section id="where-to-find-help" class="level3">
+<h3 class="anchored" data-anchor-id="where-to-find-help"><strong>5.4 Where to Find Help:</strong></h3>
+<ol type="1">
+<li><p><strong>R Documentation:</strong> The official R documentation provides detailed information on functions, packages, and usage. Access it at <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a> under the “Manuals” section.</p></li>
+<li><p><strong>R Studio Help:</strong> R Studio has its own documentation and support resources. You can find helpful information and community discussions on their website: https://support.rstudio.com/.</p></li>
+<li><p><strong>Online Communities:</strong> Engage with the vibrant R community on platforms like Stack Overflow (<a href="https://stackoverflow.com/" class="uri">https://stackoverflow.com/</a>) and the RStudio Community (https://community.rstudio.com/) to seek help and share insights.</p></li>
+<li><p><strong>Books and Tutorials:</strong> Numerous books and online tutorials cater to different skill levels. Resources like R for Data Science by Hadley Wickham and Garrett Grolemund are excellent for beginners.</p></li>
+</ol>
+</section>
+</section>
+<section id="most-common-statistical-tests-used-in-citizen-science-data-ab-testing" class="level2">
+<h2 class="anchored" data-anchor-id="most-common-statistical-tests-used-in-citizen-science-data-ab-testing">6. Most Common Statistical Tests used in Citizen Science data A/B Testing</h2>
+<section id="z-test" class="level3">
+<h3 class="anchored" data-anchor-id="z-test"><strong>6.1 Z-Test</strong></h3>
+<p><strong>When to Use:</strong> The Z-test is appropriate when comparing the means of two groups with known standard deviations and a large sample size.</p>
+<p><strong>Scenario:</strong> Citizen scientists have recorded bird observations in two regions of Kenya, Region A and Region B. You want to test if there is a significant difference in the mean counts of a particular bird species between the two regions.</p>
+<pre><code> # Example R Code # Assuming 'data' is a data frame with columns 'Region' and 'BirdCount' result &lt;- t.test(BirdCount ~ Region, data = data)  # Interpretation cat("T-Test Results:\n") cat("p-value:", result$p.value, "\n") if (result$p.value &lt; 0.05) {   cat("There is a significant difference in bird counts between Region A and Region B.\n") } else {   cat("No significant difference in bird counts is observed between Region A and Region B.\n") }</code></pre>
+<p><strong>Interpretation for Decision-makers:</strong> Policy makers and conservationists can use the Z-test to assess significant differences in bird counts between two regions. A significant result (p-value &lt; 0.05) suggests policy adjustments may be needed to address variations in bird species abundance. Strategic resource allocation and targeted conservation efforts can be prioritized based on this analysis.</p>
+</section>
+<section id="t-test-students" class="level3">
+<h3 class="anchored" data-anchor-id="t-test-students"><strong>6.2 T-Test (Student’s)</strong></h3>
+<p><strong>When to Use:</strong> The Student’s T-test is suitable for comparing the means of two groups with unknown standard deviations.</p>
+<p><strong>Scenario:</strong> Citizen scientists have measured the height of a plant species in two different habitats in Africa. You want to assess if there is a significant difference in the mean heights between the habitats.</p>
+<p><strong>Interpretation for Decision-makers:</strong> For decision-makers in environmental planning, a significant T-test result (p-value &lt; 0.05) indicates a notable difference in plant heights between habitats. This information can guide land-use policies and conservation strategies, ensuring sustainable practices tailored to the unique characteristics of each habitat.</p>
+<pre><code> # Example R Code # Assuming 'data' is a data frame with columns 'Habitat' and 'PlantHeight' result &lt;- t.test(PlantHeight ~ Habitat, data = data)  # Interpretation cat("Student's T-Test Results:\n") cat("p-value:", result$p.value, "\n") if (result$p.value &lt; 0.05) {   cat("There is a significant difference in plant heights between the two habitats.\n") } else {   cat("No significant difference in plant heights is observed between the two habitats.\n") }</code></pre>
+</section>
+<section id="welchs-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="welchs-t-test"><strong>6.3 Welch’s T-Test</strong></h3>
+<p><strong>When to Use:</strong> Use Welch’s T-test when comparing means of two groups with potentially unequal variances and sample sizes.</p>
+<p><strong>Scenario:</strong> Citizen scientists have documented butterfly species diversity in both urban and rural areas in Africa. You want to test if there is a significant difference in the mean diversity between these two settings.</p>
+<p><strong>Interpretation for Decision-makers:</strong> Investors and planners can rely on Welch’s T-test to discern significant differences in butterfly diversity between urban and rural areas. A significant result (p-value &lt; 0.05) may prompt targeted investments in biodiversity conservation efforts, acknowledging the unique challenges faced by urban and rural ecosystems.</p>
+<pre><code> # Example R Code # Assuming 'data' is a data frame with columns 'Area' and 'ButterflyDiversity' result &lt;- t.test(ButterflyDiversity ~ Area, data = data, var.equal = FALSE)  # Interpretation cat("Welch's T-Test Results:\n") cat("p-value:", result$p.value, "\n") if (result$p.value &lt; 0.05) {   cat("There is a significant difference in butterfly diversity between urban and rural areas.\n") } else {   cat("No significant difference in butterfly diversity is observed between urban and rural areas.\n") }</code></pre>
+</section>
+<section id="anova" class="level3">
+<h3 class="anchored" data-anchor-id="anova"><strong>6.4 ANOVA</strong></h3>
+<p><strong>When to Use:</strong> ANOVA is suitable for comparing means across multiple groups (more than two).</p>
+<p><img src="images/Waterfall hike to do on a summer road trip in the US.jpg" class="img-fluid"></p>
+<p><strong>Scenario:</strong> Citizen scientists have measured the height of a plant species in multiple ecosystems (grassland, forest, and wetland) in Africa. You want to determine if there is a significant difference in the mean heights across these ecosystems.</p>
+<p><strong>Interpretation for Decision-makers:</strong> Decision-makers involved in land management can use ANOVA to identify significant differences in plant heights across different ecosystems (p-value &lt; 0.05). This information is crucial for tailoring land-use policies, ensuring sustainable practices that account for the diversity of ecosystems within a region.</p>
+<pre><code> # Example R Code # Assuming 'data' is a data frame with columns 'Ecosystem' and 'PlantHeight' result &lt;- aov(PlantHeight ~ Ecosystem, data = data)  # Interpretation cat("ANOVA Results:\n") cat("p-value:", summary(result)[[1]]$`Pr(&gt;F)`[1], "\n") if (summary(result)[[1]]$`Pr(&gt;F)`[1] &lt; 0.05) {   cat("There is a significant difference in plant heights across different ecosystems.\n") } else {   cat("No significant difference in plant heights is observed across different ecosystems.\n") }</code></pre>
+</section>
+<section id="mann-whitney-u-test-comparing-amphibian-abundance-in-two-lakes" class="level3">
+<h3 class="anchored" data-anchor-id="mann-whitney-u-test-comparing-amphibian-abundance-in-two-lakes"><strong>6.5 Mann-Whitney U Test: Comparing Amphibian Abundance in Two Lakes</strong></h3>
+<p><strong>When to Use:</strong> Use the Mann-Whitney U test for comparing medians of two independent groups when assumptions for parametric tests are not met.</p>
+<p><img src="images/Frog.jpg" class="img-fluid"></p>
+<p><strong>Scenario:</strong> Citizen scientists have documented amphibian abundance in two lakes in Kenya. You want to test if there is a significant difference in the median abundance between the lakes.</p>
+<p><strong>Interpretation for Decision-makers:</strong> For conservation decision-makers, a significant U-test result (p-value &lt; 0.05) suggests a substantial difference in amphibian abundance between lakes. Tailored conservation strategies and habitat management may be required to address the unique ecological conditions of each lake.</p>
+<pre><code> # Example R Code # Assuming 'data' is a data frame with columns 'Lake' and 'AmphibianAbundance' result &lt;- wilcox.test(AmphibianAbundance ~ Lake, data = data)  # Interpretation cat("Mann-Whitney U Test Results:\n") cat("p-value:", result$p.value, "\n") if (result$p.value &lt; 0.05) {   cat("There is a significant difference in amphibian abundance between the two lakes.\n") } else {   cat("No significant difference in amphibian abundance is observed between the two lakes.\n") }</code></pre>
+</section>
+<section id="fishers-exact-test-examining-insect-pollination-preferences" class="level3">
+<h3 class="anchored" data-anchor-id="fishers-exact-test-examining-insect-pollination-preferences"><strong>6.6 Fisher’s Exact Test: Examining Insect Pollination Preferences</strong></h3>
+<p><strong>When to Use:</strong> Fisher’s Exact Test is appropriate for comparing categorical data, especially in small sample sizes.</p>
+<p><strong>Scenario:</strong> Citizen scientists have recorded the preferred pollination method (insect or wind) for a plant species in Kenya. You want to assess if there is a significant association between the pollination method and the plant species.</p>
+<p><strong>Interpretation for Decision-makers:</strong> Investors and policy makers can utilize Fisher’s Exact Test to identify significant associations between pollination methods and plant species (p-value &lt; 0.05). This information is valuable for guiding agricultural policies and investments in sustainable farming practices.</p>
+<pre><code> # Example R Code # Assuming 'data' is a data frame with columns 'PollinationMethod' and 'PlantSpecies' result &lt;- fisher.test(table(data$PollinationMethod, data$PlantSpecies))  # Interpretation cat("Fisher's Exact Test Results:\n") cat("p-value:", result$p.value, "\n") if (result$p.value &lt; 0.05) {   cat("There is a significant association between pollination method and plant species.\n") } else {   cat("No significant association is observed between pollination method and plant species.\n") }</code></pre>
+</section>
+<section id="regression-analysis-predicting-bird-species-richness-based-on-environmental-factors" class="level3">
+<h3 class="anchored" data-anchor-id="regression-analysis-predicting-bird-species-richness-based-on-environmental-factors"><strong>6.7 Regression Analysis: Predicting Bird Species Richness Based on Environmental Factors</strong></h3>
+<p><strong>When to Use:</strong> Regression analysis is suitable for exploring relationships between a dependent variable and one or more independent variables.</p>
+<p><strong>Scenario:</strong> Citizen scientists have collected data on bird species richness and environmental factors (temperature, precipitation, and habitat type) in various locations in Africa. You want to assess the relationship between bird species richness and these environmental factors.</p>
+<p><img src="images/22 Scarlet Macaw Facts_ Guide to the Beautiful Ara macao.jpg" class="img-fluid"></p>
+<p><strong>Interpretation for Decision-makers:</strong> For policy makers and investors in environmental management, a significant overall model (p-value &lt; 0.05) in regression analysis indicates that at least one predictor variable influences bird species richness. Decision-makers can use this information to develop targeted policies and investments aimed at preserving biodiversity in regions influenced by specific environmental factors.</p>
+<pre><code># Example R Code # Assuming 'data' is a data frame with columns 'BirdRichness', 'Temperature', 'Precipitation', and 'HabitatType' result &lt;- lm(BirdRichness ~ Temperature + Precipitation + HabitatType, data = data)  # Interpretation cat("Regression Analysis Results:\n") cat("p-value (overall model):", summary(result)$fstatistic[1], "\n") if (summary(result)$fstatistic[1] &lt; 0.05) {   cat("The overall model is significant, suggesting that at least one predictor is related to bird species richness.\n") } else {   cat("The overall model is not significant, indicating no strong evidence that the predictors are related to bird species richness.\n") }</code></pre>
+</section>
+<section id="pearsons-chi-squared-test-analyzing-amphibian-presence-in-different-forest-types" class="level3">
+<h3 class="anchored" data-anchor-id="pearsons-chi-squared-test-analyzing-amphibian-presence-in-different-forest-types"><strong>6.8 Pearson’s Chi-squared Test: Analyzing Amphibian Presence in Different Forest Types</strong></h3>
+<p><strong>When to Use:</strong> Use Pearson’s Chi-squared test for assessing the association between two categorical variables.</p>
+<p><strong>Scenario:</strong> Citizen scientists have documented the presence or absence of a particular amphibian species in different forest types in Kenya. You want to test if there is a significant association between amphibian presence and forest type.</p>
+<p><img src="images/Cape Dwarf Chameleon II by Macky _ Redbubble.jpg" class="img-fluid"></p>
+<p><strong>Interpretation for Decision-makers:</strong> For conservation decision-makers, a significant Chi-squared result (p-value &lt; 0.05) suggests an association between amphibian presence and forest type. This information can guide land-use planning, helping decision-makers prioritize conservation efforts based on identified associations between species presence and specific forest types.</p>
+<pre><code># Example R Code # Assuming 'data' is a data frame with columns 'AmphibianPresence' and 'ForestType' result &lt;- chisq.test(table(data$AmphibianPresence, data$ForestType))  # Interpretation cat("Pearson's Chi-squared Test Results:\n") cat("p-value:", result$p.value, "\n") if (result$p.value &lt; 0.05) {   cat("There is a significant association between amphibian presence and forest type.\n") } else {   cat("No significant association is observed between amphibian presence and forest type.\n") }</code></pre>
+</section>
+<section id="chi-square-test" class="level3">
+<h3 class="anchored" data-anchor-id="chi-square-test">6.9 Chi-square test</h3>
+<p>Assumption: Since we want to see whether the total number of observed birds in two sites(sululta Plains - Ethiopia and Nakuru National park in Kenya) are the same, we use chi-square.</p>
+<p>Null Hypothesis: There is no significant difference in the total number of observed birds in Sululta plains and Nakuru national park.</p>
+<p>Alternative Hypothesis: There is a significant difference in the total number of observed birds in Sululta plains and Nakuru national park.</p>
+<p>The table below is the contigency table.</p>
+<pre><code> # Create a matrix with the specified values my_matrix &lt;- matrix(c(48, 31, 9, 1), nrow = 2, byrow = TRUE)   rownames(my_matrix) &lt;- c("Sululta Plains", "Lake Nakuru Np") colnames(my_matrix) &lt;- c("Corvus albus", "Corvus capensis")  # Display the contingency table print(my_matrix)</code></pre>
+<pre><code> # Perform chi-square test chi_square_result &lt;- chisq.test(my_matrix)  # Display the chi-square test results print(chi_square_result)  # Interpretation cat("\nInterpretation:\n") cat("The chi-square test results indicate whether there is a significant difference in the distribution of the Corvus albus and Corvus Capensis between Sululta and lake Nakuru National park.\n")  # Check for statistical significance if (chi_square_result$p.value &lt; 0.05) {   cat("The p-value is less than 0.05, suggesting a statistically significant difference.\n") } else {   cat("The p-value is greater than 0.05, indicating no statistically significant difference.\n") }</code></pre>
+<p>Based on the results, there isn’t enough evidence to conclude that there is a significant difference in the total number of observed birds in Sululta plains and Lake Nakuru national park. The observed frequencies align well with what would be expected under the assumption of no association or difference. The p-value, which is above the commonly used significance level of 0.05, suggests that the observed frequencies of birds in both locations are consistent with what would be expected under the assumption of no significant difference.</p>
+</section>
+<section id="poisson-regression" class="level3">
+<h3 class="anchored" data-anchor-id="poisson-regression">6.10 Poisson regression</h3>
+<p>Poisson regression helps quantify the impact of variables on event counts in citizen science, aiding in understanding factors influencing observation rates.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pentad</th>
+<th></th>
+<th></th>
+<th></th>
+<th>Habitat type</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Hornbill presence</td>
+<td>Weaverbird presence</td>
+<td>Quelea Presence</td>
+<td></td>
+<td>Altitude</td>
+<td>Temp</td>
+<td>Rain</td>
+</tr>
+<tr class="even">
+<td>a</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>Forest</td>
+<td>1200</td>
+<td>19</td>
+<td>1300</td>
+</tr>
+<tr class="odd">
+<td>b</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>Savannah</td>
+<td>750</td>
+<td>22</td>
+<td>600</td>
+</tr>
+<tr class="even">
+<td>c</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>Desert</td>
+<td>200</td>
+<td>38</td>
+<td>100</td>
+</tr>
+<tr class="odd">
+<td>d</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>ASAL</td>
+<td>300</td>
+<td>37</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p>An example of a r code using poisson would be #</p>
+<pre><code># Load necessary libraries library(tidyverse)  # Generate synthetic citizen science data set.seed(123) n &lt;- 1000 age &lt;- sample(18:80, n, replace = TRUE) education &lt;- sample(c("High School", "Bachelor's", "Master's", "PhD"), n, replace = TRUE, prob = c(0.3, 0.4, 0.2, 0.1)) activity_level &lt;- sample(1:5, n, replace = TRUE) citizen_scientist &lt;- data.frame(Age = age, Education = education, Activity_Level = activity_level)  # Generate synthetic response variable (e.g., number of observations) citizen_scientist$Observations &lt;- rpois(n, lambda = 10 + 0.1 * age + 0.3 * activity_level)  # Explore the dataset head(citizen_scientist) summary(citizen_scientist)  # Fit Poisson regression model poisson_model &lt;- glm(Observations ~ Age + Education + Activity_Level, data = citizen_scientist, family = poisson)  # Summarize model summary(poisson_model)</code></pre>
+<p>The results of the poisson model are as follows:-</p>
+<p><img src="images/Poisson_results.PNG" class="img-fluid"></p>
+<p><strong>Interpretation</strong></p>
+<ol type="1">
+<li><p><strong>Age</strong>: For every one-year increase in age, holding other factors constant, we expect the number of observations to increase by approximately 0.6%. So, for example, if a participant is one year older, we expect them to provide about 0.6% more observations.</p></li>
+<li><p><strong>Education</strong>: Compared to individuals with a high school education, those with a Bachelor’s degree contribute approximately 1.4% more observations, those with a Master’s degree contribute about 2.0% more observations, and those with a PhD contribute less, with about a 0.2% decrease. These figures indicate the percentage increase in observations compared to individuals with a high school education.</p></li>
+<li><p><strong>Activity Level</strong>: Each increase in activity level is associated with approximately a 3.0% increase in the number of observations, all else being equal. So, for instance, if a participant’s activity level increases by one unit, we expect their contributions to increase by about 3.0%.</p></li>
+</ol>
+<p>These findings provide concrete insights into the impact of age, education, and activity level on participation and contribution levels in our citizen science project. They can guide strategic decisions to encourage greater involvement and maximize contributions from different participant groups.</p>
+</section>
+<section id="binary-regression-models" class="level3">
+<h3 class="anchored" data-anchor-id="binary-regression-models">6.11 Binary regression models</h3>
+<p>Binary logistic regression assesses the likelihood of participation in citizen science activities, illuminating how demographic and behavioral factors influence engagement.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pentad</th>
+<th></th>
+<th></th>
+<th></th>
+<th>Habitat type</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Hornbill count</td>
+<td>Weaverbird Count</td>
+<td>Quelea Count</td>
+<td></td>
+<td>Atitude</td>
+<td>Temperature</td>
+<td>Precipitation</td>
+</tr>
+<tr class="even">
+<td>a</td>
+<td>22</td>
+<td>23</td>
+<td>45</td>
+<td>Forest</td>
+<td>1200</td>
+<td>19</td>
+<td>1300</td>
+</tr>
+<tr class="odd">
+<td>b</td>
+<td>34</td>
+<td>23</td>
+<td>66</td>
+<td>Savannah</td>
+<td>750</td>
+<td>22</td>
+<td>600</td>
+</tr>
+</tbody>
+</table>
+<p>We interpret binary logistics regression using odds ratio. We look at the percentage odds of a predictor influencing an observation holding other factors constant.</p>
+<p>An example of code is:-</p>
+<pre><code># Load necessary libraries library(tidyverse) library(broom)  # Generate synthetic citizen science data set.seed(123) n &lt;- 1000 age &lt;- sample(18:80, n, replace = TRUE) education &lt;- sample(c("High School", "Bachelor's", "Master's", "PhD"), n, replace = TRUE, prob = c(0.3, 0.4, 0.2, 0.1)) activity_level &lt;- sample(1:5, n, replace = TRUE) participation &lt;- ifelse(age &gt;= 25 &amp; age &lt;= 60 &amp; education %in% c("Bachelor's", "Master's", "PhD") &amp; activity_level &gt; 3, 1, 0)  # Create dataframe citizen_scientist &lt;- data.frame(Age = age, Education = education, Activity_Level = activity_level, Participation = participation)  # Explore the dataset head(citizen_scientist) summary(citizen_scientist)  # Fit binary logistic regression model logistic_model &lt;- glm(Participation ~ Age + Education + Activity_Level, data = citizen_scientist, family = binomial)  # Summarize model summary(logistic_model)  # Extract coefficients and tidy up the results tidy_results &lt;- tidy(logistic_model)</code></pre>
+<p>The results from the binary logistics regression are as follows:-</p>
+<p><img src="images/Binary_logistic_reults.PNG" class="img-fluid"></p>
+<p>Interpretation</p>
+<ol type="1">
+<li><p><strong>Age</strong>: For every one-year increase in age, holding other factors constant, the log-odds of participation decreases by approximately 0.6 %. So, for example, if a participant is one year older, we expect their log-odds of participation to decrease by about 0.6%.</p></li>
+<li><p><strong>Education</strong>: Compared to individuals with a high school education, those with a Bachelor’s degree have approximately exp(-20.05) = 1.96e-09, very very high odds of participation, those with a Master’s degree have exp(-0.26) = 0.77 times high odds, and those with a PhD have exp(-0.22) = 0.802 times higher odds. These figures represent the increase in odds of participation compared to individuals with a high school education.</p></li>
+<li><p><strong>Activity Level</strong>: Each increase in activity level is associated with approximately exp(1.6801) = 5.37 times higher odds of participation, all else being equal. So, for instance, if a participant’s activity level increases by one unit, we expect their odds of participation to increase by about 5.37 times.</p></li>
+</ol>
+</section>
+</section>
+<section id="statistical-tests-typical-question-and-answer-examples" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-tests-typical-question-and-answer-examples"><strong>7. Statistical Tests: Typical question and Answer examples</strong></h2>
+<p>Statistical tests serve as powerful tools in extracting meaningful patterns from citizen science data. Let’s explore common scenarios with R code snippets for each case study along with basic explanations that relate to ecological studies using citizen science data from Kenya or Africa, along with the appropriate statistical tests.</p>
+<p>Please note that these are simplified examples, and in real-world scenarios, it’s important to adapt the code to the specific characteristics of your data.</p>
+<section id="comparing-species-diversity-at-different-sites" class="level3">
+<h3 class="anchored" data-anchor-id="comparing-species-diversity-at-different-sites"><strong>7.1 Comparing Species Diversity at Different Sites:</strong></h3>
+<p><em>Typical Question:</em> Compare the diversity of species at two or more sites, such as pentads, lakes, habitats, or during different seasons.</p>
+<p><em>Statistical Test:</em> Chi-square test for independence.</p>
+<p><em>Case Study:</em> Analyzing citizen science data on bird species diversity in different Kenyan habitats using a chi-square test. The study aims to understand if there are significant differences in bird species composition among various habitats. Here is a basic example:-</p>
+<pre><code>#  Case Study: Comparing bird species diversity in different habitats  # Generate example data data &lt;- data.frame(   Habitat = c("Forest", "Grassland", "Wetland"),   Species_A = c(20, 15, 25),   Species_B = c(10, 18, 12) )  # Chi-square test for independence chi_result &lt;- chisq.test(data[, c("Species_A", "Species_B")])  # Print the result print(chi_result)</code></pre>
+<p>This code generates a simple dataset representing bird species counts in different habitats. The chi-square test for independence is then applied to examine whether there are significant differences in species composition among the habitats. The Chi-square test for independence was conducted to examine whether the diversity of bird species differs significantly among different habitats in Kenya. If the p-value is less than 0.05, we can conclude that there is a significant difference in bird species diversity among habitats. On the other hand, if the p-value is greater than 0.05, there is no significant difference in bird species diversity among habitats.</p>
+<p>For policy makers and conservationists, a p-value less than 0.05 suggests the need for tailored conservation strategies for different habitats. Decision-makers should prioritize resource allocation and intervention efforts based on the identified variations in bird species diversity, ensuring effective conservation outcomes aligned with the unique characteristics of each habitat.</p>
+</section>
+<section id="assessing-changes-in-population-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="assessing-changes-in-population-over-time"><strong>7.2 Assessing Changes in Population Over Time:</strong></h3>
+<p><em>Typical Question:</em> Assess the timing of migration for a bird species or the spread of invasive house crows.</p>
+<p><em>Statistical Test:</em> Time series analysis, such as autoregressive integrated moving average (ARIMA) modeling.</p>
+<p><em>Case Study:</em> Investigating the temporal patterns in the occurrence of migratory birds in Kenya using ARIMA models. The study aims to identify trends, seasonality, and potential shifts in migration timing.</p>
+<pre><code># Generate example time series data time_series_data &lt;- ts(c(5, 8, 10, 15, 12, 20), start = c(2020, 1), frequency = 1)  # ARIMA modeling arima_model &lt;- arima(time_series_data, order = c(1, 1, 0))  # Print the model summary print(summary(arima_model))
+</code></pre>
+<p>This code creates a simple time series dataset representing the occurrence of migratory birds over six months. An ARIMA model is fitted to the data to analyze trends and patterns in migration timing. If the p-value is less than 0.05, it indicates a significant trend or seasonality in migratory bird occurrences over time. Conversely, if the p-value is greater than 0.05, no significant temporal patterns are observed in migratory bird occurrences.</p>
+<p>For policy makers involved in environmental planning, a significant trend or seasonality in migratory patterns (p-value &lt; 0.05) indicates the necessity to adapt conservation and resource management strategies. Timely interventions and targeted policies can be implemented to address changes in migratory behavior, ensuring the sustained well-being of bird populations in Kenya.</p>
+</section>
+<section id="assessing-species-distribution-in-space" class="level3">
+<h3 class="anchored" data-anchor-id="assessing-species-distribution-in-space"><strong>7.3 Assessing Species Distribution in Space:</strong></h3>
+<p><em>Sample Question:</em> Identify hotspot areas for a group of birds of prey, waterbirds, or a single species like quelea.</p>
+<p><em>Statistical Test:</em> Spatial analysis techniques, including spatial autocorrelation or hotspot analysis.</p>
+<p><em>Case Study:</em> Utilizing citizen science data to identify hotspot areas for a particular bird species across Kenya. Employ spatial autocorrelation analysis to detect patterns of clustering or dispersion in species distribution.</p>
+<pre><code># Case Study: Identifying hotspot areas for a bird species  # Generate example spatial data # Assume you have a spatial dataset with coordinates and species counts  # Spatial autocorrelation analysis library(spdep) #install the package  spatial_autocorr_result &lt;- moran.test(data$Species_Count, listw = nb2listw(spdep::knn2nb(knearneigh(coordinates)))) print(spatial_autocorr_result)</code></pre>
+<p>This code assumes you have a spatial dataset with coordinates and species counts. Spatial autocorrelation analysis using Moran’s I is applied to identify potential clustering or dispersion patterns. A p-value less than 0.05 suggests significant spatial clustering or dispersion in bird species distribution. Conversely, a p-value greater than 0.05 indicates no significant spatial patterns in bird species distribution. Policy makers and environmental authorities should use this information to prioritize conservation efforts, designate protected areas, and implement land-use policies that support the identified spatial patterns, contributing to the overall preservation of biodiversity in Kenya.</p>
+</section>
+<section id="assessing-trends-and-correlations" class="level3">
+<h3 class="anchored" data-anchor-id="assessing-trends-and-correlations"><strong>7.4 Assessing Trends and Correlations:</strong></h3>
+<p><em>Sample Question:</em> Does habitat quality affect the number of animals or butterflies?</p>
+<p><em>Statistical Test:</em> Regression analysis, including logistic regression or Poisson regression.</p>
+<p><img src="images/21 Fun &amp; Unique Things to Do in the Florida Keys.jpg" class="img-fluid"></p>
+<p><em>Case Study:</em> Investigating the relationship between habitat quality and the abundance of butterflies in Kenya using logistic regression. The study aims to understand how environmental factors influence butterfly presence.</p>
+<pre><code># Case Study: Investigating the relationship between habitat quality and butterfly abundance  # Generate example data habitat_quality &lt;- c(3, 4, 2, 5, 4) butterfly_abundance &lt;- c(10, 15, 8, 18, 14)  # Logistic regression logistic_model &lt;- glm(butterfly_abundance ~ habitat_quality, family = binomial)  # Print the model summary print(summary(logistic_model))</code></pre>
+<p>This code generates example data representing habitat quality scores and butterfly abundance. Logistic regression is used to model the relationship between habitat quality and the presence or absence of butterflies. If the p-value is less than 0.05, we can conclude that habitat quality has a significant effect on the presence of butterflies. However, if the p-value is greater than 0.05, habitat quality does not significantly influence butterfly presence. For decision-makers involved in land management, a significant effect (p-value &lt; 0.05) of habitat quality on butterfly presence necessitates considerations in land-use planning. Investments and policies should focus on preserving or enhancing habitats with proven positive effects on butterfly presence, contributing to broader biodiversity conservation goals in Kenya.</p>
+<p>These case studies provide practical examples of applying statistical tests to citizen science data, allowing researchers, policy makers and investors to uncover ecological insights and contribute to the understanding of biodiversity dynamics in Kenya and across Africa. As you embark on your analyses, consider the specific characteristics of your data and choose the appropriate statistical test to derive robust conclusions.</p>
+</section>
+</section>
+<section id="case-studies-for-citizen-science-data" class="level2">
+<h2 class="anchored" data-anchor-id="case-studies-for-citizen-science-data">8. Case Studies for Citizen Science Data</h2>
+<p>This section shows how to conduct citizen science analysis using real time data and application of statistical test, regression, and visualizations. The raw data can be accessed from the following DOI and please cite as: GBIF.org (24th January 2017) GBIF Occurrence Download. http://doi.org/10.15468/dl.b04fyt.</p>
+<p><img src="images/quelea_intro.png" class="img-fluid"></p>
+<section id="quelea-birds-in-kenya-uganda-and-ethiopia" class="level3">
+<h3 class="anchored" data-anchor-id="quelea-birds-in-kenya-uganda-and-ethiopia">8.1 Quelea birds in Kenya, Uganda and Ethiopia</h3>
+<p>This section will guide you through various statistical analyses to understand and interpret the observations of Quelea birds over the years. The case study focuses on time series analysis, spatial distribution analysis, comparative analysis, monthly distribution, correlation, linear regression, and a bubble plot showing the distribution of birds across countries.</p>
+<pre><code>library(data.table) library(leaflet) library(rgbif) library(broom) library(sf) library(dplyr)  quelea &lt;- fread("data/quelea quelea.csv", na.strings = c("", NA))  quelea_data &lt;- quelea %&gt;%    filter(scientificName == "Quelea quelea (Linnaeus, 1758)",          year %in% c(2014:2022)) %&gt;%   dplyr::select(locality, countryCode, stateProvince, individualCount,          decimalLatitude, decimalLongitude, eventDate, day, month, year)  for_summary &lt;- quelea_data %&gt;% select(individualCount,          decimalLatitude, decimalLongitude, eventDate, day, month, year)</code></pre>
+</section>
+<section id="time-series-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-analysis">8.2 Time series analysis</h3>
+<p>The objective is to examine how the number of Quelea birds observed has changed over the years. Time series analysis helps us understand trends, seasonality, and patterns in data collected over time. We will create a line plot to visualize changes in bird counts from 2020 to 2022.</p>
+<p>These are the steps involved:-</p>
+<ol type="1">
+<li><p><strong>Data Preparation:</strong> Arrange the data by year and count.</p></li>
+<li><p><strong>Plotting:</strong> Use a line plot to display the bird counts over the years.</p></li>
+<li><p><strong>Interpretation:</strong> Analyze the plot to identify any noticeable trends or patterns.</p></li>
+</ol>
+<pre><code>
+# Time series plot per country quelea_data %&gt;%   group_by(countryCode) %&gt;%    mutate(countryCode = case_when(     countryCode == "ET" ~ "Ethiopia",     countryCode == "KE" ~ "Kenya",     countryCode == "UG" ~ "Uganda"   )) %&gt;%    drop_na(year) %&gt;%    count(year) %&gt;% ggplot(aes(year, y=n, color = countryCode)) +   geom_line() +   expand_limits(y = 0) +   # facet_wrap(~ crop, scales = facet_scales) +   labs(x = "Year",        y = "Number of Observed Quelea birds",        title = "Distribution of Quelea birds' presence in East Africa ",        color = "Country")
+</code></pre>
+</section>
+<section id="spatial-distribution-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-distribution-analysis">8.3 Spatial Distribution Analysis</h3>
+<p>The objective is to explore how Quelea bird counts are distributed spatially across the countries. Spatial distribution analysis helps identify regions with high or low bird counts. We’ll create maps to visualize the distribution in 2020, 2021, and 2022.</p>
+<p>These are the steps involved:-</p>
+<ol type="1">
+<li><p><strong>Data Preparation:</strong> Organize the data by country, year, and count.</p></li>
+<li><p><strong>Mapping:</strong> Use a map to display the spatial distribution of bird counts for each year.</p></li>
+<li><p><strong>Interpretation:</strong> Analyze the maps to identify regions with significant bird populations.</p></li>
+</ol>
+<p>Lets look at the observed number in 2020</p>
+<p><img src="images/quelea_2020.png" class="img-fluid"></p>
+<p>what about in 2021</p>
+<p><img src="images/quelea_2021.png" class="img-fluid"></p>
+<p>Finally we have 2022</p>
+<p><img src="images/quelea_2022.png" class="img-fluid"></p>
+</section>
+<section id="comparative-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="comparative-analysis">8.4 Comparative Analysis</h3>
+<p>The main objective was to compare the distribution of Quelea birds across the three countries over the years. Boxplots provide a visual summary of the distribution of a dataset. We’ll use boxplots to compare the bird counts by year for each country.</p>
+<p>These are the steps involved:-</p>
+<ol type="1">
+<li><p><strong>Data Preparation:</strong> Group the data by country and year.</p></li>
+<li><p><strong>Boxplot:</strong> Create a boxplot for each country to compare the distribution of bird counts.</p></li>
+<li><p><strong>Interpretation:</strong> Analyze the boxplots to understand the variability in bird counts between countries.</p></li>
+</ol>
+<section id="boxplots" class="level4">
+<h4 class="anchored" data-anchor-id="boxplots">8.4.1 Boxplots</h4>
+<pre><code>ggplot(quelea_data, aes(year, individualCount, fill=year, group = year)) +   geom_boxplot(show.legend = FALSE, outlier.shape = NA) +   facet_wrap(~countryCode)+   xlim(2015,2023)</code></pre>
+</section>
+<section id="correlation" class="level4">
+<h4 class="anchored" data-anchor-id="correlation">8.4.2 Correlation</h4>
+<p>The objective was to explore the relationship between Quelea bird counts and another environmental variable. Correlation measures the strength and direction of a linear relationship between two variables. We’ll calculate the correlation between bird counts and another variable.</p>
+<p>These are the steps involved:-</p>
+<ol type="1">
+<li><p><strong>Data Preparation:</strong> Choose an environmental variable (e.g., temperature).</p></li>
+<li><p><strong>Correlation Calculation:</strong> Use statistical functions to calculate the correlation coefficient.</p></li>
+<li><p><strong>Interpretation:</strong> Assess the correlation coefficient to determine the strength and direction of the relationship.</p></li>
+</ol>
+<section id="correlation-matrix" class="level5">
+<h5 class="anchored" data-anchor-id="correlation-matrix">8.4.2.1 Correlation Matrix</h5>
+<pre><code>
+ggcorrplot::ggcorrplot(cor(round(quelea_data[,c(4:6, 8, 10)],2)))</code></pre>
+</section>
+<section id="correlation-table" class="level5">
+<h5 class="anchored" data-anchor-id="correlation-table">8.4.2.2 Correlation table</h5>
+<pre><code>
+library(correlation)  
+
+numeric_columns &lt;- c("individualCount", "decimalLatitude", "decimalLongitude",                      "day", "year")   corr_table &lt;- correlation::correlation(quelea_data %&gt;% select(numeric_columns),                                        include_factors = TRUE, method = "auto" )   corr_table</code></pre>
+</section>
+</section>
+<section id="regression-p-value-and-t-tests" class="level4">
+<h4 class="anchored" data-anchor-id="regression-p-value-and-t-tests">8.4.3 Regression (p-value and t-tests)</h4>
+<p>The objective was to investigate the linear relationship between bird counts and another variable, and test for statistical significance. Linear regression helps model the relationship between two variables. We’ll use a significance test to determine if the relationship is statistically significant.</p>
+<p>These are the steps involved:-</p>
+<ol type="1">
+<li><p><strong>Data Preparation:</strong> Select another variable (e.g., precipitation).</p></li>
+<li><p><strong>Linear Regression:</strong> Fit a linear regression model and obtain p-values.</p></li>
+<li><p><strong>Hypothesis Testing:</strong> Use a t-test to assess the significance of the regression coefficients.</p></li>
+<li><p><strong>Interpretation:</strong> Evaluate the p-values and t-test results to determine if the relationship is significant.</p></li>
+</ol>
+<section id="regression-table" class="level5">
+<h5 class="anchored" data-anchor-id="regression-table">Regression table</h5>
+<pre><code>
+regression_data &lt;- quelea %&gt;% select(individualCount,                   decimalLatitude, decimalLongitude, eventDate, day, month, year)  # Assuming you want to predict 'Count' based on 'Temperature' and 'Precipitation' lm_model &lt;- lm(individualCount ~ ., data = regression_data) tidy(lm_model)</code></pre>
+</section>
+</section>
+<section id="bubble-plot" class="level4">
+<h4 class="anchored" data-anchor-id="bubble-plot">8.4.4 Bubble plot</h4>
+<p>The objective was to visualize the distribution of Quelea birds across countries with different bubble sizes representing bird counts. A bubble plot combines a map with additional information represented by varying bubble sizes.</p>
+<p>These are the steps involved:-</p>
+<ol type="1">
+<li><p><strong>Data Preparation:</strong> Organize data by country, latitude, longitude, and bird count.</p></li>
+<li><p><strong>Mapping:</strong> Use a map to represent the countries.</p></li>
+<li><p><strong>Bubble Size:</strong> Adjust bubble sizes according to bird counts.</p></li>
+<li><p><strong>Interpretation:</strong> Analyze the plot to identify countries with higher bird counts.</p></li>
+</ol>
+<section id="bubble-plot-1" class="level5">
+<h5 class="anchored" data-anchor-id="bubble-plot-1">Bubble plot</h5>
+<pre><code>
+## Bubble plot library(maps)  # Get Kenya map boundaries # kenya_map &lt;- map("world", regions = "Kenya", plot = FALSE) countries_map &lt;- map("world", regions = c("Kenya", "Uganda", "Ethiopia"), plot = FALSE)   ea_shapefile &lt;- sf::read_sf("ESA_admin1_region.shp")  ggplot() +   geom_sf(data = ea_shapefile) +   geom_point(data = quelea_data, aes(x = decimalLongitude, y = decimalLatitude,                                       size = individualCount))+   labs(title = "Bubble Chart of Quelea Bird Counts",        x = "Longitude", y = "Latitude", size = "Count")+   theme(legend.position = "none")</code></pre>
+
+
+</section>
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
