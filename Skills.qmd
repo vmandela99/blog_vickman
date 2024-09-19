@@ -1,3 +1,37 @@
 ---
 title: "Skills"
 ---
+
+### Skills Overview Page Content
+
+**Welcome to My Skills Overview!** 🌟
+
+As a researcher and data scientist with years of experience across various fields, I bring a diverse set of skills to every project. Below, you’ll find an overview of my key skills organized into specific categories. Whether it's using advanced machine learning techniques, conducting in-depth data analysis, or delivering high-quality research, my goal is to turn data into actionable insights.
+
+Explore my skill sets, from **Data Science** to **Monitoring & Evaluation**, and discover the tools and methodologies that power my work. Each section includes examples of real-world projects, tutorials, and hands-on case studies.
+
+**Here’s a brief snapshot of my core competencies:**
+
+1.  **Data Science & Analytics** 📊
+
+    -   Expert in R, Python, and STATA for statistical analysis and data visualization.
+
+    -   Machine learning, predictive modeling, and data wrangling for real-world applications.
+
+2.  **Research Methods** 📚
+
+    -   Skilled in both quantitative and qualitative methods, including survey design, regression analysis, and case studies.
+
+    -   Proficient in tools like NVivo and ATLAS.ti for qualitative data analysis.
+
+3.  **Programming** 💻
+
+    -   Extensive experience in coding with R, Python, SQL, and using Shiny for interactive dashboards.
+
+    -   Code snippets, projects, and repositories available for learning and collaboration.
+
+4.  **Monitoring & Evaluation (M&E)** 🔍
+
+    -   Comprehensive knowledge in developing and implementing M&E frameworks, conducting baseline and endline evaluations.
+
+    -   Experience working across sectors in Kenya, Uganda, Ethiopia, South Africa, Burkina Faso, Mali, and beyond to ensure impactful results.
