@@ -6,10 +6,10 @@ website:
   navbar:
     right:
       - about.qmd
-      - case_studies.qmd
       - Projects.qmd
       - Skills.qmd
-      - templates_and_resources.qmd
+      - Templates and Resources.qmd
+      - Case Study.qmd
       - icon: github
         href: https://github.com/
       - icon: linkedin
@@ -24,6 +24,6 @@ format:
 editor: visual
 
 execute:
-  freeze: false
+  freeze: true
 
 
