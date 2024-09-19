@@ -8,8 +8,6 @@ website:
       - about.qmd
       - Projects.qmd
       - Skills.qmd
-      - Templates and Resources.qmd
-      - Case Study.qmd
       - icon: github
         href: https://github.com/
       - icon: linkedin
