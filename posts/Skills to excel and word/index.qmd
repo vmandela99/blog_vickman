@@ -1,7 +1,7 @@
 ---
 title: "Received the Job, Excel and Word for Life!"
 date: "2024-08-01"
-categories: [Monitoring and Evaluation  Statistics]
+categories: [Monitoring and Evaluation, Soft Skills]
 image: "old_car.png"
 ---
 

@@ -1,18 +1,15 @@
 ---
 title: "Navigating Financial Diaries Data: A Practical Guide to Analyzing Longitudinal Survey Data in R"
-date: "2024-08-05"
-categories: [Monitoring and Evaluation, Analysis]
-image: "cross-team.png"
+date: "2024-10-03"
+categories: [Monitoring and Evaluation, Analysis, R, Statistics, Survey, Visualization]
+image: "dairy stats.png"
 ---
 
 ![](dashboard.png)
 
 ### Case Study 2: Household Interview questions for Diaries research
 
-Introduction:
-In financial diaries research, surveys are conducted biweekly to capture how individuals manage their finances over time. The challenge lies in handling and analyzing these periodic datasets while ensuring consistency across each survey wave. In this guide, we will walk through how to merge datasets, analyze key variables, and visualize insights using R.
-
-
+Introduction: In financial diaries research, surveys are conducted biweekly to capture how individuals manage their finances over time. The challenge lies in handling and analyzing these periodic datasets while ensuring consistency across each survey wave. In this guide, we will walk through how to merge datasets, analyze key variables, and visualize insights using R.
 
 ## Setting up and Installation
 
@@ -45,6 +42,8 @@ mytheme <- theme(plot.title=element_text(face="bold.italic",
                    legend.position="top")
 ```
 
+Links to the data [here](https://github.com/vmandela99/blog_vickman/tree/main/posts/lift_practical_anlalysis)
+
 ```{r load data, include=TRUE}
 diary1 <- read_xlsx("Biweekly1 Final.xlsx")
 diary2 <- read_xlsx("Biweekly2 Final.xlsx")
@@ -53,9 +52,8 @@ diary3 <- read_xlsx("Biweekly3__Final_2016_18_11_10_12.0.xlsx")
 ```
 
 ## Merging Biweekly Datasets
+
 The first task in any longitudinal analysis is to combine data from multiple periods into a single dataset. By merging three biweekly datasets, we can create a comprehensive view of our respondents' data over time. Merging by Respondent ID ensures that all responses are aligned for each individual.
-
-
 
 ```{r merging, include=TRUE}
 merged_df <- diary1 %>% 
@@ -77,8 +75,6 @@ merged_df %>%
 
 A simple yet effective way to understand income distribution is by creating a frequency table. This table will show how many respondents selected each option for income, providing an overview of income sources.
 
-
-
 ```{r income count, include=TRUE}
 income_prep <- income_df %>% 
   gather(key = "question_name", value = "response") %>% #melting the data
@@ -95,10 +91,9 @@ income_table
   
 ```
 
-## Visualizing Income Data with a Bar Graph 
+## Visualizing Income Data with a Bar Graph
 
 Once the frequency table is generated, we can visualize the data. A bar graph makes it easy to compare the number of respondents across different income categories. The title for this graph is “Count of Respondents Having an Income Earning Activity,” offering clear insight into income distribution.
-
 
 ```{r Income plot, echo=TRUE, message=FALSE, warning=FALSE}
 #preparing the data for plot
@@ -123,9 +118,10 @@ prep_income <- income_prep %>%
 ```
 
 <!-- ## The mean and the median of different saving tools added. -->
-<!-- Step 5: Analyzing Savings Tool Usage -->
-<!-- Here we shed light on how much respondents have saved across various savings tools. By calculating the median and mean savings for each tool, we gain a deeper understanding of savings behavior. This analysis helps us identify which tools are most commonly used and how much respondents are saving. -->
 
+<!-- Step 5: Analyzing Savings Tool Usage -->
+
+<!-- Here we shed light on how much respondents have saved across various savings tools. By calculating the median and mean savings for each tool, we gain a deeper understanding of savings behavior. This analysis helps us identify which tools are most commonly used and how much respondents are saving. -->
 
 ```{r Mean and Median, include=FALSE}
 # Mean_median_df <- merged_df %>% 
@@ -141,8 +137,8 @@ prep_income <- income_prep %>%
 ```
 
 ## Investigating the Relationship Between Stress and Wealth (PPI Score)
-Stress levels (Q_91) can be associated with the wealth proxy variable “ppicut,” providing valuable insight into the socio-economic factors affecting stress. A correlation analysis between these two variables reveals whether wealth status influences stress levels among respondents.
 
+Stress levels (Q_91) can be associated with the wealth proxy variable “ppicut,” providing valuable insight into the socio-economic factors affecting stress. A correlation analysis between these two variables reveals whether wealth status influences stress levels among respondents.
 
 ```{r Modelling, include=TRUE}
 #load the segment data
@@ -166,8 +162,8 @@ summary(multi_model)
 ```
 
 ## Visualizing the Stress-Wealth Relationship(Using a Multinomial Plot)
-A scatter plot or similar graph is a powerful way to visualize the relationship between stress levels and PPI score. This graphical representation helps us better understand the distribution of data points and any potential correlation.
 
+A scatter plot or similar graph is a powerful way to visualize the relationship between stress levels and PPI score. This graphical representation helps us better understand the distribution of data points and any potential correlation.
 
 ```{r Multinomial plot, echo=TRUE, message=FALSE, warning=FALSE}
 multinomial_df %>% 
@@ -178,10 +174,8 @@ multinomial_df %>%
 ```
 
 ## Surveyor Performance Analysis (Average time)
+
 Using the VStart and VEnd variables, we can calculate the average time each surveyor (Srvyr) spent on interviews. This performance metric is crucial for evaluating the efficiency of data collection and understanding how long respondents take to complete surveys.
-
-
-
 
 ```{r Surveyor time, include=TRUE}
 ## preparing the data
@@ -202,8 +196,8 @@ sury_df <- surveyor_prep %>%
 ```
 
 ## Gender Differences in Savings Tool Usage (Men vs Women)
-We can further explore the dataset by examining which savings tools are preferred by men versus women. A comparative plot allows us to see if certain tools are more likely to be used by one gender over the other, shedding light on gendered financial behavior.
 
+We can further explore the dataset by examining which savings tools are preferred by men versus women. A comparative plot allows us to see if certain tools are more likely to be used by one gender over the other, shedding light on gendered financial behavior.
 
 ```{r Saving tools, include=TRUE}
 saving_tools_prep <- joined %>% 
@@ -250,10 +244,9 @@ value = relevel(value, ref = "1"))
        fill = "Key")
 ```
 
-## Mapping Respondent Locations 
+## Mapping Respondent Locations
+
 By selecting one of the biweekly datasets, we can visualize where respondents are located using a geographical plot. This map gives us a clear view of the geographic distribution of participants in the study, providing context for the socio-economic and environmental factors at play.
-
-
 
 ```{r gender map, echo=TRUE, message=FALSE, warning=FALSE}
 ## data prep
@@ -277,8 +270,8 @@ ggplot() +
 ```
 
 ## Pie Chart for People porvety Index (PPI)
-Using any column of choice, a pie chart is a useful tool for showing proportional distribution within a dataset. For example, visualizing savings tools or income sources with a pie chart gives a clear snapshot of the most common categories.
 
+Using any column of choice, a pie chart is a useful tool for showing proportional distribution within a dataset. For example, visualizing savings tools or income sources with a pie chart gives a clear snapshot of the most common categories.
 
 ```{r piechart}
 ## Prepare data for piechart
@@ -311,8 +304,8 @@ pie
 ```
 
 ## The Power of dplyr for Data Manipulation
-The dplyr package in R offers a suite of functions for filtering, selecting, and summarizing data. For instance, filtering respondents by income bracket and summarizing their savings allows us to draw meaningful conclusions about their financial behavior. The ease of grouping and plotting with dplyr and ggplot makes complex analyses accessible.
 
+The dplyr package in R offers a suite of functions for filtering, selecting, and summarizing data. For instance, filtering respondents by income bracket and summarizing their savings allows us to draw meaningful conclusions about their financial behavior. The ease of grouping and plotting with dplyr and ggplot makes complex analyses accessible.
 
 ```{r dplyr verbs, include=TRUE}
 saving_tools_prep <- joined %>% 
@@ -360,6 +353,7 @@ value = relevel(value, ref = "1"))
 ```
 
 ## Sampling Methods and R Implementation
+
 When working with survey data, sampling is key to ensuring representative results. In this section, we discuss simple random sampling, stratified sampling, and cluster sampling, providing an overview of how to implement these methods in R.
 
 sampling can be divided into two types.
@@ -408,8 +402,8 @@ by_cyl_f <- mtcars %>%
 This technique divides the population in clusters of equal size n and selects clusters every individual time.
 
 ## Handling Null Values in R
-Null values are inevitable in real-world datasets, and handling them effectively is essential. Two common approaches are either removing rows with null values or imputing missing data based on the median or mean. Each method has its pros and cons, which should be carefully considered based on the analysis.
 
+Null values are inevitable in real-world datasets, and handling them effectively is essential. Two common approaches are either removing rows with null values or imputing missing data based on the median or mean. Each method has its pros and cons, which should be carefully considered based on the analysis.
 
 ### Ways of Dealing with Missing Values
 

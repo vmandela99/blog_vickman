@@ -2,7 +2,7 @@
 title: "Business intelligence tools"
 author: "Victor Mandela"
 date: "2021-07-09"
-categories: [BI, analysis]
+categories: [BI, Analysis]
 image: "image.jpg"
 ---
 
