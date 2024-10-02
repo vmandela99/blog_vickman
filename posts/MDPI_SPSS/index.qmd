@@ -1,6 +1,6 @@
 ---
 title: "Unlocking Insights: A Step-by-Step Guide to Calculating Multidimensional Poverty Index (MPI) Using SPSS"
-date: "2024-08-04"
+date: "2024-10-04"
 categories: [DemographicHealthSurvey,  Statistics, SPSS, Multidimensional Poverty Index (MPI), Analysis]
 image: "dumbells.jpeg"
 ---
