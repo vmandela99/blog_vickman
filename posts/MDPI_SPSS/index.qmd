@@ -1,0 +1,88 @@
+---
+title: "Unlocking Insights: A Step-by-Step Guide to Calculating Multidimensional Poverty Index (MPI) Using SPSS"
+date: "2024-08-04"
+categories: [DemographicHealthSurvey,  Statistics, SPSS, Multidimensional Poverty Index (MPI), Analysis]
+image: "dumbells.jpeg"
+---
+
+# A Step-by-Step Guide to Calculating the Multidimensional Poverty Index (MPI) Using SPSS
+
+In poverty research, the **Multidimensional Poverty Index (MPI)** is a crucial tool for measuring poverty beyond income, capturing deprivations across multiple dimensions such as education and living standards. This blog outlines the exact **SPSS code** to compute MPI using specific survey indicators.
+
+Let’s break down the process step by step:
+
+### **Step 1: Compute the MPI Indicators**
+
+MPI is calculated based on **two dimensions**—**Education** and **Living Standards**—with specific indicators for each. Here's how you can compute the binary deprivation indicators for each component:
+
+#### **Education Indicators (Weight: 1/4 for each)**
+
+1.  **Years of Schooling Completed**\
+    `COMPUTE FIVE_YRS_SCHOOLING_COMPLETED = Q403b < 5.`
+
+2.  **School-Aged Child Enrollment**\
+    `COMPUTE SCHOOL_AGED_CHILD_NOT_ENROLLED_IN_SCHOOL = Q404 = 1.`
+
+#### **Living Standards Indicators (Weight: 1/12 for each)**
+
+1.  **No Electricity**\
+    `COMPUTE No_electricity = Q409_1 = 0.`
+
+2.  **Access to Clean Drinking Water**\
+    `COMPUTE ACCESS_TO_CLEAN_DRINKING_WATER = Q410 = 6 | Q410 = 7 | Q410 = 8 | Q410 = 10 | Q410 = 11 | Q410 = 12.`
+
+3.  **Access to Improved Sanitation**\
+    `COMPUTE ACCESS_TO_IMPROVED_SANITATION = Q413 = 10 | Q413 = 11 | Q413 = 12 | Q413 = 13.`
+
+4.  **Dirt Floor**\
+    `COMPUTE DIRT_FLOOR = Q407 = 1 | Q407 = 2.`
+
+5.  **Dirty Cooking Fuel**\
+    `COMPUTE DIRTY_COOKING_FUEL = Q412 = 7 | Q412 = 8 | Q412 = 9 | Q412 = 10 | Q412 = 11 | Q412 = 12.`
+
+6.  **Asset Holding**\
+    `COMPUTE ASSET_HOLDING = (Q409_2 = 0 & Q409_3 = 0 & Q409_4 = 0 & Q409_6 = 0 & Q409_7 = 0 & Q409_8 = 0 & Q409_9 = 0) & (Q409_11 = 0 | Q409_12 = 0).`
+
+![](dumbells.jpeg)
+
+### **Step 2: Weighting the Indicators**
+
+After computing the individual indicators, apply the appropriate weights:
+
+-   Education Indicators: Weight = **1/4**
+
+-   Living Standard Indicators: Weight = **1/12**
+
+Example for the **Years of Schooling Completed**:\
+`COMPUTE FIVE_YRS_SCHOOLING_COMPLETED_weighted = FIVE_YRS_SCHOOLING_COMPLETED * EDUCATION_WGHT.`
+
+Similarly, compute the weighted versions of all other indicators for education and living standards.
+
+### **Step 3: Calculate the Deprivation Score**
+
+The deprivation score is a sum of the weighted indicators, with scores ranging from **0 to 1**, where **1** represents the highest deprivation.\
+Syntax:\
+`COMPUTE DEPRIVATION_SCORE = FIVE_YRS_SCHOOLING_COMPLETED_weighted + SCHOOL_AGED_CHILD_NOT_ENROLLED_IN_SCHOOL_weighted + No_electricity_WEIGHTED + ACCESS_TO_CLEAN_DRINKING_WATER_weighted + ACCESS_TO_IMPROVED_SANITATION_weighted + DIRT_FLOOR_weighted + DIRTY_COOKING_FUEL_weighted + ASSET_HOLDING_WEIGHTED.`
+
+![](colony.jpeg)
+
+### **Step 4: MPI Classification**
+
+Finally, classify households based on their deprivation scores:
+
+-   **Non-Poor**: 0-0.19
+
+-   **Vulnerable to Poverty**: 0.20-0.33
+
+-   **Multidimensionally Poor**: 0.34-0.50
+
+-   **Severely Poor**: 0.51+
+
+Syntax:\
+`RECODE DEPRIVATION_SCORE (0 thru 0.1999=1) (0.2000 thru 0.3333=2) (0.3334 thru 0.5000=3) (0.5001 thru Highest=4) INTO MPI_POVERTY_STATUS2.`
+
+### **Conclusion**
+
+By following these steps and using the corresponding SPSS code, you can efficiently compute the Multidimensional Poverty Index (MPI) and gain meaningful insights into poverty beyond income-based measures.
+
+MPI helps identify vulnerable populations, prioritize areas of intervention, and assess the overall well-being of households. If you're interested in further understanding poverty data and the SPSS process, this guide serves as a comprehensive starting point!
