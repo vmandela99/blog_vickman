@@ -2,6 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/KobotoolBox_design_n_management/index.html",
+      "/posts/KobotoolBox_Intro_to_CAPI/index.html",
+      "/posts/KobotoolBox_quality_analysis_case_study/index.html",
       "/posts/Survey_CTO_Analysis, Challenges, and Future Trends/index.html",
       "/posts/Survey_CTO_Data Collection and Management/index.html",
       "/posts/Survey_CTO_Foundational Knowledge and Setup/index.html",

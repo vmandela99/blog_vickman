@@ -1,0 +1,64 @@
+---
+title: "KoboToolbox Introduction to Computer assistes programming interface(CAPI)"
+author: "Victor Mandela"
+categories: [Data Collection, KoboToolbox, CAPI]
+image: "kobotoolbox.PNG"
+---
+
+# **Introduction to CAPI with KoboToolbox**
+
+#### **Getting Started with CAPI: A Beginner's Guide to KoboToolbox**
+
+In today’s world, collecting data efficiently is critical for research and decision-making. Whether you’re conducting surveys in remote areas or urban settings, one tool that makes this process easier is KoboToolbox. It allows researchers to collect data digitally using mobile devices, replacing traditional paper surveys. This method is called **Computer-Assisted Personal Interviewing (CAPI)**.
+
+Here’s a simple guide to getting started with KoboToolbox:
+
+1.  **Create a Free KoboToolbox Account**\
+    Start by visiting the [KoboToolbox website](https://www.kobotoolbox.org/), where you can sign up for a free account. KoboToolbox is used by a wide range of users, from NGOs to governments, so it’s a reliable platform for field data collection.
+
+2.  **Design Your Survey**\
+    Once logged in, you can create a new project by clicking the “New” button. This will take you to the survey builder, where you can add questions like:
+
+    -   *Single-choice questions*: Where respondents choose one option.
+
+    -   *Multiple-choice questions*: Where they can select more than one answer.
+
+    -   *Text or numerical inputs*: For open-ended or specific data like age or income.
+
+    **Example**: If you’re surveying farmers about crop yields, your questions might include:
+
+    -   "What type of crops do you grow?" (Multiple choice: maize, beans, etc.)
+
+    -   "How much maize did you harvest this season?" (Numerical input)
+
+3.  **Deploy Your Survey**\
+    Once your survey is ready, you can “deploy” it by clicking the “Deploy” button. This makes the survey available for data collection. Your survey can then be filled out using the KoboCollect mobile app, which works on both Android and iOS.
+
+4.  **Collect Data in the Field**\
+    Download the KoboCollect app on your mobile device. Once you log in, your deployed survey will appear. You can now fill out responses while interviewing participants. KoboCollect even works **offline**, making it perfect for areas with no internet connection. Once you’re back online, your data will sync automatically.
+
+**Example**: Imagine you’re working in a rural village with no reliable internet. With KoboCollect, you can still gather data from interviews with local farmers, and sync it when you return to an area with Wi-Fi.
+
+#### **From Paper to Digital: Transitioning Your Surveys to KoboToolbox for CAPI**
+
+If you're still using paper surveys, transitioning to KoboToolbox can make your work easier, faster, and more accurate. Here’s why and how to make the switch:
+
+1.  **Why Go Digital?**
+
+    -   **Save Time**: Instead of manually entering data from paper forms, your data is stored digitally from the start.
+
+    -   **Avoid Errors**: Digital forms reduce the chances of data entry errors, ensuring cleaner, more reliable data.
+
+    -   **Work Offline**: You don’t need constant internet access. Data can be collected offline and uploaded later.
+
+2.  **How to Transition Your Paper Surveys to KoboToolbox**
+
+    -   **Step 1**: Start by analyzing your paper survey. Break it down into digital components, like question types (multiple choice, text, etc.).
+
+    -   **Step 2**: Using the KoboToolbox survey builder, replicate each question from your paper form. For example, a paper question like "What is your age?" would become a text field in KoboToolbox.
+
+    -   **Step 3**: Customize the logic in your survey. For example, if a question only applies to women, you can set it to appear only if the respondent says they are female.
+
+3.  **Test Before Deployment** Before heading to the field, always test your digital survey. KoboToolbox lets you preview the survey on your device, so you can see how it will look to the interviewers and respondents.
+
+**Example**: Let’s say you have been using paper forms to collect health data in a community. Now, using KoboToolbox, you convert those forms into digital surveys, complete with logic that skips irrelevant questions based on a respondent's previous answers. This reduces time spent on unnecessary questions and improves the data's accuracy.
