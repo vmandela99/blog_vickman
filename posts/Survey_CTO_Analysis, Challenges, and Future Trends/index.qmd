@@ -1,8 +1,7 @@
 ---
 title: "Survey CTO Analysis, Challenges, and Future Trends"
 author: "Victor Mandela"
-date: "2024-10-16"
-categories: [Data Collection, SurveyCTO, CAPI]
+categories: [Monitoring and Evaluation, Data Collection, SurveyCTO, CAPI]
 image: "surveycto.PNG"
 ---
 

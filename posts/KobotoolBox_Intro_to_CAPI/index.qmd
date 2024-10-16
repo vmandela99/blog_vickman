@@ -1,7 +1,7 @@
 ---
 title: "KoboToolbox Introduction to Computer assistes programming interface(CAPI)"
 author: "Victor Mandela"
-categories: [Data Collection, KoboToolbox, CAPI]
+categories: [Monitoring and Evaluation, Data Collection, KoboToolbox, CAPI]
 image: "kobotoolbox.PNG"
 ---
 

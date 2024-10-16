@@ -1,7 +1,7 @@
 ---
 title: "Data Quality, Analysis, and Case Studies Using KoboToolbox"
 author: "Victor Mandela"
-categories: [Data Collection, KoboToolbox, CAPI]
+categories: [Monitoring and Evaluation, Data Collection, KoboToolbox, CAPI]
 image: "kobotoolbox.PNG"
 ---
 
