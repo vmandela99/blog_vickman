@@ -1,7 +1,7 @@
 ---
 title: "Best Practices for Survey Design and Field Management Using KoboToolbox"
 author: "Victor Mandela"
-categories: [Monitoring and Evaluation, Data Collection, KoboToolbox, CAPI]
+categories: [Survey, Data Collection, KoboToolbox, CAPI]
 image: "kobotoolbox.PNG"
 ---
 

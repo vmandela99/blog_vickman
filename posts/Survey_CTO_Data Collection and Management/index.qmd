@@ -1,7 +1,7 @@
 ---
 title: "Survey CTO Data Collection and Management"
 author: "Victor Mandela"
-categories: [Monitoring and Evaluation, Data Collection, SurveyCTO, CAPI]
+categories: [Survey, Data Collection, SurveyCTO, CAPI]
 image: "surveycto.PNG"
 ---
 
