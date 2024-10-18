@@ -1,0 +1,103 @@
+---
+title: "Understanding Life Expectancy and Healthy Life Expectancy (HALE) in Morocco (2000-2018): USING DHS DATA"
+author: "Victor Mandela"
+date: "2024-10-19"
+categories: [Monitoring and Evaluation, Analysis, R, Statistics, Visualization]
+image: "Capar-comparison-of-life-expectancy-and-healthy-life-expectancy-at-birth-hale-for-females-in-morocco-2000-2018.png"
+---
+
+## **Introduction:**
+
+Morocco has seen significant changes in both **life expectancy** and **healthy life expectancy (HALE)** between 2000 and 2018. While life expectancy at birth has risen to 74.5 years, the number of years lived in full health (HALE) has decreased. This shift presents important insights for researchers interested in the health outcomes of the Moroccan population.
+
+In this blog post, we will discuss the definitions of life expectancy and HALE, examine their trends in Morocco, and highlight the importance of focusing on quality of life alongside longevity. Our analysis is based on data from **Global Health Estimates** and **Demographic and Health Surveys (DHS)**.
+
+### **What is Life Expectancy and HALE?**
+
+**Life expectancy** is the average number of years a newborn is expected to live, assuming current mortality rates remain constant throughout their lifetime. It is often used as a benchmark to measure the health and development of a population.
+
+**Healthy life expectancy (HALE)**, on the other hand, measures the number of years an individual can expect to live in good health, free from serious illnesses and disabilities. HALE provides a more comprehensive picture of population health by accounting for both mortality and the burden of disease.
+
+### **Life Expectancy Trends in Morocco (2000-2018)**
+
+From 2000 to 2018, Morocco experienced an impressive increase in life expectancy, reaching **74.5 years** in 2018. Several factors have contributed to this improvement, including:
+
+-   **Enhanced healthcare systems** and increased access to medical services.
+
+-   **Improvements in nutrition**, education, and living conditions.
+
+-   **A significant reduction in infant and child mortality rates.**
+
+These changes have extended the lifespan of the population, signaling overall progress in Morocco's health outcomes. However, a deeper look into HALE reveals a more complex reality.
+
+### **The Decline in Healthy Life Expectancy (HALE) in Morocco (H2)**
+
+While life expectancy has risen, **HALE** has seen a decline in Morocco. This suggests that although people are living longer, many of these additional years are spent living with illnesses or disabilities. Chronic diseases, such as **cardiovascular diseases, diabetes**, and other non-communicable diseases (NCDs), have become more prevalent, affecting the quality of life during these later years.
+
+This trend highlights a growing gap between total life expectancy and the number of years lived in good health. The burden of disease, especially NCDs, is a significant contributor to the reduction in HALE. As life expectancy increases, public health policies must focus on managing chronic illnesses to improve overall quality of life.
+
+### **Statistical Methodology and Data Sources**
+
+The life expectancy and HALE data for Morocco were sourced from the **Global Health Estimates (GHE)** and analyzed using standard statistical methods. HALE is calculated by adjusting life expectancy to account for years lived with illness or disability. This calculation provides a more accurate reflection of population health compared to life expectancy alone.
+
+**Demographic and Health Surveys (DHS)** also offer valuable insights into Morocco’s health trends. DHS data on maternal and child health, disease prevalence, and healthcare access play a crucial role in understanding how HALE is affected by various health determinants.
+
+## **Key Insights :**
+
+1.  **Rising Life Expectancy**: Morocco's life expectancy increased steadily from 2000 to 2018, reaching 74.5 years, showcasing overall progress in health and longevity.
+
+2.  **Decreasing HALE**: The decline in HALE underscores the need to focus not just on extending life but on improving the quality of those additional years.
+
+3.  **Chronic Disease Burden**: With the rise of NCDs, Morocco faces challenges in ensuring that its population can live longer, healthier lives. Addressing chronic illness is crucial to closing the gap between life expectancy and HALE.
+
+4.  **Data-Driven Public Health**: Utilizing high-quality data from sources like **Global Health Estimates** and **DHS** can inform policies aimed at enhancing healthcare systems and managing the burden of chronic diseases.
+
+### **How to Analyze HALE and Life Expectancy**
+
+For data enthusiasts and researchers, analyzing HALE and life expectancy trends over time can be achieved through various statistical tools. In this blog, we’ll provide an example analysis code using **R** to visualize these trends. The code will allow you to compare life expectancy at birth and HALE over time, shedding light on the growing disparity between longevity and healthy living years.
+
+Getting the data
+
+```         
+# Fetching the data
+morocco_df <- readr::read_csv("https://data.humdata.org/dataset/1f98948b-5c63-48c6-a92c-44cf2cec1e9f/resource/11c05ae5-ce13-4cbb-a888-f2175bb5266c/download/global_health_estimates_life_expectancy_and_leading_causes_of_death_and_disability_indicators_ma.csv")
+
+
+trans_morocco <- morocco_df %>% 
+  filter(`DIMENSION (NAME)` == "Female") %>% #choose females
+  select(`GHO (DISPLAY)`, `YEAR (DISPLAY)`, Numeric) %>% # choose columns
+  group_by(`GHO (DISPLAY)`) %>% 
+  add_count(`YEAR (DISPLAY)`) %>% #introduce a counting column
+    filter(n == 1) %>% 
+  pivot_wider(names_from = `GHO (DISPLAY)`,
+              values_from = Numeric) %>% #change to wide format
+  arrange(`YEAR (DISPLAY)`) %>% 
+  drop_na() %>% 
+  select(1, 4, 5, 12, 13) # select the columns of interest
+
+#write_csv(trans_morocco, "morocco_life_expectancy.csv")
+#You can write the csv file to export to an external viz tool
+#I used datawrapper
+```
+
+## **Conclusion** 
+
+The health improvements in Morocco over the past two decades are undeniable. Life expectancy has reached its highest point, but the decline in HALE raises questions about how long Moroccans are able to live in good health. As chronic diseases continue to affect the population, policymakers must shift their focus from merely extending life to improving the quality of those extra years.
+
+By addressing these health challenges, Morocco can ensure that its aging population enjoys not just longer lives, but healthier ones too. For researchers and public health professionals, HALE provides a valuable metric that complements life expectancy, offering a fuller picture of a nation's health.
+
+## **References**
+
+1.  **World Health Organization (WHO)**. Global Health Estimates: Life Expectancy and Healthy Life Expectancy (HALE). Available at: [WHO GHE](https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates)
+
+2.  **Demographic and Health Surveys (DHS)**. Health data for Morocco. Available at: DHS Morocco
+
+3.  **Institute for Health Metrics and Evaluation (IHME)**. Global Burden of Disease study. Available at: IHME
+
+**Further Reading and Data Resources (H2):** For more in-depth data analysis and information on life expectancy and health outcomes, explore the following resources:
+
+-   **World Bank Open Data**: Country-specific health and development indicators.
+
+-   **Our World in Data**: Visualizations on global health, life expectancy, and disease burden.
+
+-   **The Lancet Global Health**: Research on health trends and life expectancy in different regions.
