@@ -80,7 +80,7 @@ trans_morocco <- morocco_df %>%
 #I used datawrapper
 ```
 
-## **Conclusion** 
+## **Conclusion**
 
 The health improvements in Morocco over the past two decades are undeniable. Life expectancy has reached its highest point, but the decline in HALE raises questions about how long Moroccans are able to live in good health. As chronic diseases continue to affect the population, policymakers must shift their focus from merely extending life to improving the quality of those extra years.
 
@@ -101,3 +101,4 @@ By addressing these health challenges, Morocco can ensure that its aging populat
 -   **Our World in Data**: Visualizations on global health, life expectancy, and disease burden.
 
 -   **The Lancet Global Health**: Research on health trends and life expectancy in different regions.
+

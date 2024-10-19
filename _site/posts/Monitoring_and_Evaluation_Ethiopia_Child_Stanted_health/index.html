@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Victor Mandela">
-<meta name="dcterms.date" content="2024-10-16">
+<meta name="dcterms.date" content="2024-10-19">
 
-<title>My Blogs - Data Quality, Analysis, and Case Studies Using KoboToolbox</title>
+<title>My Blogs - Understanding Child Stunting in Ethiopia: Trends, Impacts, and Future Directions: USING DHS DATA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,12 +131,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Data Quality, Analysis, and Case Studies Using KoboToolbox</h1>
+      <h1 class="title">Understanding Child Stunting in Ethiopia: Trends, Impacts, and Future Directions: USING DHS DATA</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Survey</div>
-                <div class="quarto-category">Data Collection</div>
-                <div class="quarto-category">KoboToolbox</div>
-                <div class="quarto-category">CAPI</div>
+                <div class="quarto-category">Monitoring and Evaluation</div>
+                <div class="quarto-category">Analysis</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Statistics</div>
+                <div class="quarto-category">Visualization</div>
               </div>
                   </div>
   </div>
@@ -154,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">October 16, 2024</p>
+        <p class="date">October 19, 2024</p>
       </div>
     </div>
     
@@ -173,69 +174,83 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="automating-quality-checks-in-capi-using-kobotoolbox-features" class="level4">
-<h4 class="anchored" data-anchor-id="automating-quality-checks-in-capi-using-kobotoolbox-features"><strong>Automating Quality Checks in CAPI Using KoboToolbox Features</strong></h4>
-<p>One of the best features of KoboToolbox is its ability to automate quality checks during data collection. This ensures that the data you collect is clean and ready for analysis, reducing the need for time-consuming manual corrections later.</p>
-<p>Here’s how you can improve data quality with KoboToolbox:</p>
-<ol type="1">
-<li><p><strong>Use Validation Criteria</strong><br>
-KoboToolbox allows you to set validation rules for questions, ensuring that respondents enter data in the correct format. For example, if you’re collecting age data, you can set a rule that the age must be between 0 and 120. This prevents errors like entering “500” as an age.</p>
-<p><strong>Example</strong>: If your survey asks, “How many children do you have?” you can set a validation rule to ensure the response is a number between 0 and 15, preventing incorrect entries.</p></li>
-<li><p><strong>Add Mandatory Questions</strong><br>
-You can make certain questions mandatory so that respondents cannot skip them. This is particularly important for critical questions that are essential to your data analysis.</p>
-<p><strong>Example</strong>: In a health survey, you can make the question “What is your gender?” mandatory, ensuring that no response is left out during the interview.</p></li>
-<li><p><strong>Use Constraints for Logical Responses</strong><br>
-You can set constraints to make sure answers are logical. For instance, if someone answers that they are 5 years old, a constraint can prevent them from answering that they have children, as this would be an illogical response.</p>
-<p><strong>Example</strong>: If a respondent selects “No” to the question “Do you own a mobile phone?”, you can add a constraint that prevents them from answering follow-up questions about phone usage, improving the survey’s flow.</p></li>
-<li><p><strong>Preview and Test Before Data Collection</strong><br>
-Always preview and test your survey before deployment to ensure that the validation criteria and constraints work as expected. Testing prevents errors during actual data collection.</p>
-<p><strong>Example</strong>: Before deploying a survey on school attendance, preview it by entering test responses. This will show you if the logic and constraints work, such as preventing a respondent from entering “10” when asked “How many school days did you miss last month?” if the maximum allowed is 5.</p></li>
-</ol>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
+<p>Ethiopia has made significant strides in improving child nutrition over the past two decades. However, child stunting remains a pressing issue, with many regions still facing alarming rates. This blog post analyzes the stunting rates across various Ethiopian regions from 2000 to 2019, highlighting the progress made, the persistent challenges, and the implications for donors and investors looking to improve child health outcomes.</p>
 </section>
-<section id="real-time-data-collection-and-analysis-with-kobotoolbox" class="level4">
-<h4 class="anchored" data-anchor-id="real-time-data-collection-and-analysis-with-kobotoolbox"><strong>Real-Time Data Collection and Analysis with KoboToolbox</strong></h4>
-<p>One of the most powerful features of KoboToolbox is the ability to collect and monitor data in real time. This gives you immediate insights into your survey results, enabling you to make adjustments on the fly and ensure data accuracy.</p>
-<ol type="1">
-<li><p><strong>Monitor Data as It’s Collected</strong><br>
-KoboToolbox allows you to view the incoming data while your field team is still collecting it. You can see the number of responses collected, check for any missing or incomplete data, and identify potential issues early on.</p>
-<p><strong>Example</strong>: If you’re conducting a survey on household income, you can monitor the data to ensure all responses are complete. If you notice that a certain region is submitting fewer responses, you can contact your field team to address the issue before it becomes a bigger problem.</p></li>
-<li><p><strong>Export Data for Analysis</strong><br>
-Once the data is collected, you can export it to a variety of formats such as Excel, CSV, or even directly into statistical software like R or SPSS for deeper analysis. This allows you to clean and analyze the data as soon as it’s uploaded.</p>
-<p><strong>Example</strong>: After completing a survey on water usage in rural areas, you can export the data to Excel, where you can filter responses and run simple analyses, such as calculating the average water consumption per household.</p></li>
-<li><p><strong>Visualize Data Quickly</strong><br>
-KoboToolbox includes basic data visualization tools, allowing you to create simple graphs or charts directly on the platform. This is useful for quick insights without having to use other software.</p>
-<p><strong>Example</strong>: If you’re collecting data on the types of crops grown in different regions, KoboToolbox lets you generate pie charts to see the proportion of households growing maize, beans, or other crops at a glance.</p></li>
-</ol>
-</section>
-<section id="how-to-visualize-capi-data-collected-via-kobotoolbox" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-visualize-capi-data-collected-via-kobotoolbox"><strong>How to Visualize CAPI Data Collected via KoboToolbox</strong></h4>
-<p>Visualizing the data collected using KoboToolbox helps turn raw data into meaningful insights. Here’s how you can quickly create visualizations for your data:</p>
-<ol type="1">
-<li><p><strong>Use KoboToolbox’s Built-In Visualization</strong><br>
-KoboToolbox offers simple tools to visualize your survey results as bar charts, pie charts, or frequency tables. This is ideal for getting a quick overview of your data, especially if you need a snapshot during fieldwork.</p>
-<p><strong>Example</strong>: After completing a survey on school enrollment, you can quickly create a pie chart to visualize the percentage of boys and girls enrolled in school.</p></li>
-<li><p><strong>Export Data for Advanced Visualization</strong><br>
-If you need more complex visualizations, export the data to Excel or a data visualization tool like Tableau. From there, you can create more detailed graphs, maps, or dashboards to better understand trends or patterns in your data.</p>
-<p><strong>Example</strong>: After collecting data on household energy sources, you can export the data to Tableau and create a map that shows which regions rely more on firewood versus electricity, giving you a clearer picture of energy access in different areas.</p></li>
-<li><p><strong>Visualize Trends Over Time</strong><br>
-If your survey involves tracking data over time, you can create trend charts to visualize changes. This is especially useful in longitudinal studies where you need to monitor progress or compare results from different survey rounds.</p>
-<p><strong>Example</strong>: If you’re running a survey on child nutrition over several months, you can use KoboToolbox’s export feature to create a line chart in Excel, showing how the average weight of children has changed over time.</p></li>
-</ol>
-</section>
-<section id="case-study-improving-health-data-collection-with-kobotoolbox-capi" class="level4">
-<h4 class="anchored" data-anchor-id="case-study-improving-health-data-collection-with-kobotoolbox-capi"><strong>Case Study: Improving Health Data Collection with KoboToolbox CAPI</strong></h4>
-<p>To illustrate the power of KoboToolbox, let’s look at a real-world case study of how it was used to improve health data collection in a rural setting.</p>
-<p><strong>The Challenge</strong>:<br>
-A health NGO was tasked with collecting data on vaccination coverage in remote villages. Previously, they used paper surveys, which often led to errors, delays, and missing data. The team needed a more efficient way to gather accurate information in areas with no internet access.</p>
-<p><strong>The Solution</strong>:<br>
-The team switched to using KoboToolbox for CAPI. They designed a digital survey with validation rules and skip logic to ensure that only relevant questions were asked. The team collected data offline using the KoboCollect app and synced it later when they returned to areas with internet connectivity.</p>
-<p><strong>Results</strong>:</p>
+<section id="key-definitions" class="level4">
+<h4 class="anchored" data-anchor-id="key-definitions">Key Definitions</h4>
 <ul>
-<li><p><strong>Improved Accuracy</strong>: With validation rules, errors were minimized. For example, respondents couldn’t enter invalid ages for children receiving vaccines.</p></li>
-<li><p><strong>Faster Data Processing</strong>: Instead of waiting weeks for paper forms to be submitted and entered manually, data was available in real time, allowing the team to start analyzing it immediately.</p></li>
-<li><p><strong>Higher Quality Data</strong>: By using mandatory fields and skip logic, the survey reduced missing responses and improved the overall quality of the data.</p></li>
+<li><p><strong>Child Stunting</strong>: A form of chronic malnutrition characterized by low height for age. Stunting is a critical indicator of a child’s health and nutritional status and can have long-term impacts on cognitive development and economic productivity.</p></li>
+<li><p><strong>Malnutrition</strong>: Refers to deficiencies, excesses, or imbalances in a person’s intake of energy and/or nutrients. It encompasses undernutrition (including stunting, wasting, and underweight) as well as overnutrition (obesity).</p></li>
+<li><p><strong>Demographic and Health Surveys (DHS)</strong>: Nationally representative surveys conducted in many countries to collect data on health and nutrition, providing essential insights for policymakers and stakeholders.</p></li>
 </ul>
-<p><strong>Example</strong>: In one village, the NGO was able to quickly determine that vaccination coverage for measles was lower than expected, allowing them to take immediate action by organizing more vaccination clinics.</p>
+</section>
+<section id="why-should-you-care" class="level4">
+<h4 class="anchored" data-anchor-id="why-should-you-care">Why Should You Care?</h4>
+<p>Child stunting is not just a personal health issue; it has far-reaching implications for communities and nations. High rates of stunting can lead to:</p>
+<ul>
+<li><p><strong>Economic Consequences</strong>: Malnourished children are more likely to underperform in school and have lower productivity as adults, which can hinder national development.</p></li>
+<li><p><strong>Healthcare Burden</strong>: Increased stunting rates correlate with higher healthcare costs due to related health complications.</p></li>
+<li><p><strong>Intergenerational Effects</strong>: Poor nutrition can affect not just the current generation but also future generations, perpetuating cycles of poverty and malnutrition.</p></li>
+</ul>
+<p>Addressing child stunting is crucial for achieving sustainable development goals, particularly those related to health, education, and poverty reduction.</p>
+</section>
+<section id="trends-in-child-stunting-rates" class="level4">
+<h4 class="anchored" data-anchor-id="trends-in-child-stunting-rates">Trends in Child Stunting Rates</h4>
+<p>Based on data from the DHS, the stunting rates of children under five in Ethiopia have shown varying trends across regions. Below is a summary of the key findings:</p>
+<ul>
+<li><p><strong>Tigray</strong>: Stunting rates decreased from 61.2% in 2000 to 48.4% in 2019, indicating progress but still reflecting high levels of chronic malnutrition.</p></li>
+<li><p><strong>Afar</strong>: A reduction from 53.1% to 42.2% showcases improvements, yet the region faces significant environmental challenges.</p></li>
+<li><p><strong>Amhara</strong>: Although stunting rates dropped from 63% to 41.5%, the high prevalence highlights ongoing nutritional concerns.</p></li>
+<li><p><strong>Oromia</strong>: This region improved from 53.9% to 35.3%, signaling effective interventions but still necessitating further efforts.</p></li>
+<li><p><strong>Somali</strong>: A notable decline from 51.8% to 30.6% demonstrates progress, but vulnerability to food insecurity persists.</p></li>
+<li><p><strong>Benishangul-Gumuz</strong>: Stunting decreased from 49.7% to 40.7%, indicating a need for targeted interventions in remote areas.</p></li>
+<li><p><strong>SNNPR</strong>: A drop from 60.8% to 36.4% reflects significant improvements, but further action is essential to address diverse needs.</p></li>
+<li><p><strong>Gambela</strong>: This region saw a remarkable decline from 41.7% to 17.3%, showcasing the potential for successful interventions.</p></li>
+<li><p><strong>Harari</strong>: Stunting fell from 42.1% to 36.4%, signaling a need for urban-based nutrition strategies.</p></li>
+<li><p><strong>Addis Ababa</strong>: Stunting rates dropped from 32.9% to 15%, indicating positive trends in urban health initiatives.</p></li>
+<li><p><strong>Dire Dawa</strong>: A slight decrease from 34.3% to 25.4% suggests persistent urban challenges related to food security.</p></li>
+</ul>
+</section>
+<section id="implications-for-donors-and-investors" class="level4">
+<h4 class="anchored" data-anchor-id="implications-for-donors-and-investors">Implications for Donors and Investors</h4>
+<p>The findings underscore a dual narrative: while there has been substantial progress in reducing stunting rates across many regions, significant challenges remain in others. Donors and investors can play a crucial role in supporting initiatives that target both immediate and long-term solutions to child malnutrition. Here are some key messages for consideration:</p>
+<ol type="1">
+<li><p><strong>Targeted Interventions</strong>: Regions like Tigray and Amhara require focused nutritional programs to combat high stunting rates. Investments in health and nutrition initiatives can yield significant benefits for child development.</p></li>
+<li><p><strong>Climate Resilience</strong>: Areas like Afar and Somali highlight the need for investments in climate-resilient agriculture and food systems to mitigate the impact of environmental shocks on food security.</p></li>
+<li><p><strong>Urban Strategies</strong>: The challenges faced by urban areas like Dire Dawa and Harari necessitate tailored approaches to address nutrition and food access in densely populated settings.</p></li>
+<li><p><strong>Replication of Success</strong>: The dramatic reduction in stunting rates in Gambela serves as a model for what can be achieved with sustained support and targeted interventions. Donors can explore strategies to replicate these successes in other vulnerable regions.</p></li>
+</ol>
+</section>
+<section id="data-analysis-code-in-r" class="level4">
+<h4 class="anchored" data-anchor-id="data-analysis-code-in-r">Data Analysis Code in R</h4>
+<p>To analyze stunting rates in Ethiopia using DHS data follow the following R code:</p>
+<pre><code>#Load library
+library(tidyverse)
+
+# Loading the data
+eth_food &lt;- readr::read_csv("https://data.humdata.org/dataset/6e5d9d29-656e-40ec-9d42-e827777a94ad/resource/517a9d11-7e4b-4e0f-be29-5e9f8429345b/download/select-nutrition-indicators_subnational_eth.csv")
+
+#Transform the data
+trans_eth &lt;- eth_food %&gt;% 
+  select(2, 4, 5,9) %&gt;% 
+  filter(Indicator == "Children stunted") %&gt;% # Children stunted data
+  select(-Indicator) %&gt;% 
+  group_by(SurveyYear) %&gt;% 
+  pivot_wider(names_from = Location,
+              values_from = Value) 
+ 
+# do not run this part -- used in the datawrapper app for viz
+#write_csv(trans_eth, "ethiopia_children_stunted_wasted.csv")</code></pre>
+</section>
+<section id="data-source" class="level4">
+<h4 class="anchored" data-anchor-id="data-source">Data Source</h4>
+<p>This analysis utilizes data from the <strong>Demographic and Health Surveys (DHS)</strong>, which provides comprehensive data on health and nutrition indicators across various countries, including Ethiopia.</p>
+</section>
+<section id="conclusion" class="level4">
+<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
+<p>While Ethiopia has made remarkable progress in reducing child stunting, ongoing challenges must be addressed to sustain and accelerate these gains. By investing in targeted interventions and promoting climate resilience, donors can help ensure that every child in Ethiopia has the opportunity for a healthy start in life. Addressing child stunting is not only a moral imperative but also a strategic investment in the future of the nation.</p>
 
 
 </section>

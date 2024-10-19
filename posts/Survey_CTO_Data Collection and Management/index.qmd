@@ -1,6 +1,7 @@
 ---
 title: "Survey CTO Data Collection and Management"
 author: "Victor Mandela"
+date: "2024-10-16"
 categories: [Survey, Data Collection, SurveyCTO, CAPI]
 image: "surveycto.PNG"
 ---
