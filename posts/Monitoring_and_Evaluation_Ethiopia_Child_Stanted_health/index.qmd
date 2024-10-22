@@ -32,6 +32,8 @@ Addressing child stunting is crucial for achieving sustainable development goals
 
 #### Trends in Child Stunting Rates
 
+![](5nbrd-trends-in-stunting-rates-among-children-in-ethiopian-regions-2000-2019-.png)
+
 Based on data from the DHS, the stunting rates of children under five in Ethiopia have shown varying trends across regions. Below is a summary of the key findings:
 
 -   **Tigray**: Stunting rates decreased from 61.2% in 2000 to 48.4% in 2019, indicating progress but still reflecting high levels of chronic malnutrition.
