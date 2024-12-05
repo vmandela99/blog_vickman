@@ -1,77 +1,288 @@
 ---
-title: "How to Build a Monitoring Plan for Your Project"
+title: "School Feeding Program (SFP)"
 author: "Victor Mandela"
-date: "2024-10-17"
+date: "2024-12-05"
 categories: [Monitoring and Evaluation]
-image: "monitoring.jfif"
+image: "Feeding1.PNG"
+format:
+  html:
+    code-copy: true
+    toc: true       # Enables the Table of Contents
+    toc-depth: 3
 ---
 
-Once you've laid the foundation with a strong Research, Monitoring, and Evaluation (M&E) framework, the next step is to create a **Monitoring Plan**. This plan ensures you track the progress of your project in real time, helping you stay on course toward achieving your objectives. In this post, we'll break down the steps to build a simple, effective Monitoring Plan, with examples to make it easier to follow.
+![](images/clipboard-3272948536.png) Cover picture courtesy of Blessman International
 
-### 1. Identify What You Want to Monitor
+# Introduction
 
-Monitoring helps you check if your project is going as planned. You don’t need to monitor everything—focus on what’s most important. These can be the key activities, outcomes, and outputs you outlined in your M&E framework.
+Designing impactful program evaluations is crucial for understanding the effectiveness of interventions in various domains, including health, education, and welfare. While methodologies often overlap, the specific design and variables must be tailored to the context of the program being evaluated. This blog post takes inspiration from a health program evaluation dataset to construct a similar design for evaluating the impact of a **School Feeding Program (SFP)**.
 
-For example, if you’re running a project to improve access to clean water in a community, you might want to monitor:
+The School Feeding Program aims to improve student outcomes by providing nutritious meals during school hours, potentially influencing attendance, retention, and overall well-being. By adapting the same evaluation framework used for health interventions, we can explore how carefully chosen variables capture the nuances of such educational programs. This blog post demonstrates how to replicate the evaluation framework by defining variables for outcomes, controls, and other program-specific characteristics, ensuring a one-to-one correspondence with the health program’s design.
 
--   **Activities**: Installation of water pumps.
+The R code to get the data is here:-
 
--   **Outputs**: Number of water pumps installed.
+```{r, warning=FALSE, message=FALSE}
+# Loading of packages, data, and seed setting here
+library(haven)
+library(tidyverse)
+library(broom)
+library(estimatr)
+library(fishmethods)
+library(kableExtra)
+library(MatchIt)
+library(modelsummary)
+library(pwr)
+library(rddensity)
+library(skimr)
+library(texreg)
+library(gtsummary)
 
--   **Outcomes**: Number of households using clean water.
+# you can read directly from github here --
+trans_df <- read_csv("https://raw.githubusercontent.com/vmandela99/blog_vickman/refs/heads/main/posts/M%26E_01_School_Feeding_Causal_inference_%26_Counterfactuals/school_feeding.csv")
 
--   **Impact**: Reduction in waterborne diseases in the community.
+theme_set(ggpubr::theme_pubclean())
 
-The idea is to choose indicators that will tell you whether you're making progress toward your goals.
+# subset data to only "eligible" units
+df_elig <- trans_df %>%
+  filter(eligible == 1)
+```
 
-### 2. Define Your Data Collection Methods
+Whether you are a researcher, program implementer, or enthusiast in Monitoring and Evaluation (M&E), this approach equips you with a transferable method for evaluating interventions across various sectors. Let’s delve into how this framework is tailored for the School Feeding Program evaluation.
 
-Once you know what to monitor, decide how you’ll collect the information. The method you choose depends on what you’re measuring, but here are some simple examples:
+## **1. Variable Definitions**
 
--   **Surveys**: If you want to monitor household use of clean water, you could conduct household surveys asking how frequently they use the new water pumps.
+In designing the evaluation framework for the **School Feeding Program (SFP)**, it is essential to define variables that align with the program’s goals and context. Below, we outline the variables categorized into **Outcome Variables**, **Control Variables**, and **Other Variables**, ensuring they mirror the structure of a health program evaluation dataset.
 
--   **Observation**: You can visit project sites and observe how the water pumps are being used and maintained.
+### **Outcome Variable**
 
--   **Records and Reports**: For outputs like "number of water pumps installed," you can keep a record of the installations as they happen.
+This variable measures the primary goal of the SFP: improving school attendance.
 
-It’s important to choose methods that are easy and practical for your team to carry out. If your project is large, you might need to set up mobile data collection tools like **ODK** or **KoboCollect** to streamline the process.
+| **Variable**        | **Description**                                           |
+|------------------------|-----------------------------------------------|
+| **attendance_rate** | Average student attendance rate per school term (percent) |
 
-### 3. Set a Monitoring Schedule
+### **Control Variables**
 
-Monitoring needs to happen regularly to keep your project on track. But how often should you collect data? This will depend on the type of project and the indicators you’re tracking.
+These variables account for household and socio-economic factors that might influence school attendance or participation in the program.
 
-For example:
+| **Variable**   | **Description**                                                       |
+|-----------------------|-------------------------------------------------|
+| **age_hh**     | Age of the head of the household (in years)                           |
+| **age_sp**     | Age of the spouse (in years)                                          |
+| **educ_hh**    | Education of the head of the household (completed years of schooling) |
+| **educ_sp**    | Education of the spouse (completed years of schooling)                |
+| **female_hh**  | Head of the household is a woman (0=no, 1=yes)                        |
+| **indigenous** | Head of household speaks an indigenous language (0=no, 1=yes)         |
+| **hhsize**     | Number of household members (baseline)                                |
+| **dirtfloor**  | Home has a dirt floor at baseline (0=no, 1=yes)                       |
+| **bathroom**   | Home with private bathroom at baseline (0=no, 1=yes)                  |
+| **land**       | Number of hectares of land owned by household at baseline             |
 
--   **Daily or Weekly**: You might want to track how many water pumps are being installed on a weekly basis. This helps to spot any delays early and adjust the plan.
+### **Other Variables**
 
--   **Monthly**: If you’re looking at outcomes like household use of clean water, you might conduct monthly surveys to see if more people are benefiting from the project.
+These variables define the experimental design, program eligibility, and participation details.
 
--   **Quarterly or Annually**: For impact-level indicators, such as the reduction in waterborne diseases, quarterly or annual monitoring might be more appropriate since these changes take time.
+| **Variable**             | **Description**                                                                         |
+|-----------------------|------------------------------------------------|
+| **locality_identifier**  | Locality identifier                                                                     |
+| **household_identifier** | Unique household identifier                                                             |
+| **treatment_locality**   | School is in a locality with the feeding program (0=no, 1=yes)                          |
+| **promotion_locality**   | School is in a locality where the feeding program was promoted (0=no, 1=yes)            |
+| **eligible**             | Household is eligible for the feeding program (0=no, 1=yes)                             |
+| **enrolled**             | Child is enrolled in the feeding program (0=no, 1=yes)                                  |
+| **enrolled_rp**          | Child enrolled in the feeding program under the random promotion scenario (0=no, 1=yes) |
+| **poverty_index**        | Poverty Index 1-100                                                                     |
+| **round**                | Survey round (0=baseline; 1=follow-up)                                                  |
+| **hospital**             | HH member visited hospital in the past year (0=no, 1=yes)                               |
 
-Creating a monitoring calendar can help your team stay on top of data collection. This schedule will tell them **what to collect**, **when to collect it**, and **who is responsible**.
+This comprehensive set of variables enables a detailed analysis of the program’s impact while controlling for household-level differences and program design elements. By aligning the variable structure with the program’s objectives, we can effectively measure the success of the intervention and uncover insights for future implementation.
 
-### 4. Assign Responsibilities
+## **2. Causal Inference and Counterfactuals**
 
-Clear roles and responsibilities are crucial to ensure everyone knows what they’re supposed to do. Depending on the size of your team, you might have:
+Causal inference is the process of determining whether a program or intervention (like the School Feeding Program) directly causes a change in an outcome, such as improved school attendance. It goes beyond simple associations to uncover cause-and-effect relationships by comparing what happened with what could have happened if the program had not been implemented.
 
--   **Data Collectors**: These are the people gathering the information. For example, local community volunteers or field officers might be responsible for visiting households to collect data.
+The idea of **counterfactuals** lies at the heart of causal inference. A counterfactual refers to the hypothetical scenario of what would have occurred in the absence of the program. Since we cannot observe both the actual outcome and the counterfactual for the same household, researchers rely on rigorous study designs (such as randomized control trials) or statistical techniques to estimate the counterfactual and isolate the program’s impact.
 
--   **Data Managers**: They ensure that the collected data is entered into a database or monitoring system accurately and on time.
+### **Before-After Designs**
 
--   **Project Managers**: The person or team responsible for reviewing the data regularly and making decisions based on the findings.
+The first “expert” consultant you hire suggests that to estimate the impact of the School Feeding Program (SFP), you should calculate the change in student attendance rates over time for the schools where households enrolled in the program. The consultant argues that because SFP provides meals that alleviate hunger and improve student focus, any increase in attendance rates over time can be attributed to the program's effect.
 
-Let’s say you’re monitoring the installation of water pumps. A field officer might report every week on how many pumps have been installed, while the project manager checks the progress and adjusts the plan if needed.
+Using the subset of schools in treatment localities, you calculate their average student attendance rates before the implementation of the program and then again two years later. The analysis focuses on comparing the average attendance rates at baseline and follow-up to assess the program's impact in villages participating in the School Feeding Program.
 
-### 5. Analyze and Use the Data
+```{r}
+m_ba1 <- lm_robust(attendance_rate ~ round, 
+                   clusters = locality_identifier,
+                   data = trans_df %>% filter(treatment_locality==1 & enrolled ==1))
 
-Once you’ve gathered the data, it’s time to make sense of it. Ask yourself:
 
--   **Is the project on track?** For example, if you planned to install 20 water pumps by mid-year and you’ve only installed 5, it’s clear something needs to change.
+m_ba2 <- lm_robust(attendance_rate ~ round + age_hh + age_sp + educ_hh + 
+                     educ_sp + female_hh + indigenous + hhsize + dirtfloor + 
+                     bathroom + land + school_distance, 
+                   clusters = locality_identifier,
+                   data = trans_df %>% filter(treatment_locality==1 & enrolled ==1))
 
--   **Are we seeing the expected results?** If the outcome you wanted was increased household access to clean water, but only a few households are using the pumps, you’ll need to investigate why. Maybe the pumps are not located in convenient places, or people need more education on how to use them.
+t0 <- tbl_regression(m_ba1, intercept = T)
+t01 <- tbl_regression(m_ba2, intercept = T)
 
-Data analysis doesn’t have to be complex. Simple comparisons of actual results against your targets can give you valuable insights.
+tbl_merge_m_ba <-
+  tbl_merge(
+    tbls = list(t0, t01),
+    tab_spanner = c("No Controls", "With Controls")
+  )
 
-### Final Thoughts
+tbl_merge_m_ba
 
-A good Monitoring Plan ensures that you’re not flying blind. It helps you see if your project is progressing as expected or if adjustments need to be made. By identifying key things to monitor, choosing the right data collection methods, setting a schedule, and assigning roles, you can keep your project on track and achieve the results you’re aiming for.
+```
+
+**Does the before-and-after comparison control for all the factors that affect student attendance over time?**
+
+No, it is unlikely that this analysis accounts for all the factors influencing attendance. For instance, there could be other educational or health-related interventions occurring simultaneously in the communities receiving the School Feeding Program (SFP), which might also contribute to changes in attendance. Additionally, external factors like a regional economic crisis or natural disasters could have independently affected attendance. In the absence of SFP, attendance might have increased or decreased due to these factors, making it challenging to attribute all observed changes solely to the program.
+
+**Based on these results produced by the before-and-after analysis, should SFP be scaled up nationally?**
+
+No, based on the current results, scaling up the program nationally might not be justified yet. While the School Feeding Program appears to have improved average attendance rates, the increase of 5.7 percentage points may not be sufficient to meet the government's threshold for program effectiveness. Moreover, without understanding the contribution of confounding factors, it remains unclear whether the observed improvements are entirely due to the program.
+
+### **Enrolled vs. Non-Enrolled**
+
+Another consultant proposes a different approach, suggesting it would be more appropriate to estimate the counterfactual in the post-intervention period, two years after the program's start. The consultant correctly notes that of the 5,929 households in the baseline sample, only 2,907 enrolled in the School Feeding Program (SFP), leaving approximately 51 percent of households without access to SFP.
+
+The consultant argues that all schools within the 100 pilot villages were eligible to enroll in the program, with households in these communities sharing similar characteristics. For example, households rely on comparable school infrastructures, face similar regional conditions, and have children subject to the same school policies. Furthermore, economic activities and living standards within these localities are generally uniform.
+
+The consultant asserts that under such circumstances, attendance rates for households not enrolled in SFP after the intervention can reasonably estimate the counterfactual outcomes for those enrolled. Consequently, you decide to compare average student attendance rates in the post-intervention period for both groups—schools participating in the School Feeding Program and those that opted out.
+
+```{r}
+m_ene1 <- lm_robust(attendance_rate ~ enrolled, 
+                    clusters = locality_identifier,
+                    data = trans_df %>% filter(treatment_locality==1 & round ==1))
+
+m_ene2 <- lm_robust(attendance_rate ~ enrolled + age_hh + age_sp + educ_hh + 
+                      educ_sp + female_hh + indigenous + hhsize + dirtfloor + 
+                      bathroom + land + school_distance, 
+                    clusters = locality_identifier,
+                    data = trans_df %>% filter(treatment_locality==1 & round ==1))
+
+t0a <- tbl_regression(m_ene1, intercept = T)
+t0a1 <- tbl_regression(m_ene2, intercept = T)
+
+tbl_merge_m_ene <-
+  tbl_merge(
+    tbls = list(t0a, t0a1),
+    tab_spanner = c("No Controls", "With Controls")
+  )
+
+tbl_merge_m_ene
+```
+
+**Does this analysis likely control for all the factors that determine differences in student attendance between the enrolled and non-enrolled groups?**
+
+No, it is unlikely that the multivariate analysis fully controls for all the factors that influence the difference in attendance rates between the two groups. There could be unobservable factors that contribute to why some schools enroll in the feeding program while others do not. For instance, household preferences, school engagement levels, or the motivation of parents could play a role in determining which schools opt for the program. These factors may not be fully captured in the analysis.
+
+**Based on these results produced by the enrolled vs. non-enrolled method, should the School Feeding Program (SFP) be scaled up nationally?**
+
+Based strictly on the estimate from the multivariate linear regression, the SFP should not be scaled up nationally based on the findings here. The program increased average student attendance by 8.5%, which is a positive but modest improvement. While this result is statistically significant (p-value \< 0.001), it is lower than the expected national threshold improvement in attendance, suggesting that scaling up the program may not immediately achieve the desired outcomes at a larger scale. However, the modest effect size means that further investigation into the program’s impact across different contexts and regions is necessary to determine if it could contribute meaningfully to national efforts in improving student attendance.
+
+## 3. Randomized Assignment
+
+**Random Assignment** in the context of our school feeding program evaluation means that households or communities are randomly assigned to either the treatment group (where they receive the feeding program) or the control group (where they do not). This random assignment ensures that every participant has an equal chance of being placed in either group, making it more likely that the groups are similar at the start of the study. As a result, any differences in outcomes, such as changes in children's health or learning outcomes, can be attributed to the school feeding program itself, rather than other external factors. This method strengthens the validity of our findings and helps ensure that the observed impacts are genuinely due to the program intervention.
+
+The key is to find a group of villages that are very similar to the 100 treatment villages, except for the fact that one group participated in the school feeding program and the other did not. Since the treatment villages were randomly selected from the pool of rural villages, they should, on average, have similar characteristics to those villages that did not participate in the program.
+
+To improve the counterfactual estimate, we utilize an additional 100 rural villages that were not part of the feeding program. These comparison villages were also randomly selected, ensuring that they share similar characteristics with the treatment villages at the outset of the program. The random assignment of the program ensures that any differences in outcomes (e.g., improvements in children's nutrition or learning) between the treatment and comparison villages can be attributed to the program, not external factors.
+
+To validate this assumption, we would need to test whether the characteristics of eligible households in both the treatment and comparison villages were similar at the baseline, ensuring that no major differences existed before the program began. If the characteristics are similar, it further supports the idea that the program's effects are due to the intervention itself rather than other external factors.
+
+```{r}
+df_elig <- trans_df %>%
+  filter(eligible == 1) 
+
+df_elig %>% 
+  filter(round == 0) %>%
+  dplyr::select(treatment_locality, locality_identifier,
+                age_hh, age_sp, educ_hh, educ_sp, female_hh, indigenous, 
+                hhsize, dirtfloor, bathroom, land, school_distance) %>%
+  tidyr::pivot_longer(-c("treatment_locality","locality_identifier")) %>%
+  group_by(name) %>%
+  do(tidy(lm_robust(value ~ treatment_locality, data = .))) %>%
+  filter(term == "treatment_locality") %>%
+  dplyr::select(name, estimate, std.error, p.value) %>%
+  kable()
+
+```
+
+The average characteristics of households in both the treatment and comparison villages appear very similar. Among the various variables tested, the only statistically significant differences are in the number of years of education of the head of household and the distance to the nearest school, which are relatively small in magnitude. Specifically, the difference in the education of the household head is 0.16 years (which is less than 6% of the average years of education in the comparison group), and the difference in the distance to school is 2.91 kilometers (less than 3% of the comparison group’s average distance). These differences are statistically significant, but small, indicating that the two groups are quite similar in terms of key demographic factors.
+
+Even in a randomized experiment involving a large sample, small differences can occur by chance due to the nature of statistical tests. In fact, using a typical 5% significance level, we would expect some differences in around 5% of the characteristics simply due to random variability. Therefore, although small statistically significant differences exist, the overall similarity between the two groups suggests that the random assignment was effective and that the treatment and comparison groups are comparable for the evaluation of the feeding program's impact.
+
+**Estimate the average attendance rate for eligible households in the treatment and comparison villages for each period. What is the impact of the program?**
+
+```{r}
+out_round0 <- lm_robust(attendance_rate ~ treatment_locality,
+                        data = df_elig %>% filter(round == 0),
+                        clusters = locality_identifier)
+out_round1 <- lm_robust(attendance_rate ~ treatment_locality,
+                        data = df_elig %>% filter(round == 1),
+                        clusters = locality_identifier)
+
+t0b <- tbl_regression(out_round0, intercept = T)
+t0b1 <- tbl_regression(out_round1, intercept = T)
+
+tbl_merge_m_ba1 <-
+  tbl_merge(
+    tbls = list(t0b, t0b1),
+    tab_spanner = c("Baseline", "Follow Up")
+  )
+
+tbl_merge_m_ba1
+```
+
+At baseline, there is no statistically significant difference in the average characteristics between the treatment and comparison groups. This confirms that the groups are similar, as expected under randomized assignment. The baseline results show that the treatment locality (the area receiving the feeding program) does not significantly differ from the comparison group in terms of the outcome measure (Beta = 0.07, p-value = 0.7).
+
+At follow-up, however, the treatment locality shows a statistically significant and positive effect on the outcome measure, with a beta coefficient of 8.7 (p-value \< 0.001). This indicates that households in the treatment locality saw a notable improvement compared to those in the comparison villages. Specifically, the intervention appears to have resulted in an increase in the outcome, possibly reflecting the positive effects of the feeding program, given the substantial change in the beta coefficient.
+
+The impact of the program is therefore evident in the follow-up period, and the reduction in the treatment and comparison villages' differences shows a clear program effect, with an estimated increase of 8.7 units on the attendance rate, which is statistically significant.
+
+Thus, these findings support the conclusion that the feeding program had a positive impact on the target population over the course of the study period.
+
+**Re-estimate using a multivariate regression analysis that controls for the other observable characteristics of the sample households. How does your impact estimate change?**
+
+```{r}
+out_round1_nocov <- lm_robust(attendance_rate ~ treatment_locality,
+                              data = df_elig %>% filter(round == 1),
+                              clusters = locality_identifier)
+out_round1_wcov <- lm_robust(attendance_rate ~ treatment_locality +
+                               age_hh + age_sp + educ_hh + educ_sp + 
+                               female_hh + indigenous + hhsize + dirtfloor + 
+                               bathroom + land + school_distance,
+                             data = df_elig %>% filter(round == 1),
+                             clusters = locality_identifier)
+t2 <- tbl_regression(out_round1_nocov, intercept = T)
+t3 <- tbl_regression(out_round1_wcov, intercept = T)
+
+tbl_merge_out_round1 <-
+  tbl_merge(
+    tbls = list(t2, t3),
+    tab_spanner = c("**No Covariate Adjust.**", "**With Covariate Adjust.**")
+  )
+
+tbl_merge_out_round1
+```
+
+**Without Covariate Adjustment:**\
+At the baseline, the coefficient for the treatment locality is 8.7 (with a 95% confidence interval of 8.0 to 9.4), which is statistically significant (p-value \< 0.001). This suggests that, without adjusting for other factors, the households in the treatment locality (those receiving the feeding program) exhibit a significant improvement compared to those in the comparison group.
+
+**With Covariate Adjustment:**\
+When adjusting for other observable characteristics such as age, education, and household size, the coefficient for the treatment locality is slightly reduced to 8.6 (95% CI: 8.0 to 9.2) but remains statistically significant (p-value \< 0.001). This indicates that even when accounting for factors like age, education, and household characteristics, the treatment locality still shows a strong and positive effect, with the intervention leading to a substantial improvement in the outcome measure.
+
+### Why is the Impact Estimate Unchanged with Covariate Adjustment?
+
+The treatment effect remains nearly unchanged when controlling for additional factors because of the randomized assignment. Randomization ensures that the treatment and comparison groups are very similar in characteristics at baseline, and external factors affecting the outcome should affect both groups equally over time. Therefore, any changes observed in the treatment locality compared to the comparison group can confidently be attributed to the feeding program rather than differences in baseline characteristics or external influences.
+
+### Conclusion on the Program's Impact
+
+Given that the estimated impact remains consistent even after controlling for additional characteristics, it is clear that the feeding program has a significant positive effect on the target population. The treatment group shows a noticeable improvement in outcomes, and this improvement is robust to covariate adjustments.
+
+### Should the Feeding Program Be Scaled Up?
+
+Yes, the feeding program should be scaled up. The impact on the outcome measure is statistically significant and substantial. The effect of the intervention, even after accounting for other factors, supports the case for expanding the program to other regions to improve the well-being of households in similar circumstances.
+
+Cover picture courtesy of Blessman International
