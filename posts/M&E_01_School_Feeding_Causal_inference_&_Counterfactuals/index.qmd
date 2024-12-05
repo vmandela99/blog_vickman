@@ -2,7 +2,7 @@
 title: "School Feeding Program (SFP)"
 author: "Victor Mandela"
 date: "2024-12-05"
-categories: [Monitoring and Evaluation]
+categories: [Monitoring and Evaluation, R, Analysis, Visualization, Statistics, Regression]
 image: "Feeding1.PNG"
 format:
   html:
