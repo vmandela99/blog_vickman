@@ -419,3 +419,204 @@ The Local Average Treatment Effect (LATE) and the Complier Average Causal Effect
 **Should the SFP be Scaled Up Nationally?**
 
 Based on the results from the regression analysis, the school feeding program shows a significant positive impact on attendance rates. The estimated LATE/CACE of 8.3 percentage points suggests a clear benefit from the program. Therefore, the results support scaling the program up nationally, as the program’s effectiveness in improving attendance is statistically significant and substantial.
+
+## 5. Regression Discontinuity Designs
+
+Regression Discontinuity Designs (RDD) are a method used to evaluate the impact of a treatment or intervention by focusing on cases where a specific cutoff or threshold determines who receives the treatment. For example, imagine a school program that only allows students with test scores above a certain level to participate. RDD compares students who are just above the threshold (and get the program) with those who are just below it (and don't get the program). This helps estimate the effect of the program by assuming that those on either side of the cutoff are very similar, except for receiving the program.
+
+In simple terms, RDD looks at situations where a rule or score divides people into different groups and then compares those on either side of that line to see if the treatment makes a real difference.
+
+### Application
+
+Now consider how the regression discontinuity design (RDD) method can be applied to our School Feeding Program (SFP). After doing some more investigation into the design of SFP, you find that in addition to randomly selecting treatment villages, the authorities targeted the program to low-income households using the national poverty line. The poverty line is based on a poverty index that assigns each household in the country a score between 20 and 100 based on its assets, housing conditions, and socio demographic structure. The poverty line has been officially set at 58. This means that all households with a score of 58 or below are classified as poor, and all households with a score of more than 58 are considered to be non-poor. Even in the treatment villages, only poor households are eligible to enroll in SFP. Your data set includes information on both poor and non-poor households in the treatment villages
+
+```{r}
+# Create data subset with only treatment localities
+df_treat <- trans_df %>%
+  filter(treatment_locality == 1)
+
+```
+
+Before carrying out the regression discontinuity design estimations, you decide to check whether there is any evidence of manipulation of the eligibility index. As a first step, you check whether the density of the eligibility index raises any concerns about manipulation of the index. You plot the percentage of schools against the baseline poverty index.
+
+```{r}
+ggplot(df_treat, aes(x = poverty_index)) +
+  geom_vline(xintercept = 58) +
+  geom_density() +
+  labs(x = "Poverty Index")
+
+```
+
+We can also conduct a **McCrary density test**, to examine this more formally.
+
+```{r}
+test_density <- rdplotdensity(rdd = rddensity(df_treat$poverty_index, c = 58), 
+                              X = df_treat$poverty_index, 
+                              type = "both")
+
+```
+
+The figures do not indicate any clustering of schools right below the cutoff of 58.
+
+Next, you check whether households respected their assignment to the treatment and comparison groups on the basis of their eligibility score. You plot participation in the program against the baseline poverty index and find that two years after the start of the pilot, only households with a score of 58 or below (that is, to the left of the poverty line) have been allowed to enroll in SFP. In addition, all of the eligible households enrolled in SFP. In other words, you find full compliance and have a “sharp” RDD.
+
+```{r}
+ggplot(df_treat, aes(y = enrolled, x = poverty_index)) +
+  geom_vline(xintercept = 58) +
+  geom_point() +
+  labs(x = "Poverty Index", y = "Enrolled")
+
+```
+
+You now proceed to apply the RDD method to compute the impact of the program. Using follow-up data, you again plot the relationship between the scores on the poverty index and predicted attendance rates and find the relation illustrated in the figure below. In the relationship between the poverty index and the predicted attendance rates, you find a clear break, or discontinuity, at the poverty line (58).
+
+```{r}
+df_treat %>%
+  filter(round == 1) %>%
+  mutate(enrolled_lab = ifelse(enrolled == 1, "Enrolled", "Not Enrolled")) %>%
+  ggplot(aes(x = poverty_index, y = attendance_rate,
+             group = enrolled_lab, colour = enrolled_lab, fill = enrolled_lab)) +
+  geom_point(alpha = 0.03) +
+  geom_smooth(method = "lm") +
+  labs(x = "Poverty Index", y = "Attendance_rate") +
+  scale_colour_viridis_d("Enrollment:", end = 0.7) +
+  scale_fill_viridis_d("Enrollment:", end = 0.7) +
+  theme(legend.position="bottom")
+
+```
+
+The discontinuity reflects an increase in attendance rates for those schools eligible to receive the program. Given that schools on both sides of the cutoff score of 58 are very similar, the plausible explanation for the different level of attendance rates is that one group of schools was eligible to enroll in the program and the other was not. You estimate this difference through a regression with the findings shown in the following table.
+
+```{r}
+df_treat <- df_treat %>%
+  mutate(poverty_index_c0 = poverty_index - 58)
+
+out_rdd <- lm_robust(attendance_rate ~ poverty_index_c0 * enrolled + 
+                       age_hh + age_sp + educ_hh + educ_sp + 
+                       female_hh + indigenous + hhsize + dirtfloor + 
+                       bathroom + land + school_distance,
+                     data = df_treat %>% filter(round == 1))
+
+tbl16 <- tbl_regression(out_rdd, intercept = T) %>%
+  add_glance_source_note(
+    glance_fun = broom::glance, # Extract model summary
+    include = c("adj.r.squared", "r.squared", "nobs") # Add Adjusted R-squared
+  )
+
+```
+
+**Note:** We could also estimate the effect of the program in the following ways
+
+Estimating the effect of the program on health expenditures again using regression, but include an interaction with a cubic polynomial of the running variable.
+
+```{r}
+out_rdd_cubic <- lm_robust(attendance_rate ~ enrolled * poverty_index_c0 +
+                             enrolled * I(poverty_index_c0^2) + 
+                             enrolled * I(poverty_index_c0^3) +
+                             age_hh + age_sp + educ_hh + educ_sp + 
+                             female_hh + indigenous + hhsize + dirtfloor +
+                             bathroom + land + school_distance,
+                           data = df_treat %>% filter(round == 1))
+tbl_cubic <- tbl_regression(out_rdd_cubic, intercept = T) %>% 
+  add_glance_source_note(
+    glance_fun = broom::glance, # Extract model summary
+    include = c("adj.r.squared", "r.squared", "nobs") # Add Adjusted R-squared
+  )
+
+
+```
+
+Estimating the effect of the program on attendance rates again using regression, but only including observations 5 points above or below the cutoff of 58.
+
+```{r}
+
+out_rdd5 <- lm_robust(attendance_rate ~ enrolled * poverty_index_c0 + 
+                        age_hh + age_sp + educ_hh + educ_sp + 
+                        female_hh + indigenous + hhsize + dirtfloor + 
+                        bathroom + land + school_distance,
+                      data = df_treat %>% filter(round == 1 &
+                                                   abs(poverty_index_c0) <=5))
+
+tbl_rdd5 <- tbl_regression(out_rdd5, intercept = T) %>% 
+  add_glance_source_note(
+    glance_fun = broom::glance, # Extract model summary
+    include = c("adj.r.squared", "r.squared", "nobs") # Add Adjusted R-squared
+  )
+
+
+tbl_merge_rdd_all <-
+  tbl_merge(
+    tbls = list( tbl16,tbl_cubic, tbl_rdd5),
+    tab_spanner = c("**Linear**", "**Cubic**", "**5 Point Window**")
+  )
+
+tbl_merge_rdd_all
+
+```
+
+Combining all these results together we see a consistent effect of the program.
+
+### Results
+
+**Is the result of the RDD analysis valid for all schools in the program?**
+
+No, the RDD estimates represent the effects for schools with attendance rates very close to the defined eligibility cutoff. Intuitively, this is the region where schools just eligible for the program and those just ineligible have the most similar baseline characteristics and can be meaningfully compared.
+
+**Compared with the impact estimated with the randomized assignment method, what does this result say about schools with poverty index just below the cutoff?**
+
+This result indicates that schools with poverty index just below the eligibility threshold experience a smaller increase in attendance rates than the average eligible school. Specifically, schools just under the cutoff score experience an increase of **7.3 percentage points** in attendance rates, which is slightly less than the average improvement observed with the randomized assignment method.
+
+## 6. Difference-in-Differences
+
+The Difference-in-Differences (DiD) method is a widely used statistical approach to evaluate the causal effect of an intervention by comparing changes over time between a treatment group and a control group. In our School Feeding Program (SFP), this technique can help us measure how the introduction of the program influenced student attendance rates by comparing schools that implemented the program (treatment group) with those that did not (control group), both before and after the program began.
+
+This approach leverages the assumption that, without the intervention, both groups would have followed similar trends over time. By examining the difference in attendance rate changes between these groups, we isolate the program’s impact while controlling for underlying trends that affect all schools.
+
+In this scenario, you have two rounds of data on two groups of schools: one group that enrolled in the program, and another that did not. Remembering the case of the enrolled and non- enrolled groups, you realize that you cannot simply compare the average attendance rates of the two groups because of selection bias. Because you have data for two periods for each school in the sample, you can use those data to solve some of these challenges by comparing the change in attendance rates for the two groups, assuming that the change in the attendance rates of the non-enrolled group reflects what would have happened to the attendance of the enrolled group in the absence of the program. Note that it does not matter which way you calculate the double difference.
+
+```{r}
+out_did <- lm_robust(attendance_rate ~ round * enrolled, 
+                     data = trans_df %>% filter(treatment_locality == 1),
+                     clusters = locality_identifier)
+
+out_did_wcov <- lm_robust(attendance_rate ~ round * enrolled +
+                            age_hh + age_sp + educ_hh + educ_sp + 
+                            female_hh + indigenous + hhsize + dirtfloor + 
+                            bathroom + land + school_distance, 
+                          data = trans_df %>% filter(treatment_locality == 1),
+                          clusters = locality_identifier)
+
+tbl_did <- tbl_regression(out_did, intercept = T) %>% 
+  add_glance_source_note(
+    glance_fun = broom::glance, # Extract model summary
+    include = c("adj.r.squared", "r.squared", "nobs") # Add Adjusted R-squared
+  )
+
+tbl_did_wcov <- tbl_regression(out_did_wcov, intercept = T) %>% 
+  add_glance_source_note(
+    glance_fun = broom::glance, # Extract model summary
+    include = c("adj.r.squared", "r.squared", "nobs") # Add Adjusted R-squared
+  )
+
+
+tbl_merge_did <-
+  tbl_merge(
+    tbls = list( tbl_did, tbl_did_wcov),
+    tab_spanner = c("**No Covariate Adjustment**", "**With Covariate Adjustment**")
+  )
+
+tbl_merge_did
+
+```
+
+Next, you estimate the effect using regression analysis. Using a simple linear regression to compute the simple difference-in- differences estimate, you find that the program increased school attendance rate by 7.0. You then refine your analysis by adding additional control variables. In other words, you use a multivariate linear regression that takes into account a host of other factors, and you find the same promotion in school attendance rate.
+
+**What are the basic assumptions required to accept this result from difference-in-differences?**
+
+To accept this result, we assume that there are no differential time varying factors between the two groups other than the program. We assume that the treatment and comparison groups would have equal trends or changes in outcomes in the absence of treatment. While this assumption can’t be tested in the post intervention period, we can compare trends before the intervention starts.
+
+**Based on the result from difference-in-differences, should HISP be scaled up nationally?**
+
+No, based on this result, the SFP should not be scaled up nationally because it has Increased by less than the \$10 threshold level. Taking the estimated impact under random assignment as the “true” impact of the program suggests that the difference in difference estimate may be biased. In fact, in this case, using the nonenrolled households as a comparison group does not accurately represent the counterfactual trend in attendance rates.
+
+## Next page previous
