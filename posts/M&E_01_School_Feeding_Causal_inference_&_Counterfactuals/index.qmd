@@ -181,7 +181,7 @@ No, it is unlikely that the multivariate analysis fully controls for all the fac
 
 Based strictly on the estimate from the multivariate linear regression, the SFP should not be scaled up nationally based on the findings here. The program increased average student attendance by 8.5%, which is a positive but modest improvement. While this result is statistically significant (p-value \< 0.001), it is lower than the expected national threshold improvement in attendance, suggesting that scaling up the program may not immediately achieve the desired outcomes at a larger scale. However, the modest effect size means that further investigation into the program’s impact across different contexts and regions is necessary to determine if it could contribute meaningfully to national efforts in improving student attendance.
 
-## 3. Randomized Assignment
+## **3. Randomized Assignment**
 
 **Random Assignment** in the context of our school feeding program evaluation means that households or communities are randomly assigned to either the treatment group (where they receive the feeding program) or the control group (where they do not). This random assignment ensures that every participant has an equal chance of being placed in either group, making it more likely that the groups are similar at the start of the study. As a result, any differences in outcomes, such as changes in children's health or learning outcomes, can be attributed to the school feeding program itself, rather than other external factors. This method strengthens the validity of our findings and helps ensure that the observed impacts are genuinely due to the program intervention.
 
@@ -285,7 +285,7 @@ Given that the estimated impact remains consistent even after controlling for ad
 
 Yes, the feeding program should be scaled up. The impact on the outcome measure is statistically significant and substantial. The effect of the intervention, even after accounting for other factors, supports the case for expanding the program to other regions to improve the well-being of households in similar circumstances.
 
-## 4. Instrumental Variables
+## **4. Instrumental Variables**
 
 **Instrumental Variables** in the context of our school feeding program help us figure out how the program affects attendance rates when other factors might confuse the results. An instrumental variable is something that influences whether a child participates in the program (like whether their school is in a treatment area) but doesn’t directly impact attendance rates except through the program itself. This approach helps isolate the program's true effect on attendance, even if there are other overlapping influences.
 
@@ -312,7 +312,7 @@ t_enroll <- tbl_regression(m_enroll, intercept = TRUE) %>%
 t_enroll
 ```
 
-After two years of promotion and program implementation, you find that 49% of students in schools randomly assigned to the promotion campaign are attending school more regularly, compared to only 8% in non-promoted schools.
+After two years of promotion and program implementation, you find that 41% of students in schools randomly assigned to the promotion campaign are attending school more regularly, compared to only 8% in non-promoted schools.
 
 Because the promoted and non-promoted schools were assigned at random, we can confidently assume that the baseline characteristics of the two groups were similar in the absence of the promotion. This assumption is validated by comparing baseline attendance rates and other school-related characteristics, which showed no significant differences.
 
@@ -419,7 +419,3 @@ The Local Average Treatment Effect (LATE) and the Complier Average Causal Effect
 **Should the SFP be Scaled Up Nationally?**
 
 Based on the results from the regression analysis, the school feeding program shows a significant positive impact on attendance rates. The estimated LATE/CACE of 8.3 percentage points suggests a clear benefit from the program. Therefore, the results support scaling the program up nationally, as the program’s effectiveness in improving attendance is statistically significant and substantial.
-
-## Next chapter previous
-
-Cover picture courtesy of Blessman International
