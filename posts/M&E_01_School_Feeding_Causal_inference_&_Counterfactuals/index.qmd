@@ -420,7 +420,7 @@ The Local Average Treatment Effect (LATE) and the Complier Average Causal Effect
 
 Based on the results from the regression analysis, the school feeding program shows a significant positive impact on attendance rates. The estimated LATE/CACE of 8.3 percentage points suggests a clear benefit from the program. Therefore, the results support scaling the program up nationally, as the program’s effectiveness in improving attendance is statistically significant and substantial.
 
-## 5. Regression Discontinuity Designs
+## **5. Regression Discontinuity Designs**
 
 Regression Discontinuity Designs (RDD) are a method used to evaluate the impact of a treatment or intervention by focusing on cases where a specific cutoff or threshold determines who receives the treatment. For example, imagine a school program that only allows students with test scores above a certain level to participate. RDD compares students who are just above the threshold (and get the program) with those who are just below it (and don't get the program). This helps estimate the effect of the program by assuming that those on either side of the cutoff are very similar, except for receiving the program.
 
@@ -566,7 +566,7 @@ No, the RDD estimates represent the effects for schools with attendance rates ve
 
 This result indicates that schools with poverty index just below the eligibility threshold experience a smaller increase in attendance rates than the average eligible school. Specifically, schools just under the cutoff score experience an increase of **7.3 percentage points** in attendance rates, which is slightly less than the average improvement observed with the randomized assignment method.
 
-## 6. Difference-in-Differences
+## **6. Difference-in-Differences**
 
 The Difference-in-Differences (DiD) method is a widely used statistical approach to evaluate the causal effect of an intervention by comparing changes over time between a treatment group and a control group. In our School Feeding Program (SFP), this technique can help us measure how the introduction of the program influenced student attendance rates by comparing schools that implemented the program (treatment group) with those that did not (control group), both before and after the program began.
 

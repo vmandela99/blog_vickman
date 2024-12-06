@@ -28,21 +28,6 @@ title: "Projects"
 
     **About the Role**
 
-    In this study, we evaluate the extent to which clinicians follow pneumonia treatment
-    guidelines among children aged 2- 59 months without severe malnutrition and not ex
-    posed to HIV in level one referral hospitals. The study employed a retrospective cross
-    sectional study design, where data is collected from hospital records. It is based on data
-    from a cluster randomized trial that was conducted in 12 Kenyan hospitals. The clini
-    cal information network (CIN) data set was used. Random forest, logistic regression, and
-    decision trees machine learning models were employed. The study found that 94% of
-    children who were correctly diagnosed with severe pneumonia were more likely to die as
-    comparedtothosechildrennotcorrectlydiagnosedwithseverepneumonia, holdingother
-    factors constant. Also, 14.9% of children who were correctly diagnosed with non-severe
-    pneumonia were morelikely to die as compared to those children not correctly diagnosed
-    with non-severe pneumonia, holding other factors constant. On the other hand, correct
-    administration of treatment for non-severe pneumonia reduced the chances of mortal
-    ity by 32.4%, holding other factors constant. Machine learning techniques were used in
-    validating these findings. The conclusion was that the results could be repetitive with
-    approximately 70% accuracy.
+    In this study, we evaluate the extent to which clinicians follow pneumonia treatment guidelines among children aged 2- 59 months without severe malnutrition and not ex posed to HIV in level one referral hospitals. The study employed a retrospective cross sectional study design, where data is collected from hospital records. It is based on data from a cluster randomized trial that was conducted in 12 Kenyan hospitals. The clini cal information network (CIN) data set was used. Random forest, logistic regression, and decision trees machine learning models were employed. The study found that 94% of children who were correctly diagnosed with severe pneumonia were more likely to die as comparedtothosechildrennotcorrectlydiagnosedwithseverepneumonia, holdingother factors constant. Also, 14.9% of children who were correctly diagnosed with non-severe pneumonia were morelikely to die as compared to those children not correctly diagnosed with non-severe pneumonia, holding other factors constant. On the other hand, correct administration of treatment for non-severe pneumonia reduced the chances of mortal ity by 32.4%, holding other factors constant. Machine learning techniques were used in validating these findings. The conclusion was that the results could be repetitive with approximately 70% accuracy.
 
 3.  
