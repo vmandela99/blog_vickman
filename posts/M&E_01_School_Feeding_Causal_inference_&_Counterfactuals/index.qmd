@@ -1,5 +1,5 @@
 ---
-title: "School Feeding Program (SFP)"
+title: "School Feeding Program (SFP) Practical Evaluation Using Different Methodologies and R Codes"
 author: "Victor Mandela"
 date: "2024-12-05"
 categories: [Monitoring and Evaluation, R, Analysis, Visualization, Statistics, Regression, Practical Evaluation]
@@ -410,11 +410,11 @@ The Local Average Treatment Effect (LATE) and the Complier Average Causal Effect
 
 **What are the key conditions for accepting the results from the randomized promotion evaluation of the SFP**
 
-**Baseline Equivalence:** The schools in the promoted and non-promoted groups should have similar characteristics before the promotion. The baseline attendance rates in the first table show no significant difference, suggesting this assumption holds true.
+-   **Baseline Equivalence:** The schools in the promoted and non-promoted groups should have similar characteristics before the promotion. The baseline attendance rates in the first table show no significant difference, suggesting this assumption holds true.
 
-**Promotion Effectiveness:** The promotion should effectively increase school attendance. This assumption holds in the post-treatment period, where the promoted schools show a significant increase in attendance by 3.3 percentage points.
+-   **Promotion Effectiveness:** The promotion should effectively increase school attendance. This assumption holds in the post-treatment period, where the promoted schools show a significant increase in attendance by 3.3 percentage points.
 
-**No Direct Effects on Other Factors:** The promotion should only affect attendance and not other outcomes (such as student performance or health). This assumption cannot be directly tested but is informed by the program's design focusing only on increasing school attendance.
+-   **No Direct Effects on Other Factors:** The promotion should only affect attendance and not other outcomes (such as student performance or health). This assumption cannot be directly tested but is informed by the program's design focusing only on increasing school attendance.
 
 **Should the SFP be Scaled Up Nationally?**
 
