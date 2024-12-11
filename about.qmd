@@ -37,6 +37,6 @@ I hold an MSc in Statistics from the University of Nairobi. My research I am maj
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 ```
 ```{=html}
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/wavedata', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/vmandela99', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
 ```
 <!-- Calendly badge widget end -->

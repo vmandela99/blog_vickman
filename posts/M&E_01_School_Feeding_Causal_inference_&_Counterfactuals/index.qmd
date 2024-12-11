@@ -58,7 +58,7 @@ In designing the evaluation framework for the **School Feeding Program (SFP)**, 
 This variable measures the primary goal of the SFP: improving school attendance.
 
 | **Variable**        | **Description**                                           |
-|---------------------|-----------------------------------------------------------|
+|--------------------|----------------------------------------------------|
 | **attendance_rate** | Average student attendance rate per school term (percent) |
 
 ### **Control Variables**
@@ -66,7 +66,7 @@ This variable measures the primary goal of the SFP: improving school attendance.
 These variables account for household and socio-economic factors that might influence school attendance or participation in the program.
 
 | **Variable**   | **Description**                                                       |
-|----------------|-----------------------------------------------------------------------|
+|----------------|-------------------------------------------------------|
 | **age_hh**     | Age of the head of the household (in years)                           |
 | **age_sp**     | Age of the spouse (in years)                                          |
 | **educ_hh**    | Education of the head of the household (completed years of schooling) |
@@ -83,7 +83,7 @@ These variables account for household and socio-economic factors that might infl
 These variables define the experimental design, program eligibility, and participation details.
 
 | **Variable**             | **Description**                                                                         |
-|--------------------------|-----------------------------------------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | **locality_identifier**  | Locality identifier                                                                     |
 | **household_identifier** | Unique household identifier                                                             |
 | **treatment_locality**   | School is in a locality with the feeding program (0=no, 1=yes)                          |
@@ -620,3 +620,13 @@ To accept this result, we assume that there are no differential time varying fac
 No, based on this result, the SFP should not be scaled up nationally because it has Increased by less than the \$10 threshold level. Taking the estimated impact under random assignment as the “true” impact of the program suggests that the difference in difference estimate may be biased. In fact, in this case, using the nonenrolled households as a comparison group does not accurately represent the counterfactual trend in attendance rates.
 
 ## Next page previous
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+```{=html}
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+```
+```{=html}
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/vmandela99', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
+```
+<!-- Calendly badge widget end -->
