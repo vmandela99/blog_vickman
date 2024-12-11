@@ -28,3 +28,15 @@ I have been writing about R in my blog since 2019. I'm mostly active in the Shin
 
 I hold an MSc in Statistics from the University of Nairobi. My research I am majorly interested in webApp development, machine learning and evidence-based reproducible research.
 :::
+
+<!-- Calendly badge widget begin -->
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+```{=html}
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+```
+```{=html}
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/wavedata', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
+```
+<!-- Calendly badge widget end -->

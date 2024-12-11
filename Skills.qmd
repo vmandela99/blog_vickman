@@ -61,3 +61,15 @@ Explore my skill sets, from **Data Science** to **Monitoring & Evaluation**, and
     -   **Capacity Building**: I’ve also been responsible for **training teams** and **building capacity** within organizations, ensuring that M&E practices are sustainable and scalable. Through workshops and hands-on training, I empower teams to implement their own M&E processes.
 
     -   **Reporting & Communication**: Skilled at translating complex evaluation results into actionable insights for stakeholders. I create clear, concise reports that are both data-driven and accessible to a broad audience, ensuring decision-makers have the information they need to improve program outcomes.
+
+<!-- Calendly badge widget begin -->
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+```{=html}
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+```
+```{=html}
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/wavedata', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
+```
+<!-- Calendly badge widget end -->

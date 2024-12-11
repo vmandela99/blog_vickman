@@ -3,6 +3,10 @@ project:
 
 website:
   title: "My Blogs"
+  # description: "Data Science and Statistical Consulting"
+  open-graph: true
+  google-analytics: "GTM-T8DDSMN"
+  
   navbar:
     right:
       - about.qmd
@@ -10,6 +14,8 @@ website:
       - Skills.qmd
       - Templates and Resources.qmd
       - Case Study.qmd
+      - href: contact/index.qmd
+        text: Contact
       - icon: github
         href: https://github.com/
       - icon: linkedin
