@@ -69,3 +69,8 @@ title: "Case Study"
     The exit interviews provided valuable insights into the impact of the family planning program on young women in Kenya. By focusing on this specific age group, the evaluation highlighted the successes of the program while identifying key challenges that need to be addressed to further improve family planning services and accessibility for girls aged 15-24.
 
 2.  
+
+```{=html}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1108334434042917"
+     crossorigin="anonymous"></script>
+```

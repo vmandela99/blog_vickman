@@ -40,3 +40,10 @@ I hold an MSc in Statistics from the University of Nairobi. My research I am maj
 <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/vmandela99', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
 ```
 <!-- Calendly badge widget end -->
+
+<!-- Google adsense -->
+
+```{=html}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1108334434042917"
+     crossorigin="anonymous"></script>
+```

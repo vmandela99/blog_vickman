@@ -58,7 +58,7 @@ In designing the evaluation framework for the **School Feeding Program (SFP)**, 
 This variable measures the primary goal of the SFP: improving school attendance.
 
 | **Variable**        | **Description**                                           |
-|--------------------|----------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | **attendance_rate** | Average student attendance rate per school term (percent) |
 
 ### **Control Variables**
@@ -66,7 +66,7 @@ This variable measures the primary goal of the SFP: improving school attendance.
 These variables account for household and socio-economic factors that might influence school attendance or participation in the program.
 
 | **Variable**   | **Description**                                                       |
-|----------------|-------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | **age_hh**     | Age of the head of the household (in years)                           |
 | **age_sp**     | Age of the spouse (in years)                                          |
 | **educ_hh**    | Education of the head of the household (completed years of schooling) |
@@ -83,7 +83,7 @@ These variables account for household and socio-economic factors that might infl
 These variables define the experimental design, program eligibility, and participation details.
 
 | **Variable**             | **Description**                                                                         |
-|------------------|------------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | **locality_identifier**  | Locality identifier                                                                     |
 | **household_identifier** | Unique household identifier                                                             |
 | **treatment_locality**   | School is in a locality with the feeding program (0=no, 1=yes)                          |
@@ -630,3 +630,8 @@ No, based on this result, the SFP should not be scaled up nationally because it 
 <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/vmandela99', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
 ```
 <!-- Calendly badge widget end -->
+
+```{=html}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1108334434042917"
+     crossorigin="anonymous"></script>
+```
