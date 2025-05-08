@@ -11,8 +11,8 @@
       "/posts/Monitoring_and_Evaluation_Framework/index.html",
       "/posts/Monitoring_and_Evaluation_Monitoring/index.html",
       "/posts/Monitoring_and_Evaluation_Plan/index.html",
-      "/posts/KobotoolBox_design_n_management/index.html",
       "/posts/KobotoolBox_Intro_to_CAPI/index.html",
+      "/posts/KobotoolBox_design_n_management/index.html",
       "/posts/KobotoolBox_quality_analysis_case_study/index.html",
       "/posts/Survey_CTO_Analysis, Challenges, and Future Trends/index.html",
       "/posts/Survey_CTO_Data Collection and Management/index.html",
@@ -41,8 +41,7 @@
       "/posts/spatial regression/index.html",
       "/posts/GIS2/index.html",
       "/posts/welcome/index.html",
-      "/posts/post-with-code/index.html",
-      "/posts/How to build a shinyapp/index.html"
+      "/posts/post-with-code/index.html"
     ]
   }
 ]

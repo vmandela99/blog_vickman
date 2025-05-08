@@ -78,10 +78,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 25,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -261,7 +261,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(41)</span></div><div class="category" data-category="API">API <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Analysis">Analysis <span class="quarto-category-count">(16)</span></div><div class="category" data-category="BI">BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="CAPI">CAPI <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Climate">Climate <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Collection">Data Collection <span class="quarto-category-count">(6)</span></div><div class="category" data-category="DemographicHealthSurvey">DemographicHealthSurvey <span class="quarto-category-count">(3)</span></div><div class="category" data-category="GIS">GIS <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Git codes">Git codes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="KoboToolbox">KoboToolbox <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Monitoring and Evaluation">Monitoring and Evaluation <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Multidimensional Poverty Index (MPI)">Multidimensional Poverty Index (MPI) <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Practical Evaluation">Practical Evaluation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Profile">Profile <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(19)</span></div><div class="category" data-category="Regression">Regression <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SPSS">SPSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Soft Skills">Soft Skills <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(19)</span></div><div class="category" data-category="Survey">Survey <span class="quarto-category-count">(10)</span></div><div class="category" data-category="SurveyCTO">SurveyCTO <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Visualization">Visualization <span class="quarto-category-count">(11)</span></div><div class="category" data-category="Weather Data">Weather Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Website">Website <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(40)</span></div><div class="category" data-category="API">API <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Analysis">Analysis <span class="quarto-category-count">(16)</span></div><div class="category" data-category="BI">BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="CAPI">CAPI <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Climate">Climate <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Collection">Data Collection <span class="quarto-category-count">(6)</span></div><div class="category" data-category="DemographicHealthSurvey">DemographicHealthSurvey <span class="quarto-category-count">(3)</span></div><div class="category" data-category="GIS">GIS <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Git codes">Git codes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="KoboToolbox">KoboToolbox <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Monitoring and Evaluation">Monitoring and Evaluation <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Multidimensional Poverty Index (MPI)">Multidimensional Poverty Index (MPI) <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Practical Evaluation">Practical Evaluation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Profile">Profile <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(18)</span></div><div class="category" data-category="Regression">Regression <span class="quarto-category-count">(3)</span></div><div class="category" data-category="SPSS">SPSS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Soft Skills">Soft Skills <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(19)</span></div><div class="category" data-category="Survey">Survey <span class="quarto-category-count">(10)</span></div><div class="category" data-category="SurveyCTO">SurveyCTO <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Visualization">Visualization <span class="quarto-category-count">(11)</span></div><div class="category" data-category="Weather Data">Weather Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Website">Website <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -639,49 +639,7 @@ Victor Mandela
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Survey,Data Collection,KoboToolbox,CAPI" data-listing-date-sort="1729026000000" data-listing-file-modified-sort="1729337828257" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1062">
-<div class="thumbnail">
-<p><a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external"></a></p><a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external">
-<p><img src="./posts/KobotoolBox_design_n_management/kobotoolbox.PNG" class="thumbnail-image"></p>
-</a><p><a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external">Best Practices for Survey Design and Field Management Using KoboToolbox</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Survey'); return false;">
-Survey
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data Collection'); return false;">
-Data Collection
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('KoboToolbox'); return false;">
-KoboToolbox
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('CAPI'); return false;">
-CAPI
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external">Creating well-structured surveys is key to collecting accurate and useful data. With KoboToolbox, you can design surveys that are easy for both respondents and interviewers…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external">
-<div class="listing-date">
-Oct 16, 2024
-</div>
-<div class="listing-author">
-Victor Mandela
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="Survey,Data Collection,KoboToolbox,CAPI" data-listing-date-sort="1729026000000" data-listing-file-modified-sort="1729337830371" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
+<div class="quarto-post image-right" data-index="9" data-categories="Survey,Data Collection,KoboToolbox,CAPI" data-listing-date-sort="1729026000000" data-listing-file-modified-sort="1729337830371" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
 <div class="thumbnail">
 <p><a href="./posts/KobotoolBox_Intro_to_CAPI/index.html" class="no-external"></a></p><a href="./posts/KobotoolBox_Intro_to_CAPI/index.html" class="no-external">
 <p><img src="./posts/KobotoolBox_Intro_to_CAPI/kobotoolbox.PNG" class="thumbnail-image"></p>
@@ -714,6 +672,48 @@ CAPI
 </div>
 <div class="metadata">
 <a href="./posts/KobotoolBox_Intro_to_CAPI/index.html" class="no-external">
+<div class="listing-date">
+Oct 16, 2024
+</div>
+<div class="listing-author">
+Victor Mandela
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="Survey,Data Collection,KoboToolbox,CAPI" data-listing-date-sort="1729026000000" data-listing-file-modified-sort="1729337828257" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1062">
+<div class="thumbnail">
+<p><a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external"></a></p><a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external">
+<p><img src="./posts/KobotoolBox_design_n_management/kobotoolbox.PNG" class="thumbnail-image"></p>
+</a><p><a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external">Best Practices for Survey Design and Field Management Using KoboToolbox</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Survey'); return false;">
+Survey
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Data Collection'); return false;">
+Data Collection
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('KoboToolbox'); return false;">
+KoboToolbox
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('CAPI'); return false;">
+CAPI
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external">Creating well-structured surveys is key to collecting accurate and useful data. With KoboToolbox, you can design surveys that are easy for both respondents and interviewers…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/KobotoolBox_design_n_management/index.html" class="no-external">
 <div class="listing-date">
 Oct 16, 2024
 </div>
@@ -1844,42 +1844,6 @@ Analysis
 <a href="./posts/post-with-code/index.html" class="no-external">
 <div class="listing-date">
 Jul 9, 2021
-</div>
-<div class="listing-author">
-Victor Mandela
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="40" data-categories="R,Shiny" data-listing-date-sort="1613509200000" data-listing-file-modified-sort="1706713494265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="257">
-<div class="thumbnail">
-<p><a href="./posts/How to build a shinyapp/index.html" class="no-external"></a></p><a href="./posts/How to build a shinyapp/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/How to build a shinyapp/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/How to build a shinyapp/index.html" class="no-external">How to build a ShinyApp</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/How to build a shinyapp/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Shiny'); return false;">
-Shiny
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/How to build a shinyapp/index.html" class="no-external">We begin to demonstrate the building blocks of a shinyApp.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/How to build a shinyapp/index.html" class="no-external">
-<div class="listing-date">
-Feb 17, 2021
 </div>
 <div class="listing-author">
 Victor Mandela
