@@ -1,5 +1,7 @@
 ---
 title: "python"
+format: html
+page-layout: full
 ---
 
 This course outlines the ... bla bla bla...
