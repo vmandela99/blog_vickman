@@ -6,7 +6,6 @@ website:
   # description: "Data Science and Statistical Consulting"
   open-graph: true
   google-analytics: "GTM-T8DDSMN"
-  
   navbar:
     right:
       - about.qmd
