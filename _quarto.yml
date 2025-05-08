@@ -17,12 +17,12 @@ website:
         href: index.qmd
       - text: "My Courses"
         menu:
-          - text: "Python"
-            href: courses/python.qmd
-          - text: "Ruby"
-            href: courses/ruby.qmd
-          - text: "SQL"
-            href: courses/SQL.qmd
+          - text: "Upcoming courses"
+            href: courses/upcoming_courses.qmd
+          - text: "Available Course"
+            href: courses/available_courses.qmd
+          # - text: "SQL"
+          #   href: courses/SQL.qmd
       - Projects.qmd
       - Skills.qmd
       - Templates and Resources.qmd

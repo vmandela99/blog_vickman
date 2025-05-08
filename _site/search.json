@@ -957,5 +957,19 @@
     "title": "Spartial regression: Lesson3",
     "section": "Conclusion",
     "text": "Conclusion\nSpatial regression in R opens up new dimensions for analyzing geospatial data. In this blog post, we explored the Spatial Lag Model as an advanced technique for modeling spatial dependencies in housing prices and neighborhood characteristics. The interpretation of results, diagnostic checks, and visualizations are crucial components of spatial regression analysis.\nAs you venture into spatial analytics, consider exploring other spatial regression models, incorporating additional spatial variables, and applying advanced techniques to enhance the robustness of your models. Stay tuned for more advanced spatial analytics topics, including machine learning with geospatial data and building interactive web maps. Happy analyzing!"
+  },
+  {
+    "objectID": "courses/upcoming_courses.html",
+    "href": "courses/upcoming_courses.html",
+    "title": "Upcoming Courses",
+    "section": "",
+    "text": "Click the button below to pay for this course using Mastercard, M-Pesa, or Visa.\nAfter payment, you will receive your access credentials via email.\n\n\n\n\n\n\n\n\nPay Now"
+  },
+  {
+    "objectID": "courses/upcoming_courses.html#ai-for-me-masterclass-access",
+    "href": "courses/upcoming_courses.html#ai-for-me-masterclass-access",
+    "title": "Upcoming Courses",
+    "section": "",
+    "text": "Click the button below to pay for this course using Mastercard, M-Pesa, or Visa.\nAfter payment, you will receive your access credentials via email.\n\n\n\n\n\n\n\n\nPay Now"
   }
 ]
