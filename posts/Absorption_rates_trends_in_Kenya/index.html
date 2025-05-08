@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-03">
+<meta name="author" content="Victor Mandela">
+<meta name="dcterms.date" content="2024-11-11">
 
-<title>Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</title>
+<title>Articles - Understanding Absorption Rates and Their Implications in Kenya’s County Health Funding</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,9 +80,9 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R">
+<meta property="og:title" content="Articles - Understanding Absorption Rates and Their Implications in Kenya’s County Health Funding">
 <meta property="og:description" content="">
-<meta property="og:image" content="infections.png">
+<meta property="og:image" content="IcHyG-analysis-of-the-absorption-rates-and-trends-for-the-top-and-bottom-5-counties-in-kenya-from-2015-to-2022.png">
 <meta property="og:site_name" content="Articles">
 </head>
 
@@ -167,12 +168,13 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</h1>
+      <h1 class="title">Understanding Absorption Rates and Their Implications in Kenya’s County Health Funding</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Visualization</div>
-                <div class="quarto-category">Statistics</div>
-                <div class="quarto-category">R</div>
+                <div class="quarto-category">Monitoring and Evaluation</div>
                 <div class="quarto-category">Analysis</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Statistics</div>
+                <div class="quarto-category">Visualization</div>
               </div>
                   </div>
   </div>
@@ -180,11 +182,17 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Victor Mandela </p>
+            </div>
+    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 3, 2024</p>
+        <p class="date">November 11, 2024</p>
       </div>
     </div>
     
@@ -203,137 +211,173 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 
-<p><strong>Introduction</strong></p>
-<p><img src="pics/red ribbon symbol of hiv aids vector world aids day hiv aids tape hiv aids png.jpg" class="img-fluid"></p>
-<p>In recent years, Kenya has made significant strides in combating HIV/AIDS, but challenges remain. Understanding trends in new infections is crucial for guiding interventions and policy decisions. This article examines the trends in new HIV infections in Kenya from 2019 to 2021, focusing on both overall and pediatric cases.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/Art Print_ Kenya Political Map by Peter Hermes Furian _ 12x12in.jpg" class="img-fluid figure-img"></p>
-<figcaption>Map of Kenya</figcaption>
-</figure>
-</div>
-<p><strong>Overview of New HIV Infections:</strong> According to data from the National AIDS Control Council (NACC) of Kenya, the total number of new HIV infections in the country declined slightly from 53,200 in 2019 to 52,200 in 2021. While this represents a modest decrease of 1.13%, it signifies progress in the fight against the epidemic.</p>
-<p><strong>Trends Among Children:</strong> One particularly encouraging trend is the decrease in new HIV infections among children aged 0 to 14. In 2019, there were 6,200 new pediatric infections, which decreased to 5,200 in 2021, marking a notable 16.13% reduction over the two-year period.</p>
-<p><img src="pics/infections.PNG" class="img-fluid"></p>
-<p><strong>Factors Contributing to the Decline:</strong> Several factors may have contributed to the decline in new HIV infections in Kenya. Expanded access to HIV testing and counseling services, improved maternal and child health programs, and the scale-up of prevention of mother-to-child transmission (PMTCT) interventions have likely played a role. Additionally, increased awareness, education, and community mobilization efforts have helped reduce stigma and discrimination associated with HIV/AIDS, encouraging more people to seek testing and treatment.</p>
-<p><strong>Challenges and Areas for Improvement:</strong> Despite the progress made, challenges persist in the fight against HIV/AIDS in Kenya. Access to comprehensive prevention services, including condoms and pre-exposure prophylaxis (PrEP), remains uneven, particularly among key populations such as sex workers, men who have sex with men, and people who inject drugs. Additionally, gaps in testing coverage and linkage to care continue to hinder efforts to achieve epidemic control.</p>
-<p><img src="pics/Analysis Customizable Isometric Illustrations _ Amico Style.jpg" class="img-fluid"></p>
-<p><strong>Conclusion:</strong> In conclusion, the modest decrease in new HIV infections overall and the significant reduction among children aged 0 to 14 in Kenya from 2019 to 2021 is a testament to the country’s commitment to ending the epidemic. However, sustained efforts are needed to address remaining challenges and achieve the goal of an AIDS-free generation. By continuing to prioritize evidence-based interventions, invest in health systems strengthening, and promote equity and inclusivity, Kenya can build on its progress and move closer to ending HIV/AIDS.</p>
-<p><strong>Sources:</strong></p>
+<!-- <iframe src="DID101.pdf" width="100%" height="100%"></iframe> -->
+<section id="introduction-to-key-terms" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-key-terms"><strong>Introduction to Key Terms</strong></h2>
+<p><br>
+In the context of Kenya’s healthcare sector, <strong>absorption rate</strong> refers to the percentage of allocated funds that a county effectively uses for its intended purposes. A higher absorption rate indicates efficient utilization of resources, while lower rates may suggest inefficiency or mismanagement. Monitoring absorption rates is crucial for understanding the performance of local governments in implementing healthcare projects and services.</p>
+<p><strong>Literature Review</strong><br>
+Studies have shown that counties with higher absorption rates are often more effective in improving public health outcomes due to efficient fund allocation and management. According to research by the <strong>Controller of Budget</strong>, counties such as <strong>Mandera</strong> and <strong>West Pokot</strong> have demonstrated impressive absorption rates, while others like <strong>Kiambu</strong> and <strong>Kisii</strong> have struggled with lower utilization of funds (Controller of Budget, 2022). These disparities highlight a need for deeper analysis into what factors drive or hinder effective fund absorption across the regions.</p>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology"><strong>Methodology</strong></h2>
+<p><br>
+In this analysis, I compiled data from the <strong>Controller of Budget’s website</strong> for the years 2015 to 2022, focusing on the healthcare budget allocations and absorption rates for Kenya’s 47 counties. Using this data, I created a time series visualization that tracks the absorption rates of the top 5 and bottom 5 counties in 2022.</p>
+</section>
+<section id="data-table-and-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="data-table-and-visualization"><strong>Data Table and Visualization</strong></h2>
+<p><br>
+The table below summarizes the absorption rates for counties with the highest and lowest rates as of 2022:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 22%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>County</strong></th>
+<th><strong>Absorption Rate (2022)</strong></th>
+<th><strong>2015</strong></th>
+<th><strong>2016</strong></th>
+<th><strong>2017</strong></th>
+<th><strong>2018</strong></th>
+<th><strong>2019</strong></th>
+<th><strong>2020</strong></th>
+<th><strong>2021</strong></th>
+<th><strong>2022</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>West Pokot</strong></td>
+<td>95.4%</td>
+<td>114.74</td>
+<td>91.6</td>
+<td>78.1</td>
+<td>86.7</td>
+<td>83.3</td>
+<td>89.6</td>
+<td>85.2</td>
+<td>95.4</td>
+</tr>
+<tr class="even">
+<td><strong>Mandera</strong></td>
+<td>93.2%</td>
+<td>77.4</td>
+<td>84.8</td>
+<td>77.9</td>
+<td>87.8</td>
+<td>88.0</td>
+<td>88.4</td>
+<td>87.3</td>
+<td>93.2</td>
+</tr>
+<tr class="odd">
+<td><strong>Homa Bay</strong></td>
+<td>93.4%</td>
+<td>128.84</td>
+<td>85.2</td>
+<td>68.0</td>
+<td>67.8</td>
+<td>80.1</td>
+<td>83.0</td>
+<td>81.4</td>
+<td>93.4</td>
+</tr>
+<tr class="even">
+<td><strong>Nakuru</strong></td>
+<td>93.2%</td>
+<td>159.55</td>
+<td>70.7</td>
+<td>59.3</td>
+<td>54.9</td>
+<td>64.1</td>
+<td>66.2</td>
+<td>66.2</td>
+<td>93.2</td>
+</tr>
+<tr class="odd">
+<td><strong>Kirinyaga</strong></td>
+<td>91.7%</td>
+<td>76.94</td>
+<td>81.0</td>
+<td>80.7</td>
+<td>87.4</td>
+<td>77.8</td>
+<td>82.4</td>
+<td>77.3</td>
+<td>91.7</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: These counties were selected based on their absorption rates in 2022.</em></p>
+<p>The visualization below provides a clear representation of the trends over the years for the counties with the highest and lowest absorption rates.</p>
+<p><img src="IcHyG-analysis-of-the-absorption-rates-and-trends-for-the-top-and-bottom-5-counties-in-kenya-from-2015-to-2022.png" class="img-fluid"></p>
+</section>
+<section id="interpretation-of-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation-of-the-data"><strong>Interpretation of the Data</strong></h2>
+<p><br>
+From the table and the visualization, it is evident that counties such as <strong>West Pokot</strong>, <strong>Mandera</strong>, and <strong>Homa Bay</strong> have significantly improved their absorption rates, with each showing substantial increases from 2021 to 2022. <strong>Mandera</strong>, in particular, saw a remarkable 5.9% increase in its absorption rate from 2021. On the other hand, counties like <strong>Kiambu</strong> and <strong>Kisii</strong> experienced noticeable declines, highlighting inefficiencies in fund utilization. For example, <strong>Kiambu’s</strong> rate dropped from 73.2% in 2021 to 67.2% in 2022, which could indicate governance issues or inadequate monitoring of healthcare projects.</p>
+<p><strong>Implications for Government, Donors, and Investors</strong><br>
+For the <strong>Kenyan government</strong>, improving absorption rates should be a priority, as efficient use of funds directly impacts the delivery of healthcare services to the public. Lower absorption rates, especially in resource-rich counties like Kiambu, could result in missed opportunities for improving public health infrastructure. Donors and investors must consider the absorption rate when allocating funds to ensure that their contributions are being utilized effectively.</p>
+</section>
+<section id="recommendations-for-stakeholders" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations-for-stakeholders"><strong>Recommendations for Stakeholders</strong></h2>
 <ol type="1">
-<li><p>National AIDS Control Council (NACC) Kenya. (2022). Kenya AIDS Strategic Framework 2021/22 - 2025/26. Retrieved from https://nacc.or.ke</p></li>
-<li><p>Kenya Ministry of Health. (2021). Kenya HIV Estimates Report 2021. Retrieved from https://www.health.go.ke</p></li>
+<li><p><strong>For Government</strong>: Invest in capacity building for county governments to improve financial management and accountability.</p></li>
+<li><p><strong>For Donors</strong>: Focus funding in regions with high absorption rates, ensuring that resources are effectively utilized for public health projects.</p></li>
+<li><p><strong>For Investors</strong>: Look for investment opportunities in counties with high and improving absorption rates, as these regions are likely to see the most impactful growth in healthcare infrastructure.</p></li>
 </ol>
-<p>Attached is the r code used to generate.</p>
-<pre><code>## packages
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references"><strong>References</strong></h2>
+<ul>
+<li><p>Controller of Budget (2022). <em>Annual County Government Budget Implementation Reports</em>. <a href="https://www.cob.go.ke/">Link</a>.</p></li>
+<li><p>Ministry of Health (2022). <em>Annual Health Sector Reports</em>. <a href="https://www.treasury.go.ke/wp-content/uploads/2023/12/HEALTH-SECTOR-REPORT.pdf">Link</a>.</p></li>
+</ul>
+</section>
+<section id="practice-code-below" class="level2">
+<h2 class="anchored" data-anchor-id="practice-code-below">Practice Code below</h2>
+<pre><code># Code for analysing the absorption rate.
+
 library(tidyverse)
-library(ggtext)
-library(ggrepel)
-library(patchwork)
-library(systemfonts)
-library(camcorder)
+
+df &lt;- read_csv("full_df.csv") %&gt;% 
+  select(County, financial_year, absorption_rate) %&gt;% 
+  mutate(year = case_when(financial_year == "2014_2015" ~ 2015,
+                          financial_year == "2016_2017" ~ 2016,
+                          financial_year == "2017_2018" ~ 2017,
+                          financial_year == "2018_2019" ~ 2018,
+                          financial_year == "2019_2020" ~ 2019,
+                          financial_year == "2020_2021" ~ 2020,
+                          financial_year == "2021_2022" ~ 2021,
+                          financial_year == "2022_2023" ~ 2022))
+
+top_bottom_counties_2022 &lt;- df %&gt;%
+  filter(year == 2022) %&gt;%
+  arrange(desc(absorption_rate)) %&gt;%
+  slice(c(1:5, (n() - 4):n())) %&gt;%
+  pull(County)  # Extract the county names
+
+# Step 2: Filter the original data to get all years' records for the selected counties
+top_bottom_counties_time_series &lt;- df %&gt;%
+  filter(County %in% top_bottom_counties_2022) %&gt;% 
+  select(-financial_year) %&gt;% 
+  pivot_wider(names_from = "County",
+              values_from = "absorption_rate")
+
+write_csv(top_bottom_counties_time_series, "top_bottom_counties_by_absorption_rate.csv")</code></pre>
 
 
-gg_record(dir = here::here("2024/03"), device = "png", 
-          width = 1500 * 2, height = 1350 * 2, units = "px", dpi = 320)
-
-
-theme_set(theme_minimal(base_size = 19, base_family = "Girassol"))
-
-theme_update(
-  text = element_text(color = "grey12"),
-  axis.title = element_blank(),
-  axis.text.x = element_text(family = "Iosevka Curly"),
-  axis.text.y = element_blank(),
-  panel.grid.major.y = element_blank(),
-  panel.grid.minor = element_blank(),
-  plot.margin = margin(20, 5, 10, 10),
-  plot.subtitle = element_textbox_simple(family = "Roboto Condensed", size = 14,
-                                         lineheight = 1.6),
-  plot.title.position = "plot",
-  plot.caption = element_text(family = "Iosevka Curly", color = "#b40059", hjust = .5,
-                              size = 10, margin = margin(35, 0, 0, 0))
-)
-
-# read the data
-df &lt;- read_csv("2024/data/new_infected_data.csv")
-
-#prep data
-df_prep &lt;- df %&gt;%
-  pivot_longer(cols = c(-Newly_infected_with_HIV)) %&gt;% 
-  rename(year = name, 
-         n = value) %&gt;% 
-  group_by(Newly_infected_with_HIV) %&gt;% 
-  mutate(
-    total = sum(n),
-    current = n[which(year == 2021)]
-  ) %&gt;% 
-  ungroup() %&gt;%
-  mutate(
-    Newly_infected_with_HIV = fct_reorder(Newly_infected_with_HIV, total),
-    Newly_infected_with_HIV = fct_relevel(Newly_infected_with_HIV, "Young_people_(ages 15-24)")
-  )
-
-
-# summary computation
-df_sum &lt;-
-  df_prep %&gt;% 
-  filter(year &lt;= 2021) %&gt;% 
-  group_by(year) %&gt;% 
-  summarize(n = sum(n))
-
-# plot
-p1 &lt;- 
-  df_sum %&gt;% 
-  ggplot(aes(year, n)) +
-  geom_col(aes(fill = factor(year)), width = .85) +
-  geom_col(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(alpha = year == 2021),
-    fill = "blue", width = .5
-  ) +
-  geom_text(
-    data = df_sum %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nTotal"), as.character(n))),
-    aes(label = n_lab), 
-    family = "Iosevka Curly", size = 3.3, lineheight = .8, 
-    nudge_y = 12, vjust = 0, color = "black", fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021) %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nChildren"), as.character(n))), 
-    aes(label = n_lab), 
-    family = "Iosevka Curly",
-    color = "white", lineheight = .8, size = 3.0, 
-    nudge_y = 12, vjust = 0, fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(y = -15, label = year, color = factor(year)), 
-    family = "Iosevka Curly", size = 6, hjust = .5, vjust = 1
-  ) +
-  coord_cartesian(clip = "off") +
-  scale_y_continuous(limits = c(-15, NA)) +
-  scale_color_manual(values = c(rep("black", 9), "#b40059", "grey70"), guide = "none") +
-  scale_fill_manual(values = c(rep("purple", 9), "#b40059", "yellow"), guide = "none") +
-  scale_alpha_manual(values = c(.25, .4), guide = "none") +
-  labs(title = "&lt;br&gt;&lt;span style='font-size:20pt'&gt;New HIV infections among children in Kenya decreased by 13% in the &lt;b style='color:#b40059'&gt;Pandemic Year&lt;/b&gt;",
-       subtitle = "&lt;br&gt;&lt;span style='font-size:14pt'&gt;From 2019 to 2021, there was a 1.13% decrease in new HIV infections overall in Kenya, and a 16.13% decrease in new infections among children aged 0 to 14.",
-       caption = paste("&lt;br&gt;&lt;span style='font-size:6pt'&gt;&lt;b style='color:black'&gt;Source: World Bank  ", "      ", "\nGraphics: Victor Mandela")) +
-  theme(
-    plot.title = element_markdown(size = 28, margin = margin(5, 35, 25, 35), color = "black"),
-    plot.subtitle = element_textbox_simple(margin = margin(5, 35, 15, 35)),
-    panel.grid.major = element_blank(),
-    axis.text.x = element_blank(),
-    plot.caption = element_markdown(hjust = 0.6, size = 9, lineheight = 0.8,
-                                    family = "Charm", face = "bold",
-                                    margin = margin(t = 8))
-  )
-
-p1
-</code></pre>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

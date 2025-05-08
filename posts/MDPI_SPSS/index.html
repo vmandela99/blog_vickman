@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-03">
+<meta name="dcterms.date" content="2024-10-04">
 
-<title>Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</title>
+<title>Articles - Unlocking Insights: A Step-by-Step Guide to Calculating Multidimensional Poverty Index (MPI) Using SPSS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,9 +79,9 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R">
+<meta property="og:title" content="Articles - Unlocking Insights: A Step-by-Step Guide to Calculating Multidimensional Poverty Index (MPI) Using SPSS">
 <meta property="og:description" content="">
-<meta property="og:image" content="infections.png">
+<meta property="og:image" content="house_mdpi.png">
 <meta property="og:site_name" content="Articles">
 </head>
 
@@ -167,11 +167,12 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</h1>
+      <h1 class="title">Unlocking Insights: A Step-by-Step Guide to Calculating Multidimensional Poverty Index (MPI) Using SPSS</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Visualization</div>
+                <div class="quarto-category">DemographicHealthSurvey</div>
                 <div class="quarto-category">Statistics</div>
-                <div class="quarto-category">R</div>
+                <div class="quarto-category">SPSS</div>
+                <div class="quarto-category">Multidimensional Poverty Index (MPI)</div>
                 <div class="quarto-category">Analysis</div>
               </div>
                   </div>
@@ -184,7 +185,7 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 3, 2024</p>
+        <p class="date">October 4, 2024</p>
       </div>
     </div>
     
@@ -203,137 +204,79 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 
-<p><strong>Introduction</strong></p>
-<p><img src="pics/red ribbon symbol of hiv aids vector world aids day hiv aids tape hiv aids png.jpg" class="img-fluid"></p>
-<p>In recent years, Kenya has made significant strides in combating HIV/AIDS, but challenges remain. Understanding trends in new infections is crucial for guiding interventions and policy decisions. This article examines the trends in new HIV infections in Kenya from 2019 to 2021, focusing on both overall and pediatric cases.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/Art Print_ Kenya Political Map by Peter Hermes Furian _ 12x12in.jpg" class="img-fluid figure-img"></p>
-<figcaption>Map of Kenya</figcaption>
-</figure>
-</div>
-<p><strong>Overview of New HIV Infections:</strong> According to data from the National AIDS Control Council (NACC) of Kenya, the total number of new HIV infections in the country declined slightly from 53,200 in 2019 to 52,200 in 2021. While this represents a modest decrease of 1.13%, it signifies progress in the fight against the epidemic.</p>
-<p><strong>Trends Among Children:</strong> One particularly encouraging trend is the decrease in new HIV infections among children aged 0 to 14. In 2019, there were 6,200 new pediatric infections, which decreased to 5,200 in 2021, marking a notable 16.13% reduction over the two-year period.</p>
-<p><img src="pics/infections.PNG" class="img-fluid"></p>
-<p><strong>Factors Contributing to the Decline:</strong> Several factors may have contributed to the decline in new HIV infections in Kenya. Expanded access to HIV testing and counseling services, improved maternal and child health programs, and the scale-up of prevention of mother-to-child transmission (PMTCT) interventions have likely played a role. Additionally, increased awareness, education, and community mobilization efforts have helped reduce stigma and discrimination associated with HIV/AIDS, encouraging more people to seek testing and treatment.</p>
-<p><strong>Challenges and Areas for Improvement:</strong> Despite the progress made, challenges persist in the fight against HIV/AIDS in Kenya. Access to comprehensive prevention services, including condoms and pre-exposure prophylaxis (PrEP), remains uneven, particularly among key populations such as sex workers, men who have sex with men, and people who inject drugs. Additionally, gaps in testing coverage and linkage to care continue to hinder efforts to achieve epidemic control.</p>
-<p><img src="pics/Analysis Customizable Isometric Illustrations _ Amico Style.jpg" class="img-fluid"></p>
-<p><strong>Conclusion:</strong> In conclusion, the modest decrease in new HIV infections overall and the significant reduction among children aged 0 to 14 in Kenya from 2019 to 2021 is a testament to the country’s commitment to ending the epidemic. However, sustained efforts are needed to address remaining challenges and achieve the goal of an AIDS-free generation. By continuing to prioritize evidence-based interventions, invest in health systems strengthening, and promote equity and inclusivity, Kenya can build on its progress and move closer to ending HIV/AIDS.</p>
-<p><strong>Sources:</strong></p>
+<section id="a-step-by-step-guide-to-calculating-the-multidimensional-poverty-index-mpi-using-spss" class="level1">
+<h1>A Step-by-Step Guide to Calculating the Multidimensional Poverty Index (MPI) Using SPSS</h1>
+<p>In poverty research, the <strong>Multidimensional Poverty Index (MPI)</strong> is a crucial tool for measuring poverty beyond income, capturing deprivations across multiple dimensions such as education and living standards. This blog outlines the exact <strong>SPSS code</strong> to compute MPI using specific survey indicators.</p>
+<p>Let’s break down the process step by step:</p>
+<section id="step-1-compute-the-mpi-indicators" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-compute-the-mpi-indicators"><strong>Step 1: Compute the MPI Indicators</strong></h3>
+<p>MPI is calculated based on <strong>two dimensions</strong>—<strong>Education</strong> and <strong>Living Standards</strong>—with specific indicators for each. Here’s how you can compute the binary deprivation indicators for each component:</p>
+<section id="education-indicators-weight-14-for-each" class="level4">
+<h4 class="anchored" data-anchor-id="education-indicators-weight-14-for-each"><strong>Education Indicators (Weight: 1/4 for each)</strong></h4>
 <ol type="1">
-<li><p>National AIDS Control Council (NACC) Kenya. (2022). Kenya AIDS Strategic Framework 2021/22 - 2025/26. Retrieved from https://nacc.or.ke</p></li>
-<li><p>Kenya Ministry of Health. (2021). Kenya HIV Estimates Report 2021. Retrieved from https://www.health.go.ke</p></li>
+<li><p><strong>Years of Schooling Completed</strong><br>
+<code>COMPUTE FIVE_YRS_SCHOOLING_COMPLETED = Q403b &lt; 5.</code></p></li>
+<li><p><strong>School-Aged Child Enrollment</strong><br>
+<code>COMPUTE SCHOOL_AGED_CHILD_NOT_ENROLLED_IN_SCHOOL = Q404 = 1.</code></p></li>
 </ol>
-<p>Attached is the r code used to generate.</p>
-<pre><code>## packages
-library(tidyverse)
-library(ggtext)
-library(ggrepel)
-library(patchwork)
-library(systemfonts)
-library(camcorder)
+</section>
+<section id="living-standards-indicators-weight-112-for-each" class="level4">
+<h4 class="anchored" data-anchor-id="living-standards-indicators-weight-112-for-each"><strong>Living Standards Indicators (Weight: 1/12 for each)</strong></h4>
+<ol type="1">
+<li><p><strong>No Electricity</strong><br>
+<code>COMPUTE No_electricity = Q409_1 = 0.</code></p></li>
+<li><p><strong>Access to Clean Drinking Water</strong><br>
+<code>COMPUTE ACCESS_TO_CLEAN_DRINKING_WATER = Q410 = 6 | Q410 = 7 | Q410 = 8 | Q410 = 10 | Q410 = 11 | Q410 = 12.</code></p></li>
+<li><p><strong>Access to Improved Sanitation</strong><br>
+<code>COMPUTE ACCESS_TO_IMPROVED_SANITATION = Q413 = 10 | Q413 = 11 | Q413 = 12 | Q413 = 13.</code></p></li>
+<li><p><strong>Dirt Floor</strong><br>
+<code>COMPUTE DIRT_FLOOR = Q407 = 1 | Q407 = 2.</code></p></li>
+<li><p><strong>Dirty Cooking Fuel</strong><br>
+<code>COMPUTE DIRTY_COOKING_FUEL = Q412 = 7 | Q412 = 8 | Q412 = 9 | Q412 = 10 | Q412 = 11 | Q412 = 12.</code></p></li>
+<li><p><strong>Asset Holding</strong><br>
+<code>COMPUTE ASSET_HOLDING = (Q409_2 = 0 &amp; Q409_3 = 0 &amp; Q409_4 = 0 &amp; Q409_6 = 0 &amp; Q409_7 = 0 &amp; Q409_8 = 0 &amp; Q409_9 = 0) &amp; (Q409_11 = 0 | Q409_12 = 0).</code></p></li>
+</ol>
+<p><img src="dumbells.jpeg" class="img-fluid"></p>
+</section>
+</section>
+<section id="step-2-weighting-the-indicators" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-weighting-the-indicators"><strong>Step 2: Weighting the Indicators</strong></h3>
+<p>After computing the individual indicators, apply the appropriate weights:</p>
+<ul>
+<li><p>Education Indicators: Weight = <strong>1/4</strong></p></li>
+<li><p>Living Standard Indicators: Weight = <strong>1/12</strong></p></li>
+</ul>
+<p>Example for the <strong>Years of Schooling Completed</strong>:<br>
+<code>COMPUTE FIVE_YRS_SCHOOLING_COMPLETED_weighted = FIVE_YRS_SCHOOLING_COMPLETED * EDUCATION_WGHT.</code></p>
+<p>Similarly, compute the weighted versions of all other indicators for education and living standards.</p>
+</section>
+<section id="step-3-calculate-the-deprivation-score" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-calculate-the-deprivation-score"><strong>Step 3: Calculate the Deprivation Score</strong></h3>
+<p>The deprivation score is a sum of the weighted indicators, with scores ranging from <strong>0 to 1</strong>, where <strong>1</strong> represents the highest deprivation.<br>
+Syntax:<br>
+<code>COMPUTE DEPRIVATION_SCORE = FIVE_YRS_SCHOOLING_COMPLETED_weighted + SCHOOL_AGED_CHILD_NOT_ENROLLED_IN_SCHOOL_weighted + No_electricity_WEIGHTED + ACCESS_TO_CLEAN_DRINKING_WATER_weighted + ACCESS_TO_IMPROVED_SANITATION_weighted + DIRT_FLOOR_weighted + DIRTY_COOKING_FUEL_weighted + ASSET_HOLDING_WEIGHTED.</code></p>
+<p><img src="colony.jpeg" class="img-fluid"></p>
+</section>
+<section id="step-4-mpi-classification" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-mpi-classification"><strong>Step 4: MPI Classification</strong></h3>
+<p>Finally, classify households based on their deprivation scores:</p>
+<ul>
+<li><p><strong>Non-Poor</strong>: 0-0.19</p></li>
+<li><p><strong>Vulnerable to Poverty</strong>: 0.20-0.33</p></li>
+<li><p><strong>Multidimensionally Poor</strong>: 0.34-0.50</p></li>
+<li><p><strong>Severely Poor</strong>: 0.51+</p></li>
+</ul>
+<p>Syntax:<br>
+<code>RECODE DEPRIVATION_SCORE (0 thru 0.1999=1) (0.2000 thru 0.3333=2) (0.3334 thru 0.5000=3) (0.5001 thru Highest=4) INTO MPI_POVERTY_STATUS2.</code></p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion"><strong>Conclusion</strong></h3>
+<p>By following these steps and using the corresponding SPSS code, you can efficiently compute the Multidimensional Poverty Index (MPI) and gain meaningful insights into poverty beyond income-based measures.</p>
+<p>MPI helps identify vulnerable populations, prioritize areas of intervention, and assess the overall well-being of households. If you’re interested in further understanding poverty data and the SPSS process, this guide serves as a comprehensive starting point!</p>
 
 
-gg_record(dir = here::here("2024/03"), device = "png", 
-          width = 1500 * 2, height = 1350 * 2, units = "px", dpi = 320)
-
-
-theme_set(theme_minimal(base_size = 19, base_family = "Girassol"))
-
-theme_update(
-  text = element_text(color = "grey12"),
-  axis.title = element_blank(),
-  axis.text.x = element_text(family = "Iosevka Curly"),
-  axis.text.y = element_blank(),
-  panel.grid.major.y = element_blank(),
-  panel.grid.minor = element_blank(),
-  plot.margin = margin(20, 5, 10, 10),
-  plot.subtitle = element_textbox_simple(family = "Roboto Condensed", size = 14,
-                                         lineheight = 1.6),
-  plot.title.position = "plot",
-  plot.caption = element_text(family = "Iosevka Curly", color = "#b40059", hjust = .5,
-                              size = 10, margin = margin(35, 0, 0, 0))
-)
-
-# read the data
-df &lt;- read_csv("2024/data/new_infected_data.csv")
-
-#prep data
-df_prep &lt;- df %&gt;%
-  pivot_longer(cols = c(-Newly_infected_with_HIV)) %&gt;% 
-  rename(year = name, 
-         n = value) %&gt;% 
-  group_by(Newly_infected_with_HIV) %&gt;% 
-  mutate(
-    total = sum(n),
-    current = n[which(year == 2021)]
-  ) %&gt;% 
-  ungroup() %&gt;%
-  mutate(
-    Newly_infected_with_HIV = fct_reorder(Newly_infected_with_HIV, total),
-    Newly_infected_with_HIV = fct_relevel(Newly_infected_with_HIV, "Young_people_(ages 15-24)")
-  )
-
-
-# summary computation
-df_sum &lt;-
-  df_prep %&gt;% 
-  filter(year &lt;= 2021) %&gt;% 
-  group_by(year) %&gt;% 
-  summarize(n = sum(n))
-
-# plot
-p1 &lt;- 
-  df_sum %&gt;% 
-  ggplot(aes(year, n)) +
-  geom_col(aes(fill = factor(year)), width = .85) +
-  geom_col(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(alpha = year == 2021),
-    fill = "blue", width = .5
-  ) +
-  geom_text(
-    data = df_sum %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nTotal"), as.character(n))),
-    aes(label = n_lab), 
-    family = "Iosevka Curly", size = 3.3, lineheight = .8, 
-    nudge_y = 12, vjust = 0, color = "black", fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021) %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nChildren"), as.character(n))), 
-    aes(label = n_lab), 
-    family = "Iosevka Curly",
-    color = "white", lineheight = .8, size = 3.0, 
-    nudge_y = 12, vjust = 0, fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(y = -15, label = year, color = factor(year)), 
-    family = "Iosevka Curly", size = 6, hjust = .5, vjust = 1
-  ) +
-  coord_cartesian(clip = "off") +
-  scale_y_continuous(limits = c(-15, NA)) +
-  scale_color_manual(values = c(rep("black", 9), "#b40059", "grey70"), guide = "none") +
-  scale_fill_manual(values = c(rep("purple", 9), "#b40059", "yellow"), guide = "none") +
-  scale_alpha_manual(values = c(.25, .4), guide = "none") +
-  labs(title = "&lt;br&gt;&lt;span style='font-size:20pt'&gt;New HIV infections among children in Kenya decreased by 13% in the &lt;b style='color:#b40059'&gt;Pandemic Year&lt;/b&gt;",
-       subtitle = "&lt;br&gt;&lt;span style='font-size:14pt'&gt;From 2019 to 2021, there was a 1.13% decrease in new HIV infections overall in Kenya, and a 16.13% decrease in new infections among children aged 0 to 14.",
-       caption = paste("&lt;br&gt;&lt;span style='font-size:6pt'&gt;&lt;b style='color:black'&gt;Source: World Bank  ", "      ", "\nGraphics: Victor Mandela")) +
-  theme(
-    plot.title = element_markdown(size = 28, margin = margin(5, 35, 25, 35), color = "black"),
-    plot.subtitle = element_textbox_simple(margin = margin(5, 35, 15, 35)),
-    panel.grid.major = element_blank(),
-    axis.text.x = element_blank(),
-    plot.caption = element_markdown(hjust = 0.6, size = 9, lineheight = 0.8,
-                                    family = "Charm", face = "bold",
-                                    margin = margin(t = 8))
-  )
-
-p1
-</code></pre>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

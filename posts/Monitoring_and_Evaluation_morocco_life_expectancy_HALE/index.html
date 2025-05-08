@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-03">
+<meta name="author" content="Victor Mandela">
+<meta name="dcterms.date" content="2024-10-19">
 
-<title>Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</title>
+<title>Articles - Understanding Life Expectancy and Healthy Life Expectancy (HALE) in Morocco (2000-2018): USING DHS DATA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,9 +80,9 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R">
+<meta property="og:title" content="Articles - Understanding Life Expectancy and Healthy Life Expectancy (HALE) in Morocco (2000-2018): USING DHS DATA">
 <meta property="og:description" content="">
-<meta property="og:image" content="infections.png">
+<meta property="og:image" content="Capar-comparison-of-life-expectancy-and-healthy-life-expectancy-at-birth-hale-for-females-in-morocco-2000-2018.png">
 <meta property="og:site_name" content="Articles">
 </head>
 
@@ -167,12 +168,13 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</h1>
+      <h1 class="title">Understanding Life Expectancy and Healthy Life Expectancy (HALE) in Morocco (2000-2018): USING DHS DATA</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Visualization</div>
-                <div class="quarto-category">Statistics</div>
-                <div class="quarto-category">R</div>
+                <div class="quarto-category">Monitoring and Evaluation</div>
                 <div class="quarto-category">Analysis</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Statistics</div>
+                <div class="quarto-category">Visualization</div>
               </div>
                   </div>
   </div>
@@ -180,11 +182,17 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Victor Mandela </p>
+            </div>
+    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 3, 2024</p>
+        <p class="date">October 19, 2024</p>
       </div>
     </div>
     
@@ -203,137 +211,91 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 
-<p><strong>Introduction</strong></p>
-<p><img src="pics/red ribbon symbol of hiv aids vector world aids day hiv aids tape hiv aids png.jpg" class="img-fluid"></p>
-<p>In recent years, Kenya has made significant strides in combating HIV/AIDS, but challenges remain. Understanding trends in new infections is crucial for guiding interventions and policy decisions. This article examines the trends in new HIV infections in Kenya from 2019 to 2021, focusing on both overall and pediatric cases.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/Art Print_ Kenya Political Map by Peter Hermes Furian _ 12x12in.jpg" class="img-fluid figure-img"></p>
-<figcaption>Map of Kenya</figcaption>
-</figure>
-</div>
-<p><strong>Overview of New HIV Infections:</strong> According to data from the National AIDS Control Council (NACC) of Kenya, the total number of new HIV infections in the country declined slightly from 53,200 in 2019 to 52,200 in 2021. While this represents a modest decrease of 1.13%, it signifies progress in the fight against the epidemic.</p>
-<p><strong>Trends Among Children:</strong> One particularly encouraging trend is the decrease in new HIV infections among children aged 0 to 14. In 2019, there were 6,200 new pediatric infections, which decreased to 5,200 in 2021, marking a notable 16.13% reduction over the two-year period.</p>
-<p><img src="pics/infections.PNG" class="img-fluid"></p>
-<p><strong>Factors Contributing to the Decline:</strong> Several factors may have contributed to the decline in new HIV infections in Kenya. Expanded access to HIV testing and counseling services, improved maternal and child health programs, and the scale-up of prevention of mother-to-child transmission (PMTCT) interventions have likely played a role. Additionally, increased awareness, education, and community mobilization efforts have helped reduce stigma and discrimination associated with HIV/AIDS, encouraging more people to seek testing and treatment.</p>
-<p><strong>Challenges and Areas for Improvement:</strong> Despite the progress made, challenges persist in the fight against HIV/AIDS in Kenya. Access to comprehensive prevention services, including condoms and pre-exposure prophylaxis (PrEP), remains uneven, particularly among key populations such as sex workers, men who have sex with men, and people who inject drugs. Additionally, gaps in testing coverage and linkage to care continue to hinder efforts to achieve epidemic control.</p>
-<p><img src="pics/Analysis Customizable Isometric Illustrations _ Amico Style.jpg" class="img-fluid"></p>
-<p><strong>Conclusion:</strong> In conclusion, the modest decrease in new HIV infections overall and the significant reduction among children aged 0 to 14 in Kenya from 2019 to 2021 is a testament to the country’s commitment to ending the epidemic. However, sustained efforts are needed to address remaining challenges and achieve the goal of an AIDS-free generation. By continuing to prioritize evidence-based interventions, invest in health systems strengthening, and promote equity and inclusivity, Kenya can build on its progress and move closer to ending HIV/AIDS.</p>
-<p><strong>Sources:</strong></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction"><strong>Introduction:</strong></h2>
+<p>Morocco has seen significant changes in both <strong>life expectancy</strong> and <strong>healthy life expectancy (HALE)</strong> between 2000 and 2018. While life expectancy at birth has risen to 74.5 years, the number of years lived in full health (HALE) has decreased. This shift presents important insights for researchers interested in the health outcomes of the Moroccan population.</p>
+<p>In this blog post, we will discuss the definitions of life expectancy and HALE, examine their trends in Morocco, and highlight the importance of focusing on quality of life alongside longevity. Our analysis is based on data from <strong>Global Health Estimates</strong> and <strong>Demographic and Health Surveys (DHS)</strong>.</p>
+<section id="what-is-life-expectancy-and-hale" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-life-expectancy-and-hale"><strong>What is Life Expectancy and HALE?</strong></h3>
+<p><strong>Life expectancy</strong> is the average number of years a newborn is expected to live, assuming current mortality rates remain constant throughout their lifetime. It is often used as a benchmark to measure the health and development of a population.</p>
+<p><strong>Healthy life expectancy (HALE)</strong>, on the other hand, measures the number of years an individual can expect to live in good health, free from serious illnesses and disabilities. HALE provides a more comprehensive picture of population health by accounting for both mortality and the burden of disease.</p>
+</section>
+<section id="life-expectancy-trends-in-morocco-2000-2018" class="level3">
+<h3 class="anchored" data-anchor-id="life-expectancy-trends-in-morocco-2000-2018"><strong>Life Expectancy Trends in Morocco (2000-2018)</strong></h3>
+<p>From 2000 to 2018, Morocco experienced an impressive increase in life expectancy, reaching <strong>74.5 years</strong> in 2018. Several factors have contributed to this improvement, including:</p>
+<ul>
+<li><p><strong>Enhanced healthcare systems</strong> and increased access to medical services.</p></li>
+<li><p><strong>Improvements in nutrition</strong>, education, and living conditions.</p></li>
+<li><p><strong>A significant reduction in infant and child mortality rates.</strong></p></li>
+</ul>
+<p>These changes have extended the lifespan of the population, signaling overall progress in Morocco’s health outcomes. However, a deeper look into HALE reveals a more complex reality.</p>
+</section>
+<section id="the-decline-in-healthy-life-expectancy-hale-in-morocco-h2" class="level3">
+<h3 class="anchored" data-anchor-id="the-decline-in-healthy-life-expectancy-hale-in-morocco-h2"><strong>The Decline in Healthy Life Expectancy (HALE) in Morocco (H2)</strong></h3>
+<p>While life expectancy has risen, <strong>HALE</strong> has seen a decline in Morocco. This suggests that although people are living longer, many of these additional years are spent living with illnesses or disabilities. Chronic diseases, such as <strong>cardiovascular diseases, diabetes</strong>, and other non-communicable diseases (NCDs), have become more prevalent, affecting the quality of life during these later years.</p>
+<p>This trend highlights a growing gap between total life expectancy and the number of years lived in good health. The burden of disease, especially NCDs, is a significant contributor to the reduction in HALE. As life expectancy increases, public health policies must focus on managing chronic illnesses to improve overall quality of life.</p>
+</section>
+<section id="statistical-methodology-and-data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="statistical-methodology-and-data-sources"><strong>Statistical Methodology and Data Sources</strong></h3>
+<p>The life expectancy and HALE data for Morocco were sourced from the <strong>Global Health Estimates (GHE)</strong> and analyzed using standard statistical methods. HALE is calculated by adjusting life expectancy to account for years lived with illness or disability. This calculation provides a more accurate reflection of population health compared to life expectancy alone.</p>
+<p><strong>Demographic and Health Surveys (DHS)</strong> also offer valuable insights into Morocco’s health trends. DHS data on maternal and child health, disease prevalence, and healthcare access play a crucial role in understanding how HALE is affected by various health determinants.</p>
+</section>
+</section>
+<section id="key-insights" class="level2">
+<h2 class="anchored" data-anchor-id="key-insights"><strong>Key Insights :</strong></h2>
 <ol type="1">
-<li><p>National AIDS Control Council (NACC) Kenya. (2022). Kenya AIDS Strategic Framework 2021/22 - 2025/26. Retrieved from https://nacc.or.ke</p></li>
-<li><p>Kenya Ministry of Health. (2021). Kenya HIV Estimates Report 2021. Retrieved from https://www.health.go.ke</p></li>
+<li><p><strong>Rising Life Expectancy</strong>: Morocco’s life expectancy increased steadily from 2000 to 2018, reaching 74.5 years, showcasing overall progress in health and longevity.</p></li>
+<li><p><strong>Decreasing HALE</strong>: The decline in HALE underscores the need to focus not just on extending life but on improving the quality of those additional years.</p></li>
+<li><p><strong>Chronic Disease Burden</strong>: With the rise of NCDs, Morocco faces challenges in ensuring that its population can live longer, healthier lives. Addressing chronic illness is crucial to closing the gap between life expectancy and HALE.</p></li>
+<li><p><strong>Data-Driven Public Health</strong>: Utilizing high-quality data from sources like <strong>Global Health Estimates</strong> and <strong>DHS</strong> can inform policies aimed at enhancing healthcare systems and managing the burden of chronic diseases.</p></li>
 </ol>
-<p>Attached is the r code used to generate.</p>
-<pre><code>## packages
-library(tidyverse)
-library(ggtext)
-library(ggrepel)
-library(patchwork)
-library(systemfonts)
-library(camcorder)
+<section id="how-to-analyze-hale-and-life-expectancy" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-analyze-hale-and-life-expectancy"><strong>How to Analyze HALE and Life Expectancy</strong></h3>
+<p>For data enthusiasts and researchers, analyzing HALE and life expectancy trends over time can be achieved through various statistical tools. In this blog, we’ll provide an example analysis code using <strong>R</strong> to visualize these trends. The code will allow you to compare life expectancy at birth and HALE over time, shedding light on the growing disparity between longevity and healthy living years.</p>
+<p>Getting the data</p>
+<pre><code># Fetching the data
+morocco_df &lt;- readr::read_csv("https://data.humdata.org/dataset/1f98948b-5c63-48c6-a92c-44cf2cec1e9f/resource/11c05ae5-ce13-4cbb-a888-f2175bb5266c/download/global_health_estimates_life_expectancy_and_leading_causes_of_death_and_disability_indicators_ma.csv")
 
 
-gg_record(dir = here::here("2024/03"), device = "png", 
-          width = 1500 * 2, height = 1350 * 2, units = "px", dpi = 320)
+trans_morocco &lt;- morocco_df %&gt;% 
+  filter(`DIMENSION (NAME)` == "Female") %&gt;% #choose females
+  select(`GHO (DISPLAY)`, `YEAR (DISPLAY)`, Numeric) %&gt;% # choose columns
+  group_by(`GHO (DISPLAY)`) %&gt;% 
+  add_count(`YEAR (DISPLAY)`) %&gt;% #introduce a counting column
+    filter(n == 1) %&gt;% 
+  pivot_wider(names_from = `GHO (DISPLAY)`,
+              values_from = Numeric) %&gt;% #change to wide format
+  arrange(`YEAR (DISPLAY)`) %&gt;% 
+  drop_na() %&gt;% 
+  select(1, 4, 5, 12, 13) # select the columns of interest
+
+#write_csv(trans_morocco, "morocco_life_expectancy.csv")
+#You can write the csv file to export to an external viz tool
+#I used datawrapper</code></pre>
+<p><img src="Capar-comparison-of-life-expectancy-and-healthy-life-expectancy-at-birth-hale-for-females-in-morocco-2000-2018.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion"><strong>Conclusion</strong></h2>
+<p>The health improvements in Morocco over the past two decades are undeniable. Life expectancy has reached its highest point, but the decline in HALE raises questions about how long Moroccans are able to live in good health. As chronic diseases continue to affect the population, policymakers must shift their focus from merely extending life to improving the quality of those extra years.</p>
+<p>By addressing these health challenges, Morocco can ensure that its aging population enjoys not just longer lives, but healthier ones too. For researchers and public health professionals, HALE provides a valuable metric that complements life expectancy, offering a fuller picture of a nation’s health.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references"><strong>References</strong></h2>
+<ol type="1">
+<li><p><strong>World Health Organization (WHO)</strong>. Global Health Estimates: Life Expectancy and Healthy Life Expectancy (HALE). Available at: <a href="https://www.who.int/data/gho/data/themes/mortality-and-global-health-estimates">WHO GHE</a></p></li>
+<li><p><strong>Demographic and Health Surveys (DHS)</strong>. Health data for Morocco. Available at: DHS Morocco</p></li>
+<li><p><strong>Institute for Health Metrics and Evaluation (IHME)</strong>. Global Burden of Disease study. Available at: IHME</p></li>
+</ol>
+<p><strong>Further Reading and Data Resources (H2):</strong> For more in-depth data analysis and information on life expectancy and health outcomes, explore the following resources:</p>
+<ul>
+<li><p><strong>World Bank Open Data</strong>: Country-specific health and development indicators.</p></li>
+<li><p><strong>Our World in Data</strong>: Visualizations on global health, life expectancy, and disease burden.</p></li>
+<li><p><strong>The Lancet Global Health</strong>: Research on health trends and life expectancy in different regions.</p></li>
+</ul>
 
 
-theme_set(theme_minimal(base_size = 19, base_family = "Girassol"))
-
-theme_update(
-  text = element_text(color = "grey12"),
-  axis.title = element_blank(),
-  axis.text.x = element_text(family = "Iosevka Curly"),
-  axis.text.y = element_blank(),
-  panel.grid.major.y = element_blank(),
-  panel.grid.minor = element_blank(),
-  plot.margin = margin(20, 5, 10, 10),
-  plot.subtitle = element_textbox_simple(family = "Roboto Condensed", size = 14,
-                                         lineheight = 1.6),
-  plot.title.position = "plot",
-  plot.caption = element_text(family = "Iosevka Curly", color = "#b40059", hjust = .5,
-                              size = 10, margin = margin(35, 0, 0, 0))
-)
-
-# read the data
-df &lt;- read_csv("2024/data/new_infected_data.csv")
-
-#prep data
-df_prep &lt;- df %&gt;%
-  pivot_longer(cols = c(-Newly_infected_with_HIV)) %&gt;% 
-  rename(year = name, 
-         n = value) %&gt;% 
-  group_by(Newly_infected_with_HIV) %&gt;% 
-  mutate(
-    total = sum(n),
-    current = n[which(year == 2021)]
-  ) %&gt;% 
-  ungroup() %&gt;%
-  mutate(
-    Newly_infected_with_HIV = fct_reorder(Newly_infected_with_HIV, total),
-    Newly_infected_with_HIV = fct_relevel(Newly_infected_with_HIV, "Young_people_(ages 15-24)")
-  )
-
-
-# summary computation
-df_sum &lt;-
-  df_prep %&gt;% 
-  filter(year &lt;= 2021) %&gt;% 
-  group_by(year) %&gt;% 
-  summarize(n = sum(n))
-
-# plot
-p1 &lt;- 
-  df_sum %&gt;% 
-  ggplot(aes(year, n)) +
-  geom_col(aes(fill = factor(year)), width = .85) +
-  geom_col(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(alpha = year == 2021),
-    fill = "blue", width = .5
-  ) +
-  geom_text(
-    data = df_sum %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nTotal"), as.character(n))),
-    aes(label = n_lab), 
-    family = "Iosevka Curly", size = 3.3, lineheight = .8, 
-    nudge_y = 12, vjust = 0, color = "black", fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021) %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nChildren"), as.character(n))), 
-    aes(label = n_lab), 
-    family = "Iosevka Curly",
-    color = "white", lineheight = .8, size = 3.0, 
-    nudge_y = 12, vjust = 0, fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(y = -15, label = year, color = factor(year)), 
-    family = "Iosevka Curly", size = 6, hjust = .5, vjust = 1
-  ) +
-  coord_cartesian(clip = "off") +
-  scale_y_continuous(limits = c(-15, NA)) +
-  scale_color_manual(values = c(rep("black", 9), "#b40059", "grey70"), guide = "none") +
-  scale_fill_manual(values = c(rep("purple", 9), "#b40059", "yellow"), guide = "none") +
-  scale_alpha_manual(values = c(.25, .4), guide = "none") +
-  labs(title = "&lt;br&gt;&lt;span style='font-size:20pt'&gt;New HIV infections among children in Kenya decreased by 13% in the &lt;b style='color:#b40059'&gt;Pandemic Year&lt;/b&gt;",
-       subtitle = "&lt;br&gt;&lt;span style='font-size:14pt'&gt;From 2019 to 2021, there was a 1.13% decrease in new HIV infections overall in Kenya, and a 16.13% decrease in new infections among children aged 0 to 14.",
-       caption = paste("&lt;br&gt;&lt;span style='font-size:6pt'&gt;&lt;b style='color:black'&gt;Source: World Bank  ", "      ", "\nGraphics: Victor Mandela")) +
-  theme(
-    plot.title = element_markdown(size = 28, margin = margin(5, 35, 25, 35), color = "black"),
-    plot.subtitle = element_textbox_simple(margin = margin(5, 35, 15, 35)),
-    panel.grid.major = element_blank(),
-    axis.text.x = element_blank(),
-    plot.caption = element_markdown(hjust = 0.6, size = 9, lineheight = 0.8,
-                                    family = "Charm", face = "bold",
-                                    margin = margin(t = 8))
-  )
-
-p1
-</code></pre>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

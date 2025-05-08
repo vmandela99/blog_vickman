@@ -2,31 +2,40 @@ project:
   type: website
 
 website:
-  title: "My Blogs"
+  title: "Articles"
   # description: "Data Science and Statistical Consulting"
   open-graph: true
   google-analytics: "GTM-T8DDSMN"
   navbar:
     right:
-      - about.qmd
       - Projects.qmd
       - Skills.qmd
       - Templates and Resources.qmd
       - Case Study.qmd
+      - about.qmd
       - href: contact/index.qmd
         text: Contact
       - icon: github
-        href: https://github.com/
+        href: https://github.com/vmandela99
       - icon: linkedin
         href: https://www.linkedin.com/vmandela99/
-        text: LinkedIn
+        # text: LinkedIn
         target: _blank
+      - icon: envelope
+        href: mailto:vmandela99@gmail.com
+      - icon: twitter
+        href: http://x.com/VictorMandela8
+      - icon: facebook
+        href: https://www.facebook.com/vmandela99
+      - icon: briefcase
+        href: https://www.nature.com/articles/s41598-025-89030-z
+        text: Google Scholar
 format:
   html:
     # theme: minty
     theme: materia
-    css: styles.css
-    # css: custom.scss
+    # css: styles.css
+    css: custom.scss
 
 editor: visual
 

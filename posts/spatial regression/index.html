@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-03">
+<meta name="dcterms.date" content="2021-07-30">
 
-<title>Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</title>
+<title>Articles - Spartial regression: Lesson3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -79,9 +113,9 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R">
+<meta property="og:title" content="Articles - Spartial regression: Lesson3">
 <meta property="og:description" content="">
-<meta property="og:image" content="infections.png">
+<meta property="og:image" content="effect.jpg">
 <meta property="og:site_name" content="Articles">
 </head>
 
@@ -167,12 +201,12 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</h1>
+      <h1 class="title">Spartial regression: Lesson3</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Visualization</div>
+                <div class="quarto-category">GIS</div>
                 <div class="quarto-category">Statistics</div>
                 <div class="quarto-category">R</div>
-                <div class="quarto-category">Analysis</div>
+                <div class="quarto-category">Regression</div>
               </div>
                   </div>
   </div>
@@ -184,7 +218,7 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 3, 2024</p>
+        <p class="date">July 30, 2021</p>
       </div>
     </div>
     
@@ -203,137 +237,65 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 
-<p><strong>Introduction</strong></p>
-<p><img src="pics/red ribbon symbol of hiv aids vector world aids day hiv aids tape hiv aids png.jpg" class="img-fluid"></p>
-<p>In recent years, Kenya has made significant strides in combating HIV/AIDS, but challenges remain. Understanding trends in new infections is crucial for guiding interventions and policy decisions. This article examines the trends in new HIV infections in Kenya from 2019 to 2021, focusing on both overall and pediatric cases.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/Art Print_ Kenya Political Map by Peter Hermes Furian _ 12x12in.jpg" class="img-fluid figure-img"></p>
-<figcaption>Map of Kenya</figcaption>
-</figure>
-</div>
-<p><strong>Overview of New HIV Infections:</strong> According to data from the National AIDS Control Council (NACC) of Kenya, the total number of new HIV infections in the country declined slightly from 53,200 in 2019 to 52,200 in 2021. While this represents a modest decrease of 1.13%, it signifies progress in the fight against the epidemic.</p>
-<p><strong>Trends Among Children:</strong> One particularly encouraging trend is the decrease in new HIV infections among children aged 0 to 14. In 2019, there were 6,200 new pediatric infections, which decreased to 5,200 in 2021, marking a notable 16.13% reduction over the two-year period.</p>
-<p><img src="pics/infections.PNG" class="img-fluid"></p>
-<p><strong>Factors Contributing to the Decline:</strong> Several factors may have contributed to the decline in new HIV infections in Kenya. Expanded access to HIV testing and counseling services, improved maternal and child health programs, and the scale-up of prevention of mother-to-child transmission (PMTCT) interventions have likely played a role. Additionally, increased awareness, education, and community mobilization efforts have helped reduce stigma and discrimination associated with HIV/AIDS, encouraging more people to seek testing and treatment.</p>
-<p><strong>Challenges and Areas for Improvement:</strong> Despite the progress made, challenges persist in the fight against HIV/AIDS in Kenya. Access to comprehensive prevention services, including condoms and pre-exposure prophylaxis (PrEP), remains uneven, particularly among key populations such as sex workers, men who have sex with men, and people who inject drugs. Additionally, gaps in testing coverage and linkage to care continue to hinder efforts to achieve epidemic control.</p>
-<p><img src="pics/Analysis Customizable Isometric Illustrations _ Amico Style.jpg" class="img-fluid"></p>
-<p><strong>Conclusion:</strong> In conclusion, the modest decrease in new HIV infections overall and the significant reduction among children aged 0 to 14 in Kenya from 2019 to 2021 is a testament to the country’s commitment to ending the epidemic. However, sustained efforts are needed to address remaining challenges and achieve the goal of an AIDS-free generation. By continuing to prioritize evidence-based interventions, invest in health systems strengthening, and promote equity and inclusivity, Kenya can build on its progress and move closer to ending HIV/AIDS.</p>
-<p><strong>Sources:</strong></p>
-<ol type="1">
-<li><p>National AIDS Control Council (NACC) Kenya. (2022). Kenya AIDS Strategic Framework 2021/22 - 2025/26. Retrieved from https://nacc.or.ke</p></li>
-<li><p>Kenya Ministry of Health. (2021). Kenya HIV Estimates Report 2021. Retrieved from https://www.health.go.ke</p></li>
-</ol>
-<p>Attached is the r code used to generate.</p>
-<pre><code>## packages
-library(tidyverse)
-library(ggtext)
-library(ggrepel)
-library(patchwork)
-library(systemfonts)
-library(camcorder)
+<section id="mastering-spatial-regression-in-r-unveiling-patterns-in-geospatial-data" class="level2">
+<h2 class="anchored" data-anchor-id="mastering-spatial-regression-in-r-unveiling-patterns-in-geospatial-data">Mastering Spatial Regression in R: Unveiling patterns in Geospatial Data</h2>
+<p>Spatial regression is a powerful technique in spatial analytics that allows us to model relationships between variables while accounting for the spatial dependencies inherent in geospatial data. In this advanced blog post, we will dive into the intricacies of spatial regression using R. Our goal is to uncover hidden patterns and relationships in geospatial datasets, focusing on a hypothetical scenario of housing prices and neighborhood characteristics.</p>
+</section>
+<section id="understanding-spatial-regression" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-spatial-regression"><strong>Understanding Spatial Regression</strong></h2>
+<p>Spatial regression extends traditional regression models by incorporating spatial relationships. It acknowledges that observations closer in space may exhibit similarities or dependencies that traditional models overlook. There are different types of spatial regression models, and in this blog, we will focus on the Spatial Lag Model.</p>
+<section id="spatial-lag-model" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-lag-model"><strong>Spatial Lag Model</strong></h3>
+<p>The Spatial Lag Model introduces a spatially lagged dependent variable, indicating the influence of neighboring observations. Let’s consider housing prices as the dependent variable and neighborhood characteristics as independent variables.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install and load required packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"spdep"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spdep)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load geospatial data (housing prices and neighborhood characteristics)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>housing_data <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"path/to/housing_data.shp"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create spatial weights matrix</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">poly2nb</span>(<span class="fu">st_as_sfc</span>(housing_data))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>lw <span class="ot">&lt;-</span> <span class="fu">nb2listw</span>(w)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit Spatial Lag Model</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x1 <span class="sc">+</span> x2 <span class="sc">+</span> <span class="fu">lag</span>(y, <span class="at">listw =</span> lw), <span class="at">data =</span> housing_data)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code></code></pre>
+<p>Replace “path/to/housing_data.shp” with the actual path to your Shapefile. This example assumes you have a dependent variable <strong><code>y</code></strong> (housing prices) and independent variables <strong><code>x1</code></strong> and <strong><code>x2</code></strong> (neighborhood characteristics).</p>
+</section>
+</section>
+<section id="interpretation-of-results" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation-of-results"><strong>Interpretation of Results</strong></h2>
+<p>The summary output provides information about coefficients, standard errors, and statistical significance. Pay special attention to the spatial lag coefficient, which indicates the impact of neighboring observations on the dependent variable.</p>
+</section>
+<section id="diagnostic-checks" class="level2">
+<h2 class="anchored" data-anchor-id="diagnostic-checks"><strong>Diagnostic Checks</strong></h2>
+<p>Assess the model’s validity and assumptions through diagnostic checks.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Spatial autocorrelation of residuals</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>residuals <span class="ot">&lt;-</span> <span class="fu">residuals</span>(model)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">moran.test</span>(residuals, <span class="at">listw =</span> lw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code></code></pre>
+<p>A significant Moran’s I statistic for residuals indicates spatial autocorrelation, suggesting the need for further model refinement.</p>
+</section>
+<section id="visualization" class="level2">
+<h2 class="anchored" data-anchor-id="visualization"><strong>Visualization</strong></h2>
+<p>Visualize the spatial patterns and regression results on a map.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting observed vs. predicted values</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(housing_data<span class="sc">$</span>y, <span class="fu">fitted</span>(model), <span class="at">main =</span> <span class="st">"Observed vs. Predicted"</span>, <span class="at">xlab =</span> <span class="st">"Observed"</span>, <span class="at">ylab =</span> <span class="st">"Predicted"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Spatial autocorrelation map of residuals</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">spplot</span>(residuals, <span class="at">main =</span> <span class="st">"Spatial Autocorrelation Map of Residuals"</span>, <span class="at">col.regions =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"white"</span>, <span class="st">"red"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code></code></pre>
+<p>These visualizations help in understanding how well the model captures spatial patterns and where adjustments might be needed.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion"><strong>Conclusion</strong></h2>
+<p>Spatial regression in R opens up new dimensions for analyzing geospatial data. In this blog post, we explored the Spatial Lag Model as an advanced technique for modeling spatial dependencies in housing prices and neighborhood characteristics. The interpretation of results, diagnostic checks, and visualizations are crucial components of spatial regression analysis.</p>
+<p>As you venture into spatial analytics, consider exploring other spatial regression models, incorporating additional spatial variables, and applying advanced techniques to enhance the robustness of your models. Stay tuned for more advanced spatial analytics topics, including machine learning with geospatial data and building interactive web maps. Happy analyzing!</p>
 
 
-gg_record(dir = here::here("2024/03"), device = "png", 
-          width = 1500 * 2, height = 1350 * 2, units = "px", dpi = 320)
-
-
-theme_set(theme_minimal(base_size = 19, base_family = "Girassol"))
-
-theme_update(
-  text = element_text(color = "grey12"),
-  axis.title = element_blank(),
-  axis.text.x = element_text(family = "Iosevka Curly"),
-  axis.text.y = element_blank(),
-  panel.grid.major.y = element_blank(),
-  panel.grid.minor = element_blank(),
-  plot.margin = margin(20, 5, 10, 10),
-  plot.subtitle = element_textbox_simple(family = "Roboto Condensed", size = 14,
-                                         lineheight = 1.6),
-  plot.title.position = "plot",
-  plot.caption = element_text(family = "Iosevka Curly", color = "#b40059", hjust = .5,
-                              size = 10, margin = margin(35, 0, 0, 0))
-)
-
-# read the data
-df &lt;- read_csv("2024/data/new_infected_data.csv")
-
-#prep data
-df_prep &lt;- df %&gt;%
-  pivot_longer(cols = c(-Newly_infected_with_HIV)) %&gt;% 
-  rename(year = name, 
-         n = value) %&gt;% 
-  group_by(Newly_infected_with_HIV) %&gt;% 
-  mutate(
-    total = sum(n),
-    current = n[which(year == 2021)]
-  ) %&gt;% 
-  ungroup() %&gt;%
-  mutate(
-    Newly_infected_with_HIV = fct_reorder(Newly_infected_with_HIV, total),
-    Newly_infected_with_HIV = fct_relevel(Newly_infected_with_HIV, "Young_people_(ages 15-24)")
-  )
-
-
-# summary computation
-df_sum &lt;-
-  df_prep %&gt;% 
-  filter(year &lt;= 2021) %&gt;% 
-  group_by(year) %&gt;% 
-  summarize(n = sum(n))
-
-# plot
-p1 &lt;- 
-  df_sum %&gt;% 
-  ggplot(aes(year, n)) +
-  geom_col(aes(fill = factor(year)), width = .85) +
-  geom_col(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(alpha = year == 2021),
-    fill = "blue", width = .5
-  ) +
-  geom_text(
-    data = df_sum %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nTotal"), as.character(n))),
-    aes(label = n_lab), 
-    family = "Iosevka Curly", size = 3.3, lineheight = .8, 
-    nudge_y = 12, vjust = 0, color = "black", fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021) %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nChildren"), as.character(n))), 
-    aes(label = n_lab), 
-    family = "Iosevka Curly",
-    color = "white", lineheight = .8, size = 3.0, 
-    nudge_y = 12, vjust = 0, fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(y = -15, label = year, color = factor(year)), 
-    family = "Iosevka Curly", size = 6, hjust = .5, vjust = 1
-  ) +
-  coord_cartesian(clip = "off") +
-  scale_y_continuous(limits = c(-15, NA)) +
-  scale_color_manual(values = c(rep("black", 9), "#b40059", "grey70"), guide = "none") +
-  scale_fill_manual(values = c(rep("purple", 9), "#b40059", "yellow"), guide = "none") +
-  scale_alpha_manual(values = c(.25, .4), guide = "none") +
-  labs(title = "&lt;br&gt;&lt;span style='font-size:20pt'&gt;New HIV infections among children in Kenya decreased by 13% in the &lt;b style='color:#b40059'&gt;Pandemic Year&lt;/b&gt;",
-       subtitle = "&lt;br&gt;&lt;span style='font-size:14pt'&gt;From 2019 to 2021, there was a 1.13% decrease in new HIV infections overall in Kenya, and a 16.13% decrease in new infections among children aged 0 to 14.",
-       caption = paste("&lt;br&gt;&lt;span style='font-size:6pt'&gt;&lt;b style='color:black'&gt;Source: World Bank  ", "      ", "\nGraphics: Victor Mandela")) +
-  theme(
-    plot.title = element_markdown(size = 28, margin = margin(5, 35, 25, 35), color = "black"),
-    plot.subtitle = element_textbox_simple(margin = margin(5, 35, 15, 35)),
-    panel.grid.major = element_blank(),
-    axis.text.x = element_blank(),
-    plot.caption = element_markdown(hjust = 0.6, size = 9, lineheight = 0.8,
-                                    family = "Charm", face = "bold",
-                                    margin = margin(t = 8))
-  )
-
-p1
-</code></pre>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-03">
+<meta name="author" content="Victor Mandela">
+<meta name="dcterms.date" content="2024-10-16">
 
-<title>Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</title>
+<title>Articles - Data Quality, Analysis, and Case Studies Using KoboToolbox</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,9 +80,9 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Articles - Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R">
+<meta property="og:title" content="Articles - Data Quality, Analysis, and Case Studies Using KoboToolbox">
 <meta property="og:description" content="">
-<meta property="og:image" content="infections.png">
+<meta property="og:image" content="kobotoolbox.PNG">
 <meta property="og:site_name" content="Articles">
 </head>
 
@@ -167,12 +168,12 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Progress and Challenges: HIV Infections in Kenya from 2019 to 2021 Analysis with R</h1>
+      <h1 class="title">Data Quality, Analysis, and Case Studies Using KoboToolbox</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Visualization</div>
-                <div class="quarto-category">Statistics</div>
-                <div class="quarto-category">R</div>
-                <div class="quarto-category">Analysis</div>
+                <div class="quarto-category">Survey</div>
+                <div class="quarto-category">Data Collection</div>
+                <div class="quarto-category">KoboToolbox</div>
+                <div class="quarto-category">CAPI</div>
               </div>
                   </div>
   </div>
@@ -180,11 +181,17 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Victor Mandela </p>
+            </div>
+    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 3, 2024</p>
+        <p class="date">October 16, 2024</p>
       </div>
     </div>
     
@@ -203,137 +210,72 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 
 
 
-<p><strong>Introduction</strong></p>
-<p><img src="pics/red ribbon symbol of hiv aids vector world aids day hiv aids tape hiv aids png.jpg" class="img-fluid"></p>
-<p>In recent years, Kenya has made significant strides in combating HIV/AIDS, but challenges remain. Understanding trends in new infections is crucial for guiding interventions and policy decisions. This article examines the trends in new HIV infections in Kenya from 2019 to 2021, focusing on both overall and pediatric cases.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="pics/Art Print_ Kenya Political Map by Peter Hermes Furian _ 12x12in.jpg" class="img-fluid figure-img"></p>
-<figcaption>Map of Kenya</figcaption>
-</figure>
-</div>
-<p><strong>Overview of New HIV Infections:</strong> According to data from the National AIDS Control Council (NACC) of Kenya, the total number of new HIV infections in the country declined slightly from 53,200 in 2019 to 52,200 in 2021. While this represents a modest decrease of 1.13%, it signifies progress in the fight against the epidemic.</p>
-<p><strong>Trends Among Children:</strong> One particularly encouraging trend is the decrease in new HIV infections among children aged 0 to 14. In 2019, there were 6,200 new pediatric infections, which decreased to 5,200 in 2021, marking a notable 16.13% reduction over the two-year period.</p>
-<p><img src="pics/infections.PNG" class="img-fluid"></p>
-<p><strong>Factors Contributing to the Decline:</strong> Several factors may have contributed to the decline in new HIV infections in Kenya. Expanded access to HIV testing and counseling services, improved maternal and child health programs, and the scale-up of prevention of mother-to-child transmission (PMTCT) interventions have likely played a role. Additionally, increased awareness, education, and community mobilization efforts have helped reduce stigma and discrimination associated with HIV/AIDS, encouraging more people to seek testing and treatment.</p>
-<p><strong>Challenges and Areas for Improvement:</strong> Despite the progress made, challenges persist in the fight against HIV/AIDS in Kenya. Access to comprehensive prevention services, including condoms and pre-exposure prophylaxis (PrEP), remains uneven, particularly among key populations such as sex workers, men who have sex with men, and people who inject drugs. Additionally, gaps in testing coverage and linkage to care continue to hinder efforts to achieve epidemic control.</p>
-<p><img src="pics/Analysis Customizable Isometric Illustrations _ Amico Style.jpg" class="img-fluid"></p>
-<p><strong>Conclusion:</strong> In conclusion, the modest decrease in new HIV infections overall and the significant reduction among children aged 0 to 14 in Kenya from 2019 to 2021 is a testament to the country’s commitment to ending the epidemic. However, sustained efforts are needed to address remaining challenges and achieve the goal of an AIDS-free generation. By continuing to prioritize evidence-based interventions, invest in health systems strengthening, and promote equity and inclusivity, Kenya can build on its progress and move closer to ending HIV/AIDS.</p>
-<p><strong>Sources:</strong></p>
+<section id="automating-quality-checks-in-capi-using-kobotoolbox-features" class="level4">
+<h4 class="anchored" data-anchor-id="automating-quality-checks-in-capi-using-kobotoolbox-features"><strong>Automating Quality Checks in CAPI Using KoboToolbox Features</strong></h4>
+<p>One of the best features of KoboToolbox is its ability to automate quality checks during data collection. This ensures that the data you collect is clean and ready for analysis, reducing the need for time-consuming manual corrections later.</p>
+<p>Here’s how you can improve data quality with KoboToolbox:</p>
 <ol type="1">
-<li><p>National AIDS Control Council (NACC) Kenya. (2022). Kenya AIDS Strategic Framework 2021/22 - 2025/26. Retrieved from https://nacc.or.ke</p></li>
-<li><p>Kenya Ministry of Health. (2021). Kenya HIV Estimates Report 2021. Retrieved from https://www.health.go.ke</p></li>
+<li><p><strong>Use Validation Criteria</strong><br>
+KoboToolbox allows you to set validation rules for questions, ensuring that respondents enter data in the correct format. For example, if you’re collecting age data, you can set a rule that the age must be between 0 and 120. This prevents errors like entering “500” as an age.</p>
+<p><strong>Example</strong>: If your survey asks, “How many children do you have?” you can set a validation rule to ensure the response is a number between 0 and 15, preventing incorrect entries.</p></li>
+<li><p><strong>Add Mandatory Questions</strong><br>
+You can make certain questions mandatory so that respondents cannot skip them. This is particularly important for critical questions that are essential to your data analysis.</p>
+<p><strong>Example</strong>: In a health survey, you can make the question “What is your gender?” mandatory, ensuring that no response is left out during the interview.</p></li>
+<li><p><strong>Use Constraints for Logical Responses</strong><br>
+You can set constraints to make sure answers are logical. For instance, if someone answers that they are 5 years old, a constraint can prevent them from answering that they have children, as this would be an illogical response.</p>
+<p><strong>Example</strong>: If a respondent selects “No” to the question “Do you own a mobile phone?”, you can add a constraint that prevents them from answering follow-up questions about phone usage, improving the survey’s flow.</p></li>
+<li><p><strong>Preview and Test Before Data Collection</strong><br>
+Always preview and test your survey before deployment to ensure that the validation criteria and constraints work as expected. Testing prevents errors during actual data collection.</p>
+<p><strong>Example</strong>: Before deploying a survey on school attendance, preview it by entering test responses. This will show you if the logic and constraints work, such as preventing a respondent from entering “10” when asked “How many school days did you miss last month?” if the maximum allowed is 5.</p></li>
 </ol>
-<p>Attached is the r code used to generate.</p>
-<pre><code>## packages
-library(tidyverse)
-library(ggtext)
-library(ggrepel)
-library(patchwork)
-library(systemfonts)
-library(camcorder)
+</section>
+<section id="real-time-data-collection-and-analysis-with-kobotoolbox" class="level4">
+<h4 class="anchored" data-anchor-id="real-time-data-collection-and-analysis-with-kobotoolbox"><strong>Real-Time Data Collection and Analysis with KoboToolbox</strong></h4>
+<p>One of the most powerful features of KoboToolbox is the ability to collect and monitor data in real time. This gives you immediate insights into your survey results, enabling you to make adjustments on the fly and ensure data accuracy.</p>
+<ol type="1">
+<li><p><strong>Monitor Data as It’s Collected</strong><br>
+KoboToolbox allows you to view the incoming data while your field team is still collecting it. You can see the number of responses collected, check for any missing or incomplete data, and identify potential issues early on.</p>
+<p><strong>Example</strong>: If you’re conducting a survey on household income, you can monitor the data to ensure all responses are complete. If you notice that a certain region is submitting fewer responses, you can contact your field team to address the issue before it becomes a bigger problem.</p></li>
+<li><p><strong>Export Data for Analysis</strong><br>
+Once the data is collected, you can export it to a variety of formats such as Excel, CSV, or even directly into statistical software like R or SPSS for deeper analysis. This allows you to clean and analyze the data as soon as it’s uploaded.</p>
+<p><strong>Example</strong>: After completing a survey on water usage in rural areas, you can export the data to Excel, where you can filter responses and run simple analyses, such as calculating the average water consumption per household.</p></li>
+<li><p><strong>Visualize Data Quickly</strong><br>
+KoboToolbox includes basic data visualization tools, allowing you to create simple graphs or charts directly on the platform. This is useful for quick insights without having to use other software.</p>
+<p><strong>Example</strong>: If you’re collecting data on the types of crops grown in different regions, KoboToolbox lets you generate pie charts to see the proportion of households growing maize, beans, or other crops at a glance.</p></li>
+</ol>
+</section>
+<section id="how-to-visualize-capi-data-collected-via-kobotoolbox" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-visualize-capi-data-collected-via-kobotoolbox"><strong>How to Visualize CAPI Data Collected via KoboToolbox</strong></h4>
+<p>Visualizing the data collected using KoboToolbox helps turn raw data into meaningful insights. Here’s how you can quickly create visualizations for your data:</p>
+<ol type="1">
+<li><p><strong>Use KoboToolbox’s Built-In Visualization</strong><br>
+KoboToolbox offers simple tools to visualize your survey results as bar charts, pie charts, or frequency tables. This is ideal for getting a quick overview of your data, especially if you need a snapshot during fieldwork.</p>
+<p><strong>Example</strong>: After completing a survey on school enrollment, you can quickly create a pie chart to visualize the percentage of boys and girls enrolled in school.</p></li>
+<li><p><strong>Export Data for Advanced Visualization</strong><br>
+If you need more complex visualizations, export the data to Excel or a data visualization tool like Tableau. From there, you can create more detailed graphs, maps, or dashboards to better understand trends or patterns in your data.</p>
+<p><strong>Example</strong>: After collecting data on household energy sources, you can export the data to Tableau and create a map that shows which regions rely more on firewood versus electricity, giving you a clearer picture of energy access in different areas.</p></li>
+<li><p><strong>Visualize Trends Over Time</strong><br>
+If your survey involves tracking data over time, you can create trend charts to visualize changes. This is especially useful in longitudinal studies where you need to monitor progress or compare results from different survey rounds.</p>
+<p><strong>Example</strong>: If you’re running a survey on child nutrition over several months, you can use KoboToolbox’s export feature to create a line chart in Excel, showing how the average weight of children has changed over time.</p></li>
+</ol>
+</section>
+<section id="case-study-improving-health-data-collection-with-kobotoolbox-capi" class="level4">
+<h4 class="anchored" data-anchor-id="case-study-improving-health-data-collection-with-kobotoolbox-capi"><strong>Case Study: Improving Health Data Collection with KoboToolbox CAPI</strong></h4>
+<p>To illustrate the power of KoboToolbox, let’s look at a real-world case study of how it was used to improve health data collection in a rural setting.</p>
+<p><strong>The Challenge</strong>:<br>
+A health NGO was tasked with collecting data on vaccination coverage in remote villages. Previously, they used paper surveys, which often led to errors, delays, and missing data. The team needed a more efficient way to gather accurate information in areas with no internet access.</p>
+<p><strong>The Solution</strong>:<br>
+The team switched to using KoboToolbox for CAPI. They designed a digital survey with validation rules and skip logic to ensure that only relevant questions were asked. The team collected data offline using the KoboCollect app and synced it later when they returned to areas with internet connectivity.</p>
+<p><strong>Results</strong>:</p>
+<ul>
+<li><p><strong>Improved Accuracy</strong>: With validation rules, errors were minimized. For example, respondents couldn’t enter invalid ages for children receiving vaccines.</p></li>
+<li><p><strong>Faster Data Processing</strong>: Instead of waiting weeks for paper forms to be submitted and entered manually, data was available in real time, allowing the team to start analyzing it immediately.</p></li>
+<li><p><strong>Higher Quality Data</strong>: By using mandatory fields and skip logic, the survey reduced missing responses and improved the overall quality of the data.</p></li>
+</ul>
+<p><strong>Example</strong>: In one village, the NGO was able to quickly determine that vaccination coverage for measles was lower than expected, allowing them to take immediate action by organizing more vaccination clinics.</p>
 
 
-gg_record(dir = here::here("2024/03"), device = "png", 
-          width = 1500 * 2, height = 1350 * 2, units = "px", dpi = 320)
-
-
-theme_set(theme_minimal(base_size = 19, base_family = "Girassol"))
-
-theme_update(
-  text = element_text(color = "grey12"),
-  axis.title = element_blank(),
-  axis.text.x = element_text(family = "Iosevka Curly"),
-  axis.text.y = element_blank(),
-  panel.grid.major.y = element_blank(),
-  panel.grid.minor = element_blank(),
-  plot.margin = margin(20, 5, 10, 10),
-  plot.subtitle = element_textbox_simple(family = "Roboto Condensed", size = 14,
-                                         lineheight = 1.6),
-  plot.title.position = "plot",
-  plot.caption = element_text(family = "Iosevka Curly", color = "#b40059", hjust = .5,
-                              size = 10, margin = margin(35, 0, 0, 0))
-)
-
-# read the data
-df &lt;- read_csv("2024/data/new_infected_data.csv")
-
-#prep data
-df_prep &lt;- df %&gt;%
-  pivot_longer(cols = c(-Newly_infected_with_HIV)) %&gt;% 
-  rename(year = name, 
-         n = value) %&gt;% 
-  group_by(Newly_infected_with_HIV) %&gt;% 
-  mutate(
-    total = sum(n),
-    current = n[which(year == 2021)]
-  ) %&gt;% 
-  ungroup() %&gt;%
-  mutate(
-    Newly_infected_with_HIV = fct_reorder(Newly_infected_with_HIV, total),
-    Newly_infected_with_HIV = fct_relevel(Newly_infected_with_HIV, "Young_people_(ages 15-24)")
-  )
-
-
-# summary computation
-df_sum &lt;-
-  df_prep %&gt;% 
-  filter(year &lt;= 2021) %&gt;% 
-  group_by(year) %&gt;% 
-  summarize(n = sum(n))
-
-# plot
-p1 &lt;- 
-  df_sum %&gt;% 
-  ggplot(aes(year, n)) +
-  geom_col(aes(fill = factor(year)), width = .85) +
-  geom_col(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(alpha = year == 2021),
-    fill = "blue", width = .5
-  ) +
-  geom_text(
-    data = df_sum %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nTotal"), as.character(n))),
-    aes(label = n_lab), 
-    family = "Iosevka Curly", size = 3.3, lineheight = .8, 
-    nudge_y = 12, vjust = 0, color = "black", fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021) %&gt;% 
-      mutate(n_lab = if_else(year %in% c(2012, 2021), paste0(n, "\nChildren"), as.character(n))), 
-    aes(label = n_lab), 
-    family = "Iosevka Curly",
-    color = "white", lineheight = .8, size = 3.0, 
-    nudge_y = 12, vjust = 0, fontface = "bold"
-  ) +
-  geom_text(
-    data = df_prep %&gt;% filter(Newly_infected_with_HIV == "Children_(ages 0-14)" &amp; year &lt;= 2021),
-    aes(y = -15, label = year, color = factor(year)), 
-    family = "Iosevka Curly", size = 6, hjust = .5, vjust = 1
-  ) +
-  coord_cartesian(clip = "off") +
-  scale_y_continuous(limits = c(-15, NA)) +
-  scale_color_manual(values = c(rep("black", 9), "#b40059", "grey70"), guide = "none") +
-  scale_fill_manual(values = c(rep("purple", 9), "#b40059", "yellow"), guide = "none") +
-  scale_alpha_manual(values = c(.25, .4), guide = "none") +
-  labs(title = "&lt;br&gt;&lt;span style='font-size:20pt'&gt;New HIV infections among children in Kenya decreased by 13% in the &lt;b style='color:#b40059'&gt;Pandemic Year&lt;/b&gt;",
-       subtitle = "&lt;br&gt;&lt;span style='font-size:14pt'&gt;From 2019 to 2021, there was a 1.13% decrease in new HIV infections overall in Kenya, and a 16.13% decrease in new infections among children aged 0 to 14.",
-       caption = paste("&lt;br&gt;&lt;span style='font-size:6pt'&gt;&lt;b style='color:black'&gt;Source: World Bank  ", "      ", "\nGraphics: Victor Mandela")) +
-  theme(
-    plot.title = element_markdown(size = 28, margin = margin(5, 35, 25, 35), color = "black"),
-    plot.subtitle = element_textbox_simple(margin = margin(5, 35, 15, 35)),
-    panel.grid.major = element_blank(),
-    axis.text.x = element_blank(),
-    plot.caption = element_markdown(hjust = 0.6, size = 9, lineheight = 0.8,
-                                    family = "Charm", face = "bold",
-                                    margin = margin(t = 8))
-  )
-
-p1
-</code></pre>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
