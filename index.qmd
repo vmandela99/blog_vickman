@@ -1,5 +1,6 @@
 ---
 title: "Posts"
+image: "images/home.PNG"
 listing:
   contents: posts
   sort: "date desc"

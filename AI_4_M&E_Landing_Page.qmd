@@ -1,3 +1,6 @@
 ---
 title: "AI_4_M&E_landing_page"
+format: html
+page-layout: full
+toc: false
 ---

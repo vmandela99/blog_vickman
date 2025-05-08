@@ -2,12 +2,22 @@ project:
   type: website
 
 website:
-  title: "Articles"
+  # title: "Articles"
   # description: "Data Science and Statistical Consulting"
   open-graph: true
   google-analytics: "GTM-T8DDSMN"
   navbar:
     right:
+      - text: "Home"
+        href: index.qmd
+      - text: "My Courses"
+        menu:
+          - text: "Python"
+            href: courses/python.qmd
+          - text: "Ruby"
+            href: courses/ruby.qmd
+          - text: "SQL"
+            href: courses/SQL.qmd
       - Projects.qmd
       - Skills.qmd
       - Templates and Resources.qmd
