@@ -17,16 +17,25 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/vmandela99/
+    - icon: twitter
+      href: http://x.com/VictorMandela8
+      text: X
+    - icon: facebook
+      href: https://www.facebook.com/vmandela99
+      text: Facebook
+    - icon: briefcase
+      href: https://www.nature.com/articles/s41598-025-89030-z
+      text: Google Scholar
 ---
 
 ::: {#hero-heading}
-Hi! My name is Victor Mandela from Kenya 💜.
+Hi! My name is Victor Mandela Mokaya from Kenya 💜.
 
-I'm a data enthusiast and statistics warrior, and I strive in environments that need solutions related to data research.
+I am leader, trainer and a coach in Evaluation, Research and Analysis. With my vast and strong background in generative AI, I have managed to guide, train and encourage very many professionals in different fields and at diverse positions across the globe for very many years.
 
-I have been writing about R in my blog since 2019. I'm mostly active in the ShinyR and tidyverse community, slack groups and social media sites.
+I harbor extensive expertise in managing field-based quantitative data collection, ensuring data quality, and designing research protocols. I have extensive proven ability to analyze and interpret quantitative data, train research teams, and translate findings into programmatic recommendations. I am super adept at generative AI tools for generating insights and informing policy decisions.
 
-I hold an MSc in Statistics from the University of Nairobi. My research I am majorly interested in webApp development, machine learning and evidence-based reproducible research.
+I inspire strengths, leadership nurturing, capacity building and drive significant impact that has value to scale across the whole globe.
 :::
 
 <!-- Calendly badge widget begin -->

@@ -1,1 +1,9 @@
 /* css styles */
+
+a.linkedin-icon{
+  color:purple;
+}
+
+a. linkedin-icon:hover{
+  color:rebeccapurple
+}

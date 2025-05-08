@@ -19,12 +19,14 @@ website:
         href: https://github.com/
       - icon: linkedin
         href: https://www.linkedin.com/vmandela99/
+        text: LinkedIn
+        target: _blank
 format:
   html:
     # theme: minty
     theme: materia
-    # css: styles.css
-    css: custom.scss
+    css: styles.css
+    # css: custom.scss
 
 editor: visual
 
