@@ -21,30 +21,35 @@ website:
             href: courses/upcoming_courses.qmd
           - text: "Available Course"
             href: courses/available_courses.qmd
-          # - text: "SQL"
-          #   href: courses/SQL.qmd
-      - Projects.qmd
-      - Skills.qmd
-      - Templates and Resources.qmd
-      - Case Study.qmd
+      - text: "My Works"
+        menu:
+          - text: "Gallery"
+            href: myworks/gallery.qmd
+          - text: "Projects"
+            href: myworks/projects.qmd
+          - text: "Testimonies/Awards"
+            href: myworks/awards.qmd
+          - text: "Dashboards/Apps"
+            href: myworks/apps.qmd
+      - text: "Books"
+        href: books/books.qmd
       - about.qmd
-      - href: contact/index.qmd
-        text: Contact
-      - icon: github
-        href: https://github.com/vmandela99
-      - icon: linkedin
-        href: https://www.linkedin.com/vmandela99/
-        # text: LinkedIn
-        target: _blank
-      - icon: envelope
-        href: mailto:vmandela99@gmail.com
-      - icon: twitter
-        href: http://x.com/VictorMandela8
-      - icon: facebook
-        href: https://www.facebook.com/vmandela99
-      - icon: briefcase
-        href: https://www.nature.com/articles/s41598-025-89030-z
-        text: Google Scholar
+      # - href: contact/index.qmd
+      #   text: Contact
+      # - icon: github
+      #   href: https://github.com/vmandela99
+      # - icon: linkedin
+      #   href: https://www.linkedin.com/vmandela99/
+      #   # text: LinkedIn
+      #   target: _blank
+      # - icon: envelope
+      #   href: mailto:vmandela99@gmail.com
+      # - icon: twitter
+      #   href: http://x.com/VictorMandela8
+      # - icon: facebook
+      #   href: https://www.facebook.com/vmandela99
+      # - icon: briefcase
+      #   href: https://www.nature.com/articles/s41598-025-89030-z
 format:
   html:
     # theme: minty

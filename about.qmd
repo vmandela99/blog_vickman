@@ -1,5 +1,5 @@
 ---
-title: "About Vickman"
+title: "About"
 comments: false
 image: pic.jpg
 about:

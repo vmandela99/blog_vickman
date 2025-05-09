@@ -1,0 +1,17 @@
+{
+  "hash": "b97b0d590a38acaff55270bfde00d4b9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Gallery with Visualizations\"\nformat: html\npage-layout: full\nexecute:\n  echo: false\n---\n\n\n::: layout-panel\n::: {.grid .gap-3}\n::: g-col-4\n![Boxplots of Yearly Sorghum Yield](gallery_pics/box_vs_year.png) **Boxplots of Yearly Sorghum Yield**\n:::\n\n::: g-col-4\n![Correlation of Variables](gallery_pics/corr_plot.png) **Correlation of Variables**\n:::\n\n::: g-col-4\n![Cross-Fold Metrics](gallery_pics/fold_rsquared.png) **Cross-Fold Metrics for 5 ML Models**\n:::\n:::\n\n------------------------------------------------------------------------\n\n::: {.grid .gap-3}\n::: g-col-6\n![New Infections](gallery_pics/infections.PNG) **New Infections**\n:::\n\n::: g-col-6\n![Life Expectancy](gallery_pics/life-expectancy-and-healthy.png) **Life Expectancy**\n:::\n\n\n::: {.cell}\n::: {.cell-output-display}\n![Histogram of Sepal Length by Species (Iris Dataset)](gallery_files/figure-html/life-expectancy-hist-1.png){width=672}\n:::\n:::\n\n\n:::\n\n------------------------------------------------------------------------\n\n::: {.grid .gap-3}\n::: g-col-3\n![Milk production](gallery_pics/milk_prod.png) **Milk Production**\n:::\n\n::: g-col-3\n![Residual Diagnostics](gallery_pics/residual.png) **ML Model Diagnostics**\n:::\n\n::: g-col-3\n![Tourism Trends](gallery_pics/Safari_pic.png) **Tourism in East & Southern Africa**\n:::\n\n::: g-col-3\n![Stunting Rates](gallery_pics/trends-in-stunting-rates.png) **Stunting Rates Trends**\n:::\n:::\n\n------------------------------------------------------------------------\n\n::: {.grid .gap-3 .justify-center}\n::: g-col-6\n![Enhanced Vegetation Index for Sorghum](gallery_pics/EVI%20BarhGazal%202015-2020.png) **EVI for Sorghum (2015–2020)**\n:::\n:::\n:::\n\n:::\n\n------------------------------------------------------------------------\n",
+    "supporting": [
+      "gallery_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,68 @@
+---
+title: "Gallery with Visualizations"
+format: html
+page-layout: full
+execute:
+  echo: false
+---
+
+::: layout-panel
+::: {.grid .gap-3}
+::: g-col-4
+![Boxplots of Yearly Sorghum Yield](gallery_pics/box_vs_year.png) **Boxplots of Yearly Sorghum Yield**
+:::
+
+::: g-col-4
+![Correlation of Variables](gallery_pics/corr_plot.png) **Correlation of Variables**
+:::
+
+::: g-col-4
+![Cross-Fold Metrics](gallery_pics/fold_rsquared.png) **Cross-Fold Metrics for 5 ML Models**
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: {.grid .gap-3}
+::: g-col-6
+![New Infections](gallery_pics/infections.PNG) **New Infections**
+:::
+
+::: g-col-6
+![Life Expectancy](gallery_pics/life-expectancy-and-healthy.png) **Life Expectancy**
+:::
+
+:::
+
+------------------------------------------------------------------------
+
+::: {.grid .gap-3}
+::: g-col-3
+![Milk production](gallery_pics/milk_prod.png) **Milk Production**
+:::
+
+::: g-col-3
+![Residual Diagnostics](gallery_pics/residual.png) **ML Model Diagnostics**
+:::
+
+::: g-col-3
+![Tourism Trends](gallery_pics/Safari_pic.png) **Tourism in East & Southern Africa**
+:::
+
+::: g-col-3
+![Stunting Rates](gallery_pics/trends-in-stunting-rates.png) **Stunting Rates Trends**
+:::
+:::
+
+------------------------------------------------------------------------
+
+::: {.grid .gap-3 .justify-center}
+::: g-col-6
+![Enhanced Vegetation Index for Sorghum](gallery_pics/EVI%20BarhGazal%202015-2020.png) **EVI for Sorghum (2015–2020)**
+:::
+:::
+:::
+
+:::
+
+------------------------------------------------------------------------
