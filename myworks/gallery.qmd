@@ -31,7 +31,6 @@ execute:
 ::: g-col-6
 ![Life Expectancy](gallery_pics/life-expectancy-and-healthy.png) **Life Expectancy**
 :::
-
 :::
 
 ------------------------------------------------------------------------
@@ -66,3 +65,21 @@ execute:
 :::
 
 ------------------------------------------------------------------------
+
+::: {#disqus_thread}
+:::
+
+```{=html}
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = window.location.pathname;
+    };
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-www-victormandela-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+```
