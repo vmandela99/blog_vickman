@@ -1,3 +1,141 @@
 ---
-title: "awards"
+title: "Wall of Awards"
+format: html
+page-layout: full
+execute:
+  echo: false
 ---
+
+::: layout-panel
+
+### Creating CAPI with KOBOToolbox Course
+
+::: {.grid .gap-3}
+::: g-col-3
+![Cohort 1](awards_pics/17.png)
+:::
+
+::: g-col-3
+![](awards_pics/16.png)
+:::
+
+::: g-col-3
+![](awards_pics/15.png)
+:::
+
+::: g-col-3
+![](awards_pics/19.png)
+:::
+
+::: g-col-3
+![](awards_pics/18.png)
+:::
+:::
+
+### AI for M&E Master Class Course
+
+::: {.grid .gap-3}
+
+::: g-col-3
+![Cohort 3](awards_pics/11.png)
+:::
+
+:::
+
+### Practical Introduction to R for Data Science Course
+
+::: {.grid .gap-3}
+::: g-col-3
+![CSV Research Solution ltd - Cohort 1(2021)](awards_pics/9.png)
+:::
+
+::: g-col-3
+![](awards_pics/8.png)
+:::
+
+::: g-col-3
+![](awards_pics/7.png)
+:::
+
+::: g-col-3
+![](awards_pics/4.png)
+:::
+
+::: g-col-3
+![Cohort 2](awards_pics/23.png)
+:::
+
+:::
+
+### Practical Introduction to STATA Course
+
+::: {.grid .gap-3}
+::: g-col-3
+![CSV Research Solution ltd - Cohort 1(2021)](awards_pics/5.png)
+:::
+
+::: g-col-3
+![](awards_pics/6.png)
+:::
+
+::: g-col-3
+![Cohort 2](awards_pics/24.png)
+:::
+
+:::
+
+### Visualization Using Data Wrapper MasterClass
+
+::: {.grid .gap-3}
+::: g-col-3
+![](awards_pics/25.png)
+:::
+
+:::
+
+## Website creation/Development Courses
+
+### Using Rstudio
+
+::: {.grid .gap-3}
+::: g-col-3
+![Coding Club - Cohort 1 (2020)](awards_pics/1.png)
+:::
+
+::: g-col-3
+![](awards_pics/3.png)
+:::
+
+::: g-col-3
+![](awards_pics/2.png)
+:::
+
+::: g-col-3
+![Cohort 2](awards_pics/14.png)
+:::
+
+:::
+
+### Using Quarto
+::: {.grid .gap-3}
+
+::: g-col-3
+![](awards_pics/13.png)
+:::
+
+::: g-col-3
+![](awards_pics/12.png)
+:::
+
+
+:::
+
+### Using JavaScript and Python
+
+::: {.grid .gap-3}
+::: g-col-3
+![](awards_pics/10.png)
+:::
+
+:::
+:::
