@@ -203,27 +203,37 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 <p>Pay Now</p>
 </button>
 </div>
+<link rel="stylesheet" href="popup.css">
+
 <div id="email-modal" class="modal">
   <div class="modal-content">
-    <h3 class="anchored">✨ Stay Connected ✨</h3>
-    <p>Enter your email and message to get more updates</p>
+    <h3 style="color:#32CD32; text-shadow:0 0 8px #32CD32;" class="anchored">✨ Stay Connected ✨</h3>
+    <p style="color:#90ee90; font-weight:bold; text-shadow:0 0 5px #90ee90;">Get latest Courses and Webinars</p>
+    
     <form action="https://formspree.io/f/mgepbpon" method="POST" id="email-form">
-      <label>
-        Your email:
-        <input type="email" name="email" required="">
-      </label><br><br>
-      <label>
-        Your message:
-        <textarea name="message" required=""></textarea>
-      </label><br><br>
-      <button type="submit">Send</button>
+      <label style="display:block; margin-bottom:10px; color:#228B22; font-weight:bold;">
+        Your email:<br>
+        <input type="email" name="email" required="" style="padding:10px; width:90%; margin-top:5px; border-radius:5px;">
+      </label>
+
+      <label style="display:block; margin-bottom:10px; color:#228B22; font-weight:bold;">
+        Name and Designation:<br>
+        <textarea name="message" rows="4" required="" style="padding:10px; width:90%; margin-top:5px; border-radius:5px;"></textarea>
+      </label>
+
+      <div style="display:flex; gap:10px; margin-top:10px;">
+        <button type="submit" style="padding:10px 20px; background-color:#32CD32; color:white; border:none; border-radius:5px; cursor:pointer;">
+          Send
+        </button>
+        <button type="button" id="close-popup" style="padding:10px 20px; background-color:#444; color:white; border:none; border-radius:5px; cursor:pointer;">
+          Exit
+        </button>
+      </div>
     </form>
-    <br>
-    <button id="close-popup" style="background:#555; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer;">
-      No thanks
-    </button>
   </div>
 </div>
+
+<script src="popup.js"></script>
 
 
 </section>

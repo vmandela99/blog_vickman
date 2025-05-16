@@ -1,22 +1,21 @@
 window.onload = function () {
-  // Only show if the user hasn't interacted before
-  if (!localStorage.getItem("mailingListDismissed")) {
+  // Only show if user hasn't exited before
+  if (localStorage.getItem("mailingListDismissed") !== "true") {
     setTimeout(() => {
       document.getElementById("email-modal").style.display = "flex";
     }, 1000);
   }
 };
 
-// On form submit, save to localStorage and hide
+// On form submission: allow future popups (don’t store anything)
 document.getElementById("email-form").addEventListener("submit", function (e) {
-  localStorage.setItem("mailingListDismissed", "true");
   setTimeout(() => {
     alert("✅ Thanks! Your message was sent.");
     document.getElementById("email-modal").style.display = "none";
   }, 100);
 });
 
-// On "No thanks" button click, also hide and store
+// On clicking "Exit", store and never show again
 document.getElementById("close-popup").addEventListener("click", function () {
   localStorage.setItem("mailingListDismissed", "true");
   document.getElementById("email-modal").style.display = "none";
