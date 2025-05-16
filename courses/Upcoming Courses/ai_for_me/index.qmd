@@ -1,7 +1,9 @@
 ---
-title: "Upcoming Courses"
-format: html
-page-layout: full
+title: "AI for M&E MasterClass Access"
+author: "Victor Mandela"
+date: "2024-11-06"
+categories: [Monitoring and Evaluation, Analysis, Statistics]
+# image: "Safari_pic.png"
 ---
 
 ## AI for M&E MasterClass Access

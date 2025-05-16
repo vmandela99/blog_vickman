@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Gallery with Visualizations</title>
+<title>Upcoming Courses</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../images/logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=GTM-T8DDSMN"></script>
 
 <script type="text/javascript">
@@ -76,16 +107,44 @@ gtag('js', new Date());
 gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../custom.scss">
-<meta property="og:title" content="Gallery with Visualizations">
-<meta property="og:description" content="">
+<meta property="og:title" content="Upcoming Courses">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -154,96 +213,199 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Upcoming Courses</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Analysis">Analysis <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Machine learning">Machine learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Monitoring and Evaluation">Monitoring and Evaluation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Programming">Programming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Visualizations">Visualizations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="github">github <span class="quarto-category-count">(1)</span></div><div class="category" data-category="website">website <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Gallery with Visualizations</h1>
-</div>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<div class="layout-panel">
-<div class="grid gap-3">
-<div class="g-col-4">
-<p><img src="gallery_pics/box_vs_year.png" class="img-fluid" alt="Boxplots of Yearly Sorghum Yield"> <strong>Boxplots of Yearly Sorghum Yield</strong></p>
-</div>
-<div class="g-col-4">
-<p><img src="gallery_pics/corr_plot.png" class="img-fluid" alt="Correlation of Variables"> <strong>Correlation of Variables</strong></p>
-</div>
-<div class="g-col-4">
-<p><img src="gallery_pics/fold_rsquared.png" class="img-fluid" alt="Cross-Fold Metrics"> <strong>Cross-Fold Metrics for 5 ML Models</strong></p>
-</div>
-</div>
-<hr>
-<div class="grid gap-3">
-<div class="g-col-6">
-<p><img src="gallery_pics/infections.PNG" class="img-fluid" alt="New Infections"> <strong>New Infections</strong></p>
-</div>
-<div class="g-col-6">
-<p><img src="gallery_pics/life-expectancy-and-healthy.png" class="img-fluid" alt="Life Expectancy"> <strong>Life Expectancy</strong></p>
-</div>
-</div>
-<hr>
-<div class="grid gap-3">
-<div class="g-col-3">
-<p><img src="gallery_pics/milk_prod.png" class="img-fluid" alt="Milk production"> <strong>Milk Production</strong></p>
-</div>
-<div class="g-col-3">
-<p><img src="gallery_pics/residual.png" class="img-fluid" alt="Residual Diagnostics"> <strong>ML Model Diagnostics</strong></p>
-</div>
-<div class="g-col-3">
-<p><img src="gallery_pics/Safari_pic.png" class="img-fluid" alt="Tourism Trends"> <strong>Tourism in East &amp; Southern Africa</strong></p>
-</div>
-<div class="g-col-3">
-<p><img src="gallery_pics/trends-in-stunting-rates.png" class="img-fluid" alt="Stunting Rates"> <strong>Stunting Rates Trends</strong></p>
-</div>
-</div>
-<hr>
-<div class="grid gap-3 justify-center">
-<div class="g-col-6">
-<p><img src="gallery_pics/EVI BarhGazal 2015-2020.png" class="img-fluid" alt="Enhanced Vegetation Index for Sorghum"> <strong>EVI for Sorghum (2015–2020)</strong></p>
-</div>
-</div>
-</div>
-<p>:::</p>
-<hr>
-<div id="disqus_thread">
-
-</div>
-<script>
-    var disqus_config = function () {
-        this.page.url = window.location.href;
-        this.page.identifier = window.location.pathname;
-    };
-    (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://https-www-victormandela-com.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
+<section id="welcome-to-the-upcoming-courses-and-webinars-kindly-feel-free-to-register-and-attend-to-get-more-insights." class="level2">
+<h2 class="anchored" data-anchor-id="welcome-to-the-upcoming-courses-and-webinars-kindly-feel-free-to-register-and-attend-to-get-more-insights."><em>Welcome to the upcoming Courses and Webinars Kindly feel free to register and attend to get more insights.</em></h2>
 
 
 
-</main> <!-- /main -->
+</section>
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="R,Machine learning,Analysis,Visualizations" data-listing-file-modified-sort="1747408707564" data-listing-reading-time-sort="2" data-listing-word-count-sort="388">
+<div class="thumbnail">
+<p><a href="../courses/Upcoming Courses/Machine Learning basics  practicals/index.html" class="no-external"></a></p><a href="../courses/Upcoming Courses/Machine Learning basics  practicals/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../courses/Upcoming Courses/Machine Learning basics  practicals/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../courses/Upcoming Courses/Machine Learning basics  practicals/index.html" class="no-external">Machine Learning for Humanitarian Practical data</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../courses/Upcoming Courses/Machine Learning basics  practicals/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Machine learning'); return false;">
+Machine learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Analysis'); return false;">
+Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Visualizations'); return false;">
+Visualizations
+</div>
+</div>
+<div class="listing-description">
+<a href="../courses/Upcoming Courses/Machine Learning basics  practicals/index.html" class="no-external"><strong>How can machine learning be used to improve humanitarian outcomes?</strong> From early warning systems for food insecurity to predicting disease outbreaks and optimizing aid…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../courses/Upcoming Courses/Machine Learning basics  practicals/index.html" class="no-external"></a></p><a href="../courses/Upcoming Courses/Machine Learning basics  practicals/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="R,Programming,Analysis,Statistics" data-listing-file-modified-sort="1747408860434" data-listing-reading-time-sort="3" data-listing-word-count-sort="401">
+<div class="thumbnail">
+<p><a href="../courses/Upcoming Courses/R for DataScience/index.html" class="no-external"></a></p><a href="../courses/Upcoming Courses/R for DataScience/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../courses/Upcoming Courses/R for DataScience/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../courses/Upcoming Courses/R for DataScience/index.html" class="no-external">R for Data Science MasterClass</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../courses/Upcoming Courses/R for DataScience/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Programming'); return false;">
+Programming
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Analysis'); return false;">
+Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="../courses/Upcoming Courses/R for DataScience/index.html" class="no-external">In today’s data-driven world, <strong>data science</strong> is no longer a luxury—it’s a necessity. Whether you’re analyzing health outcomes, optimizing business decisions, or conducting…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../courses/Upcoming Courses/R for DataScience/index.html" class="no-external"></a></p><a href="../courses/Upcoming Courses/R for DataScience/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="R,website,github,Analysis,Statistics" data-listing-file-modified-sort="1747408864287" data-listing-reading-time-sort="2" data-listing-word-count-sort="382">
+<div class="thumbnail">
+<p><a href="../courses/Upcoming Courses/Website Development/index.html" class="no-external"></a></p><a href="../courses/Upcoming Courses/Website Development/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../courses/Upcoming Courses/Website Development/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../courses/Upcoming Courses/Website Development/index.html" class="no-external">Website Development Using Rstudio for Beginners</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../courses/Upcoming Courses/Website Development/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('website'); return false;">
+website
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('github'); return false;">
+github
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Analysis'); return false;">
+Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="../courses/Upcoming Courses/Website Development/index.html" class="no-external">Do you want to <strong>showcase your projects</strong>, share your research, or build a professional portfolio site — all from <strong>RStudio</strong>? You’re in the right place. Our brand-new course:</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="../courses/Upcoming Courses/Website Development/index.html" class="no-external"></a></p><a href="../courses/Upcoming Courses/Website Development/index.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="Monitoring and Evaluation,Analysis,Statistics" data-listing-date-sort="1730840400000" data-listing-file-modified-sort="1747408337070" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="347">
+<div class="thumbnail">
+<p><a href="../courses/Upcoming Courses/ai_for_me/index.html" class="no-external"></a></p><a href="../courses/Upcoming Courses/ai_for_me/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../courses/Upcoming Courses/ai_for_me/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../courses/Upcoming Courses/ai_for_me/index.html" class="no-external">AI for M&amp;E MasterClass Access</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../courses/Upcoming Courses/ai_for_me/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Monitoring and Evaluation'); return false;">
+Monitoring and Evaluation
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Analysis'); return false;">
+Analysis
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="../courses/Upcoming Courses/ai_for_me/index.html" class="no-external">Click the button below to pay for this course using <strong>Mastercard</strong>, <strong>M-Pesa</strong>, or <strong>Visa</strong>.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../courses/Upcoming Courses/ai_for_me/index.html" class="no-external">
+<div class="listing-date">
+Nov 6, 2024
+</div>
+<div class="listing-author">
+Victor Mandela
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

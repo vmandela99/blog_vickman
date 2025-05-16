@@ -1,64 +1,54 @@
 /*-- scss:defaults --*/
-$bs-blue: #027373 !default;
-$bs-pagination-active-bg: $bs-blue !default;
-$bs-primary: $bs-blue !default;
-$bs-btn-hover-bg: $bs-blue !default;
+$bs-purple: #800080 !default; // Deep purple
+$bs-pagination-active-bg: $bs-purple !default;
+$bs-primary: $bs-purple !default;
+$bs-btn-hover-bg: $bs-purple !default;
 
 /*-- scss:rules --*/
 
 .navbar {
-  background-color: $bs-blue;
-}
-
-.quarto-title-banner{
-  background-color: #0c2e42 ;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: $bs-blue;
-    border-color: $bs-blue;
-}
-
-
-
-.page-item.active .page-link {
-    z-index: 3;
-    color: #fff;
-    background-color: $bs-blue;
-    border-color: $bs-blue;
+  background-color: $bs-purple;
 }
 
 .quarto-title-banner {
-    margin-bottom: 1em;
-    color: rgba(255,255,255,.7);
-    background: $bs-blue;
+  background-color: $bs-purple;
+  margin-bottom: 1em;
+  color: rgba(255,255,255,.9);
+}
+
+/* Logo size */
+.navbar-brand img {
+  height: 70px !important;
+  width: auto;
 }
 
 
-.page-link {
-      color: $bs-blue;
+
+/* Primary button color */
+.btn-primary {
+  color: #fff;
+  background-color: $bs-purple;
+  border-color: $bs-purple;
 }
 
-
+/* Pagination and link hover colors */
+.page-item.active .page-link,
 .page-link:hover {
-    z-index: 2;
-    color: #fff;
-    background-color: $bs-blue;
-    border-color: $bs-blue;
+  color: #fff;
+  background-color: $bs-purple;
+  border-color: $bs-purple;
 }
 
-a{
-  color: $bs-blue;
-}
-
+.page-link,
+a,
 b, strong {
-    color: $bs-blue;
-    font-weight: bolder;
+  color: $bs-purple;
+  font-weight: bolder;
 }
 
+/* Category chips for blog posts */
 div.quarto-post .listing-categories .listing-category {
-    color: $bs-blue;
-    border: solid 1px var(--bs-gray-400);
-    font-size: .8em;
+  color: $bs-purple;
+  border: solid 1px var(--bs-gray-400);
+  font-size: .8em;
 }

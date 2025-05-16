@@ -23,13 +23,13 @@ execute:
 
 -   Overview of KoboToolbox interface and project setup
 
--    Designing and structuring forms using XLSForm
+-   Designing and structuring forms using XLSForm
 
--    Incorporating skip logic, validation rules, and calculations
+-   Incorporating skip logic, validation rules, and calculations
 
--    Data collection and testing using mobile devices
+-   Data collection and testing using mobile devices
 
--    Managing and monitoring survey submissions
+-   Managing and monitoring survey submissions
 
 -   Exporting and cleaning collected data
 :::

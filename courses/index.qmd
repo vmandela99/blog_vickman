@@ -1,0 +1,15 @@
+---
+title: "Upcoming Courses"
+# image: "images/home.PNG"
+listing:
+  contents: Upcoming Courses
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+## *Welcome to the upcoming Courses and Webinars Kindly feel free to register and attend to get more insights.*

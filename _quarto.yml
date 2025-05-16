@@ -8,21 +8,23 @@ project:
 
 website:
   # title: "Articles"
+  favicon: images/logo.png
   # description: "Data Science and Statistical Consulting"
   open-graph: true
   google-analytics: "GTM-T8DDSMN"
   navbar:
+    logo: images/logo.png
+    background: "#800080"
+    collapse: true
+    pinned: true
+    left: [] 
     right:
-      - text: "Home"
-        href: index.qmd
-      - text: "My Courses"
+      - icon: list
         menu:
-          - text: "Upcoming courses"
-            href: courses/upcoming_courses.qmd
+          - text: "Upcoming Courses"
+            href: courses/index.qmd
           - text: "Available Course"
             href: courses/available_courses.qmd
-      - text: "My Works"
-        menu:
           - text: "Gallery"
             href: myworks/gallery.qmd
           - text: "Projects"
@@ -31,25 +33,43 @@ website:
             href: myworks/awards.qmd
           - text: "Dashboards/Apps"
             href: myworks/apps.qmd
-      - text: "Books"
-        href: books/books.qmd
-      - about.qmd
-      # - href: contact/index.qmd
-      #   text: Contact
-      # - icon: github
-      #   href: https://github.com/vmandela99
-      # - icon: linkedin
-      #   href: https://www.linkedin.com/vmandela99/
-      #   # text: LinkedIn
-      #   target: _blank
-      # - icon: envelope
-      #   href: mailto:vmandela99@gmail.com
-      # - icon: twitter
-      #   href: http://x.com/VictorMandela8
-      # - icon: facebook
-      #   href: https://www.facebook.com/vmandela99
-      # - icon: briefcase
-      #   href: https://www.nature.com/articles/s41598-025-89030-z
+          - text: "Books"
+            href: books/books.qmd
+          - text: "Blogs"
+            href: index.qmd
+          - text: "About"
+            href: about.qmd
+  # navbar:
+  #   logo: images/logo.png
+  #   background: "#800080"         # Purple background
+  #   collapse: true                # Collapse menu into hamburger icon
+  #   pinned: true
+  #   left: []                      # Hide default left items
+  #   right:
+  #     - icon: list
+  #       menu:
+  #         - text: "Home"
+  #           href: index.qmd
+  #         - text: "My Courses"
+  #           menu:
+  #             - text: "Upcoming courses"
+  #               href: courses/upcoming_courses.qmd
+  #             - text: "Available Course"
+  #               href: courses/available_courses.qmd
+  #         - text: "My Works"
+  #           menu:
+  #             - text: "Gallery"
+  #               href: myworks/gallery.qmd
+  #             - text: "Projects"
+  #               href: myworks/projects.qmd
+  #             - text: "Testimonies/Awards"
+  #               href: myworks/awards.qmd
+  #             - text: "Dashboards/Apps"
+  #               href: myworks/apps.qmd
+  #             - text: "Books"
+  #               href: books/books.qmd
+  #         - text: "About"
+  #           href: about.qmd
 format:
   html:
     # theme: minty

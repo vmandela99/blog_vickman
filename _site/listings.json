@@ -43,5 +43,14 @@
       "/posts/welcome/index.html",
       "/posts/post-with-code/index.html"
     ]
+  },
+  {
+    "listing": "/courses/index.html",
+    "items": [
+      "/courses/Upcoming Courses/Machine Learning basics  practicals/index.html",
+      "/courses/Upcoming Courses/R for DataScience/index.html",
+      "/courses/Upcoming Courses/Website Development/index.html",
+      "/courses/Upcoming Courses/ai_for_me/index.html"
+    ]
   }
 ]
