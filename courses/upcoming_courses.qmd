@@ -13,17 +13,14 @@ After payment, you will receive your access credentials via email.
 ### ✍️ Kindly fill this short form before proceeding to payment:
 
 ::: {style="text-align: center; margin-top: 30px;"}
-<iframe 
-    src="https://ee.kobotoolbox.org/x/nR3bh08p" 
-    width="100%" 
-    height="600" 
-    frameborder="0"> </iframe>
+<iframe src="https://ee.kobotoolbox.org/x/nR3bh08p" width="100%" height="600" frameborder="0">
+
+</iframe>
 :::
 
 ::: {style="text-align: center; margin-top: 40px;"}
-<button 
-    onclick="window.location.href='https://paystack.com/pay/ai_for_me'" 
-    style="
+```{=html}
+<button onclick="window.location.href=&#39;https://paystack.com/pay/ai_for_me&#39;" style="
       background-color: red;
       color: white;
       font-size: 1.5em;
@@ -33,5 +30,33 @@ After payment, you will receive your access credentials via email.
       cursor: pointer;
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
       animation: pulse 2s infinite;
-    "> Pay Now </button>
+    ">
+```
+Pay Now
+
+</button>
 :::
+
+```{=html}
+<div id="email-modal" class="modal">
+  <div class="modal-content">
+    <h3>✨ Stay Connected ✨</h3>
+    <p>Enter your email and message to get more updates</p>
+    <form action="https://formspree.io/f/mgepbpon" method="POST" id="email-form">
+      <label>
+        Your email:
+        <input type="email" name="email" required>
+      </label><br><br>
+      <label>
+        Your message:
+        <textarea name="message" required></textarea>
+      </label><br><br>
+      <button type="submit">Send</button>
+    </form>
+    <br>
+    <button id="close-popup" style="background:#555; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer;">
+      No thanks
+    </button>
+  </div>
+</div>
+```

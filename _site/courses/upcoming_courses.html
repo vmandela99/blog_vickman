@@ -200,8 +200,29 @@ gtag('config', 'GTM-T8DDSMN', { 'anonymize_ip': true});
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
       animation: pulse 2s infinite;
     ">
-Pay Now
+<p>Pay Now</p>
 </button>
+</div>
+<div id="email-modal" class="modal">
+  <div class="modal-content">
+    <h3 class="anchored">✨ Stay Connected ✨</h3>
+    <p>Enter your email and message to get more updates</p>
+    <form action="https://formspree.io/f/mgepbpon" method="POST" id="email-form">
+      <label>
+        Your email:
+        <input type="email" name="email" required="">
+      </label><br><br>
+      <label>
+        Your message:
+        <textarea name="message" required=""></textarea>
+      </label><br><br>
+      <button type="submit">Send</button>
+    </form>
+    <br>
+    <button id="close-popup" style="background:#555; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer;">
+      No thanks
+    </button>
+  </div>
 </div>
 
 
