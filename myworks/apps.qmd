@@ -1,3 +1,79 @@
 ---
-title: "apps"
+title: "Interactive Dashboards Portfolio"
+format: html
+page-layout: full
+execute:
+  echo: false
 ---
+
+# R Shiny Dashboards: Visualizing Insights for Decision-Making
+
+This portfolio highlights interactive dashboards built with R Shiny, designed to support analysis and decision-making in development, governance, and business contexts.
+
+------------------------------------------------------------------------
+
+## 1. Donor Fund Stream in Kenya
+
+<iframe src="https://victor-mandela.shinyapps.io/Donor-Fund-Stream-in-Kenya/" width="100%" height="600px" frameborder="0">
+
+</iframe>
+
+**Overview:**\
+This dashboard visualizes how donor funds are allocated across various counties and sectors in Kenya. Users can explore the flow of resources based on funder, location, and thematic area.
+
+The link to this dashboard is:
+
+**Why It Matters:**\
+Transparent tracking of donor investments supports accountability and helps ensure equitable distribution of resources. It is particularly useful for identifying underfunded areas or sectors.
+
+**Target Users:**\
+- Donor agencies and development partners\
+- National and county government officials\
+- Policy researchers and planners\
+- NGOs and program evaluators
+
+------------------------------------------------------------------------
+
+## 2. Sales Dashboard
+
+<iframe src="https://victor-mandela.shinyapps.io/sales_dashboard2/" width="100%" height="600px" frameborder="0">
+
+</iframe>
+
+**Overview:**\
+This dashboard tracks sales performance over time, across regions and product categories. It provides a high-level view of sales trends, customer segmentation, and revenue metrics.
+
+**Why It Matters:**\
+It supports evidence-based marketing and operational decisions, helping organizations identify best-selling products, seasonal trends, and areas needing strategic attention.
+
+**Target Users:**\
+- Business owners and sales managers\
+- Marketing analysts\
+- E-commerce and retail platforms\
+- Business intelligence teams
+
+------------------------------------------------------------------------
+
+## 3. Multidimensional Poverty Index (MPI) by Region
+
+<iframe src="https://victor-mandela.shinyapps.io/MPI_by_region/" width="100%" height="600px" frameborder="0">
+
+</iframe>
+
+**Overview:**\
+This dashboard visualizes the Multidimensional Poverty Index across regions in Kenya. It disaggregates poverty into key dimensions—education, health, and living standards—based on survey data.
+
+**Why It Matters:**\
+It provides a nuanced view of poverty, allowing policymakers to target interventions more effectively. Rather than relying solely on income measures, MPI captures broader human development indicators.
+
+**Target Users:**\
+- Social policy analysts and M&E specialists\
+- National bureaus of statistics\
+- Academic and development researchers\
+- Humanitarian organizations
+
+------------------------------------------------------------------------
+
+# Conclusion
+
+These dashboards serve as living tools that convert raw data into actionable insights. They empower diverse users—from business analysts to policy strategists—to interact with data visually, ask better questions, and make data-informed decisions that drive real-world impact.

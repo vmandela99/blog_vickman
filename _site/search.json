@@ -964,5 +964,82 @@
     "title": "Spartial regression: Lesson3",
     "section": "Conclusion",
     "text": "Conclusion\nSpatial regression in R opens up new dimensions for analyzing geospatial data. In this blog post, we explored the Spatial Lag Model as an advanced technique for modeling spatial dependencies in housing prices and neighborhood characteristics. The interpretation of results, diagnostic checks, and visualizations are crucial components of spatial regression analysis.\nAs you venture into spatial analytics, consider exploring other spatial regression models, incorporating additional spatial variables, and applying advanced techniques to enhance the robustness of your models. Stay tuned for more advanced spatial analytics topics, including machine learning with geospatial data and building interactive web maps. Happy analyzing!"
+  },
+  {
+    "objectID": "courses/available_courses.html",
+    "href": "courses/available_courses.html",
+    "title": "Short Course Catalogue",
+    "section": "",
+    "text": "KoboToolbox Course\n\n\n\n\n\n\n\n\nIntroduction to CAPI (Computer-Assisted Personal Interviewing)\nOverview of KoboToolbox interface and project setup\nDesigning and structuring forms using XLSForm\nIncorporating skip logic, validation rules, and calculations\nData collection and testing using mobile devices\nManaging and monitoring survey submissions\nExporting and cleaning collected data\n:::"
+  },
+  {
+    "objectID": "courses/available_courses.html#creating-capi-with-kobotoolbox-course",
+    "href": "courses/available_courses.html#creating-capi-with-kobotoolbox-course",
+    "title": "Short Course Catalogue",
+    "section": "",
+    "text": "KoboToolbox Course\n\n\n\n\n\n\n\n\nIntroduction to CAPI (Computer-Assisted Personal Interviewing)\nOverview of KoboToolbox interface and project setup\nDesigning and structuring forms using XLSForm\nIncorporating skip logic, validation rules, and calculations\nData collection and testing using mobile devices\nManaging and monitoring survey submissions\nExporting and cleaning collected data"
+  },
+  {
+    "objectID": "courses/available_courses.html#ai-for-me-master-class-course",
+    "href": "courses/available_courses.html#ai-for-me-master-class-course",
+    "title": "Short Course Catalogue",
+    "section": "AI for M&E Master Class Course",
+    "text": "AI for M&E Master Class Course\n\nCourse Outline\n\nIntroduction to AI and machine learning in Monitoring & Evaluation\nNatural Language Processing (NLP) for qualitative data\nPredictive analytics for outcome forecasting\nAutomating M&E reporting using AI tools\nEthical use of AI in development contexts\nCase studies from development projects\n\n\n\nExpected Outcomes\n\nGain practical skills to integrate AI into data workflows.\nApply machine learning techniques to M&E problems such as prediction, classification, and automation."
+  },
+  {
+    "objectID": "courses/available_courses.html#practical-introduction-to-r-for-data-science-course",
+    "href": "courses/available_courses.html#practical-introduction-to-r-for-data-science-course",
+    "title": "Short Course Catalogue",
+    "section": "Practical Introduction to R for Data Science Course",
+    "text": "Practical Introduction to R for Data Science Course\n\n\n\n\n\nR for Data Science\n\n\n\n\n\nCourse Outline\nIntroduction to R and RStudio - Data manipulation using dplyr and tidyr - Data visualization with ggplot2 - Importing and exporting data - Basic statistical analysis - Writing reproducible reports using RMarkdown\n\n\nExpected Outcomes\n\nClean, analyze, and visualize datasets using R.\nGenerate automated reports and communicate insights effectively."
+  },
+  {
+    "objectID": "courses/available_courses.html#practical-introduction-to-stata-course",
+    "href": "courses/available_courses.html#practical-introduction-to-stata-course",
+    "title": "Short Course Catalogue",
+    "section": "Practical Introduction to STATA Course",
+    "text": "Practical Introduction to STATA Course\n\nCourse Outline\n\nGetting started with STATA interface\nImporting and managing datasets\nDescriptive and inferential statistics\nRegression analysis and model interpretation\nData visualization basics in STATA\nAutomating outputs with STATA Do-Files\n\n\n\nExpected Outcomes\n\nPerform basic to intermediate statistical analysis using STATA.\nManage data, run models, and interpret results confidently."
+  },
+  {
+    "objectID": "courses/available_courses.html#visualization-using-data-wrapper-masterclass",
+    "href": "courses/available_courses.html#visualization-using-data-wrapper-masterclass",
+    "title": "Short Course Catalogue",
+    "section": "Visualization Using Data Wrapper MasterClass",
+    "text": "Visualization Using Data Wrapper MasterClass\n\n\n\n\n\nDataWrapper Course\n\n\n\n\n\nCourse Outline\n\nIntroduction to Datawrapper interface\nCreating bar, line, and pie charts\nCustomizing map visualizations\nEmbedding visualizations into blogs and websites\nBest practices for clean, interpretable visual design\n\n\n\nExpected Outcomes\n\nMaster data storytelling with high-quality, shareable visualizations.\nCommunicate insights clearly to technical and non-technical audiences."
+  },
+  {
+    "objectID": "courses/available_courses.html#website-creationdevelopment-courses",
+    "href": "courses/available_courses.html#website-creationdevelopment-courses",
+    "title": "Short Course Catalogue",
+    "section": "Website Creation/Development Courses",
+    "text": "Website Creation/Development Courses\n\nUsing RStudio\n\n\nCourse Outline\n\nWebsite creation in RStudio using blogdown, distill, and quarto\nManaging content with Markdown and YAML\nPublishing via GitHub Pages or Netlify\nAdding analytics, comments, and social media integrations\n\n\n\nExpected Outcomes\n\nCreate personal blogs or portfolio sites in RStudio.\nUpdate and maintain static websites with confidence.\n\n\n\n\nUsing Quarto\n\n\n\n\n\nUsing Quarto\n\n\n\n\n\nCourse Outline\n\nIntroduction to Quarto framework\nWriting and rendering .qmd documents\nCreating interactive reports and dashboards\nPublishing to web\nCode chunks, figures, and citations integration\n\n\n\nExpected Outcomes\n\nDevelop interactive documents and reproducible reports using Quarto.\nDeploy and update Quarto-based websites and publications.\n\n\n\n\n\n\n\nUsing JavaScript and Python\n\n\nCourse Outline\n\nBasics of HTML, CSS, and JavaScript for interactive web design\nIntroduction to Python for web development (Flask, Streamlit)\nIntegrating JavaScript for interactivity in dashboards\nHosting and deploying Python-based web apps\n\n\n\nExpected Outcomes\n\nUnderstand how to create dynamic web content using Python and JavaScript.\nBuild interactive data apps and dashboards for research or business use. :::"
+  },
+  {
+    "objectID": "myworks/apps.html",
+    "href": "myworks/apps.html",
+    "title": "Interactive Dashboards Portfolio",
+    "section": "",
+    "text": "This portfolio highlights interactive dashboards built with R Shiny, designed to support analysis and decision-making in development, governance, and business contexts.\n\n\n\n\n\nOverview:\nThis dashboard visualizes how donor funds are allocated across various counties and sectors in Kenya. Users can explore the flow of resources based on funder, location, and thematic area.\nThe link to this dashboard is:\nWhy It Matters:\nTransparent tracking of donor investments supports accountability and helps ensure equitable distribution of resources. It is particularly useful for identifying underfunded areas or sectors.\nTarget Users:\n- Donor agencies and development partners\n- National and county government officials\n- Policy researchers and planners\n- NGOs and program evaluators\n\n\n\n\n\n\nOverview:\nThis dashboard tracks sales performance over time, across regions and product categories. It provides a high-level view of sales trends, customer segmentation, and revenue metrics.\nWhy It Matters:\nIt supports evidence-based marketing and operational decisions, helping organizations identify best-selling products, seasonal trends, and areas needing strategic attention.\nTarget Users:\n- Business owners and sales managers\n- Marketing analysts\n- E-commerce and retail platforms\n- Business intelligence teams\n\n\n\n\n\n\nOverview:\nThis dashboard visualizes the Multidimensional Poverty Index across regions in Kenya. It disaggregates poverty into key dimensions—education, health, and living standards—based on survey data.\nWhy It Matters:\nIt provides a nuanced view of poverty, allowing policymakers to target interventions more effectively. Rather than relying solely on income measures, MPI captures broader human development indicators.\nTarget Users:\n- Social policy analysts and M&E specialists\n- National bureaus of statistics\n- Academic and development researchers\n- Humanitarian organizations"
+  },
+  {
+    "objectID": "myworks/apps.html#donor-fund-stream-in-kenya",
+    "href": "myworks/apps.html#donor-fund-stream-in-kenya",
+    "title": "Interactive Dashboards Portfolio",
+    "section": "",
+    "text": "Overview:\nThis dashboard visualizes how donor funds are allocated across various counties and sectors in Kenya. Users can explore the flow of resources based on funder, location, and thematic area.\nThe link to this dashboard is:\nWhy It Matters:\nTransparent tracking of donor investments supports accountability and helps ensure equitable distribution of resources. It is particularly useful for identifying underfunded areas or sectors.\nTarget Users:\n- Donor agencies and development partners\n- National and county government officials\n- Policy researchers and planners\n- NGOs and program evaluators"
+  },
+  {
+    "objectID": "myworks/apps.html#sales-dashboard",
+    "href": "myworks/apps.html#sales-dashboard",
+    "title": "Interactive Dashboards Portfolio",
+    "section": "",
+    "text": "Overview:\nThis dashboard tracks sales performance over time, across regions and product categories. It provides a high-level view of sales trends, customer segmentation, and revenue metrics.\nWhy It Matters:\nIt supports evidence-based marketing and operational decisions, helping organizations identify best-selling products, seasonal trends, and areas needing strategic attention.\nTarget Users:\n- Business owners and sales managers\n- Marketing analysts\n- E-commerce and retail platforms\n- Business intelligence teams"
+  },
+  {
+    "objectID": "myworks/apps.html#multidimensional-poverty-index-mpi-by-region",
+    "href": "myworks/apps.html#multidimensional-poverty-index-mpi-by-region",
+    "title": "Interactive Dashboards Portfolio",
+    "section": "",
+    "text": "Overview:\nThis dashboard visualizes the Multidimensional Poverty Index across regions in Kenya. It disaggregates poverty into key dimensions—education, health, and living standards—based on survey data.\nWhy It Matters:\nIt provides a nuanced view of poverty, allowing policymakers to target interventions more effectively. Rather than relying solely on income measures, MPI captures broader human development indicators.\nTarget Users:\n- Social policy analysts and M&E specialists\n- National bureaus of statistics\n- Academic and development researchers\n- Humanitarian organizations"
   }
 ]

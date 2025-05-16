@@ -1,3 +1,183 @@
 ---
-title: "ruby"
+title: "Short Course Catalogue"
+format: html
+page-layout: full
+execute:
+  echo: false
 ---
+
+::: layout-panel
+## Creating CAPI with KOBOToolbox Course
+
+::: {.grid .gap-3}
+::: g-col-6
+![KoboToolbox Course](pics/data_collection.png)
+:::
+
+::: g-col-6}
+### Course Outline
+:::
+:::
+
+-   Introduction to CAPI (Computer-Assisted Personal Interviewing)
+
+-   Overview of KoboToolbox interface and project setup
+
+-    Designing and structuring forms using XLSForm
+
+-    Incorporating skip logic, validation rules, and calculations
+
+-    Data collection and testing using mobile devices
+
+-    Managing and monitoring survey submissions
+
+-   Exporting and cleaning collected data
+:::
+
+:::
+
+### Expected Outcomes
+
+-   Independently design, deploy, and manage digital surveys using KoboToolbox.
+-   Understand how to structure forms with advanced logic and monitor real-time data collection.
+
+------------------------------------------------------------------------
+
+## AI for M&E Master Class Course
+
+### Course Outline
+
+-   Introduction to AI and machine learning in Monitoring & Evaluation
+-   Natural Language Processing (NLP) for qualitative data
+-   Predictive analytics for outcome forecasting
+-   Automating M&E reporting using AI tools
+-   Ethical use of AI in development contexts
+-   Case studies from development projects
+
+### Expected Outcomes
+
+-   Gain practical skills to integrate AI into data workflows.
+-   Apply machine learning techniques to M&E problems such as prediction, classification, and automation.
+
+------------------------------------------------------------------------
+
+## Practical Introduction to R for Data Science Course
+
+::: {.grid .gap-3}
+::: g-col-6
+![R for Data Science](pics/R_data.png)
+:::
+
+::: g-col-6
+### Course Outline
+
+Introduction to R and RStudio - Data manipulation using `dplyr` and `tidyr` - Data visualization with `ggplot2` - Importing and exporting data - Basic statistical analysis - Writing reproducible reports using RMarkdown
+
+### Expected Outcomes
+
+-   Clean, analyze, and visualize datasets using R.
+-   Generate automated reports and communicate insights effectively.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Practical Introduction to STATA Course
+
+### Course Outline
+
+-   Getting started with STATA interface
+-   Importing and managing datasets
+-   Descriptive and inferential statistics
+-   Regression analysis and model interpretation
+-   Data visualization basics in STATA
+-   Automating outputs with STATA Do-Files
+
+### Expected Outcomes
+
+-   Perform basic to intermediate statistical analysis using STATA.
+-   Manage data, run models, and interpret results confidently.
+
+------------------------------------------------------------------------
+
+## Visualization Using Data Wrapper MasterClass
+
+::: {.grid .gap-4}
+::: g-col-6
+![DataWrapper Course](pics/datawrapper.png)
+:::
+
+::: g-col-6
+### Course Outline
+
+-   Introduction to Datawrapper interface
+-   Creating bar, line, and pie charts
+-   Customizing map visualizations
+-   Embedding visualizations into blogs and websites
+-   Best practices for clean, interpretable visual design
+
+### Expected Outcomes
+
+-   Master data storytelling with high-quality, shareable visualizations.
+-   Communicate insights clearly to technical and non-technical audiences.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Website Creation/Development Courses
+
+### Using RStudio
+
+### Course Outline
+
+-   Website creation in RStudio using `blogdown`, `distill`, and `quarto`
+-   Managing content with Markdown and YAML
+-   Publishing via GitHub Pages or Netlify
+-   Adding analytics, comments, and social media integrations
+
+### Expected Outcomes
+
+-   Create personal blogs or portfolio sites in RStudio.
+-   Update and maintain static websites with confidence.
+
+------------------------------------------------------------------------
+
+### Using Quarto
+
+::: {.grid .gap-4}
+::: g-col-6
+![Using Quarto](pics/quarto.png)
+:::
+
+::: g-col-6
+### Course Outline
+
+-   Introduction to Quarto framework
+-   Writing and rendering `.qmd` documents
+-   Creating interactive reports and dashboards
+-   Publishing to web
+-   Code chunks, figures, and citations integration
+
+### Expected Outcomes
+
+-   Develop interactive documents and reproducible reports using Quarto.
+-   Deploy and update Quarto-based websites and publications.
+:::
+:::
+
+------------------------------------------------------------------------
+
+### Using JavaScript and Python
+
+### Course Outline
+
+-   Basics of HTML, CSS, and JavaScript for interactive web design
+-   Introduction to Python for web development (Flask, Streamlit)
+-   Integrating JavaScript for interactivity in dashboards
+-   Hosting and deploying Python-based web apps
+
+### Expected Outcomes
+
+-   Understand how to create dynamic web content using Python and JavaScript.
+-   Build interactive data apps and dashboards for research or business use. :::
