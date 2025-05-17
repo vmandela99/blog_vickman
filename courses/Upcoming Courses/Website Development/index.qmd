@@ -1,117 +1,70 @@
 ---
-title: "AI for M&E MasterClass Access - starting 26th May 2025"
-# author: "CSV Research Solutions LTD"
-date: "2025-05-16"
-categories: [Monitoring and Evaluation, Analysis, Statistics]
-# image: "Safari_pic.png"
+title: "Date Coming soon - Website Development Using Rstudio for Beginners"
+# author: "Victor Mandela"
+# date: "2024-11-06"
+categories: [R, website, github, Analysis, Statistics]
+format:
+  html:
+    css: custom.scss
 ---
 
-[Discounted course Was]{style="color:#800080; font-weight:bold;"} <span style="color:red; font-weight:bold;">400 USD [now is]{style="color:#800080; font-weight:bold;"} [40 USD (5000 KES)]{style="color:green; font-weight:bold;"} [- Apply now!]{style="color:#800080; font-weight:bold;"}
+<span style="color:#800080; font-weight:bold;">🌐 Build Your Own Website with RStudio — No Coding Experience Needed!</span>
 
-[The application form is below.]{style="color:#800080; font-weight:bold;"}
+Do you want to **showcase your projects**, share your research, or build a professional portfolio site — all from **RStudio**? You're in the right place. Our brand-new course:
 
-::: {style="text-align: center; margin-top: 40px;"}
-\`\`\`{=html} <button onclick="window.location.href=&#39;https://paystack.com/pay/ai_for_me&#39;" style="
-      background-color: green;
-      color: white;
-      font-size: 1.5em;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
-      animation: pulse 2s infinite;
-    "> Pay Now
+🎓 **Website Development Using RStudio for Beginners**  
+is designed to teach you how to build stunning, professional websites using **Quarto and RStudio**, even if you've never written a line of web code before!
 
-</button>
-:::
+<span style="color:#800080; font-weight:bold;">💡 Why This Course?</span>
 
-🤖 Master Artificial Intelligence in Monitoring & Evaluation: Enroll in the "AI for M&E MasterClass" Monitoring and Evaluation (M&E) is evolving—are you keeping up? With the rise of Artificial Intelligence (AI), M&E professionals can now harness machine learning, natural language processing, and predictive analytics to enhance program design, implementation, and impact analysis.
+Having a **personal or project website** is one of the most powerful tools you can use to:
 
-🎓 Introducing the AI for M&E MasterClass – a practical, hands-on 3-week course designed to equip you with cutting-edge data and AI tools to thrive in modern evaluation roles.
+✨ Share your data visualizations, reports, and dashboards  
+📄 Publish articles, portfolios, and CVs  
+📊 Centralize all your M&E projects and research  
+🚀 Grow your professional brand and online presence
 
-🔍 Course Overview This training is a hands-on, practical 8-session program that walks you through pro-tips on navigating survey data using STATA, R, and Python interchangeably. You'll learn to create high-quality visualizations and reports that align with top journal and donor standards.
+And the best part? You can build everything *directly within RStudio* — the tool you’re already using for data analysis!
 
-🚀 With the power of AI, you'll complete tasks 50x faster while boosting accuracy in research logic and reporting.
+<span style="color:#800080; font-weight:bold;">🎯 Course Objectives</span>
 
-🧠 Ethical considerations are also covered—including best practices for protecting donor data, IPs, and shareholder confidentiality when using AI tools.
+By the end of this hands-on course, you’ll be able to:
 
-🎯 What You’ll Learn ✅ Hands-on AI tools for M&E (ChatGPT, DeepSeek, Julius) 📊 Practical data analysis in R, STATA, and Python 🧼 Data cleaning, merging, and visualization 📈 Automated reporting and dynamic dashboards 🔍 Statistical techniques: PCA, T-tests, DiD, PSM, RDD 📚 Research-aligned insights and visual storytelling 🏆 Certification awarded upon 70% pass
+✅ Set up a Quarto website from scratch using RStudio  
+✅ Design and organize pages for blogs, CVs, dashboards, or project portfolios  
+✅ Customize layout, add logos, links, and navigation menus  
+✅ Use `.qmd` files, `.yaml` configuration, and SCSS/CSS styling for branding  
+✅ Host your site on GitHub Pages or Netlify — FREE and professional
 
-🧠 Expected Results Upon completing the course, you'll walk away with:
+No HTML or JavaScript required — we start from the basics!
 
-🎯 Technical mastery of R, STATA, Python, and key AI tools for monitoring and evaluation 🔬 Confidence using advanced statistical methods like PCA, Likert scales, DiD, T-tests, PSM, and RDD 🛠️ Full command over data cleaning, merging, quality assurance, and automated reporting 📢 Skills to create insights that meet journal and donor standards 🎓 A verified Certificate of Completion to boost your CV and LinkedIn profile
+<span style="color:#800080; font-weight:bold;">🎁 Free Introductory Webinar</span>
 
-🕒 Duration & Cost 🗓️ Duration: 3 weeks (8 sessions) 💰 Cost: Only 5000 KES / \~\$40 – originally priced at \$400! 🎉 📆 Start Date: 26th May 2025
+To help you get started, we're hosting a **free intro webinar** before the course launch. 🗓️
 
-🎁 Free Webinar Before First Class! Get a taste of the MasterClass in our FREE introductory webinar 🎥:
+This webinar will cover:
 
-👨‍🏫 Meet your facilitator 📘 Preview all 8 sessions 💬 Ask your questions live ⚙️ See AI tools in real action
+👀 Live demo of a data portfolio site  
+🎯 Overview of Quarto’s power for researchers & analysts  
+💬 Q&A session to answer your burning questions  
+🎁 Bonuses for early sign-ups!
 
-📅 \[Insert webinar date/time\]
+📅 *[Insert your webinar date and time here]*
 
-👥 Who Should Join? 📍 M&E Practitioners & Specialists 📊 Data Analysts & Researchers 🌍 Program Managers in NGOs or Donor Projects 📈 Public Policy, Statistics & Development Students 🧠 Anyone curious about using AI for good
+<span style="color:#800080; font-weight:bold;">👥 Who Is This Course For?</span>
 
-No prior coding experience required — we start from scratch and guide you all the way up!
+💼 Monitoring & Evaluation professionals  
+🧑‍🔬 Researchers and Data Scientists  
+📝 Bloggers and Data Journalists  
+📈 Development Practitioners  
+🎓 Students and recent grads with R experience  
+🛠️ Anyone curious about creating a digital presence using R
 
-✍️ Register Now Fill out the form below to secure your spot or join the free webinar:
+If you’ve ever wanted to **publish your reports, findings, or dashboards online**, this is your chance.
 
-::: {style="text-align: center; margin-top: 30px;"}
+<span style="color:#800080; font-weight:bold;">📝 Sign Up Now to Get Started</span>
 
-<iframe src="https://ee.kobotoolbox.org/x/nR3bh08p" width="100%" height="600" frameborder="0">
+Ready to build your own website using RStudio?
 
-</iframe>
+link to be put here soon - - - 
 
-::: Click below to pay securely using Mastercard, Visa, or M-Pesa and reserve your slot today:
-
-::: {style="text-align: center; margin-top: 40px;"}
-{=html} Copy Edit <button onclick="window.location.href=&#39;https://paystack.com/pay/ai_for_me&#39;" style="
-      background-color: green;
-      color: white;
-      font-size: 1.5em;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
-      animation: pulse 2s infinite;
-    "> Pay Now
-
-</button>
-:::
-
-{=html} Copy Edit <link rel="stylesheet" href="popup.css">
-
-::: {#email-modal .modal}
-::: modal-content
-```         
-<h3 style="color:#32CD32; text-shadow:0 0 8px #32CD32;">✨ Stay Connected ✨</h3>
-<p style="color:#90ee90; font-weight:bold; text-shadow:0 0 5px #90ee90;">Get latest Courses and Webinars</p>
-
-<form action="https://formspree.io/f/mgepbpon" method="POST" id="email-form">
-  <label style="display:block; margin-bottom:10px; color:#228B22; font-weight:bold;">
-    Your email:<br>
-    <input type="email" name="email" required style="padding:10px; width:90%; margin-top:5px; border-radius:5px;">
-  </label>
-
-  <label style="display:block; margin-bottom:10px; color:#228B22; font-weight:bold;">
-    Name and Designation:<br>
-    <textarea name="message" rows="4" required style="padding:10px; width:90%; margin-top:5px; border-radius:5px;"></textarea>
-  </label>
-
-  <div style="display:flex; gap:10px; margin-top:10px;">
-    <button type="submit" style="padding:10px 20px; background-color:#32CD32; color:white; border:none; border-radius:5px; cursor:pointer;">
-      Send
-    </button>
-    <button type="button" id="close-popup" style="padding:10px 20px; background-color:#444; color:white; border:none; border-radius:5px; cursor:pointer;">
-      Exit
-    </button>
-  </div>
-</form>
-```
-:::
-:::
-
-```{=html}
-<script src="popup.js"></script>
-```

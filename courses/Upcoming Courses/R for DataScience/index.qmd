@@ -1,5 +1,5 @@
 ---
-title: "<span style='color:#800080; font-weight:bold;'>R for Data Science MasterClass</span>"
+title: "<span style='color:#800080; font-weight:bold;'> Date Coming soon - R for Data Science MasterClass</span>"
 # author: "Victor Mandela"
 # date: "2024-11-06"
 categories: [R, Programming, Analysis, Statistics]
@@ -54,7 +54,4 @@ No prior experience in R is needed—just a willingness to learn and a laptop!
 
 Kindly fill in the short form below to register for the course or to attend the free webinar:
 
-<!-- 🚨 Insert your KoboToolbox embedded form link below -->
-
-```html
-<!-- [Insert KoboToolbox HTML Embed Link Here] -->
+form to be put here soon - - -

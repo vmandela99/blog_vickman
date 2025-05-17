@@ -1,74 +1,70 @@
 ---
-title: "Machine Learning for Humanitarian Practical data"
+title: "Date Coming Soon - Machine Learning for Humanitarian Practical Data"
 # author: "Victor Mandela"
 # date: "2024-11-06"
 categories: [R, Machine learning, Analysis, Visualizations]
+format:
+  html:
+    css: custom.scss
 ---
+<span style="color:#800080; font-weight:bold;">🤖 Machine Learning for Humanitarian Practical Data 🌍</span>
 
-## 🤖 Machine Learning for Humanitarian Practical Data 🌍
-
-**How can machine learning be used to improve humanitarian outcomes?** From early warning systems for food insecurity to predicting disease outbreaks and optimizing aid distribution, ML is changing how we address real-world challenges.
+How can machine learning be used to improve humanitarian outcomes? From early warning systems for food insecurity to predicting disease outbreaks and optimizing aid distribution, ML is changing how we address real-world challenges.
 
 We’re thrilled to announce our new course:
 
-🎓 **Machine Learning for Humanitarian Practical Data** – A beginner-to-intermediate level course focused on building **practical ML skills** using **real humanitarian datasets**.
+🎓 Machine Learning for Humanitarian Practical Data
+A beginner-to-intermediate level course focused on building practical ML skills using real humanitarian datasets.
 
-### 💡 Why This Course?
+<span style="color:#800080; font-weight:bold;">💡 Why This Course?</span>
 
-Machine learning can feel overwhelming—especially in sectors like **health**, **education**, **climate resilience**, and **crisis response** where clean, structured data is rare. This course bridges that gap by teaching machine learning **with noisy, messy, real-world data**, just like what you work with on the ground.
+Machine learning can feel overwhelming—especially in sectors like health, education, climate resilience, and crisis response where clean, structured data is rare. This course bridges that gap by teaching machine learning with noisy, messy, real-world data, just like what you work with on the ground.
 
-No more theory-only learning. You'll gain hands-on experience applying ML to **humanitarian and development datasets** that matter.
+No more theory-only learning. You'll gain hands-on experience applying ML to humanitarian and development datasets that matter.
 
-### 🎯 Course Objectives
+<span style="color:#800080; font-weight:bold;">🎯 Course Objectives</span>
 
 By the end of this course, learners will be able to:
 
-✅ Understand the ML workflow: from data preparation to model evaluation\
-✅ Explore key ML algorithms: regression, classification, decision trees, random forests, and ensemble models\
-✅ Handle missing data, imbalance, and data quality issues in humanitarian datasets\
-✅ Evaluate model performance with real metrics\
-✅ Use tools like `caret`, `tidymodels`, and `xgboost` in R\
+✅ Understand the ML workflow: from data preparation to model evaluation
+✅ Explore key ML algorithms: regression, classification, decision trees, random forests, and ensemble models
+✅ Handle missing data, imbalance, and data quality issues in humanitarian datasets
+✅ Evaluate model performance with real metrics
+✅ Use tools like caret, tidymodels, and xgboost in R
 ✅ Communicate ML findings through compelling visuals and reports
 
-### 🎁 Free Pre-Course Webinar 🎙️
+<span style="color:#800080; font-weight:bold;">🎁 Free Pre-Course Webinar 🎙️</span>
 
-Join us for a **free webinar** before the course starts. This session is designed to:
+Join us for a free webinar before the course starts. This session is designed to:
 
-👋 Introduce the course and instructors\
-📊 Discuss real use cases of ML in humanitarian work\
-🧠 Answer your questions\
+👋 Introduce the course and instructors
+📊 Discuss real use cases of ML in humanitarian work
+🧠 Answer your questions
 🎯 Help you decide if this course is right for you
 
-📅 *\[Insert webinar date and time\]*
+📅 [Insert webinar date and time]
 
-### 👥 Who Should Attend?
+<span style="color:#800080; font-weight:bold;">👥 Who Should Attend?</span>
 
 This course is designed for:
 
-🧑‍🔬 M&E Specialists and Researchers\
-📊 Humanitarian Data Analysts and Program Officers\
-🧠 Technical Staff in NGOs, UN agencies, and Social Enterprises\
-📈 Public Health, Climate, Education, and Agriculture Professionals\
+🧑‍🔬 M&E Specialists and Researchers
+📊 Humanitarian Data Analysts and Program Officers
+🧠 Technical Staff in NGOs, UN agencies, and Social Enterprises
+📈 Public Health, Climate, Education, and Agriculture Professionals
 💻 Anyone curious about applying machine learning to messy, real-world data!
 
-📌 *Some basic understanding of R or Python is helpful—but not required. We’ll guide you!*
+📌 Some basic understanding of R or Python is helpful—but not required. We’ll guide you!
 
-### 📝 Register Now
+<span style="color:#800080; font-weight:bold;">📝 Register Now</span>
 
-Reserve your slot by filling the form below. You can also indicate interest in the **free webinar** session.
+Reserve your slot by filling the form below. You can also indicate interest in the free webinar session.
 
-<!-- 🚨 Insert your KoboToolbox embedded form here -->
+form to be put here soon - - -
 
-```         
-html
-```
-
-CopyEdit
-
-`<!-- [Insert KoboToolbox HTML Embed Code Here] -->`
-
-📣 **Real data. Real problems. Real solutions.** This isn’t a textbook course—it’s a **mission-driven** learning journey into how machine learning can improve lives and systems.
+📣 Real data. Real problems. Real solutions.
+This isn’t a textbook course—it’s a mission-driven learning journey into how machine learning can improve lives and systems.
 
 Let’s turn your humanitarian data into powerful insights. 💪
 
-📩 For more details or bulk registrations, contact us at: \[your-email\@example.com\]
+📩 For more details or bulk registrations, contact us at: vmandela99@gmail.com
