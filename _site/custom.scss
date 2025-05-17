@@ -63,3 +63,18 @@ $body-bg: #e6f7ff;            // Light blue
   color: #800080;  // Purple color
   font-weight: bold;
 }
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-brand-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #800080; // purple like your style
+}

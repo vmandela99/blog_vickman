@@ -7,13 +7,13 @@ project:
     - _headers
 
 website:
-  # title: "Articles"
+  # title: false
   favicon: images/logo.png
   # description: "Data Science and Statistical Consulting"
   open-graph: true
   google-analytics: "GTM-T8DDSMN"
   navbar:
-    logo: images/logo.png
+    # logo: images/logo.png
     background: "#800080"
     collapse: true
     pinned: true
@@ -76,6 +76,7 @@ format:
     theme: materia
     # css: styles.css
     css: custom.scss
+    include-in-header: logo-brand.html
 
 editor: visual
 
