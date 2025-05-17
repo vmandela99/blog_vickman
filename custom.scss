@@ -52,3 +52,14 @@ div.quarto-post .listing-categories .listing-category {
   border: solid 1px var(--bs-gray-400);
   font-size: .8em;
 }
+
+/*-- scss:defaults --*/
+$heading-color: #800080;      // Purple
+$body-bg: #e6f7ff;            // Light blue
+
+/*-- scss:rules --*/
+
+.purple-text {
+  color: #800080;  // Purple color
+  font-weight: bold;
+}

@@ -12,4 +12,4 @@ page-layout: full
 title-block-banner: true
 ---
 
-## *Welcome to the upcoming Courses and Webinars Kindly feel free to register and attend to get more insights.*
+## <span style="color:#800080; font-weight:bold;">*Welcome to the upcoming Courses and Webinars Kindly feel free to register and attend to get more insights.*</span>

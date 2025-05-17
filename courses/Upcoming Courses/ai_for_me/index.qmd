@@ -1,10 +1,33 @@
 ---
-title: "AI for M&E MasterClass Access"
-author: "Victor Mandela"
-date: "2024-11-06"
+title: "AI for M&E MasterClass Access - starting 26th May 2025"
+# author: "CSV Research Solutions LTD"
+date: "2025-05-16"
 categories: [Monitoring and Evaluation, Analysis, Statistics]
 # image: "Safari_pic.png"
 ---
+
+<span style="color:#800080; font-weight:bold;">Discounted course Was</span> <span style="color:red; font-weight:bold;">400 USD <span style="color:#800080; font-weight:bold;">now is</span> <span style="color:green; font-weight:bold;">40 USD (5000 KES)</span> <span style="color:#800080; font-weight:bold;">- Apply now!</span>
+
+<span style="color:#800080; font-weight:bold;">The application form is below.</span>
+
+::: {style="text-align: center; margin-top: 40px;"}
+```{=html}
+<button onclick="window.location.href=&#39;https://paystack.com/pay/ai_for_me&#39;" style="
+      background-color: green;
+      color: white;
+      font-size: 1.5em;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+      animation: pulse 2s infinite;
+    ">
+```
+Pay Now
+
+</button>
+:::
 
 ## 🤖 Master Artificial Intelligence in Monitoring & Evaluation: Enroll in the "AI for M&E MasterClass"
 
@@ -93,7 +116,7 @@ After payment, you will receive your access credentials via email.
 ::: {style="text-align: center; margin-top: 40px;"}
 ```{=html}
 <button onclick="window.location.href=&#39;https://paystack.com/pay/ai_for_me&#39;" style="
-      background-color: red;
+      background-color: green;
       color: white;
       font-size: 1.5em;
       padding: 15px 30px;
