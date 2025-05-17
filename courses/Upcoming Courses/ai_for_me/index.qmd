@@ -1,14 +1,14 @@
 ---
-title: "AI for M&E MasterClass Access - starting 26th May 2025"
+title: "AI for M&E MasterClass Access - starting 6th June 2025"
 # author: "CSV Research Solutions LTD"
 date: "2025-05-16"
 categories: [Monitoring and Evaluation, Analysis, Statistics]
 # image: "Safari_pic.png"
 ---
 
-<span style="color:#800080; font-weight:bold;">Discounted course Was</span> <span style="color:red; font-weight:bold;">400 USD <span style="color:#800080; font-weight:bold;">now is</span> <span style="color:green; font-weight:bold;">40 USD (5000 KES)</span> <span style="color:#800080; font-weight:bold;">- Apply now!</span>
+[Discounted course Was]{style="color:#800080; font-weight:bold;"} <span style="color:red; font-weight:bold;">400 USD [now is]{style="color:#800080; font-weight:bold;"} [40 USD (5000 KES)]{style="color:green; font-weight:bold;"} [- Apply now!]{style="color:#800080; font-weight:bold;"}
 
-<span style="color:#800080; font-weight:bold;">The application form is below.</span>
+[The application form is below.]{style="color:#800080; font-weight:bold;"}
 
 ::: {style="text-align: center; margin-top: 40px;"}
 ```{=html}
@@ -29,77 +29,90 @@ Pay Now
 </button>
 :::
 
-## 🤖 Master Artificial Intelligence in Monitoring & Evaluation: Enroll in the "AI for M&E MasterClass"
+## 🤖 Master Artificial Intelligence in Monitoring & Evaluation:
 
-Monitoring and Evaluation (M&E) is evolving—are you keeping up? With the rise of **Artificial Intelligence (AI)**, M&E professionals can now harness machine learning, natural language processing, and predictive analytics to enhance program design, implementation, and impact analysis.
+Enroll in the "AI for M&E MasterClass" Monitoring and Evaluation (M&E) is evolving—are you keeping up? With the rise of Artificial Intelligence (AI), M&E professionals can now harness machine learning, natural language processing, and predictive analytics to enhance program design, implementation, and impact analysis.
 
-🎓 **Introducing the AI for M&E MasterClass** – a unique training that bridges the gap between traditional M&E tools and modern AI-powered techniques.
+🎓 Introducing the AI for M&E MasterClass - a practical, hands-on 3-week course designed to equip you with cutting-edge data and AI tools to thrive in modern evaluation roles.
 
-### 💡 Why Take This Course?
+## 🔍 Course Overview 
 
-Today’s development programs generate more data than ever before—surveys, mobile data, administrative records, citizen feedback, and more. Traditional methods alone are no longer enough. AI opens a new frontier for:
+This training is a hands-on, practical 8-session program that walks you through pro-tips on navigating survey data using STATA, R, and Python interchangeably. You'll learn to create high-quality visualizations and reports that align with top journal and donor standards.
 
-⚙️ **Automating routine tasks**\
-📊 **Analyzing unstructured data** (like text, voice, and images)\
-📈 **Predicting outcomes and trends**\
-📍 **Targeting interventions more precisely**
+🚀 With the power of AI, you'll complete tasks 50x faster while boosting accuracy in research logic and reporting.
 
-Whether you work in **NGOs, government, research, or international organizations**, this course will empower you to make smarter decisions with AI-enhanced insights.
+🧠 Ethical considerations are also covered—including best practices for protecting donor data, IPs, and shareholder confidentiality when using AI tools.
 
-### 🎯 Course Objectives
+### 🎯 What You’ll Learn
 
-By the end of this course, participants will be able to:
+✅ Hands-on AI tools for M&E (ChatGPT, DeepSeek, Julius) 
 
-✅ Understand core AI concepts and their relevance to M&E\
-✅ Explore machine learning models used in development contexts\
-✅ Apply text mining and sentiment analysis for qualitative data\
-✅ Build simple AI workflows using R or Python (no coding experience needed)\
-✅ Evaluate ethical and data privacy concerns in AI-driven M&E\
-✅ Integrate AI into M&E frameworks and reporting processes
+📊 Practical data analysis in R, STATA, and Python 
 
-### 🎁 Free Webinar Before First Class!
+🧼 Data cleaning, merging, and visualization
 
-We’re kicking things off with a **free introductory webinar** 🎥 open to all interested participants. Join us to:
+📈 Automated reporting and dynamic dashboards
 
-👨‍🏫 Meet the course facilitators\
-📘 Get a preview of the modules\
-💬 Ask questions about tools, timing, and structure\
-🧭 See real examples of AI used in evaluation projects
+🔍 Statistical techniques: PCA, T-tests, DiD, PSM, RDD
 
-📅 *\[Insert date/time of webinar\]*
+📚 Research-aligned insights and visual storytelling
 
-### 👥 Who Should Join?
+🏆 Certification awarded upon 70% pass
 
-This course is ideal for:
+### 🧠 Expected Results
 
-📍 M&E Officers and Specialists\
-📊 Researchers and Data Analysts\
-🌍 Program Managers in NGOs or Donor-Funded Projects\
-🧑‍🎓 Development Studies, Statistics & Public Policy students\
-🧠 Curious professionals exploring AI for the first time
+Upon completing the course, you'll walk away with:
 
-No coding or AI experience required—we start with the basics and build up!
+🎯 Technical mastery of R, STATA, Python, and key AI tools for monitoring and evaluation
 
-### 📝 Register Now
+🔬 Confidence using advanced statistical methods like PCA, Likert scales, DiD, T-tests, PSM, and RDD
 
-Fill out the form below to secure your spot or to attend the free webinar:
+🛠️ Full command over data cleaning, merging, quality assurance, and automated reporting
 
-<!-- 🚨 Insert your KoboToolbox embedded HTML registration form below -->
+📢 Skills to create insights that meet journal and donor standards 
 
-```         
-html
-```
+🎓 A verified Certificate of Completion to boost your CV and LinkedIn profile
 
-CopyEdit
+### 🕒 Duration & Cost 
 
-`<!-- [Insert KoboToolbox HTML Embed Code Here] -->`
+🗓️ Duration: 3 weeks (8 sessions)
+
+💰 Cost: Only 5000 KES / \~\$40 – originally priced at \$400! 🎉 
+
+📆 Start Date: 6th June 2025
+
+### 🎁 Free Webinar Before First Class! 
+
+Get a taste of the MasterClass in our FREE introductory webinar 🎥:
+
+👨‍🏫 Meet your facilitator 
+
+📘 Preview all 8 sessions 
+
+💬 Ask your questions live 
+
+⚙️ See AI tools in real action
+
+📅 \[webinar date/time is Thursday, 2nd June 2025 at 9pm EAT and will be recorded\]
+
+### 👥 Who Should Join? 
+
+📍 M&E Practitioners & Specialists
+
+📊 Data Analysts & Researchers 
+
+🌍 Program Managers in NGOs or Donor Projects 
+
+📈 Public Policy, Statistics & Development Students 
+
+🧠 Anyone curious about using AI for good
+
+No prior coding experience required — we start from scratch and guide you all the way up!
+
+✍️ Register Now Fill out the form below to secure your spot or join the free webinar:
 
 🔐 Limited seats available — and demand is growing fast! Equip yourself with the skills to evaluate smarter, faster, and more effectively using AI.
 
-📩 Questions? Reach out to us at \[your-email\@example.com\]\
-📚 Let’s shape the future of evidence-driven development — together.\
-\
-AI for M&E MasterClass Access
 
 Click the button below to pay for this course using **Mastercard**, **M-Pesa**, or **Visa**.
 
@@ -165,3 +178,9 @@ Pay Now
 
 <script src="popup.js"></script>
 ```
+
+
+\
+📩 Questions? Reach out to us at \[vmandela99\@gmail.com\]\
+
+📚 Let’s shape the future of evidence-driven development — together.\
