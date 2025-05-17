@@ -1,5 +1,5 @@
 ---
-title: "AI for M&E MasterClass Access - starting 6th June 2025"
+title: "<span style='color:#800080; font-weight:bold;'> AI for M&E MasterClass Access - starting 6th June 2025 </span>"
 # author: "CSV Research Solutions LTD"
 date: "2025-05-16"
 categories: [Monitoring and Evaluation, Analysis, Statistics]
@@ -35,7 +35,7 @@ Enroll in the "AI for M&E MasterClass" Monitoring and Evaluation (M&E) is evolvi
 
 🎓 Introducing the AI for M&E MasterClass - a practical, hands-on 3-week course designed to equip you with cutting-edge data and AI tools to thrive in modern evaluation roles.
 
-## 🔍 Course Overview 
+## 🔍 Course Overview
 
 This training is a hands-on, practical 8-session program that walks you through pro-tips on navigating survey data using STATA, R, and Python interchangeably. You'll learn to create high-quality visualizations and reports that align with top journal and donor standards.
 
@@ -45,9 +45,9 @@ This training is a hands-on, practical 8-session program that walks you through 
 
 ### 🎯 What You’ll Learn
 
-✅ Hands-on AI tools for M&E (ChatGPT, DeepSeek, Julius) 
+✅ Hands-on AI tools for M&E (ChatGPT, DeepSeek, Julius)
 
-📊 Practical data analysis in R, STATA, and Python 
+📊 Practical data analysis in R, STATA, and Python
 
 🧼 Data cleaning, merging, and visualization
 
@@ -69,41 +69,41 @@ Upon completing the course, you'll walk away with:
 
 🛠️ Full command over data cleaning, merging, quality assurance, and automated reporting
 
-📢 Skills to create insights that meet journal and donor standards 
+📢 Skills to create insights that meet journal and donor standards
 
 🎓 A verified Certificate of Completion to boost your CV and LinkedIn profile
 
-### 🕒 Duration & Cost 
+### 🕒 Duration & Cost
 
 🗓️ Duration: 3 weeks (8 sessions)
 
-💰 Cost: Only 5000 KES / \~\$40 – originally priced at \$400! 🎉 
+💰 Cost: Only 5000 KES / \~\$40 – originally priced at \$400! 🎉
 
 📆 Start Date: 6th June 2025
 
-### 🎁 Free Webinar Before First Class! 
+### 🎁 Free Webinar Before First Class!
 
 Get a taste of the MasterClass in our FREE introductory webinar 🎥:
 
-👨‍🏫 Meet your facilitator 
+👨‍🏫 Meet your facilitator
 
-📘 Preview all 8 sessions 
+📘 Preview all 8 sessions
 
-💬 Ask your questions live 
+💬 Ask your questions live
 
 ⚙️ See AI tools in real action
 
 📅 \[webinar date/time is Thursday, 2nd June 2025 at 9pm EAT and will be recorded\]
 
-### 👥 Who Should Join? 
+### 👥 Who Should Join?
 
 📍 M&E Practitioners & Specialists
 
-📊 Data Analysts & Researchers 
+📊 Data Analysts & Researchers
 
-🌍 Program Managers in NGOs or Donor Projects 
+🌍 Program Managers in NGOs or Donor Projects
 
-📈 Public Policy, Statistics & Development Students 
+📈 Public Policy, Statistics & Development Students
 
 🧠 Anyone curious about using AI for good
 
@@ -112,7 +112,6 @@ No prior coding experience required — we start from scratch and guide you all 
 ✍️ Register Now Fill out the form below to secure your spot or join the free webinar:
 
 🔐 Limited seats available — and demand is growing fast! Equip yourself with the skills to evaluate smarter, faster, and more effectively using AI.
-
 
 Click the button below to pay for this course using **Mastercard**, **M-Pesa**, or **Visa**.
 
@@ -178,8 +177,6 @@ Pay Now
 
 <script src="popup.js"></script>
 ```
-
-
 \
 📩 Questions? Reach out to us at \[vmandela99\@gmail.com\]\
 

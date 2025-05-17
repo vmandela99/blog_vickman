@@ -1,5 +1,5 @@
 ---
-title: "Date Coming Soon - Machine Learning for Humanitarian Practical Data"
+title: "<span style='color:#800080; font-weight:bold;'> Date Coming Soon - Machine Learning for Humanitarian Practical Data </span>"
 # author: "Victor Mandela"
 # date: "2024-11-06"
 categories: [R, Machine learning, Analysis, Visualizations]

@@ -5,52 +5,52 @@ title: "<span style='color:#800080; font-weight:bold;'> Date Coming soon - R for
 categories: [R, Programming, Analysis, Statistics]
 ---
 
-<span style="color:#800080; font-weight:bold;">🚀 Unlock the Power of Data with R: Join Our 'Data Science for R' Course!</span>
+[🚀 Unlock the Power of Data with R: Join Our 'Data Science for R' Course!]{style="color:#800080; font-weight:bold;"}
 
 In today’s data-driven world, data science is no longer a luxury—it's a necessity. Whether you're analyzing health outcomes, optimizing business decisions, or conducting academic research, R has become one of the most powerful tools in the data scientist’s toolbox. That's why we're excited to launch our upcoming course:
 
 🎓 **Data Science for R** – A hands-on, beginner-friendly course designed to help you master the art of data analytics with R programming.
 
-<span style="color:#800080; font-weight:bold;">📌 Why This Course?</span>
+[📌 Why This Course?]{style="color:#800080; font-weight:bold;"}
 
 Data is everywhere—but making sense of it requires the right tools and the right training. R provides robust packages, visualizations, and analytical power for handling everything from small surveys to big data. Whether you're in research, monitoring and evaluation, economics, agriculture, health, or education, this course equips you with skills to turn data into impact.
 
-<span style="color:#800080; font-weight:bold;">🎯 Course Objectives</span>
+[🎯 Course Objectives]{style="color:#800080; font-weight:bold;"}
 
 By the end of this course, learners will be able to:
 
-✅ Understand the core syntax and structure of R  
-✅ Import, clean, and wrangle datasets using `dplyr`, `tidyr`, and other tidyverse tools  
-✅ Create beautiful, insightful visualizations using `ggplot2`  
-✅ Perform basic statistical analysis and build predictive models  
-✅ Reproducibly report results using R Markdown and Quarto  
+✅ Understand the core syntax and structure of R\
+✅ Import, clean, and wrangle datasets using `dplyr`, `tidyr`, and other tidyverse tools\
+✅ Create beautiful, insightful visualizations using `ggplot2`\
+✅ Perform basic statistical analysis and build predictive models\
+✅ Reproducibly report results using R Markdown and Quarto\
 ✅ Automate reports and build dashboards using Shiny (Intro level)
 
-<span style="color:#800080; font-weight:bold;">🎁 Free Webinar Before the First Class!</span>
+[🎁 Free Webinar Before the First Class!]{style="color:#800080; font-weight:bold;"}
 
 To get you started and answer any burning questions, we’re offering a **free webinar 🎙️** just before the official classes begin! This is your chance to:
 
-👋 Meet the instructors  
-💬 Interact with other learners  
-🎯 Get an overview of the curriculum  
+👋 Meet the instructors\
+💬 Interact with other learners\
+🎯 Get an overview of the curriculum\
 ✅ Ask questions and see if the course is right for you
 
-📅 *[Date and time of the webinar goes here]*
+📅 *\[Date and time of the webinar goes here\]*
 
-<span style="color:#800080; font-weight:bold;">👥 Who Should Attend?</span>
+[👥 Who Should Attend?]{style="color:#800080; font-weight:bold;"}
 
 This course is ideal for:
 
-🧑‍🔬 Researchers & Academics  
-📊 M&E and Data Officers  
-📈 Development Practitioners  
-💼 NGO Program Staff  
-🎓 Students and Graduates in social sciences, statistics, or related fields  
+🧑‍🔬 Researchers & Academics\
+📊 M&E and Data Officers\
+📈 Development Practitioners\
+💼 NGO Program Staff\
+🎓 Students and Graduates in social sciences, statistics, or related fields\
 💡 Anyone curious about turning messy data into meaningful insights!
 
 No prior experience in R is needed—just a willingness to learn and a laptop!
 
-<span style="color:#800080; font-weight:bold;">📝 Reserve Your Spot Now</span>
+[📝 Reserve Your Spot Now]{style="color:#800080; font-weight:bold;"}
 
 Kindly fill in the short form below to register for the course or to attend the free webinar:
 

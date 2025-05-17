@@ -1,5 +1,5 @@
 ---
-title: "Date Coming soon - Website Development Using Rstudio for Beginners"
+title: "<span style='color:#800080; font-weight:bold;'> Date Coming soon - Website Development Using Rstudio for Beginners </span>"
 # author: "Victor Mandela"
 # date: "2024-11-06"
 categories: [R, website, github, Analysis, Statistics]
