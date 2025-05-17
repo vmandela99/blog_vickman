@@ -27,10 +27,15 @@ No more theory-only learning. You'll gain hands-on experience applying ML to hum
 By the end of this course, learners will be able to:
 
 ✅ Understand the ML workflow: from data preparation to model evaluation
+
 ✅ Explore key ML algorithms: regression, classification, decision trees, random forests, and ensemble models
+
 ✅ Handle missing data, imbalance, and data quality issues in humanitarian datasets
+
 ✅ Evaluate model performance with real metrics
+
 ✅ Use tools like caret, tidymodels, and xgboost in R
+
 ✅ Communicate ML findings through compelling visuals and reports
 
 <span style="color:#800080; font-weight:bold;">🎁 Free Pre-Course Webinar 🎙️</span>
@@ -38,20 +43,27 @@ By the end of this course, learners will be able to:
 Join us for a free webinar before the course starts. This session is designed to:
 
 👋 Introduce the course and instructors
+
 📊 Discuss real use cases of ML in humanitarian work
+
 🧠 Answer your questions
+
 🎯 Help you decide if this course is right for you
 
-📅 [Insert webinar date and time]
+📅 webinar link soon to come here - - - 
 
 <span style="color:#800080; font-weight:bold;">👥 Who Should Attend?</span>
 
 This course is designed for:
 
 🧑‍🔬 M&E Specialists and Researchers
+
 📊 Humanitarian Data Analysts and Program Officers
+
 🧠 Technical Staff in NGOs, UN agencies, and Social Enterprises
+
 📈 Public Health, Climate, Education, and Agriculture Professionals
+
 💻 Anyone curious about applying machine learning to messy, real-world data!
 
 📌 Some basic understanding of R or Python is helpful—but not required. We’ll guide you!
